@@ -29,7 +29,7 @@ public class MainController {
 	
 	@RequestMapping(method = {RequestMethod.GET}, value="/layout.action")
 	public String layout() {
-		return "layout/layout";
+		return "layouts/layout";
 	}
 	
 
