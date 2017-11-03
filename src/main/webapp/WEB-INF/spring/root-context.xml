@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- MyBatis 설정 및 실행과 관련된 빈 태그 선언하기 -->
+	
+	<!-- JDBC의 Connection 역할 -->
+	<bean id="source" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+		<property name="username" value="hr"></property>
+		<property name="password" value="java1234"></property>
+	</bean>
+	
+	<!-- log4j 객체 -->
+	<bean id="log4j" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+		<constructor-arg ref="source"></constructor-arg>
+		<!-- 위의 bean을 매개로 받아서 수행하고, -->
+		<!-- 아래의 빈은, 이제 위의 빈이 아니라 이 빈을 매개로 받도록하여, 결국. 사이에 끼는 모양이 된다. -->	
+		<property name="logFormatter">
+			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+				<property name="loggingType" value="MULTI_LINE"></property>
+				<property name="sqlPrefix" value="[SQL]"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="log4j"></property>
+		<property name="mapperLocations" value="classpath*:com/test/spring/mapper/*.xml"></property>
+		<!-- mapper파일 영역 설정 -->
+		<property name="configLocation" value="/WEB-INF/mybatis.xml"></property>
+		<!-- 바티스에 대한 설정(앨리아스 등)을 관리하는 문서 설정 -->
+	</bean>
+	
+	
+	<!-- Spring JDBC -> SQL 실행 -> template 객체(JdbcTemplate) -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+	
+	
+		
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
