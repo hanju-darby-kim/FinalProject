@@ -18,9 +18,9 @@
    </definition>
     -->
     <!-- *의 순서를 이용한다. placeholder라고 부르네 -->
-   <definition name="main.*" template="/WEB-INF/views/layout/layout.jsp"> 
+   <definition name="main.*" template="/WEB-INF/views/layouts/main.jsp"> 
       <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
-      <put-attribute name="header" value="/WEB-INF/views/inc/{1}header.jsp"/>
+      <put-attribute name="header" value="/WEB-INF/views/{1}/{1}header.jsp"/>
       <put-attribute name="core" value="/WEB-INF/views/main/main.jsp"/>
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
