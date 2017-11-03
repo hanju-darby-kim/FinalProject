@@ -5307,7 +5307,7 @@ ul.social-icons li a.rss-bg:hover, ul.social-icons li a.rss-bg:focus {
 }
 ul.social-icons li a i {
   position: relative;
-  top: 8px;
+  top: 30%;
 }
 
 /* newsletter form */
