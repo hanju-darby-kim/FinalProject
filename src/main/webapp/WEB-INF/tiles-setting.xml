@@ -2,20 +2,35 @@
 
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 
-<!--  
-	1. 레이아웃 구성할 파일 지정(디자인 파일 지정)
-	2. 1번에서 사용할 조각 페이지 파일 지정    
--->
+
+
 <tiles-definitions>
-	<definition name="*" template="/WEB-INF/views/layouts/test.jsp">
-		<put-attribute name="main" value="/WEB-INF/views/hello.jsp"></put-attribute>	
-	</definition>
+   
+<!--    <definition name="layout" template="/WEB-INF/tiles/layout/layout.jsp">
+      <put-attribute name="header" value="/WEB-INF/tiles/tile/header.jsp"/>
+      <put-attribute name="topmenubar" value="/WEB-INF/tiles/tile/topmenubar.jsp"/>
+      <put-attribute name="footer" value="/WEB-INF/tiles/tile/footer.jsp"/>
+   </definition>
+   
+   <definition name="*/*" extends="layout">
+      <put-attribute name="content" value="/WEB-INF/views/{1}.jsp"/>
+      <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
+   </definition>
+    -->
+    <!-- *의 순서를 이용한다. placeholder라고 부르네 -->
+   <definition name="main.*" template="/WEB-INF/views/layout/layout.jsp"> 
+      <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
+      <put-attribute name="header" value="/WEB-INF/views/inc/{1}header.jsp"/>
+      <put-attribute name="core" value="/WEB-INF/views/main/main.jsp"/>
+      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
+   </definition>
+   
+    <definition name="*.*" template="/WEB-INF/views/layout/layout.jsp"> 
+      <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
+      <put-attribute name="header" value="/WEB-INF/views/inc/{1}header.jsp"/>
+      <put-attribute name="submenu" value="/WEB-INF/views/inc/{1}submenu.jsp"/>
+      <put-attribute name="core" value="/WEB-INF/views/{1}/{2}.jsp"/>
+      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
+   </definition>
+   
 </tiles-definitions>
-
-
-
-
-
-
-
-

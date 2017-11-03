@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class MainController {
-	@RequestMapping(method = {RequestMethod.GET}, value="/test.action")
-	public String hello() {
-		
-		//JSP ViewResolver -> Tiles ViewResolver
-		return "test";
+
+	@RequestMapping(method = {RequestMethod.GET}, value="/login.action")
+	public String login() {
+		return "login";
 	}
 }
