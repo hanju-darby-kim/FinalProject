@@ -6,17 +6,7 @@
 
 <tiles-definitions>
    
-<!--    <definition name="layout" template="/WEB-INF/tiles/layout/layout.jsp">
-      <put-attribute name="header" value="/WEB-INF/tiles/tile/header.jsp"/>
-      <put-attribute name="topmenubar" value="/WEB-INF/tiles/tile/topmenubar.jsp"/>
-      <put-attribute name="footer" value="/WEB-INF/tiles/tile/footer.jsp"/>
-   </definition>
-   
-   <definition name="*/*" extends="layout">
-      <put-attribute name="content" value="/WEB-INF/views/{1}.jsp"/>
-      <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
-   </definition>
-    -->
+
     <!-- *의 순서를 이용한다. placeholder라고 부르네 -->
    <definition name="main.*" template="/WEB-INF/views/layouts/main.jsp"> 
       <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
@@ -32,6 +22,7 @@
       <put-attribute name="core" value="/WEB-INF/views/{1}/{2}/{3}.jsp"/>
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
+   
    
    <definition name="layout.*" template="/WEB-INF/views/layouts/layout.jsp"> 
       <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
