@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: 16
+=======
+Built-By: hyunjin-pc
+>>>>>>> 03f03e81fda7dc40f4eca4d3884b4fbfa766db41
 Build-Jdk: 1.8.0_144
 Created-By: Maven Integration for Eclipse
 
