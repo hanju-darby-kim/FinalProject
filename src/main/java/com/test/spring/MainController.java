@@ -9,7 +9,7 @@ public class MainController {
 	
 	@RequestMapping(method = {RequestMethod.GET}, value="/main.action")
 	public String main() {
-		return "main.main";
+		return "main.member";
 	}
 	
 	@RequestMapping(method = {RequestMethod.GET}, value="/manager/main.action")

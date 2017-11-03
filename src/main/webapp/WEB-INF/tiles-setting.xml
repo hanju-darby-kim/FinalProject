@@ -21,7 +21,7 @@
    <definition name="main.*" template="/WEB-INF/views/layouts/main.jsp"> 
       <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
       <put-attribute name="header" value="/WEB-INF/views/{1}/{1}header.jsp"/>
-      <put-attribute name="core" value="/WEB-INF/views/main/main.jsp"/>
+      <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
    
