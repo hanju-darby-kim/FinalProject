@@ -4,6 +4,7 @@
 	<div class="topbar">
 		<ul class="list-inline top-nav">
 			<li>
+				<!-- 번역 -->
 				<div class="btn-group">
 					<button type="button" class="btn btn-link dropdown-toggle btn-xs"
 						data-toggle="dropdown">
@@ -28,8 +29,8 @@
 					</ul>
 				</div>
 			</li>
-			<li><a href="#">Help</a></li>
-			<li><a href="#">Support</a></li>
+			<li><a href="${pageContext.request.contextPath}/login.action">login</a></li>
+			<li><a href="#">register</a></li>
 		</ul>
 		<div class="searchbox">
 			<form method="post">

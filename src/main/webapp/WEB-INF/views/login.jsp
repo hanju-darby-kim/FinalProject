@@ -8,21 +8,21 @@
 	<meta name="description" content="Responsive Multipurpose Bootstrap Theme">
 	<meta name="author" content="The Develovers">
 	<!-- CSS -->
-	<link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="../assets/css/main.css" rel="stylesheet" type="text/css">
-	<link href="../assets/css/shop-main.css" rel="stylesheet" type="text/css">
-	<link href="../assets/css/my-custom-styles.css" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/css/shop-main.css" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/css/my-custom-styles.css" rel="stylesheet" type="text/css">
 
 	<!-- GOOGLE FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400italic,700,400,300' rel='stylesheet' type='text/css'>
 	<!-- FAVICONS -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/repute144x144.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/repute114x114.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/repute72x72.png">
-	<link rel="apple-touch-icon-precomposed" href="../assets/ico/repute57x57.png">
-	<link rel="shortcut icon" href="../assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="${pageContext.request.contextPath}/ico/repute144x144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="${pageContext.request.contextPath}/ico/repute114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="${pageContext.request.contextPath}/ico/repute72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="${pageContext.request.contextPath}/ico/repute57x57.png">
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}/ico/favicon.png">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 			</div>
 			<div class="logo">
 				<div class="container">
-					<a href="index.html"><img src="assets/img/repute-shop.png" alt="Repute Shop"><span class="sr-only">Repute Shop</span></a>
+					<a href="index.html"><img src="${pageContext.request.contextPath}/img/repute-shop.png" alt="Repute Shop"><span class="sr-only">Repute Shop</span></a>
 				</div>
 			</div>
 		</div>
@@ -163,22 +163,22 @@
 							<h3 class="footer-heading">WE ACCEPT</h3>
 							<ul class="list-inline payment-method-list">
 								<li>
-									<a href="#"><img src="assets/img/cards/visa.png" alt="Visa"></a>
+									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/visa.png" alt="Visa"></a>
 								</li>
 								<li>
-									<a href="#"><img src="assets/img/cards/mastercard.png" alt="Mastercard"></a>
+									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/mastercard.png" alt="Mastercard"></a>
 								</li>
 								<li>
-									<a href="#"><img src="assets/img/cards/maestro.png" alt="Maestro"></a>
+									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/maestro.png" alt="Maestro"></a>
 								</li>
 								<li>
-									<a href="#"><img src="assets/img/cards/amex.png" alt="American Express"></a>
+									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/amex.png" alt="American Express"></a>
 								</li>
 								<li>
-									<a href="#"><img src="assets/img/cards/discover.png" alt="Discover"></a>
+									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/discover.png" alt="Discover"></a>
 								</li>
 								<li>
-									<a href="#"><img src="assets/img/cards/paypal.png" alt="Paypal"></a>
+									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/paypal.png" alt="Paypal"></a>
 								</li>
 							</ul>
 						</div>
@@ -212,9 +212,9 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- JAVASCRIPTS -->
-	<script src="../assets/js/jquery-2.1.1.min.js"></script>
-	<script src="../assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/repute-shop.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/repute-shop.js"></script>
 
 </body>
 
