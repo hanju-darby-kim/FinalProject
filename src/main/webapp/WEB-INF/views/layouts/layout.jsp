@@ -58,37 +58,37 @@
 				<div class="row">
 					<div class="col-md-3">
 						<ul id="sidebar-nav" class="sidebar-nav margin-bottom-30px">
-							<li class="list-group-item has-submenu active">
-								<a href="#Buttons" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">Buttons</a>
-								<ul id="Buttons" class="list-unstyled collapse submenu in">
-									<li class="active"><a href="#">General Buttons</a></li>
-									<li><a href="ui-button-groups.html">Button Groups</a></li>
+							<li class="list-group-item has-submenu ">
+								<a href="#Buttons" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">메뉴1</a>
+								<ul id="Buttons" class="list-unstyled collapse submenu ">
+									<li><a href="#">General Buttons</a></li>
+									<li><a href="#">Button Groups</a></li>
 								</ul>
 							</li>
-							<li class="list-group-item "><a href="ui-tabs-accordion.html">Tabs &amp; Accordion</a></li>
+							<li class="list-group-item has-submenu "><a href="ui-tabs-accordion.html">메뉴1</a></li>
 							<li class="list-group-item has-submenu ">
-								<a href="#Components" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">Components</a>
+								<a href="#Components" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">메뉴1</a>
 								<ul id="Components" class="list-unstyled collapse submenu ">
-									<li><a href="ui-alerts.html">Alerts</a></li>
-									<li><a href="ui-breadcrumbs.html">Breadcrumbs</a></li>
-									<li><a href="ui-pagination.html">Pagination</a></li>
+									<li><a href="#">Alerts</a></li>
+									<li><a href="#">Breadcrumbs</a></li>
+									<li><a href="#">Pagination</a></li>
 								</ul>
 							</li>
 							<li class="list-group-item has-submenu ">
-								<a href="#Forms" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">Forms</a>
+								<a href="#Forms" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">메뉴1</a>
 								<ul id="Forms" class="list-unstyled collapse submenu ">
-									<li><a href="ui-form-elements-basic.html">Basic Form Elements</a></li>
-									<li><a href="ui-form-elements-advanced.html">Advanced Form Elements</a></li>
-									<li><a href="ui-form-layouts.html">Form Layouts</a></li>
-									<li><a href="ui-form-validation.html">Validation</a></li>
+									<li><a href="#">Basic Form Elements</a></li>
+									<li><a href="#">Advanced Form Elements</a></li>
+									<li><a href="#">Form Layouts</a></li>
+									<li><a href="#">Validation</a></li>
 								</ul>
 							</li>
-							<li class="list-group-item "><a href="ui-numbers-charts.html">Numbers &amp; Charts</a></li>
-							<li class="list-group-item "><a href="ui-boxed-contents.html">Boxed Contents</a></li>
-							<li class="list-group-item "><a href="ui-testimonials.html">Testimonials</a></li>
-							<li class="list-group-item "><a href="ui-maps.html">Maps</a></li>
-							<li class="list-group-item "><a href="ui-typography.html">Typography</a></li>
-							<li class="list-group-item "><a href="ui-icons.html">Icons</a></li>
+							<li class="list-group-item "><a href="#">메뉴1</a></li>
+							<li class="list-group-item "><a href="#">메뉴1</a></li>
+							<li class="list-group-item "><a href="#">메뉴1</a></li>
+							<li class="list-group-item "><a href="#">메뉴1</a></li>
+							<li class="list-group-item "><a href="#">메뉴1</a></li>
+							<li class="list-group-item "><a href="#">메뉴1</a></li>
 						</ul>
 					</div>
 					<div class="col-md-9">
