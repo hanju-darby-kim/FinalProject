@@ -1,0 +1,7 @@
+inc : 공통 화면을 담은 폴더
+layouts : 레이아웃 담은 폴더
+main, admin, student, manager, teacher : 각 계정의 파일을 저장할 폴더. 안에다가 기능별로 폴더 만들면 됩니다
+
+컨트롤러에서 페이지 명 짓는 법 : 
+사용자.기능.파일명
+ex) student.apply.main

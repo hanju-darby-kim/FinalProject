@@ -67,6 +67,12 @@
 							<h1>Log in to your account</h1>
 							<form class="form-horizontal" role="form">
 								<div class="form-group">
+									<input type="radio" name="target" id="member" value="member"><label for="member">회원</label>
+									<input type="radio" name="target" id="manager" value="manager"><label for="manager">매니저</label>
+									<input type="radio" name="target" id="admin" value="admin"><label for="admin">관리자</label>
+									<input type="radio" name="target" id="teacher" value="teacher"><label for="teacher">강사</label>
+								</div>
+								<div class="form-group">
 									<label for="inputEmail" class="control-label sr-only">Email</label>
 									<div class="col-sm-12">
 										<div class="input-group">
