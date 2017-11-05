@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- TOPBAR -->
 	<div class="topbar">
 		<ul class="list-inline top-nav">
@@ -29,8 +30,14 @@
 					</ul>
 				</div>
 			</li>
-			<li><a href="${pageContext.request.contextPath}/login.action">login</a></li>
-			<li><a href="#">register</a></li>
+			<c:if test="${target eq null}">
+			<li><a href="${pageContext.request.contextPath}/login.action">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+			</c:if>
+			<c:if test="${target != null}">
+			${name}님, 반갑습니다.
+			<li><a href="#">로그아웃</a></li>
+			</c:if>
 		</ul>
 		<div class="searchbox">
 			<form method="post">

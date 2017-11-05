@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+	<title>SIST | 쌍용교육센터</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Responsive Multipurpose Bootstrap Theme">
+	<meta name="author" content="The Develovers">
 	<!-- CSS -->
 	<link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -20,3 +24,4 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="${pageContext.request.contextPath}/ico/repute72x72.png">
 	<link rel="apple-touch-icon-precomposed" href="${pageContext.request.contextPath}/ico/repute57x57.png">
 	<link rel="shortcut icon" href="${pageContext.request.contextPath}/ico/favicon.png">
+	
