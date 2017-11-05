@@ -8,27 +8,22 @@
    
 
     <!-- main 레이아웃 관련 -->
-    <!-- main.member.login -->
     <!-- main.student.main -->
-   <definition name="main.*.*" template="/WEB-INF/views/layouts/mainlayout.jsp"> 
+   <definition name="main.*" template="/WEB-INF/views/layouts/mainlayout.jsp"> 
       <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
-      <put-attribute name="core" value="/WEB-INF/views/main/{2}.jsp"/>
+      <put-attribute name="core" value="/WEB-INF/views/main/main.jsp"/>
       <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
       <put-attribute name="header" value="/WEB-INF/views/{1}/{1}header.jsp"/>
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
    
    <!-- 로그인, 회원가입 -->
-   <!-- main.member.main -->
-   <!-- member. -->
-   <definition name="sign.*" template="/WEB-INF/views/layouts/mainlayout.jsp"> 
-      <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
-      <put-attribute name="main" value="/WEB-INF/views/main/main.jsp"/>
-      <put-attribute name="header" value="/WEB-INF/views/{1}/{1}header.jsp"/>
+   <definition name="sign.*" template="/WEB-INF/views/layouts/signlayout.jsp"> 
+      <put-attribute name="core" value="/WEB-INF/views/main/{1}.jsp"/>
+      <put-attribute name="header" value="/WEB-INF/views/member/memberheader.jsp"/>
       <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
-   
    
    
    <!-- 왼쪽에 메뉴가 있는 페이지 (사용자.기능.파일이름)으로 기재 -->

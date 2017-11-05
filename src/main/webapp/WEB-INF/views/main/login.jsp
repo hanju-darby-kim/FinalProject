@@ -1,62 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title>Login | Repute Shop - Responsive Multipurpose Bootstrap Theme</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Responsive Multipurpose Bootstrap Theme">
-	<meta name="author" content="The Develovers">
-	<!-- CSS -->
-	<link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css">
-	<link href="${pageContext.request.contextPath}/css/shop-main.css" rel="stylesheet" type="text/css">
-	<link href="${pageContext.request.contextPath}/css/my-custom-styles.css" rel="stylesheet" type="text/css">
-
-	<!-- GOOGLE FONTS -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400italic,700,400,300' rel='stylesheet' type='text/css'>
-	<!-- FAVICONS -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="${pageContext.request.contextPath}/ico/repute144x144.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="${pageContext.request.contextPath}/ico/repute114x114.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="${pageContext.request.contextPath}/ico/repute72x72.png">
-	<link rel="apple-touch-icon-precomposed" href="${pageContext.request.contextPath}/ico/repute57x57.png">
-	<link rel="shortcut icon" href="${pageContext.request.contextPath}/ico/favicon.png">
-</head>
-
-<body>
-	<!-- WRAPPER -->
-	<div class="wrapper">
-		<!-- HEADER -->
-		<div class="shop-header minimal-header">
-			<div class="top-header clearfix">
-				<div class="container">
-					<ul class="list-unstyled list-inline pull-right top-nav">
-						<li><a href="index.html">Shop</a></li>
-						<li><a href="single-product-page.html">Single Product Page</a></li>
-						<li><a href="checkout.html">Checkout</a></li>
-						<li><a href="product-filter-grid.html">Search Result</a></li>
-						<li><a href="../index.html">Main Theme</a></li>
-						<li><a href="#">Order Tracking</a></li>
-						<li><a href="#">Help</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="logo">
-				<div class="container">
-					<a href="index.html"><img src="${pageContext.request.contextPath}/img/repute-shop.png" alt="Repute Shop"><span class="sr-only">Repute Shop</span></a>
-				</div>
-			</div>
-		</div>
-		<!-- END HEADER -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 		<!-- MAIN -->
-		<div class="shop-main login">
+		<div class="shop-main login" style="margin: 50px;">
 			<div class="container">
 				<!-- BREADCRUMBS -->
 				<ol class="breadcrumb link-accent separator-arrow">
-					<li><a href="index.html" title="Home"><i class="fa fa-home"></i></a></li>
+					<li><a href="${pageContext.request.contextPath}/main.action" title="Home"><i class="fa fa-home"></i></a></li>
 					<li class="active">Login</li>
 				</ol>
 				<!-- END BREADCRUMBS -->
@@ -65,15 +14,15 @@
 					<div class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
 						<div class="account-box login-box box-with-help">
 							<h1>Log in to your account</h1>
-							<form class="form-horizontal" role="form">
-								<div class="form-group">
-									<input type="radio" name="target" id="member" value="member"><label for="member">회원</label>
-									<input type="radio" name="target" id="manager" value="manager"><label for="manager">매니저</label>
-									<input type="radio" name="target" id="admin" value="admin"><label for="admin">관리자</label>
-									<input type="radio" name="target" id="teacher" value="teacher"><label for="teacher">강사</label>
+							<form class="form-horizontal" role="form" method="post">
+								<div class="form-group col-sm-12" style="text-align: left; margin: 10px auto; padding: 0px">
+									<input type="radio" name="target" id="member" value="member" style="margin-right: 3px;"><label for="member" style="margin-right: 8px;">회원</label>
+									<input type="radio" name="target" id="manager" value="manager" style="margin-right: 3px;"><label for="manager" style="margin-right: 8px;">매니저</label>
+									<input type="radio" name="target" id="admin" value="admin" style="margin-right: 3px;"><label for="admin" style="margin-right: 8px;">관리자</label>
+									<input type="radio" name="target" id="teacher" value="teacher" style="margin-right: 3px;"><label for="teacher">강사</label>
 								</div>
 								<div class="form-group">
-									<label for="inputEmail" class="control-label sr-only">Email</label>
+									<label for="inputEmail" class="control-label sr-only">ID</label>
 									<div class="col-sm-12">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
@@ -100,7 +49,7 @@
 								</div>
 								<div class="form-group">
 									<div class="col-xs-7">
-										<button type="submit" class="btn btn-primary btn-block"><i class="fa fa-sign-in"></i> Sign in</button>
+										<button type="submit" class="btn btn-primary btn-block"><i class="fa fa-sign-in"></i> 로그인</button>
 									</div>
 									<div class="col-xs-5 text-right">
 										<a href="#"><em>forgot password?</em></a>
@@ -124,104 +73,4 @@
 			</div>
 		</div>
 		<!-- END MAIN -->
-		<!-- FOOTER -->
-		<footer class="shop-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<!-- COLUMN 1 -->
-						<h3 class="footer-heading">USEFUL LINKS</h3>
-						<div class="row margin-bottom-30px">
-							<div class="col-xs-6">
-								<ul class="list-unstyled footer-nav">
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">News</a></li>
-									<li><a href="#">Community</a></li>
-									<li><a href="#">Career</a></li>
-									<li><a href="#">Blog</a></li>
-								</ul>
-							</div>
-							<div class="col-xs-6">
-								<ul class="list-unstyled footer-nav">
-									<li><a href="#">Press Kit</a></li>
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">Terms</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-									<li><a href="#">Contact Us</a></li>
-								</ul>
-							</div>
-						</div>
-						<!-- END COLUMN 1 -->
-					</div>
-					<div class="col-md-4">
-						<!-- COLUMN 2 -->
-						<div class="social-connect">
-							<h3 class="footer-heading">GET CONNECTED</h3>
-							<ul class="list-inline social-icons">
-								<li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#" class="googleplus-bg"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</div>
-						<br>
-						<div class="payment-method-accepted">
-							<h3 class="footer-heading">WE ACCEPT</h3>
-							<ul class="list-inline payment-method-list">
-								<li>
-									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/visa.png" alt="Visa"></a>
-								</li>
-								<li>
-									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/mastercard.png" alt="Mastercard"></a>
-								</li>
-								<li>
-									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/maestro.png" alt="Maestro"></a>
-								</li>
-								<li>
-									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/amex.png" alt="American Express"></a>
-								</li>
-								<li>
-									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/discover.png" alt="Discover"></a>
-								</li>
-								<li>
-									<a href="#"><img src="${pageContext.request.contextPath}/img/cards/paypal.png" alt="Paypal"></a>
-								</li>
-							</ul>
-						</div>
-						<!-- END COLUMN 2 -->
-					</div>
-					<div class="col-md-4">
-						<!-- COLUMN 3 -->
-						<div class="newsletter">
-							<h3 class="footer-heading">NEWSLETTER</h3>
-							<p>Get the latest update from us by subscribing to our newsletter.</p>
-							<form class="newsletter-form" method="POST">
-								<div class="input-group input-group-lg">
-									<input type="email" class="form-control" name="email" placeholder="youremail@domain.com">
-									<span class="input-group-btn"><button class="btn btn-primary" type="button"><i class="fa fa-spinner fa-spin"></i><span>SUBSCRIBE</span></button>
-									</span>
-								</div>
-								<div class="alert"></div>
-							</form>
-						</div>
-						<!-- END COLUMN 3 -->
-					</div>
-				</div>
-			</div>
-			<!-- COPYRIGHT -->
-			<div class="text-center copyright">
-				&copy;2016 The Develovers. All Rights Reserved.
-			</div>
-			<!-- END COPYRIGHT -->
-		</footer>
-		<!-- END FOOTER -->
-	</div>
-	<!-- END WRAPPER -->
-	<!-- JAVASCRIPTS -->
-	<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/repute-shop.js"></script>
 
-</body>
-
-</html>
