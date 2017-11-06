@@ -8,25 +8,25 @@
 					<div class="item active">
 						<img src="${pageContext.request.contextPath}/img/sliders/slider3-h500.png" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
-							<h2 class="hero-heading">32년 전통 IT 취업교육의 명가</h2>
-							<img src="${pageContext.request.contextPath}/img/logo/repute-logo-nav.png" alt="Repute - Responsive Multipurpose Bootstrap Theme">
-							<a href="#" class="btn btn-lg hero-button">자세히 보기</a>
+							<h2 class="hero-heading">CLEAN &amp; ELEGANT DESIGN</h2>
+							<p class="lead">Giving valuable reputation and credibility to your business</p>
+							<a href="#" class="btn btn-lg hero-button">LEARN MORE</a>
 						</div>
 					</div>
 					<div class="item">
 						<img src="${pageContext.request.contextPath}/img/sliders/slider2-h500.png" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
-							<h2 class="hero-heading">SINCE 1985</h2>
-							<p class="lead">-<br>교육이 다르다<br>쌍용교육센터</p>
-							<a href="#" class="btn btn-lg hero-button">자세히 보기</a>
+							<h2 class="hero-heading">ULTRA RESPONSIVE</h2>
+							<p class="lead">Leave it to the theme, it knows how to deal with screen sizes</p>
+							<a href="#" class="btn btn-lg hero-button">LEARN MORE</a>
 						</div>
 					</div>
 					<div class="item">
 						<img src="${pageContext.request.contextPath}/img/sliders/slider1-h500.png" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
-							<h2 class="hero-heading">고용노동부 우수기관 선정</h2>
-							<p class="lead">고용노동부 기관평가 A등급 우수교육기관<br>강남 (2006~2010, 2012~2015) | 신촌 (2004~2009, 2012)</p>
-							<a href="#" class="btn btn-lg hero-button">자세히 보기</a>
+							<h2 class="hero-heading">EASY TO CUSTOMIZE</h2>
+							<p class="lead">Readable code, well documented and FREE support</p>
+							<a href="#" class="btn btn-lg hero-button">LEARN MORE</a>
 						</div>
 					</div>
 				</div>
@@ -38,13 +38,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-sm-6"><i class="fa fa-cubes "></i>
-						<h3 class="feature-heading">체계적인 취업시스템</h3></div>
+						<h3 class="feature-heading">STRONG STRUCTURE</h3></div>
 					<div class="col-md-3 col-sm-6"><i class="fa fa-globe "></i>
-						<h3 class="feature-heading">글로벌 4차산업혁명 맞춤역량</h3></div>
+						<h3 class="feature-heading">GLOBAL SERVICES</h3></div>
 					<div class="col-md-3 col-sm-6"><i class="fa fa-refresh "></i>
-						<h3 class="feature-heading">산업현장과 트렌드에 맞춘 교육</h3></div>
+						<h3 class="feature-heading">DYNAMIC CHANGE</h3></div>
 					<div class="col-md-3 col-sm-6"><i class="fa fa-rocket "></i>
 						<h3 class="feature-heading">안정된 분야의 전국취업</h3></div>
+						<h3 class="feature-heading">EXPONENTIAL GROWTH</h3></div>
 				</div>
 			</div>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															
 		</div>
