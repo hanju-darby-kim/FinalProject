@@ -42,7 +42,7 @@
 
 function init(){
 	var url = location.href;
-	var confmKey = "U01TX0FVVEgyMDE3MTEwNjEyMzAzOTEwNzQ1Nzk=";
+	var confmKey = "승인키";
 	// resultType항목 추가(2016.10.06)
 	var resultType = "4"; // 도로명주소 검색결과 화면 출력유형, 1 : 도로명, 2 : 도로명+지번, 3 : 도로명+상세건물명, 4 : 도로명+지번+상세건물명
 	var inputYn= "<%=inputYn%>";
@@ -54,7 +54,7 @@ function init(){
 		//document.form.action="http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do"; //모바일 웹인 경우, 인터넷망
 		document.form.submit();
 	}else{
-		/** API 서비스 제공항목 확대 (2017.02)zzz **/
+		/** API 서비스 제공항목 확대 (2017.02) **/
 		opener.jusoCallBack("<%=roadFullAddr%>","<%=roadAddrPart1%>","<%=addrDetail%>", "<%=roadAddrPart2%>","<%=engAddr%>"
 			, "<%=jibunAddr%>","<%=zipNo%>", "<%=admCd%>", "<%=rnMgtSn%>", "<%=bdMgtSn%>", "<%=detBdNmList%>"
 			, "<%=bdNm%>", "<%=bdKdcd%>", "<%=siNm%>", "<%=sggNm%>", "<%=emdNm%>", "<%=liNm%>", "<%=rn%>", "<%=udrtYn%>"
