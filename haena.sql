@@ -12,15 +12,3 @@ SELECT
 
 
 select * from MEMBER;
-
-select * from TEACHER;
-
-select * from MANAGER;
-
-SELECT * FROM COMPANY;
-ALTER TABLE company ADD id VARCHAR2(20);
-ALTER TABLE company ADD pw VARCHAR2(40);
-
-UPDATE company SET id = 'gm', pw = '1111' WHERE seq = 6;
-commit;
-

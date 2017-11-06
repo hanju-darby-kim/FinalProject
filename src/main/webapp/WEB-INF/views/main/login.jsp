@@ -19,14 +19,13 @@
 				<div class="row">
 					<div class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
 						<div class="account-box login-box box-with-help">
-							<h1 style="margin-bottom: 12px;">계정에 로그인하세요.</h1>
+							<h1 style="margin-bottom: 8px;">계정에 로그인하세요</h1>
 							<form class="form-horizontal" role="form" method="post" action="/final/loginok.action">
-								<div class="form-group col-sm-12" style="text-align: center; margin: 10px auto; padding: 0px">
-									<input type="radio" name="target" id="member" value="member" style="margin-right: 3px;" checked><label for="member" style="margin-right: 10px;">회원</label>
-									<input type="radio" name="target" id="manager" value="manager" style="margin-right: 3px;"><label for="manager" style="margin-right: 10px;">매니저</label>
-									<input type="radio" name="target" id="admin" value="admin" style="margin-right: 3px;"><label for="admin" style="margin-right: 10px;">관리자</label>
-									<input type="radio" name="target" id="teacher" value="teacher" style="margin-right: 3px;"><label for="teacher" style="margin-right: 10px;">강사</label>
-									<input type="radio" name="target" id="company" value="company" style="margin-right: 3px;"><label for="company">기업</label>
+								<div class="form-group col-sm-12" style="text-align: left; margin: 10px auto; padding: 0px">
+									<input type="radio" name="target" id="member" value="member" style="margin-right: 3px;" checked><label for="member" style="margin-right: 8px;">회원</label>
+									<input type="radio" name="target" id="manager" value="manager" style="margin-right: 3px;"><label for="manager" style="margin-right: 8px;">매니저</label>
+									<input type="radio" name="target" id="admin" value="admin" style="margin-right: 3px;"><label for="admin" style="margin-right: 8px;">관리자</label>
+									<input type="radio" name="target" id="teacher" value="teacher" style="margin-right: 3px;"><label for="teacher">강사</label>
 								</div>
 								<div class="form-group">
 									<label for="inputId" class="control-label sr-only">ID</label>
