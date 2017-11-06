@@ -7,6 +7,8 @@ package com.test.spring.dto;
 public class CompanyDTO {
 
 	private String seq;
+	private String id;
+	private String pw;
 	private String name;
 	private String website;
 	private String address;
@@ -120,6 +122,18 @@ public class CompanyDTO {
 		this.regDate = regDate;
 	}
 	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPw() {
+		return pw;
+	}
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
 	
 	
 }

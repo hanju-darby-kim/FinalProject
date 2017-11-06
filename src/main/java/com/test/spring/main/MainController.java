@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.spring.dto.CertificationDTO;
-import com.test.spring.dto.MemberDTO;
 
 
 @Controller
@@ -42,7 +41,7 @@ public class MainController {
 	//관리자 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/admin/main.action")
 	public String adminmain() {
-		return "main.manager";
+		return "main.admin";
 	}
 	
 	//예제 블랭크 파일
@@ -57,6 +56,15 @@ public class MainController {
 		return "sign.login";
 	}
 	
+	@RequestMapping(method= {RequestMethod.GET}, value="/logout.action")
+	public String logout(HttpSession session, HttpServletRequest req) {
+		
+		session.invalidate();
+		req.setAttribute("logout", true);
+		
+		return "main.member";
+	}
+	
 	@RequestMapping(method = {RequestMethod.POST}, value="/loginok.action")
 	public String loginok(HttpServletRequest req, HttpSession session, String id, String pw, String target) {
 		
@@ -66,16 +74,18 @@ public class MainController {
 		loginMap.put("id", id);
 		loginMap.put("pw", pw);
 		
-		//인증티켓
-		//target, seq, name, count가 넘어간
+		//로그인 성공하면 인증티켓
+		//target, seq, name, count가 넘어간다.
 		CertificationDTO certification = service.loginok(loginMap);
+
+		session.setAttribute("certification", certification);
+
 		
 		//성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
-		session.setAttribute("certification", certification);
-		
-		if (certification.getCount() != 0) { //성공시
-			return "main.member";
+		if (certification.getCount() != 0) { //성공시	
+			return "main." + certification.getTarget(); //타겟에 따라 다른 메인으로 접속
 		} else { //실패시
+			req.setAttribute("login", false);
 			return "sign.login";
 		}
 		

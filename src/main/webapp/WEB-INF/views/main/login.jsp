@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <c:if test="${login eq false}">
+    	<script>
+    		alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+    	</script>
+    </c:if>
 		<!-- MAIN -->
 		<div class="shop-main login" style="margin: 50px;">
 			<div class="container">
@@ -16,7 +22,7 @@
 							<h1 style="margin-bottom: 8px;">계정에 로그인하세요</h1>
 							<form class="form-horizontal" role="form" method="post" action="/final/loginok.action">
 								<div class="form-group col-sm-12" style="text-align: left; margin: 10px auto; padding: 0px">
-									<input type="radio" name="target" id="member" value="member" style="margin-right: 3px;"><label for="member" style="margin-right: 8px;">회원</label>
+									<input type="radio" name="target" id="member" value="member" style="margin-right: 3px;" checked><label for="member" style="margin-right: 8px;">회원</label>
 									<input type="radio" name="target" id="manager" value="manager" style="margin-right: 3px;"><label for="manager" style="margin-right: 8px;">매니저</label>
 									<input type="radio" name="target" id="admin" value="admin" style="margin-right: 3px;"><label for="admin" style="margin-right: 8px;">관리자</label>
 									<input type="radio" name="target" id="teacher" value="teacher" style="margin-right: 3px;"><label for="teacher">강사</label>
@@ -27,7 +33,7 @@
 										<div class="input-group">
 											<!-- 아이디 입력 -->
 											<span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
-											<input type="email" class="form-control" id="inputId" placeholder="ID" name="id">
+											<input type="text" class="form-control" id="inputId" placeholder="ID" name="id">
 										</div>
 									</div>
 								</div>

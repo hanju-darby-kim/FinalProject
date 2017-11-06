@@ -20,7 +20,6 @@ public class MainDAO {
 	 * @return int 회원 수
 	 */
 	public int loginok(HashMap<String, String> loginMap) {
-		
 		return sql.selectOne("main.loginok", loginMap);
 	}
 

@@ -4,10 +4,17 @@
 
 <!-- MyBatis 사용 시 SQL을 관리하는 파일 -->
 <mapper namespace="main">
-	<select id="loginok" parameterType="map" resultType="com.test.spring.dto.CertificateDTO">
-		SELECT count
+
+	<!-- login한 아이디와 pw가 존재하는지 -->
+	<select id="loginok" parameterType="map" resultType="Integer">
+		SELECT count(*) as count FROM ${target}
+			WHERE id = #{id} AND pw = #{pw}
 	</select>
 	
+	<!-- 존재 확인 후, 인증티켓 발급 -->
+	<select id="getCertification" parameterType="map" resultType="com.test.spring.dto.CertificationDTO">
+		SELECT seq, name FROM ${target} WHERE id = #{id}
+	</select>
 </mapper>
 
 
