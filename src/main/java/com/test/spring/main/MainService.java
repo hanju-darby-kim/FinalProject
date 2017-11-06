@@ -30,10 +30,10 @@ public class MainService implements IMainService {
 			certification.setCount(count);
 			certification.setTarget(loginMap.get("target"));
 			
-			System.out.println(certification.getName());
+			/*System.out.println(certification.getName());
 			System.out.println(certification.getTarget());
 			System.out.println(certification.getSeq());
-			System.out.println(certification.getCount());
+			System.out.println(certification.getCount());*/
 			
 			
 		} else { 

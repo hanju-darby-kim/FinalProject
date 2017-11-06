@@ -30,12 +30,12 @@
 					</ul>
 				</div>
 			</li>
-			<c:if test="${dto.count eq 0}">
+			<c:if test="${certification.count eq 0}">
 			<li><a href="${pageContext.request.contextPath}/login.action">로그인</a></li>
 			<li><a href="${pageContext.request.contextPath}/register.action">회원가입</a></li>
 			</c:if>
-			<c:if test="${target != null}">
-			${name}님, 반갑습니다.
+			<c:if test="${certification.count != 0}">
+			${certification.name}님, 반갑습니다.
 			<li><a href="#">로그아웃</a></li>
 			</c:if>
 		</ul>
