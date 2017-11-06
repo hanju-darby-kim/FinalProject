@@ -15,3 +15,9 @@ select * from MEMBER;
 
 
 select * from student;
+
+select * from TBLADMIN;
+
+select * from manager;
+
+select * from COMPANY;
