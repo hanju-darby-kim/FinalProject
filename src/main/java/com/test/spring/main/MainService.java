@@ -16,9 +16,7 @@ public class MainService implements IMainService {
 	
 	public CertificationDTO loginok(HashMap<String, String> loginMap) {
 		
-		CertificationDTO certification = new HashMap<String, String>();
-		
-		certification = dao.loginok(loginMap);
+		CertificationDTO certification = dao.loginok(loginMap);
 		
 		return certification;
 	}
