@@ -20,7 +20,9 @@ public class MainController {
 	
 	//비회원, 회원 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/main.action")
-	public String main() {
+	public String main(HttpServletRequest req) {
+	
+		req.setAttribute("logout", req.getAttribute("logout"));
 		return "main.member";
 	}
 	
@@ -65,7 +67,8 @@ public class MainController {
 			req.setAttribute("logout", false); //로그아웃한거 아니다(새로고침)
 		}
 		
-		return "main.member";
+		
+		return "forward:/main.action";
 	}
 	
 	@RequestMapping(method = {RequestMethod.POST}, value="/loginok.action")
@@ -83,6 +86,7 @@ public class MainController {
 
 		session.setAttribute("certification", certification);
 		
+		System.out.println("확인 : "+"main"+certification.getTarget());
 		
 		//성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
 		if (certification.getCount() != 0) { //성공시
