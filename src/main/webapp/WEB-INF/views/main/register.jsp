@@ -12,7 +12,10 @@
 				<!-- REGISTER BOX -->
 				<div class="account-box register-box">
 					<h1>Create an account</h1>
-					<form class="form-horizontal" role="form">
+					
+					
+					
+					<form method="POST" action="/final/registerok.action" class="form-horizontal" role="form">
 						<div class="form-group">
 							<label for="username" class="control-label sr-only">Username</label>
 							<div class="col-sm-12">
@@ -69,7 +72,9 @@
 							</div>
 						</div>
 					</form>
-					<p><em>Already have an account?</em> <a href="shop-login.html"><strong>Login</strong></a></p>
+					
+					
+					<p><em>Already have an account? 이미 만들었어요?</em> <a href="login.action"><strong>Login</strong></a></p>
 				</div>
 				<!-- END REGISTER BOX -->
 			</div>
