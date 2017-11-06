@@ -32,7 +32,7 @@
 									<label for="inputId" class="control-label sr-only">ID</label>
 									<div class="col-sm-12">
 										<div class="input-group">
-											<!-- 아이디 입력 -->
+											<!-- 아이디 입력 -->	
 											<span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
 											<input type="text" class="form-control" id="inputId" placeholder="ID" name="id">
 										</div>
