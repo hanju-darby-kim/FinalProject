@@ -48,4 +48,9 @@ public class MainController {
 		return "sign.register";
 	}
 	
+	@RequestMapping(method = {RequestMethod.POST}, value="/registerok.action")
+	public String registerok() {
+		return "sign.registerok";
+	}
+	
 }
