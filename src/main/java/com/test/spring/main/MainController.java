@@ -26,24 +26,6 @@ public class MainController {
 		return "main.member";
 	}
 	
-	//주소 팝업창
-	@RequestMapping(method = {RequestMethod.GET}, value="/jusoPopup.action")
-	public String jusoPopup(HttpServletRequest req) {
-		return "jusoPopup";
-	}
-	//회원가입
-	@RequestMapping(method = {RequestMethod.GET}, value="/register.action")
-	public String register(HttpServletRequest req) {
-		return "register";
-	}
-	
-	//회원가입
-	@RequestMapping(method = {RequestMethod.GET}, value="/registerok.action")
-	public String registerok(HttpServletRequest req, MemberDTO dto) {
-		
-		
-		return "registerok";
-	}
 	
 	//매니저 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/manager/main.action")
@@ -100,14 +82,24 @@ public class MainController {
 		
 	}
 	
+	//회원가입
 	@RequestMapping(method = {RequestMethod.GET}, value="/register.action")
 	public String register() {
 		return "sign.register";
 	}
 	
+	//회원가입
 	@RequestMapping(method = {RequestMethod.POST}, value="/registerok.action")
 	public String registerok() {
 		return "sign.registerok";
 	}
+	
+	//주소 팝업창
+		@RequestMapping(method = {RequestMethod.GET}, value="/jusoPopup.action")
+		public String jusoPopup(HttpServletRequest req) {
+			return "sign.jusoPopup";
+	}
+
+		
 	
 }
