@@ -16,7 +16,7 @@ public class MainDAO {
 	
 	public CertificationDTO loginok(HashMap<String, String> loginMap) {
 		
-		return sql.select("main.loginok", loginMap);
+		return sql.selectOne("main.loginok", loginMap);
 	}
 	
 }
