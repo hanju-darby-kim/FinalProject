@@ -18,9 +18,9 @@
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">취업교육과정 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="page-services.html">프로그래밍 과정</a></li>
-					<li><a href="page-pricing-tables.html">데이터베이스 과정</a></li>
-					<li><a href="page-search-results.html">스마트폰 과정</a></li>
+					<li><a href="${pageContext.request.contextPath}/curProgramming.action">프로그래밍 과정</a></li>
+					<li><a href="${pageContext.request.contextPath}/curDatabase.action">데이터베이스 과정</a></li>
+					<li><a href="${pageContext.request.contextPath}/curSmartphone.action">스마트폰 과정</a></li>
 				</ul></li>
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">예약센터 <i class="fa fa-angle-down"></i></a>
