@@ -5,7 +5,7 @@
 <!-- MyBatis 사용 시 SQL을 관리하는 파일 -->
 <mapper namespace="main">
 	<select id="loginok" parameterType="map" resultType="com.test.spring.dto.CertificateDTO">
-		SELECT id
+		SELECT count
 	</select>
 	
 </mapper>
