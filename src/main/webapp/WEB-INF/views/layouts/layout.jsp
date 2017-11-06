@@ -28,7 +28,7 @@
 				<!-- MAIN NAVIGATION -->
 				<div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
 					<ul class="nav navbar-nav navbar-right">
-					<tiles:insertAttribute name="commonheader"/>
+					<%-- <tiles:insertAttribute name="commonheader"/> --%>
 					<tiles:insertAttribute name="header"/>
 					</ul>
 				</div>
