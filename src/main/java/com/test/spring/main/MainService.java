@@ -30,6 +30,11 @@ public class MainService implements IMainService {
 			certification.setCount(count);
 			certification.setTarget(loginMap.get("target"));
 			
+			//일반 회원 계정이라면 지원서를 작성한 학생 계정인지 알아옴
+			if (certification.getTarget().equals("member")) {
+				
+			}
+			
 			/*System.out.println(certification.getName());
 			System.out.println(certification.getTarget());
 			System.out.println(certification.getSeq());
