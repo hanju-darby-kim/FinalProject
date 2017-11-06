@@ -39,28 +39,6 @@
 					<li><a href="one-page/index.html">One Page</a></li>
 				</ul></li>
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">재직자교육과정 <span
-					class="label label-danger label-main-nav">NEW</span> <i
-					class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="feature-navigation-menu.html">Navigation
-							Menus</a></li>
-					<li><a href="feature-hero-unit.html">Hero Units</a></li>
-					<li><a href="feature-page-header.html">Page Header</a></li>
-					<li><a href="feature-footer.html">Footers</a></li>
-					<li class="dropdown "><a href="#">Email Templates <span
-							class="label label-danger label-main-nav">NEW</span> <i
-							class="fa fa-angle-right"></i></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a
-								href="email-templates/email-template-v1/email-template-v1.html">Email
-									Template v1</a></li>
-							<li><a
-								href="email-templates/email-template-v2/email-template-v2.html">Email
-									Template v2</a></li>
-						</ul></li>
-				</ul></li>
-			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">취업교육과정 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="page-services.html">Service Page</a></li>

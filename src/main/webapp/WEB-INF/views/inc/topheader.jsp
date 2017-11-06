@@ -10,14 +10,14 @@
 					<button type="button" class="btn btn-link dropdown-toggle btn-xs"
 						data-toggle="dropdown">
 						<img
-							src="${pageContext.request.contextPath}/img/flags/United-Kingdom.png"
-							alt="United Kingdom"> United Kingdom <span class="caret"></span>
+							src="${pageContext.request.contextPath}/img/flags/South-Korea.png"
+							alt="South Korea" width="16px"> South Korea <span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu dropdown-menu-right country-selector"
 						role="menu">
 						<li><a href="#"><img
-								src="${pageContext.request.contextPath}/img/flags/United-Kingdom.png"
-								alt="United Kingdom"> United Kingdom</a></li>
+								src="${pageContext.request.contextPath}/img/flags/South-Korea.png"
+								alt="South Korea" width="16px"> South Korea</a></li>
 						<li><a href="#"><img
 								src="${pageContext.request.contextPath}/img/flags/Japan.png"
 								alt="Japan"> Japan</a></li>

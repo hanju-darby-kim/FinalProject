@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: sist26
-=======
-Built-By: 16
->>>>>>> 0e5497b1e8e70f6fd066361ad52a94528ceb1853
 Build-Jdk: 1.8.0_144
 Created-By: Maven Integration for Eclipse
 
