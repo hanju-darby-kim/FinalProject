@@ -33,6 +33,12 @@ public class MainService implements IMainService {
 			//일반 회원 계정이라면 지원서를 작성한 학생 계정인지 알아옴
 			if (certification.getTarget().equals("member")) {
 				
+				boolean isStudent = dao.isStudent(certification.getSeq()); //학생인지
+				
+				if(isStudent) { //학생이라면
+					//dao.getPf(certification.getseq());
+				}
+				
 			}
 			
 			/*System.out.println(certification.getName());

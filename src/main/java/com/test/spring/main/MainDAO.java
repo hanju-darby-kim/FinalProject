@@ -31,5 +31,10 @@ public class MainDAO {
 	public CertificationDTO getCertification(HashMap<String, String> loginMap) {
 		return sql.selectOne("main.getCertification", loginMap);
 	}
+
+	public boolean isStudent(String seq) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 }
