@@ -1,5 +1,7 @@
 package com.test.spring.main;
 
+import java.util.HashMap;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -8,12 +10,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.test.spring.dto.CertificationDTO;
+
 
 @Controller
 public class MainController {
 
 	@Autowired
-	MainService service;
+	IMainService service;
 	
 	//비회원, 회원 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/main.action")
@@ -52,14 +56,22 @@ public class MainController {
 	}
 	
 	@RequestMapping(method = {RequestMethod.POST}, value="/loginok.action")
-	public String loginok(HttpServletRequest req, HttpSession session, String id, String pw) {
+	public String loginok(HttpServletRequest req, HttpSession session, String id, String pw, String target) {
 		
-		int result = service.loginok(id, pw);
+		
+		HashMap<String, String> loginMap = new HashMap<String, String>();
+		loginMap.put("target", target);
+		loginMap.put("id", id);
+		loginMap.put("pw", pw);
+		
+		//인증티켓
+		//target, seq, name, count가 넘어간
+		CertificationDTO certification = service.loginok(loginMap);
 		
 		//성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
-		req.setAttribute("result", result);
+		session.setAttribute("certification", certification);
 		
-		if (result == 1) { //성공시
+		if (certification.getCount() != 0) { //성공시
 			return "main.member";
 		} else { //실패시
 			return "sign.login";

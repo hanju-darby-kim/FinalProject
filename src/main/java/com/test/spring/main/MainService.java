@@ -1,13 +1,27 @@
 package com.test.spring.main;
 
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
-public class MainService {
+import com.test.spring.dto.CertificationDTO;
 
-	public int loginok(String id, String pw) {
+
+@Service
+public class MainService implements IMainService {
+
+	@Autowired
+	private MainDAO dao;
+	
+	public CertificationDTO loginok(HashMap<String, String> loginMap) {
 		
-		return 0;
+		CertificationDTO certification = new HashMap<String, String>();
+		
+		certification = dao.loginok(loginMap);
+		
+		return certification;
 	}
+
 
 }
