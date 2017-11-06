@@ -4,7 +4,7 @@ package com.test.spring.dto;
  * @author 전슬기
  *
  */
-public class TblEduDTO {
+public class EduDTO {
 	
 	private String seq;
 	private String cvSeq;

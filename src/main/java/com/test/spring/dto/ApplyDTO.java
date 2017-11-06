@@ -4,7 +4,7 @@ package com.test.spring.dto;
  * @author 전슬기
  *
  */
-public class TblApplyDTO {
+public class ApplyDTO {
 
 	private String seq;
 	private String fieldSeq;
