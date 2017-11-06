@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class NoticeController {
 
-	@RequestMapping(method = {RequestMethod.GET}, value="/addNotice.action")
+	/**
+	 * 기업 공고 등록
+	 * @return
+	 */
+	@RequestMapping(method = {RequestMethod.GET}, value="/addnotice.action")
 	public String addNotice() {
 		
 		return "company.notice.addnotice";
