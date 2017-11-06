@@ -6,7 +6,7 @@
   
   function goPopup(){
 		// 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
-	    var pop = window.open("/final/main/popup/jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
+	    var pop = window.open("/final/main/popup/jusoPopup.action","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
   }						/*  src/main/webapp/WEB-INF/view/page.jsp
   							/views/popup/jusoPopup.js*/
   /** API 서비스 제공항목 확대 (2017.02) **/
