@@ -3,7 +3,7 @@
 
 
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">관리자메뉴 <i class="fa fa-angle-down"></i></a>
+				data-toggle="dropdown">기업메뉴 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="blog-medium-thumbnail.html">Blog Medium
 							Thumbnail</a></li>
