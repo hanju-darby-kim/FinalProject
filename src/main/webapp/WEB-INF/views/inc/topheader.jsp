@@ -2,6 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- TOPBAR -->
+	<!-- 로그인한 후 접속 시 -->
+	<c:if test="${logout eq true}">
+	<script>
+		alert("로그아웃 되셨습니다.");
+	</script>
+	</c:if>
+	
 	<div class="topbar">
 		<ul class="list-inline top-nav">
 			<li>
@@ -30,13 +37,13 @@
 					</ul>
 				</div>
 			</li>
-			<c:if test="${certification.count eq 0}">
+			<c:if test="${certification.count != 1}">
 			<li><a href="${pageContext.request.contextPath}/login.action">로그인</a></li>
 			<li><a href="${pageContext.request.contextPath}/register.action">회원가입</a></li>
 			</c:if>
-			<c:if test="${certification.count != 0}">
+			<c:if test="${certification.count eq 1}">
 			${certification.name}님, 반갑습니다.
-			<li><a href="#">로그아웃</a></li>
+			<li><a href="${pageContext.request.contextPath}/logout.action">로그아웃</a></li>
 			</c:if>
 		</ul>
 		<div class="searchbox">
