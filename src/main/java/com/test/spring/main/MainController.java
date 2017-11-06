@@ -1,6 +1,7 @@
-package com.test.spring;
+package com.test.spring.main;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -51,13 +52,20 @@ public class MainController {
 	}
 	
 	@RequestMapping(method = {RequestMethod.POST}, value="/loginok.action")
-	public String loginok(HttpServletRequest req, String id, String pw) {
+	public String loginok(HttpServletRequest req, HttpSession session, String id, String pw) {
 		
-		
+		int result = service.loginok(id, pw);
 		
 		//성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
+		req.setAttribute("result", result);
 		
-		return "";
+		if (result == 1) { //성공시
+			return "main.member";
+		} else { //실패시
+			return "sign.login";
+		}
+		
+		
 	}
 	
 	@RequestMapping(method = {RequestMethod.GET}, value="/register.action")
