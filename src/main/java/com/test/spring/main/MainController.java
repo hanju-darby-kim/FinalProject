@@ -82,7 +82,7 @@ public class MainController {
 
 		
 		//성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
-		if (certification.getCount() != 0) { //성공시	
+		if (certification.getCount() != 0) { //성공시
 			return "main." + certification.getTarget(); //타겟에 따라 다른 메인으로 접속
 		} else { //실패시
 			req.setAttribute("login", false);
