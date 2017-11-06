@@ -57,8 +57,13 @@ public class MainController {
 	@RequestMapping(method= {RequestMethod.GET}, value="/logout.action")
 	public String logout(HttpSession session, HttpServletRequest req) {
 		
-		session.invalidate();
-		req.setAttribute("logout", true);
+		System.out.println(session.getAttribute("certification"));
+		if (session.getAttribute("certification") != null) {
+			session.invalidate();
+			req.setAttribute("logout", true);			
+		} else {
+			req.setAttribute("logout", false);
+		}
 		
 		return "main.member";
 	}
