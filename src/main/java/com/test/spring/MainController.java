@@ -1,5 +1,7 @@
 package com.test.spring;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -41,6 +43,14 @@ public class MainController {
 	@RequestMapping(method = {RequestMethod.GET}, value="/login.action")
 	public String login() {
 		return "sign.login";
+	}
+	
+	@RequestMapping(method = {RequestMethod.POST}, value="/loginok.action")
+	public String loginok(HttpServletRequest req, String id, String pw) {
+		
+		//성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
+		
+		return "";
 	}
 	
 	@RequestMapping(method = {RequestMethod.GET}, value="/register.action")
