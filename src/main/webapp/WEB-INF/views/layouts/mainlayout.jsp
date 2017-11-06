@@ -16,23 +16,7 @@
 		<nav class="navbar navbar-default " role="navigation">
 			<div class="container">
 			<tiles:insertAttribute name="topheader"/>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed"
-						data-toggle="collapse" data-target="#main-nav">
-						<span class="sr-only">Toggle Navigation</span> <i class="fa fa-bars"></i>
-					</button>
-					<a href="#" class="navbar-brand navbar-logo navbar-logo-bigger"> <img
-						src="${pageContext.request.contextPath}/img/logo/repute-logo-nav.png"
-						alt="Repute - Responsive Multipurpose Bootstrap Theme">
-					</a>
-				</div>
-				<!-- MAIN NAVIGATION -->
-				<div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
-					<ul class="nav navbar-nav navbar-right">
-					<tiles:insertAttribute name="commonheader"/>
-					<tiles:insertAttribute name="header"/>
-					</ul>
-				</div>
+			<tiles:insertAttribute name="header"/>
 			</div>
 		</nav>
 		<!-- END NAVBAR -->
