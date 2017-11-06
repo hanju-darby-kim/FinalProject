@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<<<<<<< HEAD
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle collapsed"
 			data-toggle="collapse" data-target="#main-nav">
@@ -76,6 +77,9 @@
 					<li><a href="blog-single-full.html">강의장임대</a></li>
 					<li><a href="blog-single-full.html">결제안내</a></li>
 				</ul></li>
+=======
+
+>>>>>>> ec948e2d9fec55fd58195c5a19bd3de8597b4517
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">관리자메뉴 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
@@ -85,6 +89,5 @@
 					<li><a href="blog-single.html">Blog Single</a></li>
 					<li><a href="blog-single-full.html">Blog Single Full</a></li>
 				</ul></li>
-		</ul>
-	</div>
-	<!-- END MAIN NAVIGATION -->
+
+
