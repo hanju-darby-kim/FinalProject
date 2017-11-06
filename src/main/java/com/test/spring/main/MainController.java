@@ -42,7 +42,7 @@ public class MainController {
 	//관리자 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/admin/main.action")
 	public String adminmain() {
-		return "main.manager";
+		return "main.admin";
 	}
 	
 	//예제 블랭크 파일
