@@ -8,6 +8,3 @@
 					<li><a href="blog-medium-thumbnail.html">매니저 근무표 관리</a></li>
 					<li><a href="blog-full-thumbnail.html">재준아 메뉴 이거 쓰면돼</a></li>
 				</ul></li>
-
-
-	
