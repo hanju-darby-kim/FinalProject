@@ -49,7 +49,7 @@
 		<div class="searchbox">
 			<form method="post">
 				<div class="input-group input-group-sm">
-					<input type="text" class="form-control" placeholder="search ...">
+					<input type="text" class="form-control" placeholder="검색 ...">
 					<span class="input-group-btn">
 						<button class="btn btn-default" type="button">
 							<i class="fa fa-search"></i>

@@ -6,7 +6,7 @@
 			<div id="carousel-hero" class="slick-carousel">
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="${pageContext.request.contextPath}/img/sliders/slider3-h500.png" class="img-responsive" alt="Slider Image">
+						<img src="${pageContext.request.contextPath}/img/sliders/slider1-pic1.jpg" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
 							<h2 class="hero-heading">CLEAN &amp; ELEGANT DESIGN</h2>
 							<p class="lead">Giving valuable reputation and credibility to your business</p>
@@ -14,7 +14,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="${pageContext.request.contextPath}/img/sliders/slider2-h500.png" class="img-responsive" alt="Slider Image">
+						<img src="${pageContext.request.contextPath}/img/sliders/slider1-pic2.jpg" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
 							<h2 class="hero-heading">ULTRA RESPONSIVE</h2>
 							<p class="lead">Leave it to the theme, it knows how to deal with screen sizes</p>
@@ -22,7 +22,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="${pageContext.request.contextPath}/img/sliders/slider1-h500.png" class="img-responsive" alt="Slider Image">
+						<img src="${pageContext.request.contextPath}/img/sliders/slider1-pic3.jpeg" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
 							<h2 class="hero-heading">EASY TO CUSTOMIZE</h2>
 							<p class="lead">Readable code, well documented and FREE support</p>
