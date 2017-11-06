@@ -26,6 +26,11 @@ public class MainController {
 		return "main.member";
 	}
 	
+	//주소 팝업창
+	@RequestMapping(method = {RequestMethod.GET}, value="/jusoPopup.action")
+	public String jusoPopup(HttpServletRequest req) {
+		return "jusoPopup";
+	}
 	//회원가입
 	@RequestMapping(method = {RequestMethod.GET}, value="/register.action")
 	public String register(HttpServletRequest req) {
