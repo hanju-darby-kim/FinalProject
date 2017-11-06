@@ -85,7 +85,7 @@
 				<tr>
 					<th>우편번호</th>
 					<td>
-					    <input type="hidden" id="confmKey" name="confmKey" value=""  >
+					    <input type="hidden" id="confmKey" name="confmKey" value="roadFullAddr"  >
 						<input type="text" id="zipNo" name="zipNo" readonly style="width:100px">
 						<input type="button"  value="주소검색" onclick="goPopup();">
 					</td>
