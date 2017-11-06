@@ -59,10 +59,11 @@
 				<c:if test="${certification.target eq 'student'}">
 				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">학생 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="blog-medium-thumbnail.html">출석체크</a></li>
-						<li><a href="blog-full-thumbnail.html">출결확인</a></li>
-						<li><a href="blog-single.html">휴가신청</a></li>
 						<li><a href="blog-single-full.html">지원금확인</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/attcheck.action">출석체크</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결확인</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/vacation.action">휴가신청</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
 					</ul>
 				</li>
 				</c:if>
@@ -80,8 +81,8 @@
 								</ul></li>
 							<li class="dropdown "><a href="#">지원금관리 <i class="fa fa-angle-right"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">지원금확인</a></li>
-									<li><a href="#">지원금신청</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/grantrequest.action">지원금신청</a></li>
 								</ul></li>
 						</ul></li>
 					</ul></li>
@@ -95,8 +96,8 @@
 							<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결변경</a></li>
 							<li class="dropdown "><a href="#">지원금관리 <i class="fa fa-angle-right"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">지원금확인</a></li>
-									<li><a href="#">지원금신청</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/grantrequest.action">지원금신청</a></li>
 								</ul></li>
 						</ul></li>
 					</ul></li>
