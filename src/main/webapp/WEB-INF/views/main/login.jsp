@@ -27,7 +27,7 @@
 										<div class="input-group">
 											<!-- 아이디 입력 -->
 											<span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
-											<input type="email" class="form-control" id="inputId" placeholder="ID" name="id">
+											<input type="text" class="form-control" id="inputId" placeholder="ID" name="id">
 										</div>
 									</div>
 								</div>

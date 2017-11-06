@@ -5,9 +5,10 @@ SELECT
 	member.tel,
 	member.address,
 	member.email,
-	member.GENDER,
-	member.ssn,
-	student.
+	member.gender
 	FROM member
 		INNER JOIN student
 			ON MEMBER.SEQ = STUDENT.SEQ;
+
+
+select * from MEMBER;
