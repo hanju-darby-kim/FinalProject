@@ -4,7 +4,7 @@ package com.test.spring.dto;
  * @author 전슬기
  *
  */
-public class TblLangSkillDTO {
+public class LangSkillDTO {
 
 	private String seq;
 	private String cvSeq;
