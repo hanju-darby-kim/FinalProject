@@ -12,3 +12,6 @@ SELECT
 
 
 select * from MEMBER;
+
+
+select * from student;
