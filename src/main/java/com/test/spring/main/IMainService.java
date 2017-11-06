@@ -1,6 +1,11 @@
 package com.test.spring.main;
 
+import java.util.HashMap;
+
+import com.test.spring.dto.CertificationDTO;
+
 public interface IMainService {
-	 int loginok(String id, String pw);
+	   
+	CertificationDTO loginok(HashMap<String, String> loginMap);
 	
 }
