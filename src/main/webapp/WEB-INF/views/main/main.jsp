@@ -44,9 +44,10 @@
 					<div class="col-md-3 col-sm-6"><i class="fa fa-refresh "></i>
 						<h3 class="feature-heading">DYNAMIC CHANGE</h3></div>
 					<div class="col-md-3 col-sm-6"><i class="fa fa-rocket "></i>
+						<h3 class="feature-heading">안정된 분야의 전국취업</h3></div>
 						<h3 class="feature-heading">EXPONENTIAL GROWTH</h3></div>
 				</div>
-			</div>
+			</div>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															
 		</div>
 		<!-- END MAIN FEATURES -->
 		<!-- INTRO -->
