@@ -12,3 +12,7 @@ SELECT
 
 
 select * from MEMBER;
+
+select * from TEACHER;
+
+select * from MANAGER;
