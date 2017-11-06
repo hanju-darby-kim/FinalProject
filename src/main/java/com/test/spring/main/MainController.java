@@ -57,8 +57,13 @@ public class MainController {
 	@RequestMapping(method= {RequestMethod.GET}, value="/logout.action")
 	public String logout(HttpSession session, HttpServletRequest req) {
 		
-		session.invalidate();
-		req.setAttribute("logout", true);
+		//session 값에 인증티켓이 있다면
+		if (session.getAttribute("certification") != null) {
+			session.invalidate(); //지운다
+			req.setAttribute("logout", true); //로그아웃한거맞다			
+		} else {
+			req.setAttribute("logout", false); //로그아웃한거 아니다(새로고침)
+		}
 		
 		return "main.member";
 	}

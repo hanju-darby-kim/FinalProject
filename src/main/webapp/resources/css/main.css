@@ -5990,8 +5990,8 @@ ul.sidebar-nav ul.submenu li:first-child a {
   color: #fff;
 }
 .main-features i {
-  font-size: 5em;
-  margin-bottom: 28px;
+  font-size: 4em;
+  margin-bottom: 23px;
 }
 .main-features div[class^="col-"]:after {
   content: '';
