@@ -15,6 +15,16 @@
 	<select id="getCertification" parameterType="map" resultType="com.test.spring.dto.CertificationDTO">
 		SELECT seq, name FROM ${target} WHERE id = #{id}
 	</select>
+	
+	<!-- 로그인한 회원이 학생인지 구분 -->
+	<select id="isStudent" parameterType="String" resultType="Integer">
+		SELECT COUNT(*) AS count FROM student WHERE seq = #{seq}
+	</select>
+	
+	<!-- 학생의 pf를 -->
+	<select id="getPf" parameterType="String" resultType="String">
+		SELECT pf FROM student WHERE seq = #{seq}
+	</select>
 </mapper>
 
 

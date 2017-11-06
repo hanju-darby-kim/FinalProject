@@ -35,9 +35,20 @@ public class MainService implements IMainService {
 				
 				boolean isStudent = dao.isStudent(certification.getSeq()); //학생인지
 				
-				if(isStudent) { //학생이라면
-					//dao.getPf(certification.getseq());
+				
+				if(isStudent) { //학생이라면 불합 여부 반환
+					certification.setPf(dao.getPf(certification.getSeq()));
+					
+					//합격한 학생이라면 학생 메뉴가 보여야하니까 target을 student로 변겨ㅓㅇ한다.
+					if (certification.getPf().equals("p")) {
+						certification.setTarget("student");						
+					}
+					
 				}
+				
+				certification.setIsStudent(isStudent); //학생인지 아닌지 저장
+				
+				
 				
 			}
 			
