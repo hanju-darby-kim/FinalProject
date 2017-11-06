@@ -1,5 +1,5 @@
 package com.test.spring.company;
 
-public interface INoticeController {
+public interface INoticeService {
 
 }

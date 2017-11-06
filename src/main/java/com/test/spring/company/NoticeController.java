@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 
 
 @Controller
-public class noticeController {
+public class NoticeController {
 
 	public String addNotice() {
 		
