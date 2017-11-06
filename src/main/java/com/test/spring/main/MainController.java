@@ -77,7 +77,7 @@ public class MainController {
 		CertificationDTO certification = service.loginok(loginMap);
 
 		session.setAttribute("certification", certification);
-
+		
 		
 		//성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
 		if (certification.getCount() != 0) { //성공시
