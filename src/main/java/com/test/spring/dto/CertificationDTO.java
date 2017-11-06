@@ -37,10 +37,10 @@ public class CertificationDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public boolean isStudent() {
+	public boolean getIsStudent() {
 		return isStudent;
 	}
-	public void setStudent(boolean isStudent) {
+	public void setIsStudent(boolean isStudent) {
 		this.isStudent = isStudent;
 	}
 	public String getPf() {

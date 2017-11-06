@@ -31,5 +31,22 @@ public class MainDAO {
 	public CertificationDTO getCertification(HashMap<String, String> loginMap) {
 		return sql.selectOne("main.getCertification", loginMap);
 	}
+
+	public boolean isStudent(String seq) {
+		
+		//로그인한 회원과 동일한 시퀀스가 학생 테이블에 몇개 있는지 
+		int count = sql.selectOne("main.isStudent", seq);
+		
+		if(count != 0) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+
+	public String getPf(String seq) {
+		return sql.selectOne("main.getPf", seq);
+	}
 	
 }

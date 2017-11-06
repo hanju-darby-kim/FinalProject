@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.spring.dto.CertificationDTO;
 
-
 @Controller
 public class MainController {
 
@@ -21,10 +20,11 @@ public class MainController {
 	
 	//비회원, 회원 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/main.action")
-	public String main() {
+	public String main(HttpServletRequest req) {
+	
+		req.setAttribute("logout", req.getAttribute("logout"));
 		return "main.member";
 	}
-	
 	
 	//매니저 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/manager/main.action")
@@ -59,10 +59,16 @@ public class MainController {
 	@RequestMapping(method= {RequestMethod.GET}, value="/logout.action")
 	public String logout(HttpSession session, HttpServletRequest req) {
 		
-		session.invalidate();
-		req.setAttribute("logout", true);
+		//session 값에 인증티켓이 있다면
+		if (session.getAttribute("certification") != null) {
+			session.invalidate(); //지운다
+			req.setAttribute("logout", true); //로그아웃한거맞다			
+		} else {
+			req.setAttribute("logout", false); //로그아웃한거 아니다(새로고침)
+		}
 		
-		return "main.member";
+		
+		return "forward:/main.action";
 	}
 	
 	@RequestMapping(method = {RequestMethod.POST}, value="/loginok.action")
@@ -79,10 +85,11 @@ public class MainController {
 		CertificationDTO certification = service.loginok(loginMap);
 
 		session.setAttribute("certification", certification);
-
+		
+		System.out.println("확인 : "+"main"+certification.getTarget());
 		
 		//성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
-		if (certification.getCount() != 0) { //성공시	
+		if (certification.getCount() != 0) { //성공시
 			return "main." + certification.getTarget(); //타겟에 따라 다른 메인으로 접속
 		} else { //실패시
 			req.setAttribute("login", false);

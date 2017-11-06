@@ -1,192 +1,74 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-	
+
 			<li class="dropdown active"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">센터소개 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li class="active"><a href="#">Home v1</a></li>
-					<li><a href="index-v1_dark-header.html">Home v1 Dark
-							Header</a></li>
-					<li><a href="index-v1_light-footer.html">Home v1 Light
-							Footer</a></li>
-					<li><a href="index-v2.html">Home v2</a></li>
-					<li><a href="index-v2_dark-header.html">Home v2 Dark
-							Header</a></li>
-					<li><a href="index-v3.html">Home v3</a></li>
-					<li><a href="index-v4_fullscreen.html">Home v4 Fullscreen</a></li>
-					<li><a href="index-v5_fullscreen_slider.html">Home v5
-							Fullscreen Slider</a></li>
-					<li class="dropdown "><a href="#">Blog Home <span
-							class="label label-danger label-main-nav">NEW</span> <i
-							class="fa fa-angle-right"></i></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="blog/index-blog-v1.html">Blog Home v1</a></li>
-							<li><a href="blog/index-blog-v2.html">Blog Home v2</a></li>
-						</ul></li>
-					<li><a href="one-page/index.html">One Page</a></li>
-				</ul></li>
-			<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">재직자교육과정 <span
-					class="label label-danger label-main-nav">NEW</span> <i
-					class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="feature-navigation-menu.html">Navigation
-							Menus</a></li>
-					<li><a href="feature-hero-unit.html">Hero Units</a></li>
-					<li><a href="feature-page-header.html">Page Header</a></li>
-					<li><a href="feature-footer.html">Footers</a></li>
-					<li class="dropdown "><a href="#">Email Templates <span
-							class="label label-danger label-main-nav">NEW</span> <i
-							class="fa fa-angle-right"></i></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a
-								href="email-templates/email-template-v1/email-template-v1.html">Email
-									Template v1</a></li>
-							<li><a
-								href="email-templates/email-template-v2/email-template-v2.html">Email
-									Template v2</a></li>
-						</ul></li>
+					<li class="active"><a href="#">개요</a></li>
+					<li><a href="index-v1_dark-header.html">CEO컬럼</a></li>
+					<li><a href="index-v1_light-footer.html">연혁</a></li>
+					<li><a href="index-v2.html">시설 및 장비</a></li>
+					<li><a href="index-v2_dark-header.html">교수진 소개</a></li>
+					<li><a href="index-v3.html">입학안내</a></li>
+					<li><a href="index-v4_fullscreen.html">수상현황</a></li>
+					<li><a href="index-v5_fullscreen_slider.html">찾아오시는 길</a></li>
 				</ul></li>
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">취업교육과정 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="page-services.html">Service Page</a></li>
-					<li><a href="page-pricing-tables.html">Pricing Tables</a></li>
-					<li class="dropdown "><a href="#">Columns <i
-							class="fa fa-angle-right"></i></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="page-left-sidebar.html">Left Sidebar</a></li>
-							<li><a href="page-right-sidebar.html">Right Sidebar</a></li>
-							<li><a href="page-double-sidebar.html">Double Sidebar</a></li>
-						</ul></li>
-					<li><a href="page-search-results.html">Search Result</a></li>
-					<li><a href="page-support.html">Support</a></li>
-					<li><a href="page-faq.html">FAQ</a></li>
-					<li><a href="page-about-us.html">About Us</a></li>
-					<li><a href="page-contacts.html">Contact</a></li>
-					<li><a href="page-privacy.html">Privacy Policy</a></li>
-					<li><a href="page-terms.html">Terms</a></li>
-					<li><a href="page-error.html">Error Page</a></li>
-					<li class="dropdown "><a href="#">Sub Menu Lvl 1 <i
-							class="fa fa-angle-right"></i></a>
-						<ul class="dropdown-menu" role="menu">
-							<li class="dropdown "><a href="#">Sub Menu Lvl 2 <i
-									class="fa fa-angle-right"></i></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Sub Menu Lvl 3</a></li>
-									<li><a href="#">Sub Menu Lvl 3</a></li>
-								</ul></li>
-							<li><a href="#">Sub Menu Lvl 2</a></li>
-							<li><a href="#">Sub Menu Lvl 2</a></li>
-						</ul></li>
+					<li><a href="page-services.html">프로그래밍 과정</a></li>
+					<li><a href="page-pricing-tables.html">데이터베이스 과정</a></li>
+					<li><a href="page-search-results.html">스마트폰 과정</a></li>
 				</ul></li>
-			<li class="dropdown mega-menu"><a href="#"
+			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">예약센터 <i class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu mega-menu-container">
-					<li>
-						<div class="mega-menu-content">
-							<div class="row">
-								<div class="col-md-3">
-									<h5 class="menu-heading">Buttons &amp; Icons</h5>
-									<ul class="list-unstyled list-menu">
-										<li><a href="ui-buttons.html"><i class="fa fa-square"></i>
-												General Buttons</a></li>
-										<li><a href="ui-button-groups.html"><i
-												class="fa fa-clone"></i> Button Groups</a></li>
-										<li><a href="ui-icons.html"><i class="fa fa-asterisk"></i>
-												Icons</a></li>
-									</ul>
-								</div>
-								<div class="col-md-3">
-									<h5 class="menu-heading">Forms</h5>
-									<ul class="list-unstyled list-menu">
-										<li><a href="ui-form-elements-basic.html"><i
-												class="fa fa-check-square"></i> Basic Form Elements</a></li>
-										<li><a href="ui-form-elements-advanced.html"><i
-												class="fa fa-plus-square"></i> Advanced Form Elements</a></li>
-										<li><a href="ui-form-layouts.html"><i
-												class="fa fa-columns"></i> Form Layouts</a></li>
-										<li><a href="ui-form-validation.html"><i
-												class="fa fa-check-circle"></i> Validation</a></li>
-									</ul>
-								</div>
-								<div class="col-md-3">
-									<h5 class="menu-heading">Content Elements</h5>
-									<ul class="list-unstyled list-menu">
-										<li><a href="ui-tabs-accordion.html"><i
-												class="fa fa-list-alt"></i> Tabs &amp; Accordion</a></li>
-										<li><a href="ui-boxed-contents.html"><i
-												class="fa fa-suitcase"></i> Boxed Contents</a></li>
-										<li><a href="ui-numbers-charts.html"><i
-												class="fa fa-pie-chart"></i> Numbers &amp; Charts</a></li>
-										<li><a href="ui-typography.html"><i
-												class="fa fa-font"></i> Typography</a></li>
-									</ul>
-								</div>
-								<div class="col-md-3">
-									<h5 class="menu-heading">Components</h5>
-									<ul class="list-unstyled list-menu">
-										<li><a href="ui-testimonials.html"><i
-												class="fa fa-thumbs-up"></i> Testimonials</a></li>
-										<li><a href="ui-maps.html"><i class="fa fa-map"></i>
-												Maps</a></li>
-										<li><a href="ui-breadcrumbs.html"><i
-												class="fa fa-angle-right"></i> Breadcrumbs</a></li>
-										<li><a href="ui-alerts.html"><i class="fa fa-warning"></i>
-												Alerts</a></li>
-										<li><a href="ui-pagination.html"><i
-												class="fa fa-ellipsis-h"></i> Pagination</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="page-services.html">예약신청</a></li>
 				</ul></li>
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">교육서비스 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
-					<li><a href="portfolio-3-columns.html">Portfolio 3 Columns</a></li>
-					<li><a href="portfolio-2-columns.html">Portfolio 2 Columns</a></li>
-					<li><a href="portfolio-single.html">Portfolio Item</a></li>
+					<li><a href="portfolio-4-columns.html">취업교육</a></li>
+					<li><a href="portfolio-3-columns.html">재직자교육</a></li>
+					<li><a href="portfolio-2-columns.html">기업맞춤교육</a></li>
+					<li><a href="portfolio-single.html">교육컨설팅</a></li>
 				</ul></li>
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">인재추천의뢰 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="shop/index.html">Front Page</a></li>
-					<li><a href="shop/single-product-page.html">Single Product
-							Page</a></li>
-					<li><a href="shop/product-filter-grid.html">Search Result
-							with Filter</a></li>
-					<li><a href="shop/checkout.html">Checkout with Validation</a></li>
-					<li><a href="shop/shop-login.html">Login</a></li>
-					<li><a href="shop/shop-register.html">Register</a></li>
+					<li><a href="shop/index.html">업체등록관리</a></li>
+					<li><a href="shop/single-product-page.html">구인의뢰</a></li>
+					<li><a href="shop/product-filter-grid.html">구인의뢰수정</a></li>
+					<li><a href="shop/checkout.html">SIST수료생장점</a></li>
 				</ul></li>
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">고객센터 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">Blog Medium
-							Thumbnail</a></li>
-					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
-					<li><a href="blog-single.html">Blog Single</a></li>
-					<li><a href="blog-single-full.html">Blog Single Full</a></li>
+					<li><a href="blog-medium-thumbnail.html">공지사항</a></li>
+					<li><a href="blog-full-thumbnail.html">문의게시판</a></li>
+					<li><a href="blog-single.html">취업정보</a></li>
+					<li><a href="blog-single-full.html">후기</a></li>
+					<li><a href="blog-single-full.html">프로젝트</a></li>
+					<li><a href="blog-single-full.html">HRD-Net 수강후기</a></li>
+					<li><a href="blog-single-full.html">FAQ</a></li>
+					<li><a href="blog-single-full.html">강의장임대</a></li>
+					<li><a href="blog-single-full.html">결제안내</a></li>
 				</ul></li>
-			<!-- 학생 전용 메뉴 표출 -->
-			<c:if test="${certification.target == 'student'}">
-			<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">학생 메뉴 <i class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">출석체크</a></li>
-					<li><a href="blog-full-thumbnail.html">출결확인</a></li>
-					<li><a href="blog-single.html">휴가신청</a></li>
-					<li><a href="blog-single-full.html">지원금확인</a></li>
-				</ul></li>
-			</c:if>
-			<!-- 매니저 전용 메뉴 표출 -->
-			<c:if test="${certification.target == 'manager'}">
-			<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
+				
+				<c:if test="${certification.target eq 'student'}">
+				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">학생 메뉴 <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="blog-medium-thumbnail.html">출석체크</a></li>
+						<li><a href="blog-full-thumbnail.html">출결확인</a></li>
+						<li><a href="blog-single.html">휴가신청</a></li>
+						<li><a href="blog-single-full.html">지원금확인</a></li>
+					</ul>
+				</li>
+				</c:if>
+				
+				<c:if test="${certification.target eq 'manager'}">
+				<li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">		
 						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
 						<ul class="dropdown-menu" role="menu">
@@ -203,23 +85,10 @@
 								</ul></li>
 						</ul></li>
 					</ul></li>
-			</c:if>
-			<!-- 강사 전용 메뉴 표출 -->
-			<c:if test="${certification.target == 'teacher'}">
-			<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">강사 메뉴 <i class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">Blog Medium
-							Thumbnail</a></li>
-					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
-					<li><a href="blog-single.html">Blog Single</a></li>
-					<li><a href="blog-single-full.html">Blog Single Full</a></li>
-				</ul></li>
-			</c:if>
-			<!-- 관리자 전용 메뉴 표출 -->
-			<c:if test="${certification.target == 'admin'}">
-			<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
+				</c:if>
+				
+				<c:if test="${certification.target eq 'admin'}">
+				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">		
 						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
 						<ul class="dropdown-menu" role="menu">
@@ -231,11 +100,11 @@
 								</ul></li>
 						</ul></li>
 					</ul></li>
-			</c:if>
-			<!-- 기업 전용 메뉴 표출 -->
-			<c:if test="${certification.target == 'company'}">
-			<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">기업 메뉴 <i class="fa fa-angle-down"></i></a>
+				</c:if>
+				
+				<c:if test="${certification.target eq 'company'}">
+				<li class="dropdown "><a href="#" class="dropdown-toggle"
+				data-toggle="dropdown">기업메뉴 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="blog-medium-thumbnail.html">Blog Medium
 							Thumbnail</a></li>
@@ -243,8 +112,6 @@
 					<li><a href="blog-single.html">Blog Single</a></li>
 					<li><a href="blog-single-full.html">Blog Single Full</a></li>
 				</ul></li>
-			</c:if>
-				
-			
+				</c:if>
 
 	<!-- END MAIN NAVIGATION -->
