@@ -6,10 +6,12 @@ package com.test.spring.dto;
  *
  */
 public class CertificationDTO {
-	private String target;
-	private String seq;
-	private String name;
-	private int count;
+	private String target; //계정 종류(member, student, company, manager, teacher, admin)
+	private String seq; 		//번호
+	private String name; 	//이름
+	private int count; 		//로그인 아이디와 비번이 존재하는지
+	private boolean isStudent; //학생인지(멤버랑 구분 위해)
+	private String pf;	//학생이라면 탈락여부알려줌
 	
 	public int getCount() {
 		return count;
@@ -34,6 +36,18 @@ public class CertificationDTO {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public boolean isStudent() {
+		return isStudent;
+	}
+	public void setStudent(boolean isStudent) {
+		this.isStudent = isStudent;
+	}
+	public String getPf() {
+		return pf;
+	}
+	public void setPf(String pf) {
+		this.pf = pf;
 	}
 
 
