@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.spring.dto.CertificationDTO;
 
-
 @Controller
 public class MainController {
 
@@ -24,7 +23,6 @@ public class MainController {
 	public String main() {
 		return "main.member";
 	}
-	
 	
 	//매니저 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/manager/main.action")
