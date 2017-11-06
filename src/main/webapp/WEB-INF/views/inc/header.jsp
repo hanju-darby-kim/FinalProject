@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-	
 			<li class="dropdown active"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">센터소개 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
@@ -58,39 +57,49 @@
 				</ul></li>
 				
 				<c:if test="${certification.target eq 'student'}">
-				<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">학생메뉴 <i class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">Blog Medium
-							Thumbnail</a></li>
-					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
-					<li><a href="blog-single.html">Blog Single</a></li>
-					<li><a href="blog-single-full.html">Blog Single Full</a></li>
-				</ul></li>
+				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">학생 메뉴 <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="blog-medium-thumbnail.html">출석체크</a></li>
+						<li><a href="blog-full-thumbnail.html">출결확인</a></li>
+						<li><a href="blog-single.html">휴가신청</a></li>
+						<li><a href="blog-single-full.html">지원금확인</a></li>
+					</ul>
+				</li>
 				</c:if>
 				
 				<c:if test="${certification.target eq 'manager'}">
-				<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">매니저메뉴 <i class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">Blog Medium
-							Thumbnail</a></li>
-					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
-					<li><a href="blog-single.html">Blog Single</a></li>
-					<li><a href="blog-single-full.html">Blog Single Full</a></li>
-				</ul></li>
+				<li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">		
+						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
+						<ul class="dropdown-menu" role="menu">
+							<li class="dropdown "><a href="#">출결관리 <i	class="fa fa-angle-right"></i></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결확인</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/vacation.action">휴가관리</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/early_sick.action">조퇴/병가관리</a></li>
+								</ul></li>
+							<li class="dropdown "><a href="#">지원금관리 <i class="fa fa-angle-right"></i></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">지원금확인</a></li>
+									<li><a href="#">지원금신청</a></li>
+								</ul></li>
+						</ul></li>
+					</ul></li>
 				</c:if>
 				
 				<c:if test="${certification.target eq 'admin'}">
-				<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">관리자메뉴 <i class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">Blog Medium
-							Thumbnail</a></li>
-					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
-					<li><a href="blog-single.html">Blog Single</a></li>
-					<li><a href="blog-single-full.html">Blog Single Full</a></li>
-				</ul></li>
+				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">		
+						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결변경</a></li>
+							<li class="dropdown "><a href="#">지원금관리 <i class="fa fa-angle-right"></i></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">지원금확인</a></li>
+									<li><a href="#">지원금신청</a></li>
+								</ul></li>
+						</ul></li>
+					</ul></li>
 				</c:if>
 				
 				<c:if test="${certification.target eq 'company'}">
@@ -104,7 +113,5 @@
 					<li><a href="blog-single-full.html">Blog Single Full</a></li>
 				</ul></li>
 				</c:if>
-				
-			
 
 	<!-- END MAIN NAVIGATION -->

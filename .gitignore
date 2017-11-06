@@ -5,3 +5,6 @@ target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
 *.MF
 target/m2e-wtp/web-resources/META-INF/maven/com.test/spring/pom.properties
 target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+target/m2e-wtp/web-resources/META-INF/maven/com.test/final/pom.properties
+*.properties
+target/m2e-wtp/web-resources/META-INF/maven/com.test/final/pom.properties
