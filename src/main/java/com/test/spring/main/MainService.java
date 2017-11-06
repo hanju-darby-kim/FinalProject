@@ -22,7 +22,8 @@ public class MainService implements IMainService {
 		//해당 id와 pw에 맞는 회원이 몇명인지
 		int count = dao.loginok(loginMap);
 		
-		if(certification.getCount() != 0) { 
+		
+		if(count != 0) { 
 			
 			//0이 아니라면(회원이 존재 한다면) 인증티켓 얻어오기
 			certification = dao.getCertification(loginMap);

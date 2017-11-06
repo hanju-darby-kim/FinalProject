@@ -13,7 +13,7 @@
 	
 	<!-- 존재 확인 후, 인증티켓 발급 -->
 	<select id="getCertification" parameterType="map" resultType="com.test.spring.dto.CertificationDTO">
-		SELECT seq, name FROM ${target} WHERE id = ${id}
+		SELECT seq, name FROM ${target} WHERE id = #{id}
 	</select>
 </mapper>
 

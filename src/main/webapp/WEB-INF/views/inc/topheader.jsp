@@ -30,7 +30,7 @@
 					</ul>
 				</div>
 			</li>
-			<c:if test="${target eq null}">
+			<c:if test="${dto.count eq 0}">
 			<li><a href="${pageContext.request.contextPath}/login.action">로그인</a></li>
 			<li><a href="${pageContext.request.contextPath}/register.action">회원가입</a></li>
 			</c:if>
