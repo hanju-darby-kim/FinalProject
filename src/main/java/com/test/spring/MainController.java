@@ -2,12 +2,17 @@ package com.test.spring;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 @Controller
 public class MainController {
+
+	@Autowired
+	MainService service;
 	
 	//비회원, 회원 메인
 	@RequestMapping(method = {RequestMethod.GET}, value="/main.action")
