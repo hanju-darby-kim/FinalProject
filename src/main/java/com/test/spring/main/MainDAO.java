@@ -33,8 +33,20 @@ public class MainDAO {
 	}
 
 	public boolean isStudent(String seq) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		//로그인한 회원과 동일한 시퀀스가 학생 테이블에 몇개 있는지 
+		int count = sql.selectOne("main.isStudent", seq);
+		
+		if(count != 0) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+
+	public String getPf(String seq) {
+		return sql.selectOne("main.getPf", seq);
 	}
 	
 }
