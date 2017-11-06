@@ -13,8 +13,8 @@
 				<div class="row">
 					<div class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
 						<div class="account-box login-box box-with-help">
-							<h1 style="margin-bottom: 8px;">Log in to your account</h1>
-							<form class="form-horizontal" role="form" method="post">
+							<h1 style="margin-bottom: 8px;">계정에 로그인하세요</h1>
+							<form class="form-horizontal" role="form" method="post" action="/final/loginok.action">
 								<div class="form-group col-sm-12" style="text-align: left; margin: 10px auto; padding: 0px">
 									<input type="radio" name="target" id="member" value="member" style="margin-right: 3px;"><label for="member" style="margin-right: 8px;">회원</label>
 									<input type="radio" name="target" id="manager" value="manager" style="margin-right: 3px;"><label for="manager" style="margin-right: 8px;">매니저</label>
@@ -22,11 +22,12 @@
 									<input type="radio" name="target" id="teacher" value="teacher" style="margin-right: 3px;"><label for="teacher">강사</label>
 								</div>
 								<div class="form-group">
-									<label for="inputEmail" class="control-label sr-only">ID</label>
+									<label for="inputId" class="control-label sr-only">ID</label>
 									<div class="col-sm-12">
 										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-											<input type="email" class="form-control" id="inputEmail" placeholder="ID">
+											<!-- 아이디 입력 -->
+											<span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+											<input type="email" class="form-control" id="inputId" placeholder="ID" name="id">
 										</div>
 									</div>
 								</div>
@@ -34,8 +35,9 @@
 									<label for="inputPassword" class="control-label sr-only">Password</label>
 									<div class="col-sm-12">
 										<div class="input-group">
+											<!-- 비밀번호 입력 -->
 											<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-											<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+											<input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pw">
 										</div>
 									</div>
 								</div>
