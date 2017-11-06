@@ -97,7 +97,7 @@ public class MainController {
 	//주소 팝업창
 		@RequestMapping(method = {RequestMethod.GET}, value="/jusoPopup.action")
 		public String jusoPopup() {
-			return "sign.jusoPopup";
+			return "main/popup/jusoPopup";
 	}
 
 		
