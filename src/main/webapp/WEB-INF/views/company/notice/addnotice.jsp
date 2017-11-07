@@ -4,7 +4,7 @@
 <h2 class="section-heading">공고 등록</h2>
 <form method="POST" action="/final/addnotice.action">
 	<div id="noticeContent">
-		
+		<div id="noticePcdata">회사소개</div>
 		<textarea name="noticeContent	"></textarea>
 	</div>
 </form>
