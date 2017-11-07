@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.spring.dto.CertificationDTO;
+import com.test.spring.dto.MemberDTO;
 
 
 @Service
@@ -64,6 +65,12 @@ public class MainService implements IMainService {
 		}
 		
 		return certification;
+	}
+
+	@Override
+	public int register(MemberDTO dto) {
+		// TODO Auto-generated method stub
+		return dao.register(dto);
 	}
 
 

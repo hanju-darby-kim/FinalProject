@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.test.spring.AddressDTO;
+
 import com.test.spring.dto.CertificationDTO;
 import com.test.spring.dto.MemberDTO;
 
