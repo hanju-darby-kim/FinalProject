@@ -10,6 +10,7 @@ public class NoticeDTO {
 	private String companySeq;
 	private String noticeContent;
 	private String confirm;
+	private String startDate;
 	private String endDate;
 	private String report;
 	
@@ -48,6 +49,12 @@ public class NoticeDTO {
 	}
 	public void setNoticeContent(String noticeContent) {
 		this.noticeContent = noticeContent;
+	}
+	public String getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
 	}
 
 	
