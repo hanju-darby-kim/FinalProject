@@ -38,20 +38,11 @@
 					
 					<form method="POST" action="/final/registerok.action" class="form-horizontal" role="form">
 						<div class="form-group">
-							<label for="username" class="control-label sr-only">Username</label>
+							<label for="id" class="control-label sr-only">id</label>
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user"></i></span>
-									<input type="text" class="form-control" id="username" placeholder="Username">
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="email" class="control-label sr-only">Email</label>
-							<div class="col-sm-12">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<input type="text" class="form-control" id="id" placeholder="id">
 								</div>
 							</div>
 						</div>
@@ -73,6 +64,34 @@
 								</div>
 							</div>
 						</div>
+						<div class="form-group">
+							<label for="username" class="control-label sr-only">Username</label>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span>
+									<input type="text" class="form-control" id="username" placeholder="Username">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email" class="control-label sr-only">Email</label>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" class="form-control" id="email" placeholder="Email">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email" class="control-label sr-only">Email</label>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" class="form-control" id="email" placeholder="Email">
+								</div>
+							</div>
+						</div>
+						
 						
 						
 					<!-- 우편번호검색 -->	
@@ -121,11 +140,35 @@
 								</label>
 							</div>
 						</div>
+						
+						gender : &nbsp;&nbsp;&nbsp;
+						<input type="checkbox" name="chk_info" value="m">man
+						<input type="checkbox" name="chk_info" value="f">lady
+						
+						
+						
+						<div class="form-group">
+							<label for="email" class="control-label sr-only">Email</label>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" class="form-control" id="email" placeholder="Email">
+								</div>
+							</div>
+						</div>
+						
+						
+						
 						<div class="form-group">
 							<div class="col-sm-12">
 								<button type="submit" class="btn btn-primary btn-block"><i class="fa fa-check-circle"></i> Create Account</button>
 							</div>
 						</div>
+						
+						
+						
+						
+						
 					</form>
 					
 					
