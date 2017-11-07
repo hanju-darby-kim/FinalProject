@@ -10,7 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 import com.test.spring.dto.CertificationDTO;
+import com.test.spring.dto.MemberDTO;
 
 @Controller
 public class MainController {
@@ -97,13 +99,18 @@ public class MainController {
 
 	// 회원가입
 	@RequestMapping(method = { RequestMethod.GET }, value = "/register.action")
-	public String register() {
+	public String register(HttpServletRequest req) {
 		return "sign.register";
 	}
 
 	// 회원가입
 	@RequestMapping(method = { RequestMethod.POST }, value = "/registerok.action")
-	public String registerok() {
+	public String registerok(HttpServletRequest req, MemberDTO dto) {
+		
+		int result = service.register(dto);
+		
+		req.setAttribute("result", result);
+		
 		return "sign.registerok";
 	}
 

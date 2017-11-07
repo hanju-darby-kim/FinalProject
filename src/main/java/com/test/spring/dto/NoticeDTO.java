@@ -8,7 +8,7 @@ public class NoticeDTO {
 	
 	private String seq;
 	private String companySeq;
-	private String content;
+	private String noticeContent;
 	private String confirm;
 	private String endDate;
 	private String report;
@@ -24,12 +24,6 @@ public class NoticeDTO {
 	}
 	public void setCompanySeq(String companySeq) {
 		this.companySeq = companySeq;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
 	}
 	public String getConfirm() {
 		return confirm;
@@ -48,6 +42,12 @@ public class NoticeDTO {
 	}
 	public void setReport(String report) {
 		this.report = report;
+	}
+	public String getNoticeContent() {
+		return noticeContent;
+	}
+	public void setNoticeContent(String noticeContent) {
+		this.noticeContent = noticeContent;
 	}
 
 	

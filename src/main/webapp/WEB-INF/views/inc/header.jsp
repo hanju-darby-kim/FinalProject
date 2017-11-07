@@ -89,14 +89,22 @@
 				</c:if>
 				
 				<c:if test="${certification.target eq 'admin'}">
+<<<<<<< HEAD
+				
+				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">관리자 메뉴 <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">	
+						<li><a href="blog-medium-thumbnail.html">매니저 근무표 관리</a></li>
+						<li><a href="blog-full-thumbnail.html">재준아 너 이거써</a></li>
+=======
 				<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">관리자메뉴 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">매니저 근무표 관리</a></li>
+					<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">매니저 근무표 관리</a></li>
 					<li><a href="blog-full-thumbnail.html">재준아 너 이거써</a></li>
 				</ul></li>
 				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">관리자 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">		
+>>>>>>> c7ad0ee8530f72024dc80510c3e0e10eb341d200
 						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="${pageContext.request.contextPath}/admin/attendance.action">출결변경</a></li>
@@ -113,8 +121,7 @@
 				<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">기업메뉴 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">Blog Medium
-							Thumbnail</a></li>
+					<li><a href="${pageContext.request.contextPath}/company/addnotice.action">공고관리</a></li>
 					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
 					<li><a href="blog-single.html">Blog Single</a></li>
 					<li><a href="blog-single-full.html">Blog Single Full</a></li>
