@@ -61,7 +61,7 @@
 					<div class="col-md-9">
 						<!-- BASIC -->
 						
-						<!-- 내용이 들어갈 자리 -->
+						<!-- 내용이 들어갈 자리. 내용에 <h2 class="section-heading">TITLE</h2> 추가하기 -->
 						<tiles:insertAttribute name="core" />
 					</div>
 				</div>
