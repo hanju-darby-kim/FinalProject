@@ -6,6 +6,13 @@ public class MemberDTO {
 	private String id;
 	private String pw;
 	private String name;
+	private String tel;
+	private String address;
+	private String email;
+	private String gender;
+	private String ssn;
+	
+	
 	public String getSeq() {
 		return seq;
 	}
@@ -60,11 +67,6 @@ public class MemberDTO {
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
-	private String tel;
-	private String address;
-	private String email;
-	private String gender;
-	private String ssn;
 	
 	
 }

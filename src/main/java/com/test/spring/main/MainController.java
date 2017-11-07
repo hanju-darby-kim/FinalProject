@@ -112,7 +112,7 @@ public class MainController {
 	}
 	
 	//주소 팝업창
-		@RequestMapping(value="/jusoPopup.action")
+		@RequestMapping(method = {RequestMethod.POST},value="/jusoPopup.action")
 		public String jusoPopup() {
 			return "main/popup/jusoPopup";
 	}
