@@ -19,6 +19,7 @@ body {
   font-size: 13px;
   color: #7b7b7b;
   line-height: 1.6;
+  overflow-y: scroll;
 }
 body.layout-boxed {
   background-image: url('../img/gray_jean.png?1353438653');
