@@ -3,26 +3,10 @@
 <div class="col-md-3">
 	<ul id="sidebar-nav" class="sidebar-nav margin-bottom-30px">
 		<li class="list-group-item"><a
-		 href="${pageContext.request.contextPath}/center/geyo.action">개요</a>
+		 href="${pageContext.request.contextPath}/admin/seulikitest.action">슬기메뉴</a>
 		<li class="list-group-item"><a
-			href="${pageContext.request.contextPath}/center/column.action">CEO 컬럼</a></li>		
-		<li class="list-group-item"><a
-			href="${pageContext.request.contextPath}/center/history.action">연혁</a></li>
+			href="${pageContext.request.contextPath}/center/column.action">ㄷ재준이메누</a></li>		
 		
-		<li class="list-group-item"><a
-			href="${pageContext.request.contextPath}/center/facility.action">시설 및 장비</a></li>
-		
-		<li class="list-group-item"><a
-			href="${pageContext.request.contextPath}/center/teacher.action">교수진 소개</a></li>
-		
-		<li class="list-group-item"><a
-			href="${pageContext.request.contextPath}/center/joininfo.action">입학안내</a></li>
-		
-		<li class="list-group-item"><a
-			href="${pageContext.request.contextPath}/center/awards.action">수상현황</a></li>
-		
-		<li class="list-group-item"><a
-			href="${pageContext.request.contextPath}/center/road.action">찾아오시는 길</a></li>
 		
 	</ul>
 </div>
