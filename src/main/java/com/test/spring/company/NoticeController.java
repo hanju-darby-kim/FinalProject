@@ -27,7 +27,6 @@ public class NoticeController {
 		String seq = ((CertificationDTO)session.getAttribute("certification")).getSeq();
 	
 		String content = service.getContent(seq);
-		System.out.println(content);
 		req.setAttribute("content", content);
 		
 		return "company.notice.addnotice";
