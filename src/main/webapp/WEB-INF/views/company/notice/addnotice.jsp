@@ -2,6 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
+
+
+
 <h2 class="section-heading">공고 등록</h2>
 <form method="POST" action="/final/addnotice.action">
 	<div id="NoticeContentContainter">
@@ -9,40 +12,44 @@
 		<textarea name="noticeContent" class="form-control">${content}</textarea>
 	</div>
 	
-<!-- 	<div id="dateContainer">
+	<div id="dateContainer">
 		<div id="datePcdata">게시일</div>
-		<div class="input-group"> 		
-			<input type="text" id="daterange" class="form-control">
+		<div class="input-group" style="width: 350px;"> 		
+			<input type="text" name="daterange" class="form-control">
 			<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 		</div>
-		<script>
-			$('input[name="daterange"]').daterangepicker(
-				{
-				    locale: {
-				      format: 'YYYY-MM-DD'
-				    }
-				}, 
-				function(start, end, label) {
-				    alert("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-				});
-		</script>
-		 -->
+		
+		
 	</div>
 	<div id="reportContainer">
-		<span id="reportPcdata" class="noticeTitle">종합평가서</span>
-		<input type="checkbox" name="report" id="report">
+		<label class="fancy-checkbox">
+            <input type="checkbox" name="checkbox1">
+            <span>종합평가서</span>
+        </label>
 	</div>
 	
 </form>
 
-<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/plugins/jquery-maskedinput/jquery.masked-input.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/plugins/moment/moment.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-<script src="${pageContext.request.contextPath}/js/plugins/daterangepicker/daterangepicker.js"></script>
-<script src="${pageContext.request.contextPath}/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/repute-scripts.js"></script>
+<!-- Include Required Prerequisites -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+ 
+<script type="text/javascript">
+
+    $('input[name="daterange"]').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+            format: 'YYYY-MM-DD h:mm A'
+        }
+    });
+	
+</script>
 	
 	
 	

@@ -12,6 +12,7 @@ import com.test.spring.dto.CertificationDTO;
 
 
 @Controller
+
 public class NoticeController {
 	
 	@Autowired
