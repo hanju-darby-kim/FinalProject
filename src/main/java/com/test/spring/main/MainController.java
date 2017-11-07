@@ -107,8 +107,8 @@ public class MainController {
 		return "sign.registerok";
 	}
 
-	// 주소 팝업창
-	@RequestMapping(method = { RequestMethod.POST }, value = "/jusoPopup.action")
+	// 회원가입 주소입력 팝업창
+	@RequestMapping( value = "/jusoPopup.action")
 	public String jusoPopup() {
 		return "main/popup/jusoPopup";
 	}

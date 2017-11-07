@@ -39,13 +39,13 @@
 		</nav>
 		<!-- END NAVBAR -->
 		<!-- BREADCRUMBS -->
-		<div class="page-header">
+		<div class="page-header one-column has-background-image">
 			<div class="container">
-				<h1 class="page-title pull-left">BUTTONS</h1>
-				<ol class="breadcrumb">
+				<h1 class="page-title">PAGE HEADER WITH IMAGE BACKGROUND</h1>
+				<ol class="breadcrumb link-accent">
 					<li><a href="#">Home</a></li>
-					<li><a href="#">UI Elements</a></li>
-					<li class="active">Buttons</li>
+					<li><a href="#">Features</a></li>
+					<li class="active">Page Header</li>
 				</ol>
 			</div>
 		</div>
@@ -60,8 +60,9 @@
 					<!-- end submenu -->
 					<div class="col-md-9">
 						<!-- BASIC -->
-						<h2 class="section-heading">TITLE</h2>
+						
 						<!-- 내용이 들어갈 자리 -->
+						<tiles:insertAttribute name="core" />
 					</div>
 				</div>
 			</div>
