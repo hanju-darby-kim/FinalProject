@@ -1,0 +1,5 @@
+package com.test.spring.company;
+
+public class NoticeDAO {
+	
+}

@@ -12,7 +12,7 @@ public class NoticeController {
 	 * 기업 공고 등록
 	 * @return
 	 */
-	@RequestMapping(method = {RequestMethod.GET}, value="/addnotice.action")
+	@RequestMapping(method = {RequestMethod.GET}, value="/company/addnotice.action")
 	public String addNotice() {
 		
 		return "company.notice.addnotice";

@@ -60,8 +60,9 @@
 					<!-- end submenu -->
 					<div class="col-md-9">
 						<!-- BASIC -->
-						<h2 class="section-heading">TITLE</h2>
+						
 						<!-- 내용이 들어갈 자리 -->
+						<tiles:insertAttribute name="core" />
 					</div>
 				</div>
 			</div>
