@@ -42,7 +42,7 @@
 			<li><a href="${pageContext.request.contextPath}/register.action">회원가입</a></li>
 			</c:if>
 			<c:if test="${certification.count eq 1}">
-			${certification.name}님, 반갑습니다.
+			<li>${certification.name}님, 반갑습니다.</li>
 			<li><a href="${pageContext.request.contextPath}/logout.action">로그아웃</a></li>
 			</c:if>
 		</ul>

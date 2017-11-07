@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-	
 			<li class="dropdown active"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">센터소개 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li class="active"><a href="#">개요</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/center/geyo.action">개요</a></li>
 					<li><a href="index-v1_dark-header.html">CEO컬럼</a></li>
 					<li><a href="index-v1_light-footer.html">연혁</a></li>
 					<li><a href="index-v2.html">시설 및 장비</a></li>
@@ -18,9 +17,9 @@
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">취업교육과정 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="page-services.html">프로그래밍 과정</a></li>
-					<li><a href="page-pricing-tables.html">데이터베이스 과정</a></li>
-					<li><a href="page-search-results.html">스마트폰 과정</a></li>
+					<li><a href="${pageContext.request.contextPath}/curProgramming.action">프로그래밍 과정</a></li>
+					<li><a href="${pageContext.request.contextPath}/curDatabase.action">데이터베이스 과정</a></li>
+					<li><a href="${pageContext.request.contextPath}/curSmartphone.action">스마트폰 과정</a></li>
 				</ul></li>
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">예약센터 <i class="fa fa-angle-down"></i></a>
@@ -58,36 +57,59 @@
 				</ul></li>
 				
 				<c:if test="${certification.target eq 'student'}">
-				<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">학생메뉴 <i class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">Blog Medium
-							Thumbnail</a></li>
-					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
-					<li><a href="blog-single.html">Blog Single</a></li>
-					<li><a href="blog-single-full.html">Blog Single Full</a></li>
-				</ul></li>
+				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">학생 메뉴 <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="blog-single-full.html">지원금확인</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/attcheck.action">출석체크</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결확인</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/vacation.action">휴가신청</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
+					</ul>
+				</li>
 				</c:if>
 				
 				<c:if test="${certification.target eq 'manager'}">
-				<li class="dropdown "><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown">매니저메뉴 <i class="fa fa-angle-down"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="blog-medium-thumbnail.html">Blog Medium
-							Thumbnail</a></li>
-					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
-					<li><a href="blog-single.html">Blog Single</a></li>
-					<li><a href="blog-single-full.html">Blog Single Full</a></li>
-				</ul></li>
+				<li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">		
+						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
+						<ul class="dropdown-menu" role="menu">
+							<li class="dropdown "><a href="#">출결관리 <i	class="fa fa-angle-right"></i></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결확인</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/vacation.action">휴가관리</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/early_sick.action">조퇴/병가관리</a></li>
+								</ul></li>
+							<li class="dropdown "><a href="#">지원금관리 <i class="fa fa-angle-right"></i></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/grantrequest.action">지원금신청</a></li>
+								</ul></li>
+						</ul></li>
+					</ul></li>
 				</c:if>
 				
 				<c:if test="${certification.target eq 'admin'}">
+<<<<<<< HEAD
 				<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">관리자메뉴 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="blog-medium-thumbnail.html">매니저 근무표 관리</a></li>
 					<li><a href="blog-full-thumbnail.html">재준아 너 이거써</a></li>
 				</ul></li>
+=======
+				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">		
+						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결변경</a></li>
+							<li class="dropdown "><a href="#">지원금관리 <i class="fa fa-angle-right"></i></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
+									<li><a href="${pageContext.request.contextPath}/student/grantrequest.action">지원금신청</a></li>
+								</ul></li>
+						</ul></li>
+					</ul></li>
+>>>>>>> f58c15a0d1d983d86e23dc2c016bdd1b7c90619b
 				</c:if>
 				
 				<c:if test="${certification.target eq 'company'}">
@@ -101,7 +123,5 @@
 					<li><a href="blog-single-full.html">Blog Single Full</a></li>
 				</ul></li>
 				</c:if>
-				
-			
 
 	<!-- END MAIN NAVIGATION -->
