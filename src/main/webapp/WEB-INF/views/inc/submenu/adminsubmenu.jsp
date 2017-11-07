@@ -8,7 +8,7 @@
 		<li class="list-group-item has-submenu ">
          <a href="#Notice" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">근무표 관리</a>
          <ul id="Notice" class="list-unstyled collapse submenu ">
-            <li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">근무표 작성</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/write.action">근무표 작성</a></li>
             <li><a href="ui-button-groups.html">근무 일지 체크</a></li>
             <li><a href="ui-button-groups.html">직원별 근무 차트</a></li>
          </ul>
