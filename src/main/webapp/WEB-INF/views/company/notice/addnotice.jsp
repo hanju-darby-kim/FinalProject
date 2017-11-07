@@ -7,12 +7,11 @@
 		<div id="contentPcdata" class="noticeTitle">회사소개</div>
 		<textarea name="noticeContent" class="form-control">${content}</textarea>
 	</div>
-	<div id="endDateContainer">
-		<div id="finalDatePcdata" class="noticeTitle">게시종료일</div>
-		<!-- <input type="text" name="endDate" id="datepicker"> -->
-		<div class="input-group">
+	<div id="dateContainer">
+		<div class="input-group"> 
+			<div id="datePcdata">게시일</div>
+			<input type="text" id="daterangepicker" class="form-control">
 			<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-			<input type="text" id="datepicker" class="form-control">
 		</div>
 	</div>
 	<div id="reportContainer">
