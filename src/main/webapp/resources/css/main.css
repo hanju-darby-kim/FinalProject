@@ -158,7 +158,7 @@ hr {
 }
 .page-header.has-background-image {
   padding: 40px 0;
-  background-image: url('../img/page-header-bg.png?1445263834');
+  background-image: url('../img/banner.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -4057,7 +4057,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 /* ----------------------------------------------------- */
 /* HERO UNIT 
-/* Types: slider with animated object, default slider
+/* Types: slider widows: ;th animated object, default slider
 /* ----------------------------------------------------- */
 .hero-unit-animated {
   padding: 100px 0;
@@ -7157,4 +7157,10 @@ ul.nav-categories > li > a:hover {
     float: none;
     width: 100%;
   }
+}
+
+/* 추가 CSS */
+.list-group-item{
+	border:0px;
+	border-bottom:2px solid #ddd;
 }
