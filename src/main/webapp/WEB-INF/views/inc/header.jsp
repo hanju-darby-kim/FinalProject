@@ -63,6 +63,7 @@
 						<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결확인</a></li>
 						<li><a href="${pageContext.request.contextPath}/student/vacation.action">휴가신청</a></li>
 						<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/evaluate.action">동료평가</a></li>
 					</ul>
 				</li>
 				</c:if>
@@ -95,9 +96,9 @@
 					<ul class="dropdown-menu" role="menu">	
 						<li class="dropdown "><a href="#">근무표 관리<i class="fa fa-angle-right"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">근무표 작성</a></li>
-									<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">근무 일지 체크</a></li>
-									<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">직원별 근무 차트</a></li>
+									<li><a href="${pageContext.request.contextPath}/admin/write.action">근무표 작성</a></li>
+									<li><a href="${pageContext.request.contextPath}/admin/write.action">근무 일지 체크</a></li>
+									<li><a href="${pageContext.request.contextPath}/admin/write.action">직원별 근무 차트</a></li>
 						</ul></li>
 						
 						<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">재준이 메뉴랍니다.</a></li>

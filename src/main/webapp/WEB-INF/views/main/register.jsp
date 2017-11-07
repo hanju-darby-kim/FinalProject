@@ -18,6 +18,11 @@
   	$("#roadAddrPart2").val(roadAddrPart2);
   	$("#addrDetail").val(addrDetail);
   	$("#zipNo").val(zipNo);
+  	
+  	alert(roadAddrPart1);
+  	/* var address =  roadAddrPart1 + roadAddrPart2 + addrDetail + zipNo; */
+  	//var address = str.con
+  	alert(address);
   }
   
   </script>
@@ -42,7 +47,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user"></i></span>
-									<input type="text" class="form-control" id="id" placeholder="id">
+									<input type="text" class="form-control" id="id" placeholder="id" name="id">
 								</div>
 							</div>
 						</div>
@@ -51,7 +56,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password" placeholder="Password">
+									<input type="password" class="form-control" id="password" placeholder="Password" name="password">
 								</div>
 							</div>
 						</div>
@@ -60,7 +65,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password2" placeholder="Repeat Password">
+									<input type="password" class="form-control" id="password2" placeholder="Repeat Password" id="password2">
 								</div>
 							</div>
 						</div>
@@ -69,7 +74,16 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user"></i></span>
-									<input type="text" class="form-control" id="username" placeholder="Username">
+									<input type="text" class="form-control" id="username" placeholder="Username" name="username">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="tel" class="control-label sr-only">Tel</label>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-phone"></i></span>
+									<input type="tel" class="form-control" id="tel" placeholder="Tel" name="tel">
 								</div>
 							</div>
 						</div>
@@ -78,16 +92,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" id="email" placeholder="Email">
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="email" class="control-label sr-only">Email</label>
-							<div class="col-sm-12">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<input type="email" class="form-control" id="email" placeholder="Email" name="email">
 								</div>
 							</div>
 						</div>
@@ -141,9 +146,9 @@
 							</div>
 						</div>
 						
-						gender : &nbsp;&nbsp;&nbsp;
+						<!-- gender : &nbsp;&nbsp;&nbsp;
 						<input type="checkbox" name="chk_info" value="m">man
-						<input type="checkbox" name="chk_info" value="f">lady
+						<input type="checkbox" name="chk_info" value="f">lady -->
 						
 						
 						
@@ -151,8 +156,21 @@
 							<label for="email" class="control-label sr-only">Email</label>
 							<div class="col-sm-12">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<span class="input-group-addon"><i class="fa fa-male"></i></span>
+									<select name="gender" class="form-control" id="gender">
+									    <option value="">--Gender--</option>
+									    <option value="m">male</option>
+									    <option value="f">female</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ssn" class="control-label sr-only">SSN</label>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-group"></i></span>
+									<input type="ssn" class="form-control" id="ssn" placeholder="SSN(123456-1234567)">
 								</div>
 							</div>
 						</div>
@@ -165,11 +183,9 @@
 							</div>
 						</div>
 						
-						
-						
-						
-						
 					</form>
+						
+						
 					
 					
 					<p><em>Already have an account? 이미 만들었어요?</em> <a href="login.action"><strong>Login</strong></a></p>
