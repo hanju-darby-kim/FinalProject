@@ -18,10 +18,6 @@
   	$("#roadAddrPart2").val(roadAddrPart2);
   	$("#addrDetail").val(addrDetail);
   	$("#zipNo").val(zipNo);
-  	document.form.roadAddrPart2.value = roadAddrPart2;
-  	document.form.addrDetail.value = addrDetail;
-  	document.form.zipNo.value = zipNo;
-  	pop.close();
   }
   
   </script>
