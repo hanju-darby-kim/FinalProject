@@ -3,5 +3,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <h2 class="section-heading">TITLE</h2>
 <form method="POST" action="/final/addnotice.action">
-	dfdsgsfgsdfgdfg
+	<textarea name=""
 </form>
