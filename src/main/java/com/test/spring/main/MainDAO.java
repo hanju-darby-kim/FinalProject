@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.test.spring.dto.CertificationDTO;
+import com.test.spring.dto.MemberDTO;
 
 @Repository
 public class MainDAO {
@@ -47,6 +48,11 @@ public class MainDAO {
 
 	public String getPf(String seq) {
 		return sql.selectOne("main.getPf", seq);
+	}
+
+	public int register(MemberDTO dto) {
+		// 회원등록
+		return sql.insert("main.register", dto);
 	}
 	
 }
