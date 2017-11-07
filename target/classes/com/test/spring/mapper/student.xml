@@ -4,5 +4,16 @@
 
 <mapper namespace="student">
 
+	<select id="loginCheck" parameterType="com.test.spring.dto.StudentDTO">
+		select count(*) from tblAttendance where date .....
+	</select>
+	
+	<insert id="checkIn">
+		
+	</insert>
+	
+	<update id="checkOut">
+		
+	</update>
 	
 </mapper>
