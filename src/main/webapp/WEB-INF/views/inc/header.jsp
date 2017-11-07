@@ -89,14 +89,12 @@
 				</c:if>
 				
 				<c:if test="${certification.target eq 'admin'}">
-<<<<<<< HEAD
 				<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">관리자메뉴 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="blog-medium-thumbnail.html">매니저 근무표 관리</a></li>
 					<li><a href="blog-full-thumbnail.html">재준아 너 이거써</a></li>
 				</ul></li>
-=======
 				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">		
 						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
@@ -109,7 +107,6 @@
 								</ul></li>
 						</ul></li>
 					</ul></li>
->>>>>>> f58c15a0d1d983d86e23dc2c016bdd1b7c90619b
 				</c:if>
 				
 				<c:if test="${certification.target eq 'company'}">
