@@ -2,12 +2,12 @@
 	pageEncoding="UTF-8"%>
 <div class="col-md-3">
 	<ul id="sidebar-nav" class="sidebar-nav margin-bottom-30px">
-<<<<<<< HEAD
+
 		<li class="list-group-item"><a
 		 href="${pageContext.request.contextPath}/center/geyo.action">개요</a></li>
 		<li class="list-group-item"><a
 			href="${pageContext.request.contextPath}/center/column.action">CEO 컬럼</a></li>		
-=======
+
 		<li class="list-group-item has-submenu ">
 			<a href="#Notice" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">공고등록</a>
 			<ul id="Notice" class="list-unstyled collapse submenu ">
@@ -16,7 +16,7 @@
 			</ul>
 		</li>
 		<li class="list-group-item"><a href="${pageContext.request.contextPath}/center/column.action">CEO 컬럼</a></li>		
->>>>>>> b2427e2bedfde72307ed231ee7fe7acd8e484034
+
 		<li class="list-group-item"><a
 			href="${pageContext.request.contextPath}/center/history.action">연혁</a></li>
 		
