@@ -116,7 +116,6 @@ public class MainController {
 		public String jusoPopup() {
 			return "main/popup/jusoPopup";
 	}
-
 		
-	
+
 }
