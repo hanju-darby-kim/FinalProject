@@ -5,6 +5,7 @@
 <form method="POST" action="/final/addnotice.action">
 	<div id="noticeContent">
 		<div id="noticePcdata">회사소개</div>
-		<textarea name="noticeContent	"></textarea>
+		<textarea name="noticeContent" class="form-control"></textarea>
 	</div>
+	<div></div>
 </form>
