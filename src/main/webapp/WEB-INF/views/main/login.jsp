@@ -57,7 +57,7 @@
 									</div>
 								</div>
 							</form>
-							<p><em>아직 계정이 없으신가요?</em> <a href="shop-register.html"><strong>회원가입</strong></a></p>
+							<p><em>아직 계정이 없으신가요?</em> <a href="${pageContext.request.contextPath}/register.action"><strong>회원가입</strong></a></p>
 							<button type="button" class="btn btn-link btn-login-help"><i class="fa fa-question-circle" title="Click for help"></i></button>
 						</div>
 					</div>

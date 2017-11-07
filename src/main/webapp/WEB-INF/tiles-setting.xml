@@ -15,12 +15,6 @@
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>	<!-- 푸터 -->
    </definition>
 
-
-
-
-
-
-
     <!-- main 레이아웃 관련 -->
     <!-- main.student.main -->
    <definition name="main.*" template="/WEB-INF/views/layouts/mainlayout.jsp"> 
@@ -39,7 +33,7 @@
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
    
-   
+ 
    <!-- 왼쪽에 메뉴가 있는 페이지 (사용자.기능.파일이름)으로 기재 -->
     <definition name="*.*.*" template="/WEB-INF/views/layouts/layout.jsp"> 
       <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
