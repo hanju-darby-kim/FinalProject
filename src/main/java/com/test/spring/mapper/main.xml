@@ -25,6 +25,14 @@
 	<select id="getPf" parameterType="String" resultType="String">
 		SELECT pf FROM student WHERE seq = #{seq}
 	</select>
+	
+	<!-- 회원가입 -->
+	<insert id="register" parameterType="dto">
+		insert into member
+			 values (memberSeq.nextval, #{id}, #{pw}, #{name}, #{tel}, #{address}, #{email}, #{gender}, #{ssn})
+	</insert>
+	
+	
 </mapper>
 
 
