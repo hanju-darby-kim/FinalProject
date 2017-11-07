@@ -1,18 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+
 <h2 class="section-heading">공고 등록</h2>
 <form method="POST" action="/final/addnotice.action">
 	<div id="NoticeContentContainter">
 		<div id="contentPcdata" class="noticeTitle">회사소개</div>
 		<textarea name="noticeContent" class="form-control">${content}</textarea>
 	</div>
+	
 	<div id="dateContainer">
-		<div class="input-group"> 
-			<div id="datePcdata">게시일</div>
+		<div id="datePcdata">게시일</div>
+		<div class="input-group"> 		
 			<input type="text" id="daterangepicker" class="form-control">
 			<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 		</div>
+		
 	</div>
 	<div id="reportContainer">
 		<span id="reportPcdata" class="noticeTitle">종합평가서</span>
