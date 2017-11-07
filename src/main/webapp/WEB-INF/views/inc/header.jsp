@@ -89,11 +89,20 @@
 				</c:if>
 				
 				<c:if test="${certification.target eq 'admin'}">
+
 				
 				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">관리자 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">	
-						<li><a href="blog-medium-thumbnail.html">매니저 근무표 관리</a></li>
-						<li><a href="blog-full-thumbnail.html">재준아 너 이거써</a></li>
+						<li class="dropdown "><a href="#">근무표 관리<i class="fa fa-angle-right"></i></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">근무표 작성</a></li>
+									<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">근무 일지 체크</a></li>
+									<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">직원별 근무 차트</a></li>
+						</ul></li>
+						
+						<li><a href="${pageContext.request.contextPath}/admin/seulikitest.action">재준이 메뉴랍니다.</a></li>
+					</ul></li>
+
 						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="${pageContext.request.contextPath}/admin/attendance.action">출결변경</a></li>
@@ -103,7 +112,6 @@
 									<li><a href="${pageContext.request.contextPath}/admin/grantrequest.action">지원금신청</a></li>
 								</ul></li>
 						</ul></li>
-					</ul></li>
 				</c:if>
 				
 				<c:if test="${certification.target eq 'company'}">
