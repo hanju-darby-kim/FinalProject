@@ -7,7 +7,6 @@ public class FieldDTO {
 	private String fieldContent;
 	private String hireType;
 	private String location;
-	
 	private int salary;
 	private String careerType;
 	
