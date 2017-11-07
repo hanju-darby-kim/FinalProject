@@ -112,9 +112,7 @@ public class MainController {
 	public String jusoPopup() {
 		return "main/popup/jusoPopup";
 	}
-<<<<<<< HEAD
-		
-=======
+
 
 	// 센터소개 -> 개요
 	@RequestMapping(method = { RequestMethod.GET }, value = "/center/geyo.action")
@@ -163,6 +161,5 @@ public class MainController {
 	public String centerRoad() {
 		return "center.road.view";
 	}
->>>>>>> f58c15a0d1d983d86e23dc2c016bdd1b7c90619b
 
 }
