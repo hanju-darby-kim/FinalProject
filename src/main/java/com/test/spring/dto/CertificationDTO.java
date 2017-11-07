@@ -49,6 +49,12 @@ public class CertificationDTO {
 	public void setPf(String pf) {
 		this.pf = pf;
 	}
+	
+	@Override
+	public String toString() {
+		System.out.println(target + " " + seq + " " + name + " " + count + " " + isStudent + " " + pf);
+		return "";
+	}
 
 
 }

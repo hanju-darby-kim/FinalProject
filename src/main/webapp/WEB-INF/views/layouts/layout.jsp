@@ -39,16 +39,7 @@
 		</nav>
 		<!-- END NAVBAR -->
 		<!-- BREADCRUMBS -->
-		<div class="page-header one-column has-background-image">
-			<div class="container">
-				<h1 class="page-title">PAGE HEADER WITH IMAGE BACKGROUND</h1>
-				<ol class="breadcrumb link-accent">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Features</a></li>
-					<li class="active">Page Header</li>
-				</ol>
-			</div>
-		</div>
+		<tiles:insertAttribute name="imgheader"/>
 		<!-- END BREADCRUMBS -->
 		<!-- PAGE CONTENT -->
 		<div class="page-content">
