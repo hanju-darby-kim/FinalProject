@@ -39,6 +39,7 @@
       <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
       <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
       <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>
+      <put-attribute name="submenu" value="/WEB-INF/views/inc/submenu/{1}submenu.jsp"/>
       <put-attribute name="core" value="/WEB-INF/views/{1}/{2}/{3}.jsp"/>
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
@@ -48,6 +49,7 @@
       <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
       <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
       <put-attribute name="header" value="/WEB-INF/views/inc/header"/>
+      <put-attribute name="submenu" value="/WEB-INF/views/inc/{1}submenu.jsp"/>
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
    
