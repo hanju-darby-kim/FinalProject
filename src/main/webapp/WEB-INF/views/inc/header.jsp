@@ -63,6 +63,7 @@
 						<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결확인</a></li>
 						<li><a href="${pageContext.request.contextPath}/student/vacation.action">휴가신청</a></li>
 						<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
+						<li><a href="${pageContext.request.contextPath}/student/evaluate.action">동료평가</a></li>
 					</ul>
 				</li>
 				</c:if>
