@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class StudentController {
 
-	@Autowired
+	
 	IService service;
 	
 	@RequestMapping(method= {RequestMethod.GET}, value="/student/attendance.action")

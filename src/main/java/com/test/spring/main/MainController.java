@@ -20,7 +20,9 @@ public class MainController {
 
 	// 비회원, 회원 메인
 	@RequestMapping(method = { RequestMethod.GET }, value = "/main.action")
-	public String main() {
+	public String main(HttpServletRequest req) {
+
+		req.setAttribute("logout", req.getAttribute("logout"));
 		return "main.member";
 	}
 
@@ -64,7 +66,7 @@ public class MainController {
 			req.setAttribute("logout", false); // 로그아웃한거 아니다(새로고침)
 		}
 
-		return "main.member";
+		return "forward:/main.action";
 	}
 
 	@RequestMapping(method = { RequestMethod.POST }, value = "/loginok.action")
@@ -80,6 +82,8 @@ public class MainController {
 		CertificationDTO certification = service.loginok(loginMap);
 
 		session.setAttribute("certification", certification);
+
+		System.out.println("확인 : " + "main" + certification.getTarget());
 
 		// 성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
 		if (certification.getCount() != 0) { // 성공시
@@ -103,18 +107,59 @@ public class MainController {
 		return "sign.registerok";
 	}
 
-	// 주소 팝업창
-	@RequestMapping(method = { RequestMethod.GET }, value = "/jusoPopup.action")
+	// 회원가입 주소입력 팝업창
+	@RequestMapping( value = "/jusoPopup.action")
 	public String jusoPopup() {
 		return "main/popup/jusoPopup";
 	}
 
-	// 센터소개 - 개요
+
+	// 센터소개 -> 개요
 	@RequestMapping(method = { RequestMethod.GET }, value = "/center/geyo.action")
 	public String centerGeyo() {
 		return "center.geyo.view";
 	}
 	
-
+	// 센터소개 -> CEO컬럼
+	@RequestMapping(method = { RequestMethod.GET }, value = "/center/column.action")
+	public String centerColumn() {
+		return "center.colmun.view";
+	}
+	
+	// 센터소개 -> 연혁
+	@RequestMapping(method = { RequestMethod.GET }, value = "/center/history.action")
+	public String centerHistory() {
+		return "center.history.view";
+	}
+	
+	// 센터소개 -> 시설및장비
+	@RequestMapping(method = { RequestMethod.GET }, value = "/center/facility.action")
+	public String centerFacility() {
+		return "center.facility.view";
+	}
+	
+	// 센터소개 -> 교수진소개
+	@RequestMapping(method = { RequestMethod.GET }, value = "/center/teacher.action")
+	public String centerTeacher() {
+		return "center.teacher.view";
+	}
+	
+	// 센터소개 -> 입학안내
+	@RequestMapping(method = { RequestMethod.GET }, value = "/center/joininfo.action")
+	public String centerJoininfo() {
+		return "center.joininfo.view";
+	}
+	
+	// 센터소개 -> 수상현황
+	@RequestMapping(method = { RequestMethod.GET }, value = "/center/awards.action")
+	public String centerAwards() {
+		return "center.awards.view";
+	}
+	
+	// 센터소개 -> 찾아오시는길
+	@RequestMapping(method = { RequestMethod.GET }, value = "/center/road.action")
+	public String centerRoad() {
+		return "center.road.view";
+	}
 
 }
