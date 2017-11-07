@@ -9,24 +9,42 @@
 		<textarea name="noticeContent" class="form-control">${content}</textarea>
 	</div>
 	
-	<div id="dateContainer">
+<!-- 	<div id="dateContainer">
 		<div id="datePcdata">게시일</div>
 		<div class="input-group"> 		
-			<input type="text" id="daterangepicker" class="form-control">
+			<input type="text" id="daterange" class="form-control">
 			<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 		</div>
-		
+		<script>
+			$('input[name="daterange"]').daterangepicker(
+				{
+				    locale: {
+				      format: 'YYYY-MM-DD'
+				    }
+				}, 
+				function(start, end, label) {
+				    alert("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+				});
+		</script>
+		 -->
 	</div>
 	<div id="reportContainer">
 		<span id="reportPcdata" class="noticeTitle">종합평가서</span>
 		<input type="checkbox" name="report" id="report">
 	</div>
+	
 </form>
-	<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/plugins/jquery-maskedinput/jquery.masked-input.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/plugins/moment/moment.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-	<script src="${pageContext.request.contextPath}/js/plugins/daterangepicker/daterangepicker.js"></script>
-	<script src="${pageContext.request.contextPath}/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/repute-scripts.js"></script>
+
+<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/plugins/jquery-maskedinput/jquery.masked-input.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/plugins/moment/moment.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+<script src="${pageContext.request.contextPath}/js/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="${pageContext.request.contextPath}/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/repute-scripts.js"></script>
+	
+	
+	
+	
+	
