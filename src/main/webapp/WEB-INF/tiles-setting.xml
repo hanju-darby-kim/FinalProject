@@ -33,6 +33,7 @@
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
    
+   
  <!-- company.notice.addnotice -->
    <!-- 왼쪽에 메뉴가 있는 페이지 (사용자.기능.파일이름)으로 기재 -->
     <definition name="*.*.*" template="/WEB-INF/views/layouts/layout.jsp"> 
