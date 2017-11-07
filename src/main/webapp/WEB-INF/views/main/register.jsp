@@ -18,6 +18,11 @@
   	$("#roadAddrPart2").val(roadAddrPart2);
   	$("#addrDetail").val(addrDetail);
   	$("#zipNo").val(zipNo);
+  	
+  	alert(roadAddrPart1);
+  	/* var address =  roadAddrPart1 + roadAddrPart2 + addrDetail + zipNo; */
+  	//var address = str.con
+  	alert(address);
   }
   
   </script>
@@ -178,11 +183,9 @@
 							</div>
 						</div>
 						
-						
-						
-						
-						
 					</form>
+						
+						
 					
 					
 					<p><em>Already have an account? 이미 만들었어요?</em> <a href="login.action"><strong>Login</strong></a></p>
