@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.test.spring.dto.AreaTypeDTO;
 import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.TestTypeDTO;
@@ -45,6 +46,12 @@ public class NoticeService implements INoticeService {
 	@Override
 	public int addNoticeOk(String seq) {
 		return 0;
+	}
+
+
+	@Override
+	public List<AreaTypeDTO> getAreaType() {
+		return dao.getAreaType();
 	}
 
 	

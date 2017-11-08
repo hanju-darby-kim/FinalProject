@@ -109,8 +109,8 @@
 		<div id="areaTypeContainer">
 			<div class="noticeTitle">근무지역</div>
 			<select>
-				<c:forEach items="${careertypelist}" var="careertypedto">
-				<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
+				<c:forEach items="${areatypelist}" var="areatypedto">
+				<option value="${areatypedto.seq}">${areatypedto.area}</option>
 				</c:forEach>
 			</select>
 		</div>

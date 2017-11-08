@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.test.spring.dto.AreaTypeDTO;
 import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.TestTypeDTO;
@@ -30,6 +31,10 @@ public class NoticeDAO {
 
 	public List<CareerTypeDTO> getCareerType() {
 		return sql.selectList("notice.getCareerType");
+	}
+
+	public List<AreaTypeDTO> getAreaType() {
+		return sql.selectList("notice.getAreaType");
 	}
 	
 }

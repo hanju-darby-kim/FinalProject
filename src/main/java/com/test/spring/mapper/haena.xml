@@ -21,6 +21,10 @@
 		SELECT * FROM careerType
 	</select>
 	
+	<select id="getAreaType" resultType="com.test.spring.dto.AreaTypeDTO">
+		SELECT * FROM tblAreaType
+	</select>
+	
 </mapper>
 
 

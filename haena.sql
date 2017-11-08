@@ -71,4 +71,7 @@ ALTER TABLE TBLFIELD MODIFY (LOCATION REFERENCES TBLAREATYPE(SEQ));
 
 alter table TBLFIELD rename column location to areaTypeSeq;
 
+
+select * from TBLAREATYPE;
+
 COMMIT;
