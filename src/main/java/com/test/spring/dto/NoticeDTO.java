@@ -13,6 +13,7 @@ public class NoticeDTO {
 	private String startDate;
 	private String endDate;
 	private String report;
+	private String extra;
 	
 	public String getSeq() {
 		return seq;
@@ -56,6 +57,14 @@ public class NoticeDTO {
 	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
+	public String getExtra() {
+		return extra;
+	}
+	public void setExtra(String extra) {
+		this.extra = extra;
+	}
+	
+	
 
 	
 	

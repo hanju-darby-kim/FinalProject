@@ -7,29 +7,97 @@
 
 <h2 class="section-heading">공고 등록</h2>
 <form method="POST" action="/final/addnotice.action">
-	<div id="NoticeContentContainter">
-		<div id="contentPcdata" class="noticeTitle">회사소개</div>
-		<textarea name="noticeContent" class="form-control">${content}</textarea>
-	</div>
-	
-	<div id="dateContainer">
-		<div id="datePcdata">게시일</div>
-		<div class="input-group" style="width: 350px;"> 		
-			<input type="text" name="daterange" class="form-control">
-			<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+	<div id="noticeContiner">
+		<div id="NoticeContentContainter">
+			<div id="contentPcdata" class="noticeTitle">회사소개</div>
+			<textarea name="noticeContent" class="form-control">${content}</textarea>
 		</div>
 		
+		<!-- 게시 시작일과 게시 종료일 입력 -->
+		<div id="dateContainer">
+			<div id="datePcdata" class="">게시일</div>
+			<div class="input-group" style="width: 350px;"> 		
+				<input type="text" name="startEndDate" class="form-control">
+				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+			</div>
+		</div>
 		
+		<!-- 종합평가서 여부 -->
+		<div id="reportContainer">
+			<label class="fancy-checkbox">
+	            <input type="checkbox" name="report" value="y">
+	            <span>종합평가서</span>
+	        </label>
+		</div>
+		
+		<!-- 면접 전형 -->
+		<div id="testContainer">
+			<div  class="noticeTitle">면접 전형</div>
+
+			<div class="testSubContainer">
+				<div class="testPcdata">1차</div>
+				<select>
+					<c:forEach items="${testlist}" var="testdto">
+					<option value="${testdto.seq}">${testdto.testType}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div class="testSubContainer">
+				<div class="testPcdata">2차</div>
+				<select disabled>
+					<c:forEach items="${testlist}" var="testdto">
+					<option value="${testdto.seq}">${testdto.testType}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div class="testSubContainer">
+				<div class="testPcdata">3차</div>
+				<select disabled>
+					<c:forEach items="${testlist}" var="testdto">
+					<option value="${testdto.seq}">${testdto.testType}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div class="testSubContainer">
+				<div class="testPcdata">4차</div>
+				<select disabled>
+					<c:forEach items="${testlist}" var="testdto">
+					<option value="${testdto.seq}">${testdto.testType}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div class="testSubContainer">
+				<div class="testPcdata">5차</div>
+				<select disabled>
+					<c:forEach items="${testlist}" var="testdto">
+					<option value="${testdto.seq}">${testdto.testType}</option>
+					</c:forEach>
+				</select>
+			</div>
+			<button>추가</button> <button>삭제</button>
+		</div>
 	</div>
-	<div id="reportContainer">
-		<label class="fancy-checkbox">
-            <input type="checkbox" name="checkbox1">
-            <span>종합평가서</span>
-        </label>
+	<!-- 지원분야 관련 -->
+	<div id="fieldContainer">
+		<div id="fieldNameContainer">
+			<div id="testPcdata" class="noticeTitle">지원분야명</div>
+			<input type="text" name="fieldName">
+		</div>
+		
+		<div id="hireTypeSeq"></div>
 	</div>
+	
+	
+	
+	
 	
 </form>
 
+<!-- dateRange -->
 <!-- Include Required Prerequisites -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -41,7 +109,7 @@
  
 <script type="text/javascript">
 
-    $('input[name="daterange"]').daterangepicker({
+    $('input[name="startEndDate"]').daterangepicker({
         timePicker: true,
         timePickerIncrement: 30,
         locale: {

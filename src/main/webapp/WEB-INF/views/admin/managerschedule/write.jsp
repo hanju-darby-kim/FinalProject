@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-
 <!-- 참고 : <link rel="stylesheet" href="/memo/css/bootstrap.css"> -->
 <link href='${pageContext.request.contextPath}/css/fullcalendar.min.css' rel='stylesheet' />
 <link href='${pageContext.request.contextPath}/css/fullcalendar.print.min.css' rel='stylesheet' />
