@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TestController {	
 	
 	/**
-	 * 근무표 테스트
+	 * 테스트 해봅시다
 	 * @return
 	 */
 	@RequestMapping(method = {RequestMethod.GET}, value="/admin/seulikitest.action")
