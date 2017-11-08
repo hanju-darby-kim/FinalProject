@@ -4,6 +4,7 @@ public class TestByNoticeDTO {
 	private String seq;
 	private String noticeSeq;
 	private String testTypeSeq;
+	
 	public String getSeq() {
 		return seq;
 	}
