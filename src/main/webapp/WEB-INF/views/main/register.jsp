@@ -20,7 +20,7 @@
   	$("#zipNo").val(zipNo);
   	
   	alert(roadAddrPart1);
-  	/* var address =  roadAddrPart1 + roadAddrPart2 + addrDetail + zipNo; */
+  	var address =  roadAddrPart1 + roadAddrPart2 + addrDetail + zipNo;
   	//var address = str.con
   	alert(address);
   }
