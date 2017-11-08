@@ -1,6 +1,6 @@
 package com.test.spring.jaejun;
 
-import java.awt.List;
+import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
@@ -17,11 +17,8 @@ public class JJCurriDAO {
 	}
 	
 	public List<CurTypeDTO> curType() {
-		
-		return sql.selectList("JJCurri.curType");
+		return sql.selectList("JJCurri.getCurType");
 	}
-	
-	
 	
 }
 

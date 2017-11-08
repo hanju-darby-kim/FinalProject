@@ -1,6 +1,6 @@
 package com.test.spring.jaejun;
 
-import java.awt.List;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +15,8 @@ public class JJCurriService implements IJJCurriService {
 	
 	@Override
 	public List<CurTypeDTO> curType() {
-		
+		System.out.println("여기까지?");
 		return dao.curType();
 	}
-	
-	
 	
 }

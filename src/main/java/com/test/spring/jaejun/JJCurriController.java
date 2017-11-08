@@ -1,6 +1,6 @@
 package com.test.spring.jaejun;
 
-import java.awt.List;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.test.spring.dto.CurTypeDTO;
 import com.test.spring.dto.MenuCategoryDTO;
 
 @Controller
@@ -53,8 +54,9 @@ public class JJCurriController {
 		
 		req.setAttribute("menuCategory", menuCategory);
 		
-		List<com.test.spring.dto.CurTypeDTO> list = service.curType();
-		req.setAttribute("list1", list);
+		List<CurTypeDTO> list = service.curType();
+		//System.out.println("리스트 세개?" + list.size());
+		req.setAttribute("list", list);
 		
 		return "admin.curriculum.list";
 	}
