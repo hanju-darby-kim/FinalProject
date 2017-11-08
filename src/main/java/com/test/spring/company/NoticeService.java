@@ -1,7 +1,11 @@
 package com.test.spring.company;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.test.spring.dto.TestTypeDTO;
 
 @Service
 public class NoticeService implements INoticeService {
@@ -25,6 +29,11 @@ public class NoticeService implements INoticeService {
 	public int addNoticeOk(String seq) {
 		
 		return 0;
+	}
+
+	@Override
+	public List<TestTypeDTO> getTestType() {
+		return dao.getTestType();
 	}
 
 	

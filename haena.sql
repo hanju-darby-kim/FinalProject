@@ -12,3 +12,5 @@ SELECT
 
 
 select * from MEMBER;
+select * from TEACHER;
+SELECT * FROM TESTTYPE;

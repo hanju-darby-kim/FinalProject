@@ -9,7 +9,9 @@
 		SELECT business FROM company WHERE seq = #{seq}
 	</select>
 	
-	
+	<select id="getTestType" resultType="com.test.spring.dto.TestTypeDTO">
+		SELECT * FROM testType
+	</select>
 	
 </mapper>
 
