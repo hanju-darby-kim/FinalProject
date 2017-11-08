@@ -19,8 +19,8 @@
 		<li class="list-group-item has-submenu">
 			<a href="#Curri" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">과정 관리</a>
 			<ul id="Curri" class="list-unstyled collapse submenu">
-	            <li><a href="ui-button-groups.html">과정 목록</a></li>
-	            <li><a href="ui-button-groups.html">강의 목록</a></li>
+	            <li><a href="${pageContext.request.contextPath}/admin/curri/list.action">과정 목록</a></li>
+	            <li><a href="${pageContext.request.contextPath}/admin/subject/list.action">강의 목록</a></li>
 			</ul>
 		</li>
 		<!-- 재준 메뉴 끝 -->

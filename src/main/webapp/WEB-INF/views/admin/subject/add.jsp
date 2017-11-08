@@ -19,7 +19,7 @@
 </script>
 </head>
 <body>
-curri add.jsp
+subject add.jsp
 </body>
 </html>
 

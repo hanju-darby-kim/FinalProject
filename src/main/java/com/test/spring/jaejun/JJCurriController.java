@@ -15,8 +15,8 @@ public class JJCurriController {
 	IJJCurriService service;
 	MenuCategoryDTO menuCategory = new MenuCategoryDTO();
 	
-	@RequestMapping(method={RequestMethod.GET}, value="/curri/add.action")
-	public String add(HttpServletRequest req){
+	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/add.action")
+	public String curriAdd(HttpServletRequest req){
 		menuCategory.setBigCategory("관리자메뉴");
 		menuCategory.setMiddleCategory("과정추가");
 		menuCategory.setSmallCategory("");
@@ -25,4 +25,28 @@ public class JJCurriController {
 		
 		return "admin.curriculum.add";
 	}
+	
+	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/list.action")
+	public String curriList(HttpServletRequest req){
+		menuCategory.setBigCategory("관리자메뉴");
+		menuCategory.setMiddleCategory("과정목록");
+		menuCategory.setSmallCategory("");
+		
+		req.setAttribute("menuCategory", menuCategory);
+		
+		return "admin.curriculum.list";
+	}
+	
+	@RequestMapping(method={RequestMethod.GET}, value="/admin/subject/list.action")
+	public String subjectList(HttpServletRequest req){
+		menuCategory.setBigCategory("관리자메뉴");
+		menuCategory.setMiddleCategory("과목목록");
+		menuCategory.setSmallCategory("");
+		
+		req.setAttribute("menuCategory", menuCategory);
+		
+		return "admin.subject.add";
+	}
 }
+
+
