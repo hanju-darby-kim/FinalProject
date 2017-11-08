@@ -10,8 +10,8 @@ import com.test.spring.jaejun.IJJCurriService;
 
 @Controller
 public class OverController {
-	@Autowired
-	IJJCurriService service;
+/*	@Autowired
+	IJJCurriService service;*/
 	MenuCategoryDTO menuCategory = new MenuCategoryDTO();
 	
 	/**
@@ -28,7 +28,8 @@ public class OverController {
 		menuCategory.setSmallCategory("근무 일지 체크");
 		
 		req.setAttribute("menuCategory", menuCategory);
-		return "admin.managerschedule.write";
+	 	/*<!-- company.notice.addnotice.addnoticecss -->  */
+		return "admin.managerschedule.write.writecss";
 		
 	}
 
