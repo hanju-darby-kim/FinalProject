@@ -6,6 +6,7 @@
 <html>
 <head>
 <tiles:insertAttribute name="links" />
+<tiles:insertAttribute name="additionalLinks"/>
 	<!-- JAVASCRIPTS -->
 
 	<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
