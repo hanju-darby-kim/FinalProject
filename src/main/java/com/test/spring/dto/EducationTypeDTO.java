@@ -6,7 +6,7 @@ package com.test.spring.dto;
  */
 public class EducationTypeDTO {
 	private String seq; 
-	private String educationCategoryName;
+	private String educationType;
 	
 	public String getSeq() {
 		return seq;
@@ -14,12 +14,13 @@ public class EducationTypeDTO {
 	public void setSeq(String seq) {
 		this.seq = seq;
 	}
-	public String getEducationCategoryName() {
-		return educationCategoryName;
+	public String getEducationType() {
+		return educationType;
 	}
-	public void setEducationCategoryName(String educationCategoryName) {
-		this.educationCategoryName = educationCategoryName;
+	public void setEducationType(String educationType) {
+		this.educationType = educationType;
 	}
+	
 	
 	
 }
