@@ -26,6 +26,17 @@ public class JJCurriController {
 		return "admin.curriculum.add";
 	}
 	
+	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/addok.action")
+	public String curriAddok(HttpServletRequest req){
+//		menuCategory.setBigCategory("관리자메뉴");
+//		menuCategory.setMiddleCategory("과정추가");
+//		menuCategory.setSmallCategory("");
+//		
+//		req.setAttribute("menuCategory", menuCategory);
+		
+		return "admin.curriculum.addok";
+	}
+	
 	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/list.action")
 	public String curriList(HttpServletRequest req){
 		menuCategory.setBigCategory("관리자메뉴");
@@ -37,6 +48,17 @@ public class JJCurriController {
 		return "admin.curriculum.list";
 	}
 	
+	@RequestMapping(method={RequestMethod.GET}, value="/admin/subject/add.action")
+	public String subjectAdd(HttpServletRequest req){
+		menuCategory.setBigCategory("관리자메뉴");
+		menuCategory.setMiddleCategory("과목추가");
+		menuCategory.setSmallCategory("");
+		
+		req.setAttribute("menuCategory", menuCategory);
+		
+		return "admin.subject.add";
+	}
+	
 	@RequestMapping(method={RequestMethod.GET}, value="/admin/subject/list.action")
 	public String subjectList(HttpServletRequest req){
 		menuCategory.setBigCategory("관리자메뉴");
@@ -45,7 +67,7 @@ public class JJCurriController {
 		
 		req.setAttribute("menuCategory", menuCategory);
 		
-		return "admin.subject.add";
+		return "admin.subject.list";
 	}
 }
 
