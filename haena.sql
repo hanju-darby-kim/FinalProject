@@ -62,7 +62,13 @@ ALTER TABLE tblfield MODIFY (careerTypeSeq NUMBER REFERENCES careerType(seq));
 
 UPDATE TBLFIELD SET hireTypeSeq = 1;
 UPDATE TBLFIELD SET careerTypeSeq = 1;
-
+UPDATE TBLFIELD SET location = null;
 SELECT * FROM TBLFIELD;
+
+
+alter table TBLFIELD MODIFY (location number);
+ALTER TABLE TBLFIELD MODIFY (LOCATION REFERENCES TBLAREATYPE(SEQ));
+
+alter table TBLFIELD rename column location to areaTypeSeq;
 
 COMMIT;

@@ -88,7 +88,32 @@
 			<input type="text" name="fieldName">
 		</div>
 		
-		<div id="hireTypeSeq"></div>
+		<div id="hireTypeContainer">
+			<div class="noticeTitle">고용형태</div>
+			<select>
+				<c:forEach items="${hiretypelist}" var="hiretypedto">
+				<option value="${hiretypedto.seq}">${hiretypedto.hireType}</option>
+				</c:forEach>
+			</select>
+		</div>
+		
+		<div id="careerTypeContainer">
+			<div class="noticeTitle">경력</div>
+			<select>
+				<c:forEach items="${careertypelist}" var="careertypedto">
+				<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
+				</c:forEach>
+			</select>
+		</div>
+		
+		<div id="areaTypeContainer">
+			<div class="noticeTitle">근무지역</div>
+			<select>
+				<c:forEach items="${careertypelist}" var="careertypedto">
+				<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
+				</c:forEach>
+			</select>
+		</div>
 	</div>
 	
 	
