@@ -14,7 +14,7 @@
          </ul>
 		</li>
 		<!-- 슬기 메뉴 끝 -->
-      
+		
 		<!-- 재준 메뉴 시작 -->
 		<li class="list-group-item has-submenu">
 			<a href="#Curri" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">과정 관리</a>
