@@ -88,3 +88,9 @@ ALTER TABLE educationType RENAME COLUMN educationcategoryName TO educationType;
 commit;
 
 select * from majorcategory;
+
+update majorcategory set majorcategory = '인문학' where majorcategory = '문학';
+
+update majorcategory set majorcategory = '어문학' where majorcategory = '어학';
+
+commit;
