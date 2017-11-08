@@ -1,7 +1,10 @@
 package com.test.spring.company;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -11,7 +14,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.CertificationDTO;
+import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.TestTypeDTO;
 
 
@@ -39,10 +44,18 @@ public class NoticeController {
 		List<TestTypeDTO> testlist = new ArrayList<TestTypeDTO>();
 		testlist = service.getTestType();
 		
-		System.out.println(testlist.size());
+		//hireType 얻어오기
+		List<HireTypeDTO> hiretypelist = new ArrayList<HireTypeDTO>();
+		hiretypelist = service.getHireType();
 		
-		req.setAttribute("testlist", testlist);
+		//careerType 얻어오기
+		List<CareerTypeDTO> careertypelist = new ArrayList<CareerTypeDTO>();
+		careertypelist = service.getCareerType();
+		
 		req.setAttribute("content", content);
+		req.setAttribute("testlist", testlist);
+		req.setAttribute("hiretypelist", hiretypelist);
+		req.setAttribute("careertypelist", careertypelist);
 		
 		return "company.notice.addnotice";
 	}

@@ -88,7 +88,7 @@
 			<input type="text" name="fieldName">
 		</div>
 		
-		<div id=""></div>
+		<div id="hireTypeSeq"></div>
 	</div>
 	
 	

@@ -13,6 +13,14 @@
 		SELECT * FROM testType
 	</select>
 	
+	<select id="getHireType" resultType="com.test.spring.dto.HireTypeDTO">
+		SELECT * FROM hireType
+	</select>
+	
+	<select id="getCareerType" resultType="com.test.spring.dto.CareerTypeDTO">
+		SELECT * FROM careerType
+	</select>
+	
 </mapper>
 
 
