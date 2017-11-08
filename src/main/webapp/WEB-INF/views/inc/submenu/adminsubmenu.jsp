@@ -19,8 +19,10 @@
 		<li class="list-group-item has-submenu">
 			<a href="#Curri" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">과정 관리</a>
 			<ul id="Curri" class="list-unstyled collapse submenu">
-	            <li><a href="${pageContext.request.contextPath}/admin/curri/list.action">과정 추가</a></li>
-	            <li><a href="${pageContext.request.contextPath}/admin/subject/list.action">강의 추가</a></li>
+	            <li><a href="${pageContext.request.contextPath}/admin/curri/list.action">과정 목록</a></li>
+	            <li><a href="${pageContext.request.contextPath}/admin/curri/add.action">과정 추가</a></li>
+	            <li><a href="${pageContext.request.contextPath}/admin/subject/list.action">강의 목록</a></li>
+	            <li><a href="${pageContext.request.contextPath}/admin/subject/add.action">강의 추가</a></li>
 			</ul>
 		</li>
 		<!-- 재준 메뉴 끝 -->
