@@ -46,3 +46,23 @@ select * from hireType;
 
 
 commit;
+
+ALTER TABLE tblfield RENAME COLUMN hireType TO hireTypeSeq;
+
+ALTER TABLE tblfield RENAME COLUMN careerType TO careerTypeSeq;
+select * from TBLFIELD;
+
+ALTER TABLE tblfield MODIFY (hireTypeSeq NOT NULL);
+
+ALTER TABLE tblfield MODIFY (careerTypeSeq NOT NULL);
+
+ALTER TABLE tblfield MODIFY (hireTypeSeq NUMBER REFERENCES hireType(seq));
+
+ALTER TABLE tblfield MODIFY (careerTypeSeq NUMBER REFERENCES careerType(seq));
+
+UPDATE TBLFIELD SET hireTypeSeq = 1;
+UPDATE TBLFIELD SET careerTypeSeq = 1;
+
+SELECT * FROM TBLFIELD;
+
+COMMIT;
