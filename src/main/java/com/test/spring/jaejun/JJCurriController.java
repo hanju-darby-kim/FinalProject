@@ -1,5 +1,7 @@
 package com.test.spring.jaejun;
 
+import java.awt.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,12 @@ public class JJCurriController {
 	@Autowired
 	IJJCurriService service;
 	MenuCategoryDTO menuCategory = new MenuCategoryDTO();
+	
+	private JJCurriDAO dao;
+	
+	public JJCurriController() {
+		this.dao = new JJCurriDAO();
+	}
 	
 	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/add.action")
 	public String curriAdd(HttpServletRequest req){
@@ -44,6 +52,9 @@ public class JJCurriController {
 		menuCategory.setSmallCategory("");
 		
 		req.setAttribute("menuCategory", menuCategory);
+		
+		List<com.test.spring.dto.CurTypeDTO> list = service.curType();
+		req.setAttribute("list1", list);
 		
 		return "admin.curriculum.list";
 	}
