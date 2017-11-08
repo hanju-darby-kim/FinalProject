@@ -15,7 +15,7 @@ public class JJCurriService implements IJJCurriService {
 	
 	@Override
 	public List<CurTypeDTO> curType() {
-		System.out.println("여기까지?");
+		
 		return dao.curType();
 	}
 	

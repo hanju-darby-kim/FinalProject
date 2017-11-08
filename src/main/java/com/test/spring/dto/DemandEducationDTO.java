@@ -4,7 +4,7 @@ public class DemandEducationDTO {
 
 	private String seq;
 	private String fieldSeq;
-	private String educationType;
+	private String educationTypeSeq;
 	private String essential;
 	public String getSeq() {
 		return seq;
@@ -18,11 +18,11 @@ public class DemandEducationDTO {
 	public void setFieldSeq(String fieldSeq) {
 		this.fieldSeq = fieldSeq;
 	}
-	public String getEducationType() {
-		return educationType;
+	public String getEducationTypeSeq() {
+		return educationTypeSeq;
 	}
-	public void setEducationType(String educationType) {
-		this.educationType = educationType;
+	public void setEducationTypeSeq(String educationTypeSeq) {
+		this.educationTypeSeq = educationTypeSeq;
 	}
 	public String getEssential() {
 		return essential;

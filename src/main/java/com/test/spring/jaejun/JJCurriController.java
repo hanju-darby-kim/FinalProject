@@ -55,7 +55,7 @@ public class JJCurriController {
 		req.setAttribute("menuCategory", menuCategory);
 		
 		List<CurTypeDTO> list = service.curType();
-		//System.out.println("리스트 세개?" + list.size());
+		System.out.println("여긴되나?" + list.size());
 		req.setAttribute("list", list);
 		
 		return "admin.curriculum.list";
