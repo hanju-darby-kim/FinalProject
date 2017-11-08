@@ -5,11 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Responsive Multipurpose Bootstrap Theme">
 	<meta name="author" content="The Develovers">
-	<!-- CSS -->
-	<!-- 작성자 전슬기 관리자 근무표 일정 css -->
-	<link href='${pageContext.request.contextPath}/css/admin/fullcalendar.min.css' rel='stylesheet' />
-	<link href='${pageContext.request.contextPath}/css/fullcalendar.print.min.css' rel='stylesheet' />
-	<!-- 전슬기 끝 -->
+	
+	
+	
 	<link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css">
