@@ -4,7 +4,7 @@
 
 <!-- MyBatis 사용 시 SQL을 관리하는 파일 -->
 <mapper namespace="JJCurri">
-	<select id="curType" resultType="com.test.spring.dto.CurTypeDTO">
+	<select id="getCurType" resultType="com.test.spring.dto.CurTypeDTO">
 		SELECT * FROM curType
 	</select>
 </mapper>
