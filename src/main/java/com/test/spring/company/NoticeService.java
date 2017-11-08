@@ -7,7 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.test.spring.dto.AreaTypeDTO;
 import com.test.spring.dto.CareerTypeDTO;
+import com.test.spring.dto.CertificateTypeDTO;
+import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.HireTypeDTO;
+import com.test.spring.dto.LangTestTypeDTO;
+import com.test.spring.dto.MajorCategoryDTO;
 import com.test.spring.dto.TestTypeDTO;
 
 @Service
@@ -52,6 +56,30 @@ public class NoticeService implements INoticeService {
 	@Override
 	public List<AreaTypeDTO> getAreaType() {
 		return dao.getAreaType();
+	}
+
+
+	@Override
+	public List<EducationTypeDTO> getEducationType() {
+		return dao.getEducationType();
+	}
+
+
+	@Override
+	public List<CertificateTypeDTO> getCertificateType() {
+		return dao.getCertificateType();
+	}
+
+
+	@Override
+	public List<LangTestTypeDTO> getLangTestType() {
+		return dao.getLangTestType();
+	}
+
+
+	@Override
+	public List<MajorCategoryDTO> getMajorCategory() {
+		return dao.getMajorCategory();
 	}
 
 	

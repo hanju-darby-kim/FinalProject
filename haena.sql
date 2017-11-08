@@ -73,5 +73,18 @@ alter table TBLFIELD rename column location to areaTypeSeq;
 
 
 select * from TBLAREATYPE;
-
+select * from DEMANDCERTIFICATE;
+update DEMANDCERTIFICATE SET CERTIFICATETYPESEQ = 1 where seq = 21;
+select * from DEMANDLANGTEST;
 COMMIT;
+select * from EDUCATIONTYPE;
+select * from LANGTESTTYPE;
+select * from majorCategory;
+select * from certificateType;
+ALTER TABLE langTestType RENAME COLUMN name TO langTestType;
+
+ALTER TABLE educationType RENAME COLUMN educationcategoryName TO educationType;
+
+commit;
+
+select * from majorcategory;

@@ -25,6 +25,21 @@
 		SELECT * FROM tblAreaType
 	</select>
 	
+	<select id="getEducationType" resultType="com.test.spring.dto.EducationTypeDTO">
+		SELECT * FROM EducationType ORDER BY EducationType
+	</select>
+	
+	<select id="getCertificateType" resultType="com.test.spring.dto.CertificateTypeDTO">
+		SELECT * FROM CertificateType ORDER BY certificateType
+	</select>
+	
+	<select id="getLangTestType" resultType="com.test.spring.dto.LangTestTypeDTO">
+		SELECT * FROM LangTestType ORDER BY langTestType
+	</select>
+	
+	<select id="getMajorCategory" resultType="com.test.spring.dto.MajorCategoryDTO">
+		SELECT * FROM MajorCategory ORDER BY majorCategory
+	</select>
 </mapper>
 
 

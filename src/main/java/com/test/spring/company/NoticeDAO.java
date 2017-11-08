@@ -8,7 +8,11 @@ import org.springframework.stereotype.Repository;
 
 import com.test.spring.dto.AreaTypeDTO;
 import com.test.spring.dto.CareerTypeDTO;
+import com.test.spring.dto.CertificateTypeDTO;
+import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.HireTypeDTO;
+import com.test.spring.dto.LangTestTypeDTO;
+import com.test.spring.dto.MajorCategoryDTO;
 import com.test.spring.dto.TestTypeDTO;
 
 @Repository
@@ -35,6 +39,22 @@ public class NoticeDAO {
 
 	public List<AreaTypeDTO> getAreaType() {
 		return sql.selectList("notice.getAreaType");
+	}
+
+	public List<EducationTypeDTO> getEducationType() {
+		return sql.selectList("notice.getEducationType");
+	}
+
+	public List<CertificateTypeDTO> getCertificateType() {
+		return sql.selectList("notice.getCertificateType");
+	}
+
+	public List<LangTestTypeDTO> getLangTestType() {
+		return sql.selectList("notice.getLangTestType");
+	}
+
+	public List<MajorCategoryDTO> getMajorCategory() {
+		return sql.selectList("notice.getMajorCategory");
 	}
 	
 }

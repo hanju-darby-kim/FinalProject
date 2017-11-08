@@ -114,6 +114,56 @@
 				</c:forEach>
 			</select>
 		</div>
+		
+		<div id="demandContainer">
+			<div id="areaTypeContainer">
+				<div class="noticeTitle">요구학력</div>
+				<select>
+					<c:forEach items="${educationtypelist}" var="educationtypedto">
+					<option value="${educationtypedto.seq}">${educationtypedto.educationType}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div id="areaTypeContainer">
+				<div class="noticeTitle">요구자격증</div>
+				<select>
+					<c:forEach items="${certificatetypelist}" var="certificatetypedto">
+					<option value="${certificatetypedto.seq}">${certificatetypedto.certificateType}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div id="areaTypeContainer">
+				<div class="noticeTitle">요구어학시험</div>
+				<select>
+					<c:forEach items="${langtesttypelist}" var="langtesttypedto">
+					<option value="${langtesttypedto.seq}">${langtesttypedto.area}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div id="areaTypeContainer">
+				<div class="noticeTitle">근무지역</div>
+				<select>
+					<c:forEach items="${areatypelist}" var="areatypedto">
+					<option value="${areatypedto.seq}">${areatypedto.area}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div id="areaTypeContainer">
+				<div class="noticeTitle">근무지역</div>
+				<select>
+					<c:forEach items="${areatypelist}" var="areatypedto">
+					<option value="${areatypedto.seq}">${areatypedto.area}</option>
+					</c:forEach>
+				</select>
+			</div>
+		
+		</div>
+		
+		
 	</div>
 	
 	
