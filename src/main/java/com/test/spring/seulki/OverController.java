@@ -49,6 +49,25 @@ public class OverController {
 		
 	}
 	
+	/**
+	 * 직원별 근무 차트 
+	 * 관리자 > 메뉴 > 근무표 관리 > 직원별 근무 차트
+	 * 관리자가 직원별 근무 통계를 볼 수 있는 차트 뷰
+	 * @return
+	 */
+	@RequestMapping(method = {RequestMethod.GET}, value="/admin/overnightchart.action")
+	public String viewOvernightChart(HttpServletRequest req) {
+		
+		menuCategory.setBigCategory("관리자 메뉴");
+		menuCategory.setMiddleCategory("근무표 관리");
+		menuCategory.setSmallCategory("직원별 근무차트");
+		
+		req.setAttribute("menuCategory", menuCategory);
+		/*<!-- company.notice.addnotice.addnoticecss -->  */
+		return "admin.managerschedule.overnightchart";
+		
+	}
+	
 	
 
 	

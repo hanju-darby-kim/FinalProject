@@ -10,7 +10,7 @@
          <ul id="Notice" class="list-unstyled collapse submenu">
             <li><a href="${pageContext.request.contextPath}/admin/write.action">근무표 작성</a></li>
             <li><a href="${pageContext.request.contextPath}/admin/overnightviewcss.action">근무 일지 체크</a></li>
-            <li><a href="${pageContext.request.contextPath}/admin/overnightviewcss.action">근무 일지 체크</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/overnightchart.action">직원별 근무 차트</a></li>
          </ul>
 		</li>
 		<!-- 슬기 메뉴 끝 -->
