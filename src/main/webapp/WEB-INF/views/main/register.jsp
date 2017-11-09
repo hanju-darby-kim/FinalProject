@@ -175,11 +175,12 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-group"></i></span>
-									<input type="ssn" class="form-control" id="ssn" placeholder="SSN(123456-1234567)">
+									<input type="ssn" class="form-control" id="ssn" placeholder="SSN(123456-1234567)" >
 								</div>
 							</div>
 						</div>
 						
+						<input type="hidden" name = "address" value = &{address};>
 						
 						
 						<div class="form-group">
