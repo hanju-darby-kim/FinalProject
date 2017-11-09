@@ -125,5 +125,15 @@
 					<li><a href="blog-single-full.html">Blog Single Full</a></li>
 				</ul></li>
 				</c:if>
+				
+				<c:if test="${certification.target eq 'teacher'}">
+				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">강사 메뉴<i class="fa fa-angle-down"></i></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="${pageContext.request.contextPath}/teacher/evaluate.action">학생 평가</a></li>
+						<li><a href="${pageContext.request.contextPath}/teacher/schedule.action">강의스케줄 조회</a></li>
+						<li><a href="${pageContext.request.contextPath}/teacher/project.action">프로젝트 관리</a></li>
+					</ul>	
+				</li>
+				</c:if>
 
 	<!-- END MAIN NAVIGATION -->
