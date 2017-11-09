@@ -14,6 +14,7 @@
 	<script
 		src="${pageContext.request.contextPath}/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
 	<script src="${pageContext.request.contextPath}/js/repute-scripts.js"></script>
+
 </head>
 
 <body>

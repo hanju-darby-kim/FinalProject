@@ -6,13 +6,15 @@
 <html>
 <head>
 <tiles:insertAttribute name="links" />
-	<!-- JAVASCRIPTS -->
+<!-- JAVASCRIPTS -->
 
-	<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/repute-scripts.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/repute-scripts.js"></script>
+
+
 </head>
 
 <body>
@@ -46,7 +48,7 @@
 		</nav>
 		<!-- END NAVBAR -->
 		<!-- BREADCRUMBS -->
-		<tiles:insertAttribute name="imgheader"/>
+		<tiles:insertAttribute name="imgheader" />
 		<!-- END BREADCRUMBS -->
 		<!-- PAGE CONTENT -->
 		<div class="page-content">
@@ -54,11 +56,11 @@
 				<div class="row">
 					<!-- submenu -->
 					<tiles:insertAttribute name="submenu" />
-					
+
 					<!-- end submenu -->
 					<div class="col-md-9">
 						<!-- BASIC -->
-						
+
 						<!-- 내용이 들어갈 자리. 내용에 <h2 class="section-heading">TITLE</h2> 추가하기 -->
 						<tiles:insertAttribute name="core" />
 					</div>

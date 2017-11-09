@@ -20,6 +20,15 @@
 }
 
 </style>
+<script>
+
+	function addcategory(){
+		 alert('경고');
+		
+	};
+
+</script>
+
 <form method="post" action="/admin/curri/addok.action">
 	<table id="tblform" class="table">
 		<tr>
@@ -30,6 +39,7 @@
 						<option value="${dto.seq}">${dto.curType}</option>
 					</c:forEach>
 				</select>
+				<input type="button" id="addCategory" name="addCategory" value="카테고리 추가" onclick="addcategory();"/>
 			</td>
 			<!-- <td><input type="text" name="curTypeSeq" id="curTypeSeq" class="form-control short" /></td> -->
 		</tr>
