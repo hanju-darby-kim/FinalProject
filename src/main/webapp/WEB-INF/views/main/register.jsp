@@ -61,7 +61,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password" placeholder="Password" name="password">
+									<input type="password" class="form-control" id="pw" placeholder="Password" name="pw">
 								</div>
 							</div>
 						</div>
@@ -70,7 +70,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password2" placeholder="Repeat Password" id="password2">
+									<input type="password" class="form-control" id="password2" placeholder="Repeat Password" name="password2">
 								</div>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user"></i></span>
-									<input type="text" class="form-control" id="username" placeholder="Username" name="username">
+									<input type="text" class="form-control" id="name" placeholder="Username" name="name">
 								</div>
 							</div>
 						</div>
@@ -158,7 +158,7 @@
 						
 						
 						<div class="form-group">
-							<label for="email" class="control-label sr-only">Email</label>
+							<label for="gender" class="control-label sr-only">Gender</label>
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-male"></i></span>
@@ -175,12 +175,12 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-group"></i></span>
-									<input type="ssn" class="form-control" id="ssn" placeholder="SSN(123456-1234567)" >
+									<input type="text" class="form-control" name = "ssn" id="ssn" placeholder="SSN(123456-1234567)" >
 								</div>
 							</div>
 						</div>
 						
-						<input type="hidden" name = "address" value = &{address};>
+						<input type="hidden" id = "address" name = "address" value = &{address};>
 						
 						
 						<div class="form-group">
