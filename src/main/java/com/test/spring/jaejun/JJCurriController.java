@@ -29,8 +29,11 @@ public class JJCurriController {
 		menuCategory.setBigCategory("관리자메뉴");
 		menuCategory.setMiddleCategory("과정추가");
 		menuCategory.setSmallCategory("");
-		
 		req.setAttribute("menuCategory", menuCategory);
+
+		List<CurTypeDTO> list = service.curType();
+		//System.out.println(list.size());
+		req.setAttribute("list", list);
 		
 		return "admin.curriculum.add";
 	}
@@ -42,7 +45,7 @@ public class JJCurriController {
 //		menuCategory.setSmallCategory("");
 //		
 //		req.setAttribute("menuCategory", menuCategory);
-		
+
 		return "admin.curriculum.addok";
 	}
 	
@@ -53,10 +56,6 @@ public class JJCurriController {
 		menuCategory.setSmallCategory("");
 		
 		req.setAttribute("menuCategory", menuCategory);
-		
-		List<CurTypeDTO> list = service.curType();
-		System.out.println("여긴되나?" + list.size());
-		req.setAttribute("list", list);
 		
 		return "admin.curriculum.list";
 	}

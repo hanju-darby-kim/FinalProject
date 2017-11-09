@@ -26,8 +26,9 @@
 			<th>카테고리</th>
 			<td>
 				<select name="curTypeSeq" id="curTypeSeq" class="form-control short">
-					<option></option>
-					<option></option>
+					<c:forEach items="${list}" var="dto">
+						<option value="${dto.seq}">${dto.curType}</option>
+					</c:forEach>
 				</select>
 			</td>
 			<!-- <td><input type="text" name="curTypeSeq" id="curTypeSeq" class="form-control short" /></td> -->
