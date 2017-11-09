@@ -61,7 +61,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="pw" placeholder="Password" name="pw">
+									<input type="password" class="form-control" id="password" placeholder="Password" name="password">
 								</div>
 							</div>
 						</div>
@@ -191,7 +191,7 @@
 						
 					</form>
 						
-						
+					
 					
 					
 					<p><em>Already have an account? 이미 만들었어요?</em> <a href="login.action"><strong>Login</strong></a></p>
