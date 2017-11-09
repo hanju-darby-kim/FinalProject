@@ -1,5 +1,4 @@
 package com.test.spring.seulki;
-
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.test.spring.dto.MenuCategoryDTO;
 
 @Controller
-public class OverController {
+public class OverNightController {
 
 	MenuCategoryDTO menuCategory = new MenuCategoryDTO();
 	
@@ -63,7 +62,6 @@ public class OverController {
 		menuCategory.setSmallCategory("직원별 근무차트");
 		
 		req.setAttribute("menuCategory", menuCategory);
-		/*<!-- company.notice.addnotice.addnoticecss -->  */
 		return "admin.managerschedule.overnightchart";
 		
 	}

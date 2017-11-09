@@ -19,14 +19,15 @@
   	$("#addrDetail").val(addrDetail);
   	$("#zipNo").val(zipNo);
   	
-  	alert(roadAddrPart1);
+  	//alert(roadAddrPart1);
   	
   	//document.write("str1.concat(str2) : " + roadAddrPart1.concat(roadAddrPart2) + "<br>");
   	
   	// var address = 'roadAddrPart1' + 'roadAddrPart2' + 'addrDetail' + 'zipNo'; 
-  	//var address =  roadAddrPart1 + roadAddrPart2 + addrDetail + zipNo;
+  	var address =  roadAddrPart1 + roadAddrPart2 + addrDetail + zipNo;
   	//var address = str.con
-  	//alert(address);
+  	alert(address);
+  	//alert(roadFullAddr);
   }
   
   </script>
@@ -174,11 +175,12 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-group"></i></span>
-									<input type="ssn" class="form-control" id="ssn" placeholder="SSN(123456-1234567)">
+									<input type="ssn" class="form-control" id="ssn" placeholder="SSN(123456-1234567)" >
 								</div>
 							</div>
 						</div>
 						
+						<input type="hidden" name = "address" value = &{address};>
 						
 						
 						<div class="form-group">
