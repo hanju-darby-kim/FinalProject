@@ -30,6 +30,19 @@
   	//alert(roadFullAddr);
   }
   
+  
+  function goCheck(){
+	  $("#password").val();
+	  $("#password2").val();
+	  
+	  if($("#password").val().equals($("#password2").val())){
+		  alert("같습니다");
+	  }else{
+		  
+		  alert("다릅니다");
+	  }
+  }
+  
   </script>
 		<!-- MAIN -->
 		<div class="shop-main register">
@@ -74,6 +87,9 @@
 								</div>
 							</div>
 						</div>
+					
+						
+						
 						<div class="form-group">
 							<label for="username" class="control-label sr-only">Username</label>
 							<div class="col-sm-12">
@@ -185,7 +201,7 @@
 						
 						<div class="form-group">
 							<div class="col-sm-12">
-								<button type="submit" class="btn btn-primary btn-block"><i class="fa fa-check-circle"></i> Create Account</button>
+								<button type="submit" id="submit" onclick="goCheck();" class="btn btn-primary btn-block"><i class="fa fa-check-circle"></i> Create Account</button>
 							</div>
 						</div>
 						
