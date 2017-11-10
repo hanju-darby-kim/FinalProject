@@ -46,16 +46,16 @@
   function pwCheck(){
 	//alert(password);
 	//alert(password2);
-	  document.getElementById("password").value;
-	  document.getElementById("password2").value;
+	  document.getElementById("pw").value;
+	  document.getElementById("pw2").value;
  
-  	if(document.getElementById("password2").value == ""){
+  	if(document.getElementById("pw2").value == ""){
   		
   		document.getElementById("passwordCheckText").innerHTML = ""
-  	}else if(document.getElementById("password").value != document.getElementById("password2").value){
+  	}else if(document.getElementById("pw").value != document.getElementById("pw2").value){
   		document.getElementById("passwordCheckText").innerHTML = "<b><font color = red size = 1pt>비밀번호가 일치하지 않습니다.</font></b>"
   	}else{
-  		document.getElementById("passwordCheckText").innerHTML = "<b><font color = blue size = 1pt>비밀번호가 일치합니다.</font></b>"
+  		document.getElementById("passwordCheckText").innerHTML = "<b><font color = blue size = 1pt>비밀번호가  일치합니다.</font></b>"
   		
   	}
   	}
@@ -97,7 +97,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password" placeholder="Password" name="password">
+									<input type="password" class="form-control" id="pw" placeholder="Password" name="pw">
 								</div>
 							</div>
 						</div>
@@ -106,7 +106,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password2" placeholder="Repeat Password" name="password2" onkeyup="pwCheck()">
+									<input type="password" class="form-control" id="pw2" placeholder="Repeat Password" name="pw2" onkeyup="pwCheck()">
 								</div>
 							</div>
 						</div>
@@ -223,7 +223,7 @@
 							</div>
 						</div>
 						
-						<input type="hidden" id = "address" name = "address" value = &{address};>
+						<input type="hidden" id = "address" name = "address" value = "&{address};">
 						
 						
 						<div class="form-group">

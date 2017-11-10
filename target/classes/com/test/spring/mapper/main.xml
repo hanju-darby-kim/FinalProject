@@ -29,7 +29,7 @@
 	<!-- 회원가입 -->
 	<insert id="register" parameterType="com.test.spring.dto.MemberDTO">
 		insert into member
-			 values (memberSeq.nextval, #{id}, #{password}, #{name}, #{tel}, #{address}, #{email}, #{gender}, #{ssn})
+			 values (memberSeq.nextval, #{id}, #{pw}, #{name}, #{tel}, #{address}, #{email}, #{gender}, #{ssn})
 	</insert>
 	
 	
