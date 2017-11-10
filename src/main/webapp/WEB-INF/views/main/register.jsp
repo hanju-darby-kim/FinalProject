@@ -43,7 +43,30 @@
 	  }
   }
   
+  function pwCheck(){
+	//alert(password);
+	//alert(password2);
+	  document.getElementById("password").value;
+	  document.getElementById("password2").value;
+ 
+  	if(document.getElementById("password2").value == ""){
+  		
+  		document.getElementById("passwordCheckText").innerHTML = ""
+  	}else if(document.getElementById("password").value != document.getElementById("password2").value){
+  		document.getElementById("passwordCheckText").innerHTML = "<b><font color = red size = 1pt>비밀번호가 일치하지 않습니다.</font></b>"
+  	}else{
+  		document.getElementById("passwordCheckText").innerHTML = "<b><font color = blue size = 1pt>비밀번호가 일치합니다.</font></b>"
+  		
+  	}
+  	}
+  	
+  	
+  	
+ 
+  
   </script>
+  
+  
 		<!-- MAIN -->
 		<div class="shop-main register">
 			<div class="container">
@@ -83,11 +106,15 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password2" placeholder="Repeat Password" name="password2">
+									<input type="password" class="form-control" id="password2" placeholder="Repeat Password" name="password2" onkeyup="pwCheck()">
 								</div>
 							</div>
 						</div>
-					
+						<table>
+							<tr>
+								<td id="passwordCheckText" width=100></td>
+							</tr>
+						</table>
 						
 						
 						<div class="form-group">
