@@ -38,12 +38,12 @@
 	  $("#pw2").val();
 	  
 	  if($("#pw").val() == $("#pw2").val()){
-		  alert("같습니다");
+		  alert("비밀번호 유효성 통과");
 		 // alert($("#btnsubmit")[0].type);//button
 		 $("#form1").submit();
 	  }else{
 		  
-		  alert("다릅니다");
+		  alert("비밀번호가 다릅니다");
 		  return false;
 	  }
   }
