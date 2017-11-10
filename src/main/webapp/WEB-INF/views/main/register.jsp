@@ -32,14 +32,19 @@
   
   
   function goCheck(){
-	  $("#password").val();
-	  $("#password2").val();
+	  console.log("함수를 실행하였습니다.");
+
+	  $("#pw").val();
+	  $("#pw2").val();
 	  
-	  if($("#password").val().equals($("#password2").val())){
+	  if($("#pw").val() == $("#pw2").val()){
 		  alert("같습니다");
+		 // alert($("#btnsubmit")[0].type);//button
+		 $("#form1").submit();
 	  }else{
 		  
 		  alert("다릅니다");
+		  return false;
 	  }
   }
   
@@ -62,7 +67,7 @@
   	
   	
   	
- 
+ console.log("스크립트를 실행하였습니다.");
   
   </script>
   
@@ -82,7 +87,7 @@
 					
 					
 					
-					<form method="POST" action="/final/registerok.action" class="form-horizontal" role="form">
+					<form method="POST" action="/final/registerok.action" class="form-horizontal" id="form1" >
 						<div class="form-group">
 							<label for="id" class="control-label sr-only">id</label>
 							<div class="col-sm-12">
@@ -228,7 +233,7 @@
 						
 						<div class="form-group">
 							<div class="col-sm-12">
-								<button type="submit" id="submit" onclick="goCheck();" class="btn btn-primary btn-block"><i class="fa fa-check-circle"></i> Create Account</button>
+								<button type="button" id="btnsubmit" onclick="goCheck()" class="btn btn-primary btn-block"><i class="fa fa-check-circle"></i> Create Account</button>
 							</div>
 						</div>
 						
