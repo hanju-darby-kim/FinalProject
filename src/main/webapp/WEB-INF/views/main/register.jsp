@@ -26,7 +26,7 @@
   	// var address = 'roadAddrPart1' + 'roadAddrPart2' + 'addrDetail' + 'zipNo'; 
   	var address =  roadAddrPart1 + roadAddrPart2 + addrDetail + zipNo;
   	//var address = str.con
-  	alert(address);
+  	$("#address").val(address);
   	//alert(roadFullAddr);
   }
   
@@ -223,7 +223,7 @@
 							</div>
 						</div>
 						
-						<input type="hidden" id = "address" name = "address" value = "&{address};">
+						<input type="hidden" id = "address" name = "address">
 						
 						
 						<div class="form-group">
