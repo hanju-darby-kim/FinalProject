@@ -22,7 +22,7 @@ public class JJCurriService implements IJJCurriService {
 	@Override
 	public int addCategory(String categoryname) {
 		
-		return dao.addCategory();
+		return dao.addCategory(categoryname);
 	}
 	
 }

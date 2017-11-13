@@ -23,7 +23,7 @@
 <script>
 
 	function addcategory(){
-		var child = window.open("${pageContext.request.contextPath}/admin/curriculum/categorylist.action", "child", "width=450, height=600, left=" + (screen.availWidth * 0.6) + ", top=" + (screen.availHeight * 0.2));
+		var child = window.open("${pageContext.request.contextPath}/admin/curri/categorylist.action", "child", "width=450, height=600, left=" + (screen.availWidth * 0.6) + ", top=" + (screen.availHeight * 0.2));
 	};
 
 </script>

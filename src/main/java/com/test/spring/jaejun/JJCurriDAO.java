@@ -24,9 +24,9 @@ public class JJCurriDAO {
 		return sql.selectList("JJCurri.getCurType");
 	}
 	
-	public int addCategory() {
+	public int addCategory(String categoryname) {
 		
-		return sql.insert("JJCurri.categoryadd");
+		return sql.insert("JJCurri.categoryadd", categoryname);
 	}
 	
 }

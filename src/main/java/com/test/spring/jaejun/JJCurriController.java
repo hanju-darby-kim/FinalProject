@@ -110,7 +110,7 @@ public class JJCurriController {
 	 * @param req
 	 * @return
 	 */
-	@RequestMapping(method={RequestMethod.GET}, value="/admin/curriculum/categorylist.action")
+	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/categorylist.action")
 	public String categorylist(HttpServletRequest req){
 		List<CurTypeDTO> list = service.curType();
 		//System.out.println(list.size());
@@ -118,17 +118,6 @@ public class JJCurriController {
 		
 		return "admin/curriculum/categorylist";
 	}
-	
-	@RequestMapping(method={RequestMethod.POST}, value="/admin/curriculum/categoryaddok.action")
-	public int categoryAddOk(){
-		System.out.println("포스트방식 접근");
-		//String categoryname = (String)req.getAttribute("categoryname");
-		//int result = service.addCategory(categoryname);
-		
-		return 0;
-	}
-	
-	
 	
 }
 

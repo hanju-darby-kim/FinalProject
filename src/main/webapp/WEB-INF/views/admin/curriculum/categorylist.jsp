@@ -9,25 +9,39 @@
 	#categoryaddtbl th:NTH-CHILD(2) { width: 270px; }
 	#categoryaddtbl th:NTH-CHILD(3) { width: 100px; }
 	#categoryaddtbl td { text-align: center; }
+	#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD { background-color:red; }
 </style>
 
 <script type="text/javascript">
+	$(document).ready(function() {
+		
+		//console.log($("#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD").text());
+	});
 	
 	function add() {
-		alert("추가");
+		//alert("ajax 동작");
+		//alert($("#categoryname").val());
+		
+		var num = Number($("#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD").text()) + 1;
+		
 		$.ajax({
 			type: "POST",
-			url: "${pageContext.request.contextPath}/admin/curriculum/categoryaddok.action",
+			url: "${pageContext.request.contextPath}/admin/curri/categoryaddok.action",
 			data: "categoryname=" + $("#categoryname").val(),
+			dataType: "json",
 			success: function(result) {
 				//추가 성공(1)
 				//추가 실패(0)
-				if (result == "1") {
-					alert("성공");
-					//$("#result").text("")
+				if (result.addCategoryresult == "1") {
+					//alert("성공");
+					
+					var tr = "<tr><td>" + num + "</td><td>" + $("#categoryname").val() + "</td><td>" + "<a href='#' style='cursor: pointer;' onclick='modify();'>[수정]</a> <a href='#' style='cursor: pointer;' onclick='del();'>[삭제]</a>" + "</tr>";
+					//<table></table> : <tr> 태그가 존재하지 않으면 <tbody>도 자동 생성되지 않는다.
+					$("#beforepoint").before(tr);
+					$("#categoryname").val("");
+					
 				} else {
-					alert("실패");
-					//$("#result").text("")
+					alert("과정 추가에 실패했습니다. 다시 시도해주세요.");
 				}
 			},
 			error: function(a,b,c) {
@@ -47,13 +61,7 @@
 			url: "/${pageContext.request.contextPath}/",
 			data: "id=" + $("#id").val(),
 			success: function(result) {
-				//동일 아이디 없음(1)
-				//동일 아이디 있음(0)
-				if (result == "1") {
-					$("#result").text("사용가능한 아이디입니다")
-				} else {
-					$("#result").text("이미 존재하는 아이디입니다")
-				}
+
 			},
 			error: function(a,b,c) {
 				alert(c);
@@ -81,8 +89,10 @@
 		</td>
 	</tr>
 </c:forEach>
-	<tr>
+	<tr id="beforepoint">
 		<!-- ;%재준보완. 추가될 번호 표시하기 -->
-		<td colspan="3"><input type="text" id="categoryname" placeholder="추가할 과정명을 입력하세요."/ style="width: 265px; margin-right: 5px;"><input type="button" value="추가" onclick="add();"/></td>
+		<td colspan="3"><input type="text" id="categoryname" name="categoryname" placeholder="추가할 과정명을 입력하세요." style="width: 265px; margin-right: 5px;"><input type="button" value="추가" onclick="add();"/></td>
 	</tr>
 </table>
+
+
