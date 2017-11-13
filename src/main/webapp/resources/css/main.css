@@ -7188,6 +7188,7 @@ ul.nav-categories > li > a:hover {
 }
 .border-solid{
 	border: 4px solid #ddd;
+	background-color:#406DA4;
 }
 .project-addbtn{
 	color: #fff;
@@ -7255,6 +7256,11 @@ ul.nav-categories > li > a:hover {
 	padding: 7px 0px;
 }
 
+.mb-items select {
+	height:45px;
+	border:1px solid #ddd;
+	color:#333;
+}
 .mb-add {
 	margin-bottom: 12px;
 }
@@ -7275,13 +7281,22 @@ ul.nav-categories > li > a:hover {
 .mb-time input[type=text] {
 	border: 1px solid #ddd;
 	height: 45px;
-	padding-left: 15px;
-	margin-left: 10px;
-	width: 80%;
 	color: #ccc;
 	background-color: #fff;
-	width: 80%;
 }
 .mb-time button{
 	width:34px;
+}
+
+.datebox{
+	float:left;
+	width:45%;
+}
+.datebox-middle{
+	float:left;
+	width:10%;
+	color:#ccc;
+	font-size:25px;
+	vertical-align:middle;
+	text-align:center;
 }
