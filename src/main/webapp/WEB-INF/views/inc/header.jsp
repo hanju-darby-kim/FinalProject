@@ -24,7 +24,7 @@
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">예약센터 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="page-services.html">예약신청</a></li>
+					<li><a href="${pageContext.request.contextPath}/center/geyo.action">예약신청</a></li>
 				</ul></li>
 			<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">교육서비스 <i class="fa fa-angle-down"></i></a>
