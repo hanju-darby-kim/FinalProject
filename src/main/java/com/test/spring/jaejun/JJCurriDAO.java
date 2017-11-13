@@ -24,6 +24,11 @@ public class JJCurriDAO {
 		return sql.selectList("JJCurri.getCurType");
 	}
 	
+	public int addCategory() {
+		
+		return sql.insert("JJCurri.categoryadd");
+	}
+	
 }
 
 

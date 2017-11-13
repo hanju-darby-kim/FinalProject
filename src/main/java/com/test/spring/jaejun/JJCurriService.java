@@ -19,4 +19,10 @@ public class JJCurriService implements IJJCurriService {
 		return dao.curType();
 	}
 	
+	@Override
+	public int addCategory(String categoryname) {
+		
+		return dao.addCategory();
+	}
+	
 }

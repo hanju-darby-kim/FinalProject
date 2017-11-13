@@ -7,4 +7,8 @@
 	<select id="getCurType" resultType="com.test.spring.dto.CurTypeDTO">
 		SELECT * FROM curType
 	</select>
+	
+	<select id="categoryadd" parameterType="String">
+		insert into curType values (curtypeseq.nextval, #{str})
+	</select>
 </mapper>
