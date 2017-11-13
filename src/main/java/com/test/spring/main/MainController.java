@@ -225,5 +225,17 @@ public class MainController {
 		
 		return "center.road.view";
 	}
+	
+	// 예약센터 -> 예약신청
+	@RequestMapping(method = { RequestMethod.GET }, value = "/booking/consulting.action")
+	public String consulting(HttpServletRequest req) {
+		menuCategory.setBigCategory("예약센터");
+		menuCategory.setMiddleCategory("예약신청");
+		menuCategory.setSmallCategory("없음");
+		
+		req.setAttribute("menuCategory", menuCategory);
+		
+		return "booking.consulting.view";
+	}
 
 }
