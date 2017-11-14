@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 import com.test.spring.dto.StudentDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 
 @Repository
@@ -20,9 +23,13 @@ public class ManagerDAO {
 	}
 	
 	//매니저의 관리 학생들 출결 개시
-	public int attStart(int seq) {
+	public void attStart(int seq) {
 		
-		return 0;
+		List<Integer> students = sql.selectList("manager.stuList", seq);
+		
+		for (int i=0;i<students.size();i++) {			
+			sql.insert("manager.start", students.get(i));
+		}
 	}
 
 	

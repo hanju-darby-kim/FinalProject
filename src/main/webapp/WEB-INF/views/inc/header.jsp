@@ -135,5 +135,11 @@
 					</ul>	
 				</li>
 				</c:if>
+				
+				<c:if test="${procMsg} != null">
+					<script>
+						alert(${procMsg});
+					</script>
+				</c:if>
 
 	<!-- END MAIN NAVIGATION -->
