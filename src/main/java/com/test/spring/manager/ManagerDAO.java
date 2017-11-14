@@ -13,17 +13,17 @@ public class ManagerDAO {
 	@Autowired
 	private SqlSessionTemplate sql;
 	
+	//매니저의 관리 학생들 출결 개시했는지 여부 확인
+	public int attManagerCheck(int seq) {
+		
+		return sql.selectOne("manager.check", seq);
+	}
+	
 	//매니저의 관리 학생들 출결 개시
 	public int attStart(int seq) {
 		
 		return 0;
 	}
 
-	//매니저의 관리 학생들 출결 개시했는지 여부 확인
-	public int attManagerCheck(int seq) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 	
 }

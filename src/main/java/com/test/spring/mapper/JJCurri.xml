@@ -5,6 +5,12 @@
 <!-- MyBatis 사용 시 SQL을 관리하는 파일 -->
 <mapper namespace="JJCurri">
 	<select id="getCurType" resultType="com.test.spring.dto.CurTypeDTO">
-		SELECT * FROM curType
+		SELECT * FROM curType order by seq
+	</select>
+	
+	<select id="categoryadd" parameterType="String">
+		insert into curType values (curtypeseq.nextval, #{str})
 	</select>
 </mapper>
+
+

@@ -24,6 +24,12 @@ public class JJCurriController {
 		this.dao = new JJCurriDAO();
 	}
 	
+	
+	/**
+	 * 과정 추가 페이지
+	 * @param req
+	 * @return 
+	 */
 	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/add.action")
 	public String curriAdd(HttpServletRequest req){
 		menuCategory.setBigCategory("관리자메뉴");
@@ -38,6 +44,11 @@ public class JJCurriController {
 		return "admin.curriculum.add";
 	}
 	
+	/**
+	 * 
+	 * @param req
+	 * @return
+	 */
 	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/addok.action")
 	public String curriAddok(HttpServletRequest req){
 //		menuCategory.setBigCategory("관리자메뉴");
@@ -49,6 +60,12 @@ public class JJCurriController {
 		return "admin.curriculum.addok";
 	}
 	
+	
+	/**
+	 * 
+	 * @param req
+	 * @return
+	 */
 	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/list.action")
 	public String curriList(HttpServletRequest req){
 		menuCategory.setBigCategory("관리자메뉴");
@@ -60,6 +77,11 @@ public class JJCurriController {
 		return "admin.curriculum.list";
 	}
 	
+	/**
+	 * 
+	 * @param req
+	 * @return
+	 */
 	@RequestMapping(method={RequestMethod.GET}, value="/admin/subject/add.action")
 	public String subjectAdd(HttpServletRequest req){
 		menuCategory.setBigCategory("관리자메뉴");
@@ -81,6 +103,22 @@ public class JJCurriController {
 		
 		return "admin.subject.list";
 	}
+	
+	
+	/**
+	 * 과정 카테고리 추가
+	 * @param req
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/categorylist.action")
+	public String categorylist(HttpServletRequest req){
+		List<CurTypeDTO> list = service.curType();
+		//System.out.println(list.size());
+		req.setAttribute("list", list);
+		
+		return "admin/curriculum/categorylist";
+	}
+	
 }
 
 

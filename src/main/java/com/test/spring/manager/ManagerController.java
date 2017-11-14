@@ -27,9 +27,10 @@ public class ManagerController {
 			req.setAttribute("checkResult", result);
 			return "main.manager";
 			
-		} else {
-			return "main.error";//에러페이지로
-		}	
+		} else {	//매니저가 아닌 경우
+			req.setAttribute("errorMsg", "로그인 후 이용해 주시기 바랍니다");
+			return "main.error";
+		}
 	}
 	
 	@RequestMapping(method= {RequestMethod.GET}, value="/manager/attendance.action")
@@ -39,7 +40,7 @@ public class ManagerController {
 			
 			service.attManager();
 			
-			return "student.manager.attendance";		
+			return "manager.attendance";		
 			
 		} else {
 			return "main.error";			
