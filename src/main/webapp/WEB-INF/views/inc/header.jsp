@@ -5,7 +5,7 @@
 			<li class="dropdown active"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">센터소개 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li class="active"><a href="${pageContext.request.contextPath}/booking/consulting.action">개요</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/center/geyo.action">개요</a></li>
 					<li><a href="index-v1_dark-header.html">CEO컬럼</a></li>
 					<li><a href="index-v1_light-footer.html">연혁</a></li>
 					<li><a href="index-v2.html">시설 및 장비</a></li>
