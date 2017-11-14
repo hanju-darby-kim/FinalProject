@@ -13,7 +13,8 @@
 <script
 	src="${pageContext.request.contextPath}/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/repute-scripts.js"></script>
-
+	<script src="${pageContext.request.contextPath}/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+	<script src="${pageContext.request.contextPath}/js/plugins/daterangepicker/daterangepicker.js"></script>
 
 </head>
 

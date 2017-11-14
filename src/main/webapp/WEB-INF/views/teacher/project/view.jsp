@@ -1,12 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<style>
+.dropdown-menu{
+	z-index:1100;
+}
+</style>
 <div class="project-box border-solid">
 	<div class="project-row">
 		<div class="explain-box">객체지향 프로그래밍(JAVA)</div>
 	</div>
 </div>
-<div style="height:20px;"></div>
+<div style="height: 20px;"></div>
 <div class="project-box border-dashed">
 	<div class="project-row" id="addbtn" data-toggle="modal"
 		data-target="#myModal">
@@ -32,40 +37,62 @@
 				<div class="modal-body">
 
 					<div class="mb-title">
-						<div>프로젝트 제목</div>
+						<div>개설 과정명</div>
 						<div>
 							<input type="text" id="title" name="title"
 								placeholder="제목을 입력하세요">
 						</div>
 					</div>
 					<div class="mb-items">
-						<div>프로젝트 항목</div>
+						<div>프로젝트 과목명</div>
 						<div>
-							<input type="text" id="item1" name="item" placeholder="항목을 입력하세요">
-						</div>
-						<div>
-							<input type="text" id="item2" name="item" placeholder="항목을 입력하세요">
-						</div>
-						<div>
-							<input type="text" id="item3" name="item" placeholder="항목을 입력하세요">
+							<select class="form-control">
+								<option value="객체지향프로그래밍(Java)">객체지향프로그래밍(JAVA)</option>
+								<option value="객체지향프로그래밍(Java)">객체지향프로그래밍(JAVA)</option>
+								<option value="객체지향프로그래밍(Java)">객체지향프로그래밍(JAVA)</option>
+							</select>
 						</div>
 					</div>
-					<div class="mb-add">
-						<div>
-							<a href="#" onclick="addBtn();"><span
-								class="glyphicon glyphicon-plus" aria-hidden="true"></span> 추가하기</a>
-						</div>
-					</div>
+
 					<div class="mb-time">
-						<div>마감날짜 설정</div>
+						<div>프로젝트날짜 설정</div>
 
 						<div class="input-group input-append date">
-							<button type="button" class="btn btn-default btn-sm"
-								id="dateChoice" title="unchecked">&nbsp;&nbsp;</button>
-							<input id="datePicker" class="datePicker" type="text"
-								name="endDate" placeholder="이틀 후 마감" disabled="disabled">
+							<div class="input-group datebox">
+								<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+								<input type="text" id="datepicker" class="form-control">
+							</div>
+							<div class="datebox-middle"> ~ </div>
+							<div class="input-group datebox">
+								<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+								<input type="text" id="datepicker2" class="form-control">
+							</div>
 						</div>
-
+						<script>
+						var nowTemp = new Date();
+						var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+						 
+						var checkin = $('#datepicker').datepicker({
+						  onRender: function(date) {
+						    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+						  }
+						}).on('changeDate', function(ev) {
+						  if (ev.date.valueOf() > checkout.date.valueOf()) {
+						    var newDate = new Date(ev.date)
+						    newDate.setDate(newDate.getDate() + 1);
+						    checkout.setValue(newDate);
+						  }
+						  checkin.hide();
+						  $('#datepicker2')[0].focus();
+						}).data('datepicker');
+						var checkout = $('#datepicker2').datepicker({
+						  onRender: function(date) {
+						    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+						  }
+						}).on('changeDate', function(ev) {
+						  checkout.hide();
+						}).data('datepicker');
+						</script>
 
 
 					</div>
