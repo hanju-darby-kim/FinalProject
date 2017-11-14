@@ -48,7 +48,7 @@ public class StudentController {
 			service.attStudent();
 			
 			
-			return "student.student.attendance";		
+			return "student.attendance";		
 			
 		} else {			
 			return "main.error";//에러페이지로
