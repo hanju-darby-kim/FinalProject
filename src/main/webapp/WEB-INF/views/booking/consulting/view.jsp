@@ -35,45 +35,68 @@
 					<td><input type="text" name="name" id="name" class="form-control short" required /></td>
 				</tr>
 				<tr>
-					<th>이메일</th>
-					<td><input type="text" name="email" id="email" class="form-control short" required /></td>
+					<th>연락처</th>
+					<td><input type="text" name="email" id="tel" class="form-control short" required /></td>
 				</tr>
 				<tr>
-					<th>제목</th>
-					<td><input type="text" name="subject" id="subject" class="form-control long" required /></td>
+					<th>e-mail</th>
+					<td><input type="text" name="subject" id="email" class="form-control long" required /></td>
 				</tr>
+				
 				<tr>
-					<th>내용</th>
-					<td><textarea name="content" id="content" class="form-control long" required></textarea></td>
-				</tr>
-				<tr>
-					<th>태그</th>
+					<th>예약인 구분</th>
 					<td>
 						<select name="tag" id="tag" class="form-control short">
-							<option value="y">적용함</option>
-							<option value="n">적용안함</option>
+							<option value="">-- 선택 --</option>
+							<option value="4">대학생,일반</option>
+							<option value="5">회사에서 교육비 납부</option>
+							<option value="6">개인이 교육비 납부(제직자)</option>
 						</select>
 					</td>
 				</tr>
-				<tr>
-					<th>파일</th>
-					<td><input type="file" name="attach" id="attach" class="form-control" /></td>
-				</tr>
-				<tr>
-					<th>암호</th>
-					<td><input type="password" name="pw" id="pw" class="form-control short" required /></td>
-					
-				</tr>
+				
+					<tr>
+						<th><label for="username">선택 과목 </label></th>
+						<td> 
+							<input type="checkbox" value="5" name="cou"/> 웹 프로그래밍과정
+						</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td> 
+							<input type="checkbox" value="6" name="cou"/> 데이터베이스 과정
+						</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td> 
+							<input type="checkbox" value="7" name="cou"/> 스마트 폰 개발과정
+						</td>
+					</tr>
+					<!-- <tr>
+						<th></th>
+						<td> 
+							<input type="checkbox" value="클라우드 과정" name="cou"/> 기타 과정
+						</td>
+					</tr> -->
+
+					<tr>
+						<th scope="row"><label for="username"> 기타 희망과정 : </label></th>
+						<td>
+							<textarea name="inq" rows="6" cols="60"></textarea>
+						</td>
+					</tr>
+				
 			</table>
-			<div id="btns">
-				<input type="button" value="돌아가기" class="btn btn-default" onclick="history.back();" />
-				<input type="submit" value="글쓰기" class="btn btn-primary" />
+			<div id="btns" align="center">
+				<input type="button" style="width:100px; " value="돌아가기" class="btn btn-default" onclick="history.back();"/>
+				<input type="submit" style="width:100px; " value="신청하기" class="btn btn-primary" />
 			</div>
 			
 			<!-- 지금 작성중인 글이 새글? 답변글? -->
-			<input type="hidden" name = "reply" value="${reply}" />
+			<%-- <input type="hidden" name = "reply" value="${reply}" />
 			<input type="hidden" name = "thread" value ="${thread }" />
-			<input type="hidden" name ="depth" value="${depth }" />
+			<input type="hidden" name ="depth" value="${depth }" /> --%>
 			</form>
 		</section>
 
