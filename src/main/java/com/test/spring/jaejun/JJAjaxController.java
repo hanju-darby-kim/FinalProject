@@ -42,6 +42,8 @@ public class JJAjaxController {
 	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/categoryeditok.action")
 	public String categoryEditOk(HttpServletRequest req, String seq, String editcategoryname){
 		HashMap<String,String> map = new HashMap<String,String>();
+		System.out.println("메서드 seq" + seq);
+		//System.out.println("메서드 editcategoryname" + editcategoryname);
 		map.put("seq", seq);
 		map.put("editcategoryname", editcategoryname);
 		

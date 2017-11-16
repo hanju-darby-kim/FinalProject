@@ -60,15 +60,17 @@
 	//카테고리 수정하기 위한 입력폼 변경하기
 	function modify(seq, statusseq) {
 		//alert("수정" + seq + "테이블행번호" + statusseq);
-		statusseq = statusseq + 1;
-		var categorytext = $("#categoryaddtbl tr:NTH-CHILD(" + statusseq + ") td:NTH-CHILD(2)").text();
-		tr = '<td><input type="text" id="editcategoryname" name="editcategoryname" value="'+ categorytext +'"/> <input type="button" value="저장하기" onclick="editok(seq, statusseq);" style="cursor: pointer;"/></td>';
+		layoutstatusseq = statusseq + 1;
+		var categorytext = $("#categoryaddtbl tr:NTH-CHILD(" + layoutstatusseq + ") td:NTH-CHILD(2)").text();
+		tr = '<td><input type="text" id="editcategoryname" name="editcategoryname" value="'+ categorytext +'"/> <input type="button" value="저장하기" onclick="editok(' + seq + ',' + statusseq + ');" style="cursor: pointer;"/></td>';
 		
-		$("#categoryaddtbl tr:NTH-CHILD(" + statusseq + ") td:NTH-CHILD(2)").empty();
-		$("#categoryaddtbl tr:NTH-CHILD(" + statusseq + ") td:NTH-CHILD(2)").prepend(tr);
+		$("#categoryaddtbl tr:NTH-CHILD(" + layoutstatusseq + ") td:NTH-CHILD(2)").empty();
+		$("#categoryaddtbl tr:NTH-CHILD(" + layoutstatusseq + ") td:NTH-CHILD(2)").prepend(tr);
 	}
 	//카테고리 수정
 	function editok(seq, statusseq) {
+		//alert("넘겨받은 수정" + seq + "테이블행번호" + statusseq); //잘 넘어옴
+		alert($("#editcategoryname").val());
 		var num = Number($("#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD").text()) + 1;
 
 		$.ajax({
@@ -147,7 +149,7 @@
 </c:forEach>
 	<tr id="beforepoint">
 		<!-- ;%재준보완. 추가될 번호 표시하기 -->
-		<td colspan="3"><input type="text" id="categoryname" name="categoryname" placeholder="추가할 과정명을 입력하세요." style="width: 265px; margin-right: 5px;"><input type="button" value="추가" onclick="add();"/></td>
+		<td colspan="3"><input type="text" id="categoryname" name="categoryname" placeholder="추가추가할 과정명을 입력하세요." style="width: 265px; margin-right: 5px;"><input type="button" value="추가" onclick="add();"/></td>
 	</tr>
 </table>
 
