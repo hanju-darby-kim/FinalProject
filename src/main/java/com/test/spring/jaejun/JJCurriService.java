@@ -25,4 +25,10 @@ public class JJCurriService implements IJJCurriService {
 		return dao.addCategory(categoryname);
 	}
 	
+	@Override
+	public int delCategory(String delcategoryseq) {
+		
+		return dao.delCategory(delcategoryseq);
+	}
+	
 }

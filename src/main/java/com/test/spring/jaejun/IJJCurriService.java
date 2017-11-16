@@ -9,6 +9,8 @@ public interface IJJCurriService {
 	List<CurTypeDTO> curType();
 
 	int addCategory(String categoryname);
+
+	int delCategory(String delcategoryseq);
 	
 	
 	

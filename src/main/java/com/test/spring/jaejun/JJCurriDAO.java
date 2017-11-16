@@ -28,6 +28,11 @@ public class JJCurriDAO {
 		
 		return sql.insert("JJCurri.categoryadd", categoryname);
 	}
+
+	public int delCategory(String delcategoryseq) {
+		
+		return sql.delete("JJCurri.categorydel", delcategoryseq);
+	}
 	
 }
 

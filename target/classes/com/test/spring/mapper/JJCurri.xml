@@ -11,6 +11,10 @@
 	<select id="categoryadd" parameterType="String">
 		insert into curType values (curtypeseq.nextval, #{str})
 	</select>
+	
+	<select id="categorydel" parameterType="String">
+		delete from curType where seq = #{str}
+	</select>
 </mapper>
 
 

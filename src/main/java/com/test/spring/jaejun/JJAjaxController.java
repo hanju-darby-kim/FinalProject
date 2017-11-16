@@ -19,13 +19,29 @@ public class JJAjaxController {
 	 */
 	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/categoryaddok.action")
 	public String categoryAddOk(HttpServletRequest req, String categoryname){
-		System.out.println("포스트방식 접근");
+		//System.out.println("포스트방식 접근");
 		//System.out.println("categoryname: " + categoryname);
 		
 		int addCategoryresult = service.addCategory(categoryname);
 		req.setAttribute("addCategoryresult", addCategoryresult);
 		//System.out.println("result:" + result);
 		return "admin/curriculum/categoryaddok";
+	}
+	
+	/**
+	 * 카테고리 삭제
+	 * @param req
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/categorydelok.action")
+	public String categoryDelOk(HttpServletRequest req, String delcategoryseq){
+		//System.out.println("포스트방식 접근");
+		//System.out.println("categoryseq: " + delcategoryseq);
+		
+		int delCategoryresult = service.delCategory(delcategoryseq);
+		req.setAttribute("delCategoryresult", delCategoryresult);
+		//System.out.println("delCategoryresult result:" + delCategoryresult);
+		return "admin/curriculum/categorydelok";
 	}
 	
 }
