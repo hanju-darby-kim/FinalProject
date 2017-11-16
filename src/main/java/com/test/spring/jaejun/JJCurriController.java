@@ -36,7 +36,7 @@ public class JJCurriController {
 		menuCategory.setMiddleCategory("과정추가");
 		menuCategory.setSmallCategory("");
 		req.setAttribute("menuCategory", menuCategory);
-
+		
 		List<CurTypeDTO> list = service.curType();
 		//System.out.println(list.size());
 		req.setAttribute("list", list);

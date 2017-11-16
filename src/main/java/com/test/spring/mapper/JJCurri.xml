@@ -8,9 +8,22 @@
 		SELECT * FROM curType order by seq
 	</select>
 	
-	<select id="categoryadd" parameterType="String">
+	<insert id="categoryadd" parameterType="String">
 		insert into curType values (curtypeseq.nextval, #{str})
+	</insert>
+	
+	<delete id="categorydel" parameterType="String">
+		delete from curType where seq = #{str}
+	</delete>
+	
+	<select id="getlastseqCategory" resultType="Integer">
+		select max(Seq) from curtype
 	</select>
+	
+	<update id="categoryedit" parameterType="map">
+		update curType set curtype = #{str} where seq = #{num}
+	</update>
+	
 </mapper>
 
 
