@@ -265,14 +265,16 @@
 				</div>		
 			</div>
 			<!-- 요구사항 끝 -->
+			<input type="button" value="지원분야 추가">
 		</div>
 		<!-- 지원분야끝 -->
 		
 		<!-- 지원분야 관련(동적추가)2 -->
+		
 		<div class="fieldContainer">
 		
 			<div class="fieldNameContainer">
-				<div class="noticeTitle testPcdata">지원분야명</div>
+				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
 				<input type="text" name="fieldName1" disabled>
 			</div>
 			
@@ -450,6 +452,7 @@
 				<!-- 요구어학시험 끝 -->	
 			</div>
 			<!-- 요구사항 끝 -->
+			<input type="button" value="지원분야 추가">
 		</div>
 		<!-- 지원분야끝 -->
 		
@@ -457,7 +460,7 @@
 		<div class="fieldContainer">
 		
 			<div class="fieldNameContainer">
-				<div class="noticeTitle testPcdata">지원분야명</div>
+				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
 				<input type="text" name="fieldName1" disabled>
 			</div>
 			
@@ -655,7 +658,7 @@
 
  <script>
  	$(document).ready(function() {
- 		 //$(".fieldContainer").first().nextAll().hide();
+ 		$(".fieldContainer").first().nextAll().hide();
  		$(".testSubContainer").first().nextAll().hide(); //면접 전형 1차만 보이게
  		$(".demandCertificateContainer > .certificateTypeContainer").hide(); //요구자격증모두숨김
  		$(".demandLangTestContainer > .langTestType").hide(); //어학시험모두숨김
@@ -678,7 +681,7 @@
  			} else {
 	 			var last = nextContainer.last(); //보이는 애들 중 마지막 애
 	 			last.hide(); //마지막 요소 숨기기
-	 			last.find(":enabled").prop("disabled", true); //disable 하면서 숨겨야도미
+	 			last.find(":enabled").prop("disabled", true); //disable 하면서 숨겨야됨
  			}
  		});
  	});
