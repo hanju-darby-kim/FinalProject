@@ -86,6 +86,6 @@ public class NoticeController {
 		req.setAttribute("langtesttypelist", langtesttypelist);
 		req.setAttribute("majorcategorylist", majorcategorylist);
 		
-		return "company.notice.addnotice";
+		return "company.notice.addnotice.addnoticecss";
 	}
 }
