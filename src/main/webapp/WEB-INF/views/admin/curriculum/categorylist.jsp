@@ -18,7 +18,8 @@
 		
 		//console.log($("#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD").text());
 	});
-	
+
+	//카테고리 추가
 	var seq;
 	function add() {
 		//alert("ajax 동작");
@@ -47,7 +48,7 @@
 					$("#categoryname").val("");
 					
 				} else {
-					alert("과정 추가에 실패했습니다. 다시 시도해주세요.");
+					alert("카테고리 추가에 실패했습니다. 다시 시도해주세요.");
 				}
 			},
 			error: function(a,b,c) {
@@ -56,25 +57,48 @@
 		});
 	}	
 	
+	//카테고리 수정하기 위한 입력폼 변경하기
 	function modify(seq, statusseq) {
 		//alert("수정" + seq + "테이블행번호" + statusseq);
 		statusseq = statusseq + 1;
 		var categorytext = $("#categoryaddtbl tr:NTH-CHILD(" + statusseq + ") td:NTH-CHILD(2)").text();
+		tr = '<td><input type="text" id="editcategoryname" name="editcategoryname" value="'+ categorytext +'"/> <input type="button" value="저장하기" onclick="editok(seq, statusseq);" style="cursor: pointer;"/></td>';
 		
-		tr = '<td><input type="text" value="'+ categorytext +'"/><input type="button" value="저장하기" onclick="editok(seq, statusseq);"/></td>';
-			
 		$("#categoryaddtbl tr:NTH-CHILD(" + statusseq + ") td:NTH-CHILD(2)").empty();
 		$("#categoryaddtbl tr:NTH-CHILD(" + statusseq + ") td:NTH-CHILD(2)").prepend(tr);
-		
 	}
-	
+	//카테고리 수정
 	function editok(seq, statusseq) {
+		var num = Number($("#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD").text()) + 1;
+
+		$.ajax({
+			type: "POST",
+			url: "${pageContext.request.contextPath}/admin/curri/categoryeditok.action",
+			data: "seq=" + seq + "editcategoryname=" + $("#editcategoryname").val(),
+			dataType: "json",
+			success: function(result) {
+				//추가 성공(1)
+				//추가 실패(0)
+				if (result.editCategoryresult == "1") {
+					//var seq = ${list.size()} + 1;
+					seq = result.lastseq;
+					var tr = "<tr><td>" + num + "</td><td>" + $("#categoryname").val() + "</td><td>" + "<a href='#' style='cursor: pointer;' onclick='modify(" + seq + "," + num + ");'>[수정]</a> <a href='#' style='cursor: pointer;' onclick='del(" + seq + "," + num + ");'>[삭제]</a>" + "</tr>";
+					//<table></table> : <tr> 태그가 존재하지 않으면 <tbody>도 자동 생성되지 않는다.
+					$("#beforepoint").before(tr);
+					$("#categoryname").val("");
+					
+				} else {
+					alert("카테고리 수정에 실패했습니다. 다시 시도해주세요.");
+				}
+			},
+			error: function(a,b,c) {
+				alert(c);
+			}
+		});
 		
-	
 	}
-	
-	var count = 0;
-	var preseq = 0;
+
+	//카테고리 삭제
 	function del(seq, statusseq) {
 		statusseq = statusseq + 1;
 		
@@ -91,7 +115,7 @@
 						//$("#categoryaddtbl tr:NTH-CHILD(" + statusseq + ")").remove();
 						window.location.reload(true);
 					} else {
-						alert("과정 삭제에 실패했습니다. 다시 시도해주세요.");
+						alert("카테고리 삭제에 실패했습니다. 다시 시도해주세요.");
 					}
 				},
 				error: function(a,b,c) {

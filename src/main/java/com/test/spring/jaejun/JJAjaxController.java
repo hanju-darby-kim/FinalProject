@@ -1,5 +1,7 @@
 package com.test.spring.jaejun;
 
+import java.util.HashMap;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,23 @@ public class JJAjaxController {
 		
 		//System.out.println("result:" + result);
 		return "admin/curriculum/categoryaddok";
+	}
+	
+	/**
+	 * 카테고리 수정
+	 * @param req
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/categoryeditok.action")
+	public String categoryEditOk(HttpServletRequest req, String seq, String editcategoryname){
+		HashMap<String,String> map = new HashMap<String,String>();
+		map.put("seq", seq);
+		map.put("editcategoryname", editcategoryname);
+		
+		int editCategoryresult = service.editCategory(map);
+		req.setAttribute("editCategoryresult", editCategoryresult);
+		
+		return "admin/curriculum/categoryeditok";
 	}
 	
 	/**

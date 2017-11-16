@@ -1,5 +1,6 @@
 package com.test.spring.jaejun;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -38,7 +39,12 @@ public class JJCurriDAO {
 
 		return sql.selectOne("JJCurri.getlastseqCategory");
 	}
-	
+
+	public int editCategory(HashMap<String, String> map) {
+		
+		return sql.update("JJCurri.categoryedit");
+	}
+
 }
 
 

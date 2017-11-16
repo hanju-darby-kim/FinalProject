@@ -1,5 +1,6 @@
 package com.test.spring.jaejun;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,12 @@ public class JJCurriService implements IJJCurriService {
 	public int lastseqCategory() {
 		
 		return dao.lastseqCategory();
+	}
+	
+	@Override
+	public int editCategory(HashMap<String, String> map) {
+
+		return dao.editCategory(map);
 	}
 	
 }

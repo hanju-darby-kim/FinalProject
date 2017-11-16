@@ -19,6 +19,11 @@
 	<select id="getlastseqCategory" resultType="Integer">
 		select max(Seq) from curtype
 	</select>
+	
+	<select id="categoryedit" parameterType="map">
+		update curType set curtype = #{str} where seq = #{num};
+	</select>
+	
 </mapper>
 
 
