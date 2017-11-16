@@ -24,6 +24,10 @@ public class JJAjaxController {
 		
 		int addCategoryresult = service.addCategory(categoryname);
 		req.setAttribute("addCategoryresult", addCategoryresult);
+		
+		int lastseq = service.lastseqCategory();
+		req.setAttribute("lastseq", lastseq);
+		
 		//System.out.println("result:" + result);
 		return "admin/curriculum/categoryaddok";
 	}

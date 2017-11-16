@@ -11,6 +11,8 @@ public interface IJJCurriService {
 	int addCategory(String categoryname);
 
 	int delCategory(String delcategoryseq);
+
+	int lastseqCategory();
 	
 	
 	

@@ -33,6 +33,11 @@ public class JJCurriDAO {
 		
 		return sql.delete("JJCurri.categorydel", delcategoryseq);
 	}
+
+	public int lastseqCategory() {
+
+		return sql.selectOne("JJCurri.getlastseqCategory");
+	}
 	
 }
 

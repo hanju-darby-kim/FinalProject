@@ -31,4 +31,10 @@ public class JJCurriService implements IJJCurriService {
 		return dao.delCategory(delcategoryseq);
 	}
 	
+	@Override
+	public int lastseqCategory() {
+		
+		return dao.lastseqCategory();
+	}
+	
 }
