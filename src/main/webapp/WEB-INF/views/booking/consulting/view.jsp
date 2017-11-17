@@ -59,7 +59,7 @@
 			<td>
 				<select name="ConsulteeType" id="ConsulteeType" class="form-control short">
 					<c:forEach items="${list}" var="dto">
-						<option value="${dto.seq}">${dto.ConsulteeType}</option>
+						<option value="${dto.seq}">${dto.consulteeType}</option>
 					</c:forEach>
 				</select>
 			</td>

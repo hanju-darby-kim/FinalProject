@@ -15,9 +15,9 @@ public class ConsultService implements IConsultService {
 	private ConsultDAO dao;
 	
 	@Override
-	public List<ConsulteeTypeDTO> ConsulteeType() {
+	public List<ConsulteeTypeDTO> consulteeType() {
 		
-		return dao.ConsulteeType();
+		return dao.consulteeType();
 	}
 
 	/*@Override

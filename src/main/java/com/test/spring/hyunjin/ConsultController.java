@@ -46,7 +46,7 @@ private ConsultDAO dao;
 		
 		req.setAttribute("menuCategory", menuCategory);
 		
-		List<ConsulteeTypeDTO> list = service.ConsulteeType();
+		List<ConsulteeTypeDTO> list = service.consulteeType();
 		//System.out.println(list.size());
 		req.setAttribute("list", list);
 	

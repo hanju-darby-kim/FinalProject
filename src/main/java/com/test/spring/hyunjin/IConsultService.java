@@ -10,7 +10,7 @@ public interface IConsultService {
 	   
 	
 
-	List<ConsulteeTypeDTO> ConsulteeType();
+	List<ConsulteeTypeDTO> consulteeType();
 	
 	//int booking(ConsultingBookingDTO dto);
 	

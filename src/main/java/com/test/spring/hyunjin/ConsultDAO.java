@@ -26,7 +26,7 @@ public class ConsultDAO {
 		return sql.insert("JJCurri.categoryadd", categoryname);
 	}*/
 
-	public List<ConsulteeTypeDTO> ConsulteeType() {
+	public List<ConsulteeTypeDTO> consulteeType() {
 		// TODO Auto-generated method stub
 		return sql.selectList("hyunjin.getConsulteeType");
 	}
