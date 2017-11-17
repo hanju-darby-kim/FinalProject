@@ -9,6 +9,18 @@ public class CurriculumDTO {
 	private int timePerDay;
 	private String objective;
 	private int day;
+	private String curType;
+	
+	
+	
+	public String getCurType() {
+		return curType;
+	}
+	public void setCurType(String curType) {
+		this.curType = curType;
+	}
+	
+	
 	
 	public String getSeq() {
 		return seq;
