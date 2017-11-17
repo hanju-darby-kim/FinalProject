@@ -1,5 +1,6 @@
 package com.test.spring.jaejun;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,25 @@ public class JJCurriService implements IJJCurriService {
 	public int addCategory(String categoryname) {
 		
 		return dao.addCategory(categoryname);
+	}
+	
+	@Override
+	public int delCategory(String delcategoryseq) {
+		
+		return dao.delCategory(delcategoryseq);
+	}
+	
+	@Override
+	public int lastseqCategory() {
+		
+		return dao.lastseqCategory();
+	}
+	
+	@Override
+	public int editCategory(HashMap<String, String> map) {
+		//System.out.println("서비스로 건네준" + map.get("seq"));
+		//System.out.println("서비스로 건네준" + map.get("editcategoryname"));
+		return dao.editCategory(map);
 	}
 	
 }
