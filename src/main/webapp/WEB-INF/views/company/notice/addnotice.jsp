@@ -7,81 +7,82 @@
 
 <h2 class="section-heading">공고 등록</h2>
 <form method="POST" action="/final/addnotice.action">
-	<div id="noticeContiner">
-	
-		<div id="NoticeContentContainter">
-			<div id="contentPcdata" class="noticeTitle">회사소개</div>
-			<textarea name="noticeContent" class="form-control">${content}</textarea>
-		</div>
-		
-		<!-- 게시 시작일과 게시 종료일 입력 -->
-		<div id="dateContainer">
-			<div id="datePcdata" class="">게시일</div>
-			<div class="input-group" style="width: 350px;"> 		
-				<input type="text" name="startEndDate" class="form-control">
-				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-			</div>
-		</div>
-		
-		<!-- 종합평가서 여부 -->
-		<div id="reportContainer">
-			<label class="fancy-checkbox">
-	            <input type="checkbox" name="report" value="y">
-	            <span>종합평가서</span>
-	        </label>
-		</div>
-		
-		<!-- 면접 전형 -->
-		<div id="testContainer">
-			<div class="noticeTitle">면접 전형 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
-			<div class="testSubContainer">
-				<div class="testPcdata">1차</div>
-				<select name="testByNotice1">
-					<c:forEach items="${testlist}" var="testdto">
-					<option value="${testdto.seq}">${testdto.testType}</option>
-					</c:forEach>
-				</select>
+	<div id="noticeContainer">
+		<div id="noticeHeadContainer">
+			<div id="noticeContentContainter">
+				<div id="contentPcdata" class="noticeTitle">회사소개</div>
+				<textarea name="noticeContent" id="noticeContent" class="form-control">${content}</textarea>
 			</div>
 			
-			<div class="testSubContainer">
-				<div class="testPcdata">2차</div>
-				<select name="testByNotice2" disabled>
-					<c:forEach items="${testlist}" var="testdto">
-					<option value="${testdto.seq}">${testdto.testType}</option>
-					</c:forEach>
-				</select>
+			<!-- 게시 시작일과 게시 종료일 입력 -->
+			<div id="dateContainer">
+				<div id="datePcdata" class="noticeTitle">게시일</div>
+				<div class="input-group" style="width: 350px;"> 		
+					<input type="text" name="startEndDate" class="form-control">
+					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+				</div>
 			</div>
 			
-			<div class="testSubContainer">
-				<div class="testPcdata">3차</div>
-				<select name="testByNotice3" disabled>
-					<c:forEach items="${testlist}" var="testdto">
-					<option value="${testdto.seq}">${testdto.testType}</option>
-					</c:forEach>
-				</select>
+			<!-- 종합평가서 여부 -->
+			<div id="reportContainer">
+				<label class="fancy-checkbox">
+		            <input type="checkbox" name="report" value="y">
+		            <span>종합평가서</span>
+		        </label>
 			</div>
 			
-			<div class="testSubContainer">
-				<div class="testPcdata">4차</div>
-				<select name="testByNotice4" disabled>
-					<c:forEach items="${testlist}" var="testdto">
-					<option value="${testdto.seq}">${testdto.testType}</option>
-					</c:forEach>
-				</select>
+			<!-- 면접 전형 -->
+			<div id="testContainer">
+				<div class="noticeTitle">면접 전형 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+				<div class="testSubContainer">
+					<div class="testPcdata">1차</div>
+					<select name="testByNotice1">
+						<c:forEach items="${testlist}" var="testdto">
+						<option value="${testdto.seq}">${testdto.testType}</option>
+						</c:forEach>
+					</select>
+				</div>
+				
+				<div class="testSubContainer">
+					<div class="testPcdata">2차</div>
+					<select name="testByNotice2" disabled>
+						<c:forEach items="${testlist}" var="testdto">
+						<option value="${testdto.seq}">${testdto.testType}</option>
+						</c:forEach>
+					</select>
+				</div>
+				
+				<div class="testSubContainer">
+					<div class="testPcdata">3차</div>
+					<select name="testByNotice3" disabled>
+						<c:forEach items="${testlist}" var="testdto">
+						<option value="${testdto.seq}">${testdto.testType}</option>
+						</c:forEach>
+					</select>
+				</div>
+				
+				<div class="testSubContainer">
+					<div class="testPcdata">4차</div>
+					<select name="testByNotice4" disabled>
+						<c:forEach items="${testlist}" var="testdto">
+						<option value="${testdto.seq}">${testdto.testType}</option>
+						</c:forEach>
+					</select>
+				</div>
+				
+				<div class="testSubContainer">
+					<div class="testPcdata">5차</div>
+					<select name="testByNotice5" disabled>
+						<c:forEach items="${testlist}" var="testdto">
+						<option value="${testdto.seq}">${testdto.testType}</option>
+						</c:forEach>
+					</select>
+				</div>
+				<button>추가</button> <button>삭제</button>
 			</div>
-			
-			<div class="testSubContainer">
-				<div class="testPcdata">5차</div>
-				<select name="testByNotice5" disabled>
-					<c:forEach items="${testlist}" var="testdto">
-					<option value="${testdto.seq}">${testdto.testType}</option>
-					</c:forEach>
-				</select>
-			</div>
-			<button>추가</button> <button>삭제</button>
+			<!-- 면접전형 끝 -->
 		</div>
-		<!-- 면접전형 끝 -->
-	
+		<!-- 공고 헤드 부분 끝 -->
 		<!-- 지원분야 관련(동적추가)1 -->
 		<div class="fieldContainer">
 		
