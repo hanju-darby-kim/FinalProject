@@ -5604,6 +5604,7 @@ ul.sidebar-nav ul.submenu li:first-child a {
   width: 18px;
   height: 18px;
   margin-right: 8px;
+  background-color: white;
 }
 .fancy-radio input[type="radio"]:checked + span > i:after {
   -moz-border-radius: 50%;
