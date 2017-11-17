@@ -19,9 +19,7 @@
 			font-weight: bold;
 		}
 		
-		#noticeContainer #noticeHeadContainer input.form-control {
-			background-color: black;
-		}
+		
 		
 		#noticeHeadContainer {
 			border: 1px solid red;
@@ -38,6 +36,25 @@
 			height: 150px;
 			outline: none;
 			resize: none;
+		}
+		
+		#dateContainer {
+			margin-top: 20px;
+		}
+		
+		
+		#reportContainer {
+			margin-left: 30px;
+			width: 200px;
+			margin-top: 20px;
+		}
+		
+		#reportContainer #reportPcdata{
+			margin-bottom: 6px;	
+		}
+		
+		#testContainer {
+			margin-top: 20px;
 		}
 		
 	</style>

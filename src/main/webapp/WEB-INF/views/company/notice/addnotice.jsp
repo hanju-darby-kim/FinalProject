@@ -15,7 +15,7 @@
 			</div>
 			
 			<!-- 게시 시작일과 게시 종료일 입력 -->
-			<div id="dateContainer">
+			<div id="dateContainer" style="float: left;">
 				<div id="datePcdata" class="noticeTitle">게시일</div>
 				<div class="input-group" style="width: 350px;"> 		
 					<input type="text" name="startEndDate" class="form-control">
@@ -24,12 +24,19 @@
 			</div>
 			
 			<!-- 종합평가서 여부 -->
-			<div id="reportContainer">
-				<label class="fancy-checkbox">
-		            <input type="checkbox" name="report" value="y">
-		            <span>종합평가서</span>
-		        </label>
+			<div id="reportContainer" style="float: left;">
+				<div id="reportPcdata" class="noticeTitle">종합평가서 요청</div>
+				<label class="fancy-radio" style="float: left;">
+					<input type="radio" name="report" value="y">
+					<span><i></i>네</span>
+				</label>
+				<label class="fancy-radio" style="float: left;">
+					<input type="radio" name="report" checked="checked" value="n">
+					<span><i></i>아니오</span>
+				</label>
+				<div style="clear: both;"></div>
 			</div>
+			<div style="clear: both;"></div>
 			
 			<!-- 면접 전형 -->
 			<div id="testContainer">
