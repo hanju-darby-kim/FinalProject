@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.spring.dto.CurTypeDTO;
+import com.test.spring.dto.CurriculumDTO;
 import com.test.spring.dto.MenuCategoryDTO;
 
 @Controller
@@ -23,7 +24,6 @@ public class JJCurriController {
 	public JJCurriController() {
 		this.dao = new JJCurriDAO();
 	}
-	
 	
 	/**
 	 * 과정 추가 페이지
@@ -60,7 +60,7 @@ public class JJCurriController {
 	 * @param req
 	 * @return
 	 */
-	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/list.action")
+	@RequestMapping(method={RequestMethod.GET}, value="/admin/curri/curriculumlist.action")
 	public String curriList(HttpServletRequest req){
 		menuCategory.setBigCategory("관리자메뉴");
 		menuCategory.setMiddleCategory("과정목록");
@@ -68,7 +68,11 @@ public class JJCurriController {
 		
 		req.setAttribute("menuCategory", menuCategory);
 		
-		return "admin.curriculum.list";
+		List<CurriculumDTO> list = service.curriculum();
+		//System.out.println(list.size()); //7
+		req.setAttribute("list", list);
+		
+		return "admin.curriculum.curriculumlist";
 	}
 	
 	/**
