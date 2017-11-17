@@ -51,15 +51,9 @@ public class JJCurriController {
 	 */
 	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/addok.action")
 	public String curriAddok(HttpServletRequest req){
-//		menuCategory.setBigCategory("관리자메뉴");
-//		menuCategory.setMiddleCategory("과정추가");
-//		menuCategory.setSmallCategory("");
-//		
-//		req.setAttribute("menuCategory", menuCategory);
 
 		return "admin.curriculum.addok";
 	}
-	
 	
 	/**
 	 * 
