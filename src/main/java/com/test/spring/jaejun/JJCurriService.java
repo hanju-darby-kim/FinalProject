@@ -40,7 +40,8 @@ public class JJCurriService implements IJJCurriService {
 	
 	@Override
 	public int editCategory(HashMap<String, String> map) {
-
+		//System.out.println("서비스로 건네준" + map.get("seq"));
+		//System.out.println("서비스로 건네준" + map.get("editcategoryname"));
 		return dao.editCategory(map);
 	}
 	

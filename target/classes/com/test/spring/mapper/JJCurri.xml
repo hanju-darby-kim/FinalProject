@@ -21,7 +21,7 @@
 	</select>
 	
 	<update id="categoryedit" parameterType="map">
-		update curType set curtype = #{str} where seq = #{num}
+		update curType set curtype.curtype = #{editcategoryname} where curtype.seq = #{seq}
 	</update>
 	
 </mapper>
