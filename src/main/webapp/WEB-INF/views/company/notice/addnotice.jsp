@@ -29,11 +29,11 @@
 				<label class="fancy-radio" style="float: left;">
 					<input type="radio" name="report" value="y">
 					<span><i></i>네</span>
-				</label>
+				</label><div style="clear: both;"></div>
 				<label class="fancy-radio" style="float: left;">
 					<input type="radio" name="report" checked="checked" value="n">
 					<span><i></i>아니오</span>
-				</label>
+				</label><div style="clear: both;"></div>
 				<div style="clear: both;"></div>
 			</div>
 			<div style="clear: both;"></div>
@@ -91,7 +91,7 @@
 		</div>
 		<!-- 공고 헤드 부분 끝 -->
 		<!-- 지원분야 관련(동적추가)1 -->
-		<div class="fieldContainer">
+		<div class="fieldContainer" id="fieldContainer1">
 		
 			<div class="fieldNameContainer">
 				<div class="noticeTitle testPcdata">지원분야명</div>
@@ -136,15 +136,15 @@
 						</c:forEach>
 					</select>
 					<label class="fancy-checkbox">
-		            	<input type="checkbox" name="educationEssential1" value="필수" disabled>
+		            	<input type="checkbox"  name="educationEssential1" value="필수">
 		            	<span>필수</span>
-		        	</label>
+		        	</label><div style="clear: both;"></div>
 				</div>
 				
 				<!-- 자격증콘테이너 -->
 				<div class="demandCertificateContainer">
 					<!-- 3개가능 -->
-					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="certificateTypeContainer">
 						<select name="certificateTypeSeq1_1" disabled>
@@ -153,9 +153,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential1_1" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential1_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 2 -->
@@ -166,9 +166,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential1_2" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential1_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 3 -->
@@ -179,16 +179,16 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential1_3" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential1_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 			        </div>
 				</div>
 				<!-- 자격증콘테이너끝 -->
 				
 				<!-- 요구어학시험 -->
 				<div class="demandLangTestContainer">
-					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="langTestType">
 						<select name="langTestTypeSeq1_1" disabled>
@@ -197,9 +197,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential1_1" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential1_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 2 -->
@@ -210,9 +210,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential1_2" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential1_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 3 -->
@@ -223,15 +223,15 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential1_3" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential1_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 				</div>
 				<!-- 요구어학시험끝 -->
 				
 				<div class="demandMajorContainer">
-					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="majorCategory">
 						<select name="majorCategorySeq1_1" disabled>
@@ -240,9 +240,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential1_1" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential1_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 2 -->
@@ -253,9 +253,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential1_2" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential1_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 3 -->
@@ -266,9 +266,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential1_3" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential1_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 				</div>		
 			</div>
@@ -279,42 +279,45 @@
 		
 		<!-- 지원분야 관련(동적추가)2 -->
 		
-		<div class="fieldContainer">
+		<div class="fieldContainer" id="fieldContainer2">
 		
 			<div class="fieldNameContainer">
 				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
 				<input type="text" class="fieldName" name="fieldName1" disabled>
 			</div>
-			
-			<div class="hireTypeContainer">
-				<div class="noticeTitle">고용형태</div>
-				<select class="hireType" name="hireTypeSeq2" disabled>
-					<c:forEach items="${hiretypelist}" var="hiretypedto">
-					<option value="${hiretypedto.seq}">${hiretypedto.hireType}</option>
-					</c:forEach>
-				</select>
+			<div>
+				<div class="hireTypeContainer">
+					<div class="noticeTitle">고용형태</div>
+					<select class="hireType" name="hireTypeSeq2" disabled>
+						<c:forEach items="${hiretypelist}" var="hiretypedto">
+						<option value="${hiretypedto.seq}">${hiretypedto.hireType}</option>
+						</c:forEach>
+					</select>
+				</div>
+				
+				<div class="careerTypeContainer">
+					<div class="noticeTitle">경력</div>
+					<select class="careerType" name="careerTypeSeq2" disabled>
+						<c:forEach items="${careertypelist}" var="careertypedto">
+						<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
+						</c:forEach>
+					</select>
+				</div>
+				
+				<div class="areaTypeContainer">
+					<div class="noticeTitle">근무지역</div>
+					<select class="areaType" name="areaTypeSeq2" disabled>
+						<c:forEach items="${areatypelist}" var="areatypedto">
+						<option value="${areatypedto.seq}">${areatypedto.area}</option>
+						</c:forEach>
+					</select>
+				</div>
+				
 			</div>
 			
-			<div class="careerTypeContainer">
-				<div class="noticeTitle">경력</div>
-				<select class="careerType" name="careerTypeSeq2" disabled>
-					<c:forEach items="${careertypelist}" var="careertypedto">
-					<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
-					</c:forEach>
-				</select>
-			</div>
-			
-			<div class="areaTypeContainer">
-				<div class="noticeTitle">근무지역</div>
-				<select class="areaType" name="areaTypeSeq2" disabled>
-					<c:forEach items="${areatypelist}" var="areatypedto">
-					<option value="${areatypedto.seq}">${areatypedto.area}</option>
-					</c:forEach>
-				</select>
-			</div>
 			
 			<!-- 요구사항들 -->
-			<div class="demandContainer">
+			<div class="demandContainer" style="clear: both;">
 				<div class="information">* 필수에 표시하지 않을 경우 우대사항이 됩니다.</div>
 				<div id="demandEducationContainer">
 					<div class="noticeTitle">요구학력</div>
@@ -324,14 +327,14 @@
 						</c:forEach>
 					</select>
 					<label class="fancy-checkbox">
-		            	<input type="checkbox" class="educationEssential" name="educationEssential2" value="필수" disabled>
+		            	<input type="checkbox"  class="educationEssential" name="educationEssential2" value="필수" disabled>
 		            	<span>필수</span>
-		        	</label>
+		        	</label><div style="clear: both;"></div>
 				</div>
 				
 				<div class="demandCertificateContainer">
 					<!-- 3개가능 -->
-					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="certificateTypeContainer">
 						<select name="certificateTypeSeq2_1" disabled>
@@ -340,9 +343,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential2_1" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential2_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 2 -->
@@ -353,9 +356,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential2_2" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential2_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 3 -->
@@ -366,15 +369,15 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential2_3" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential2_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 				</div>
 				
 				<!-- 요구 어학시험 시작 -->
 				<div class="demandLangTestContainer">
-					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="langTestType">
 						<select name="langTestTypeSeq2_1" disabled>
@@ -383,9 +386,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential2_1" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential2_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 2 -->
@@ -396,9 +399,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential2_2" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential2_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 3 -->
@@ -409,15 +412,15 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential2_3" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential2_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 				</div>
 				<!-- 요구 어학시험 끝 -->
 				
 				<div class="demandMajorContainer">
-					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="majorCategory">
 						<select name="majorCategorySeq2_1" disabled>
@@ -426,9 +429,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential2_1" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential2_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 2 -->
@@ -439,9 +442,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential2_2" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential2_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 3 -->
@@ -452,9 +455,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential2_3" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential2_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 				</div>	
 				<!-- 요구어학시험 끝 -->	
@@ -465,7 +468,7 @@
 		<!-- 지원분야끝 -->
 		
 		<!-- 지원분야 관련(동적추가)3 -->
-		<div class="fieldContainer">
+		<div class="fieldContainer" id="fieldContainer3">
 		
 			<div class="fieldNameContainer">
 				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
@@ -512,12 +515,12 @@
 					<label class="fancy-checkbox">
 		            	<input type="checkbox" name="educationEssential3" value="필수" disabled>
 		            	<span>필수</span>
-		        	</label>
+		        	</label><div style="clear: both;"></div>
 				</div>
 				
 				<div class="demandCertificateContainer">
 					<!-- 3개가능 -->
-					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="certificateTypeContainer">
 						<select class="" name="certificateTypeSeq3_1" disabled>
@@ -526,9 +529,10 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential3_1" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential3_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
+			        	
 		        	</div>
 		        	
 		        	<!-- 2 -->
@@ -539,9 +543,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential3_2" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential3_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 3 -->
@@ -552,16 +556,16 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="certificateEssential3_3" value="필수" disabled>
+			            	<input type="checkbox"  name="certificateEssential3_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div><div style="clear: both;"></div>
 			        </div>
 				</div>
 				<!-- 요구자격증끝 -->
 				
 				<!-- 요구 어학시험 -->
 				<div class="demandLangTestContainer">
-					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="langTestType">
 						<select name="langTestTypeSeq3_1" disabled>
@@ -570,9 +574,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential3_1" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential3_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 			        </div>
 			        	
 		        	<!-- 2 -->
@@ -583,9 +587,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential3_2" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential3_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 			        </div>
 		        	
 		        	<!-- 3 -->
@@ -596,16 +600,16 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="langTestEssential3_3" value="필수" disabled>
+			            	<input type="checkbox"  name="langTestEssential3_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 				</div>
 				<!-- 요구어학시험끝 -->
 				
 				<!-- 요구학과 -->
 				<div class="demandMajorContainer">
-					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
+					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 					<!-- 1 -->
 					<div class="majorCategory">
 						<select name="majorCategorySeq3_1" disabled>
@@ -614,9 +618,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential3_1" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential3_1" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 2 -->
@@ -627,9 +631,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential3_2" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential3_2" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 		        	
 		        	<!-- 3 -->
@@ -640,9 +644,9 @@
 							</c:forEach>
 						</select>
 						<label class="fancy-checkbox">
-			            	<input type="checkbox" name="majorEssential3_3" value="필수" disabled>
+			            	<input type="checkbox"  name="majorEssential3_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label>
+			        	</label><div style="clear: both;"></div>
 		        	</div>
 				</div>		
 				<!-- 요구 학과 끝 -->

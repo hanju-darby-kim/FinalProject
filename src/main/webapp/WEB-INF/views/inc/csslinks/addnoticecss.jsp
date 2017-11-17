@@ -40,8 +40,18 @@
 		}
 		
 		.fieldContainer {
-			border: 3px solid skyblue;
-			padding: 10px;
+			padding: 15px;
+		}
+		
+		#fieldContainer1 {
+			background-color: #C8DDF1;
+		}
+		#fieldContainer2 {
+			background-color: #CBEFFB;
+			
+		}
+		#fieldContainer3 {
+			background-color: #EBFBE3;
 		}
 		
 		#noticeContent {
@@ -71,6 +81,23 @@
 			margin-left: 3px;
 		}
 		
+		.hireTypeContainer, .careerTypeContainer, .areaTypeContainer {
+			float: left;
+			margin-right: 30px;
+			margin-bottom: 15px;
+		}
 		
+		.demandContainer {
+			clear: both;
+		}
+		
+		#demandEducationContainer .noticeTitle {
+			margin-top: 0px;
+		}
+		
+		select {
+			float: left;
+			margin-right: 5px;
+		}
 		
 	</style>
