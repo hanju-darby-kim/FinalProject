@@ -11,7 +11,7 @@
 		
 		.fa-trash-o {
 		    font-size: 20px;
-		    background-color: #aaa;
+		    background-color: #bbb;
 		    border-radius: 3px;
 		    color: white;
 		    padding: 3px 7px;
@@ -85,6 +85,12 @@
 			float: left;
 			margin-right: 30px;
 			margin-bottom: 15px;
+			border: 1px solid black;
+		}
+		
+		/* 왜 안먹지 */
+		.hireTypeContainer select, .careerTypeContainer select, .areaTypeContainer select {
+			width: 70px;
 		}
 		
 		.demandContainer {
@@ -97,7 +103,8 @@
 		
 		select {
 			float: left;
-			margin-right: 5px;
+			margin-right: 6px;
+	
 		}
 		
 	</style>

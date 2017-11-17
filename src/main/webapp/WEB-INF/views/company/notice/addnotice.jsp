@@ -273,7 +273,7 @@
 				</div>		
 			</div>
 			<!-- 요구사항 끝 -->
-			<input type="button" class="addField" value="지원분야 추가">
+			<button type="button" class="btn btn-rounded-4x btn-default addField">지원분야 추가</button>
 		</div>
 		<!-- 지원분야끝 -->
 		
