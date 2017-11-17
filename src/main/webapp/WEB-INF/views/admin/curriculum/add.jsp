@@ -21,11 +21,9 @@
 
 </style>
 <script>
-
 	function addcategory(){
-		var child = window.open("${pageContext.request.contextPath}/admin/curri/categorylist.action", "child", "width=450, height=600, left=" + (screen.availWidth * 0.6) + ", top=" + (screen.availHeight * 0.2));
-	};
 		var win = window.open("${pageContext.request.contextPath}/admin/curri/categorylist.action", "win", "width=450, height=600, left=" + (screen.availWidth * 0.6) + ", top=" + (screen.availHeight * 0.2));
+	}
 </script>
 <form method="post" action="/admin/curri/addok.action">
 	<table id="tblform" class="table">
