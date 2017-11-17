@@ -128,7 +128,7 @@
 						</c:forEach>
 					</select>
 					<label class="fancy-checkbox">
-		            	<input type="checkbox" name="educationEssential1" value="필수">
+		            	<input type="checkbox" name="educationEssential1" value="필수" disabled>
 		            	<span>필수</span>
 		        	</label>
 				</div>
@@ -265,7 +265,7 @@
 				</div>		
 			</div>
 			<!-- 요구사항 끝 -->
-			<input type="button" value="지원분야 추가">
+			<input type="button" class="addField" value="지원분야 추가">
 		</div>
 		<!-- 지원분야끝 -->
 		
@@ -275,12 +275,12 @@
 		
 			<div class="fieldNameContainer">
 				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
-				<input type="text" name="fieldName1" disabled>
+				<input type="text" class="fieldName" name="fieldName1" disabled>
 			</div>
 			
 			<div class="hireTypeContainer">
 				<div class="noticeTitle">고용형태</div>
-				<select name="hireTypeSeq2" disabled>
+				<select class="hireType" name="hireTypeSeq2" disabled>
 					<c:forEach items="${hiretypelist}" var="hiretypedto">
 					<option value="${hiretypedto.seq}">${hiretypedto.hireType}</option>
 					</c:forEach>
@@ -289,7 +289,7 @@
 			
 			<div class="careerTypeContainer">
 				<div class="noticeTitle">경력</div>
-				<select name="careerTypeSeq2" disabled>
+				<select class="careerType" name="careerTypeSeq2" disabled>
 					<c:forEach items="${careertypelist}" var="careertypedto">
 					<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
 					</c:forEach>
@@ -298,7 +298,7 @@
 			
 			<div class="areaTypeContainer">
 				<div class="noticeTitle">근무지역</div>
-				<select name="areaTypeSeq2" disabled>
+				<select class="areaType" name="areaTypeSeq2" disabled>
 					<c:forEach items="${areatypelist}" var="areatypedto">
 					<option value="${areatypedto.seq}">${areatypedto.area}</option>
 					</c:forEach>
@@ -310,13 +310,13 @@
 				<div class="information">* 필수에 표시하지 않을 경우 우대사항이 됩니다.</div>
 				<div id="demandEducationContainer">
 					<div class="noticeTitle">요구학력</div>
-					<select name="educationTypeSeq2" disabled>
+					<select class="educationType" name="educationTypeSeq2" disabled>
 						<c:forEach items="${educationtypelist}" var="educationtypedto">
 						<option value="${educationtypedto.seq}">${educationtypedto.educationType}</option>
 						</c:forEach>
 					</select>
 					<label class="fancy-checkbox">
-		            	<input type="checkbox" name="educationEssential2" value="필수">
+		            	<input type="checkbox" class="educationEssential" name="educationEssential2" value="필수" disabled>
 		            	<span>필수</span>
 		        	</label>
 				</div>
@@ -452,7 +452,7 @@
 				<!-- 요구어학시험 끝 -->	
 			</div>
 			<!-- 요구사항 끝 -->
-			<input type="button" value="지원분야 추가">
+			<input type="button" class="addField" value="지원분야 추가">
 		</div>
 		<!-- 지원분야끝 -->
 		
@@ -461,12 +461,12 @@
 		
 			<div class="fieldNameContainer">
 				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
-				<input type="text" name="fieldName1" disabled>
+				<input type="text" class="fieldName" name="fieldName1" disabled>
 			</div>
 			
 			<div class="hireTypeContainer">
 				<div class="noticeTitle">고용형태</div>
-				<select name="hireTypeSeq3" disabled>
+				<select class="hireType" name="hireTypeSeq3" disabled>
 					<c:forEach items="${hiretypelist}" var="hiretypedto">
 					<option value="${hiretypedto.seq}">${hiretypedto.hireType}</option>
 					</c:forEach>
@@ -475,7 +475,7 @@
 			
 			<div class="careerTypeContainer">
 				<div class="noticeTitle">경력</div>
-				<select name="careerTypeSeq3" disabled>
+				<select class="careerType" name="careerTypeSeq3" disabled>
 					<c:forEach items="${careertypelist}" var="careertypedto">
 					<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
 					</c:forEach>
@@ -484,7 +484,7 @@
 			
 			<div class="areaTypeContainer">
 				<div class="noticeTitle">근무지역</div>
-				<select name="areaTypeSeq3" disabled>
+				<select class="areaType" name="areaTypeSeq3" disabled>
 					<c:forEach items="${areatypelist}" var="areatypedto">
 					<option value="${areatypedto.seq}">${areatypedto.area}</option>
 					</c:forEach>
@@ -496,7 +496,7 @@
 				<div class="information">* 필수에 표시하지 않을 경우 우대사항이 됩니다.</div>
 				<div id="demandEducationContainer">
 					<div class="noticeTitle">요구학력</div>
-					<select name="educationTypeSeq3" disabled>
+					<select class="educationType" name="educationTypeSeq3" disabled>
 						<c:forEach items="${educationtypelist}" var="educationtypedto">
 						<option value="${educationtypedto.seq}">${educationtypedto.educationType}</option>
 						</c:forEach>
@@ -684,6 +684,20 @@
 	 			last.find(":enabled").prop("disabled", true); //disable 하면서 숨겨야됨
  			}
  		});
+ 		
+ 		$(".addField").click(function(event) {
+ 			var nextField = $(event.target).parent().next(); //다음 요구 조건
+ 			nextField.show(); //다음 요구 조건 보이기
+ 			nextField.find(".fieldName, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", false); //얘네 disabled 풀어주기
+ 		});
+ 		
+ 		$(".fa-trash-o").click(function(event) {
+ 			var parentField = $(event.target).parents(".fieldContainer");
+ 			parentField.find(".fieldName, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", true);
+ 			parentField.hide();
+ 			
+ 		});
+ 		
  	});
  	
  </script>

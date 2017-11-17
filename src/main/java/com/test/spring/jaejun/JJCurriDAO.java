@@ -46,7 +46,7 @@ public class JJCurriDAO {
 		
 		return sql.update("JJCurri.categoryedit", map);
 	}
-
+	
 }
 
 

@@ -20,7 +20,7 @@ public class JJAjaxController {
 	 * @return
 	 */
 	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/categoryaddok.action")
-	public String categoryAddOk(HttpServletRequest req, String categoryname){
+	public String categoryAddOk(HttpServletRequest req){
 		//System.out.println("포스트방식 접근");
 		//System.out.println("categoryname: " + categoryname);
 		

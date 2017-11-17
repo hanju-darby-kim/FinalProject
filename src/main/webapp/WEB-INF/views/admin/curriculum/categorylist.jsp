@@ -15,8 +15,8 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		
 		//console.log($("#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD").text());
+		
 	});
 
 	//카테고리 추가
@@ -119,13 +119,23 @@
 				}
 			});
 		}
-		
-		
+	}
+	
+	//창 종료시키기
+	function windowclose() {
+		opener.parent.location.reload(true);
+		window.close();
+	}
+	
+	//창 끄기방지
+	function closeIt()
+	{
+		alert("창 강제종료");
 	}
 	
 </script>
 
-<table id="categoryaddtbl">
+<table id="categoryaddtbl" ombeforeunload="closeIt();">
 	<tr>
 		<th>번호</th>
 		<th>과정명</th>
@@ -146,5 +156,7 @@
 		<td colspan="3"><input type="text" id="categoryname" name="categoryname" placeholder="추가할 과정명을 입력하세요." style="width: 265px; margin-right: 5px;"><input type="button" value="추가" onclick="add();"/></td>
 	</tr>
 </table>
-
+<div style="width: 420px; text-align: right; margin-top: 10px;">
+	<input type="button" value="창 닫기" onclick="windowclose();"/>
+</div>
 
