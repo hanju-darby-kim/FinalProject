@@ -21,13 +21,10 @@
 
 </style>
 <script>
-
 	function addcategory(){
-		var child = window.open("${pageContext.request.contextPath}/admin/curri/categorylist.action", "child", "width=450, height=600, left=" + (screen.availWidth * 0.6) + ", top=" + (screen.availHeight * 0.2));
-	};
-
+		var win = window.open("${pageContext.request.contextPath}/admin/curri/categorylist.action", "win", "width=450, height=600, left=" + (screen.availWidth * 0.6) + ", top=" + (screen.availHeight * 0.2));
+	}
 </script>
-
 <form method="post" action="/admin/curri/addok.action">
 	<table id="tblform" class="table">
 		<tr>
@@ -44,27 +41,33 @@
 		</tr>
 		<tr>
 			<th>과정명</th>
-			<td><input type="text" name="title" id="title" class="form-control short" /></td>
+			<td><input placeholder="예) Java&Python 기반 응용SW 개발자 양성과정" type="text" name="title" id="title" class="form-control short" /></td>
 		</tr>
 		<tr>
 			<th>과정단가</th>
-			<td><input type="text" name="cost" id="cost" class="form-control short" /></td>
+			<td><input placeholder="예) 7362880" type="text" name="cost" id="cost" class="form-control short" /></td>
 		</tr>
 		<tr>
 			<th>모집정원</th>
-			<td><input type="text" name="capacity" id="capacity" class="form-control short" /></td>
+			<td><input placeholder="예) 28" type="text" name="capacity" id="capacity" class="form-control short" /></td>
 		</tr>
 		<tr>
 			<th>교육시간</th>
-			<td><input type="text" name="time" id="time" class="form-control short" /></td>
+			<td><input placeholder="예) 1120" type="text" name="time" id="time" class="form-control short" /></td>
 		</tr>
 		<tr>
 			<th>하루교육시간</th>
-			<td><input type="text" name="timePerDay" id="timePerDay" class="form-control short" /></td>
+			<td><input placeholder="예) 8" type="text" name="timePerDay" id="timePerDay" class="form-control short" /></td>
+		</tr>
+		<tr>
+			<th>교육일수</th>
+			<td><input placeholder="예) 140" type="text" name="day" id="day" class="form-control short" /></td>
 		</tr>
 		<tr>
 			<th>교육목표</th>
-			<td><input type="text" name="objective" id="objective" class="form-control short" /></td>
+			<td>
+				<textarea placeholder="교육목표를 입력하세요." name="objective" id="objective" class="form-control short" cols="30" rows="10"></textarea>
+			</td>
 		</tr>
 	</table>
 	<div id="btns" style="text-align: right;">

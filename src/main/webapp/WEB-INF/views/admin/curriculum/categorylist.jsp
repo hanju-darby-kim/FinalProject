@@ -9,14 +9,14 @@
 	#categoryaddtbl th:NTH-CHILD(2) { width: 270px; }
 	#categoryaddtbl th:NTH-CHILD(3) { width: 100px; }
 	#categoryaddtbl td { text-align: center; }
-	#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD { background-color:red; }
+	/* #categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD { background-color:red; } */
 
 </style>
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		
 		//console.log($("#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD").text());
+		
 	});
 
 	//카테고리 추가
@@ -69,26 +69,20 @@
 	}
 	//카테고리 수정
 	function editok(seq, statusseq) {
-		//alert("넘겨받은 수정" + seq + "테이블행번호" + statusseq); //잘 넘어옴
-		alert($("#editcategoryname").val());
-		var num = Number($("#categoryaddtbl tr:NTH-LAST-CHILD(2)>td:FIRST-CHILD").text()) + 1;
-
+		//alert("넘겨받은 시퀀스" + seq + "테이블행번호" + statusseq);
+		//alert("수정할 카테고리 이름" + $("#editcategoryname").val());
+		
 		$.ajax({
 			type: "POST",
 			url: "${pageContext.request.contextPath}/admin/curri/categoryeditok.action",
-			data: "seq=" + seq + "editcategoryname=" + $("#editcategoryname").val(),
+			data: "seq=" + seq + "&editcategoryname=" + $("#editcategoryname").val(),
 			dataType: "json",
 			success: function(result) {
 				//추가 성공(1)
 				//추가 실패(0)
 				if (result.editCategoryresult == "1") {
 					//var seq = ${list.size()} + 1;
-					seq = result.lastseq;
-					var tr = "<tr><td>" + num + "</td><td>" + $("#categoryname").val() + "</td><td>" + "<a href='#' style='cursor: pointer;' onclick='modify(" + seq + "," + num + ");'>[수정]</a> <a href='#' style='cursor: pointer;' onclick='del(" + seq + "," + num + ");'>[삭제]</a>" + "</tr>";
-					//<table></table> : <tr> 태그가 존재하지 않으면 <tbody>도 자동 생성되지 않는다.
-					$("#beforepoint").before(tr);
-					$("#categoryname").val("");
-					
+					window.location.reload(true);
 				} else {
 					alert("카테고리 수정에 실패했습니다. 다시 시도해주세요.");
 				}
@@ -125,13 +119,23 @@
 				}
 			});
 		}
-		
-		
+	}
+	
+	//창 종료시키기
+	function windowclose() {
+		opener.parent.location.reload(true);
+		window.close();
+	}
+	
+	//창 끄기방지
+	function closeIt()
+	{
+		alert("창 강제종료");
 	}
 	
 </script>
 
-<table id="categoryaddtbl">
+<table id="categoryaddtbl" ombeforeunload="closeIt();">
 	<tr>
 		<th>번호</th>
 		<th>과정명</th>
@@ -149,8 +153,10 @@
 </c:forEach>
 	<tr id="beforepoint">
 		<!-- ;%재준보완. 추가될 번호 표시하기 -->
-		<td colspan="3"><input type="text" id="categoryname" name="categoryname" placeholder="추가추가할 과정명을 입력하세요." style="width: 265px; margin-right: 5px;"><input type="button" value="추가" onclick="add();"/></td>
+		<td colspan="3"><input type="text" id="categoryname" name="categoryname" placeholder="추가할 과정명을 입력하세요." style="width: 265px; margin-right: 5px;"><input type="button" value="추가" onclick="add();"/></td>
 	</tr>
 </table>
-
+<div style="width: 420px; text-align: right; margin-top: 10px;">
+	<input type="button" value="창 닫기" onclick="windowclose();"/>
+</div>
 

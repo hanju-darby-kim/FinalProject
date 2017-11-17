@@ -41,10 +41,12 @@ public class JJCurriDAO {
 	}
 
 	public int editCategory(HashMap<String, String> map) {
+		//System.out.println("DAO" + map.get("seq"));
+		//System.out.println("DAO" + map.get("editcategoryname"));
 		
-		return sql.update("JJCurri.categoryedit");
+		return sql.update("JJCurri.categoryedit", map);
 	}
-
+	
 }
 
 

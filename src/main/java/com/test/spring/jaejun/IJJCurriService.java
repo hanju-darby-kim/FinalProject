@@ -16,8 +16,5 @@ public interface IJJCurriService {
 	int lastseqCategory();
 
 	int editCategory(HashMap<String, String> map);
-
-	
-	
 	
 }
