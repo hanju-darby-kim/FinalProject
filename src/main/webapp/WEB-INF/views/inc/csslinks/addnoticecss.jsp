@@ -1,9 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 	<style>
-		.fa-plus, .fa-minus {
+		.addElement, .deleteElement {
 			cursor: pointer;
+			font-size: 12px;
+			color: cornflowerblue;
 		}
+		
+		.addElement { margin-left: 1px; }
 		
 		.fa-trash-o {
 		    font-size: 20px;
@@ -17,14 +21,22 @@
 		.noticeTitle {
 			font-size: 15px;
 			font-weight: bold;
+			padding-left: 1px;
+			margin-bottom: 10px;
+			margin-top: 15px;
 		}
 		
-		
-		
 		#noticeHeadContainer {
-			border: 1px solid red;
-			padding: 10px;
+			padding: 15px;
 			background-color: #eee;
+		}
+		
+		#contentPcdata {
+			margin-top: 0px;
+		}
+		
+		.testPcdata {
+			margin-top: 0px;
 		}
 		
 		.fieldContainer {
@@ -38,23 +50,27 @@
 			resize: none;
 		}
 		
-		#dateContainer {
+		/* #dateContainer {
 			margin-top: 20px;
-		}
-		
+		} */
 		
 		#reportContainer {
 			margin-left: 30px;
 			width: 200px;
-			margin-top: 20px;
 		}
 		
-		#reportContainer #reportPcdata{
-			margin-bottom: 6px;	
+		#reportContainer label {
+			margin-top: 7px;	
 		}
 		
-		#testContainer {
-			margin-top: 20px;
+		
+		
+		.testSubContainer {
+			float: left;
+			margin-right: 10px;
+			margin-left: 3px;
 		}
+		
+		
 		
 	</style>

@@ -40,7 +40,7 @@
 			
 			<!-- 면접 전형 -->
 			<div id="testContainer">
-				<div class="noticeTitle">면접 전형 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+				<div class="noticeTitle">면접 전형 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
 				<div class="testSubContainer">
 					<div class="testPcdata">1차</div>
 					<select name="testByNotice1">
@@ -84,9 +84,9 @@
 						<option value="${testdto.seq}">${testdto.testType}</option>
 						</c:forEach>
 					</select>
-				</div>
-				<button>추가</button> <button>삭제</button>
+				</div>				
 			</div>
+			<div style="clear: both;"></div>
 			<!-- 면접전형 끝 -->
 		</div>
 		<!-- 공고 헤드 부분 끝 -->
@@ -144,7 +144,7 @@
 				<!-- 자격증콘테이너 -->
 				<div class="demandCertificateContainer">
 					<!-- 3개가능 -->
-					<div class="noticeTitle">요구자격증 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="certificateTypeContainer">
 						<select name="certificateTypeSeq1_1" disabled>
@@ -188,7 +188,7 @@
 				
 				<!-- 요구어학시험 -->
 				<div class="demandLangTestContainer">
-					<div class="noticeTitle">요구어학시험 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="langTestType">
 						<select name="langTestTypeSeq1_1" disabled>
@@ -231,7 +231,7 @@
 				<!-- 요구어학시험끝 -->
 				
 				<div class="demandMajorContainer">
-					<div class="noticeTitle">요구학과 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="majorCategory">
 						<select name="majorCategorySeq1_1" disabled>
@@ -331,7 +331,7 @@
 				
 				<div class="demandCertificateContainer">
 					<!-- 3개가능 -->
-					<div class="noticeTitle">요구자격증 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="certificateTypeContainer">
 						<select name="certificateTypeSeq2_1" disabled>
@@ -374,7 +374,7 @@
 				
 				<!-- 요구 어학시험 시작 -->
 				<div class="demandLangTestContainer">
-					<div class="noticeTitle">요구어학시험 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="langTestType">
 						<select name="langTestTypeSeq2_1" disabled>
@@ -417,7 +417,7 @@
 				<!-- 요구 어학시험 끝 -->
 				
 				<div class="demandMajorContainer">
-					<div class="noticeTitle">요구학과 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="majorCategory">
 						<select name="majorCategorySeq2_1" disabled>
@@ -517,7 +517,7 @@
 				
 				<div class="demandCertificateContainer">
 					<!-- 3개가능 -->
-					<div class="noticeTitle">요구자격증 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구자격증 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="certificateTypeContainer">
 						<select class="" name="certificateTypeSeq3_1" disabled>
@@ -561,7 +561,7 @@
 				
 				<!-- 요구 어학시험 -->
 				<div class="demandLangTestContainer">
-					<div class="noticeTitle">요구어학시험 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구어학시험 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="langTestType">
 						<select name="langTestTypeSeq3_1" disabled>
@@ -605,7 +605,7 @@
 				
 				<!-- 요구학과 -->
 				<div class="demandMajorContainer">
-					<div class="noticeTitle">요구학과 <span class="fa fa-plus"></span> <span class="fa fa-minus"></span></div>
+					<div class="noticeTitle">요구학과 <span class="addElement">추가</span> <span class="deleteElement"></span></div>
 					<!-- 1 -->
 					<div class="majorCategory">
 						<select name="majorCategorySeq3_1" disabled>
@@ -673,7 +673,7 @@
  		$(".demandMajorContainer > .majorCategory").hide(); //전공모두숨김
  		
  		//+ 누르면 다음 요소 화면에 보임
- 		$(".fa-plus").click(function(event) {
+ 		$(".addElement").click(function(event) {
  			var next = $(event.target).parent().nextAll("div:hidden").first();
  			if(next.size() == 0) { alert("더 이상 추가할 수 없습니다."); } //최대 개수 넘어가면 ㄴㄴ
  			next.show(); //보이기
@@ -681,7 +681,7 @@
  		});
  		
  		//- 누르면 마지막 요소 제거
- 		$(".fa-minus").click(function(event) {
+ 		$(".deleteElement").click(function(event) {
  			var nextContainer = $(event.target).parent().nextAll("div:visible");
  			if(nextContainer.size() == 1
  					&& nextContainer.hasClass("testSubContainer")) { //면접 전형을 하나 이하로 줄이려고 한다면
