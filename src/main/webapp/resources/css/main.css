@@ -5562,6 +5562,7 @@ ul.sidebar-nav ul.submenu li:first-child a {
   margin-right: 8px;
   content: "";
   border: 1px solid #ccc;
+  background-color: white;
 }
 .fancy-checkbox input[type="checkbox"]:checked + span:before {
   font-family: FontAwesome;
