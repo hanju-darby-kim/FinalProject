@@ -43,7 +43,7 @@
 					<td><input type="text" name="subject" id="email" class="form-control long" required /></td>
 				</tr>
 				
-				<tr>
+				<!-- <tr>
 					<th>예약인 구분</th>
 					<td>
 						<select name="tag" id="tag" class="form-control short">
@@ -53,7 +53,18 @@
 							<option value="6">개인이 교육비 납부(제직자)</option>
 						</select>
 					</td>
-				</tr>
+				</tr> -->
+				<tr>
+			<th>예약인 구분</th>
+			<td>
+				<select name="ConsulteeType" id="ConsulteeType" class="form-control short">
+					<c:forEach items="${list}" var="dto">
+						<option value="${dto.seq}">${dto.ConsulteeType}</option>
+					</c:forEach>
+				</select>
+			</td>
+			<!-- <td><input type="text" name="curTypeSeq" id="curTypeSeq" class="form-control short" /></td> -->
+		</tr>
 				
 					<tr>
 						<th><label for="username">선택 과목 </label></th>
