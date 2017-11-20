@@ -6,7 +6,7 @@ public class FieldDTO {
 	private String seq;
 	private String noticeSeq;
 	private String fieldName;
-	private String fieldContent;
+	private String content;
 	private String hireTypeSeq;
 	private String areaTypeSeq;
 	private int salary;
@@ -41,11 +41,11 @@ public class FieldDTO {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	public String getFieldContent() {
-		return fieldContent;
+	public String getContent() {
+		return content;
 	}
-	public void setFieldContent(String fieldContent) {
-		this.fieldContent = fieldContent;
+	public void setContent(String content) {
+		this.content = content;
 	}
 	public String getHireTypeSeq() {
 		return hireTypeSeq;
@@ -93,7 +93,7 @@ public class FieldDTO {
 	
 	@Override
 	public String toString() {
-		System.out.println(seq + " " + noticeSeq + " " + fieldName + " " + hireTypeSeq + " " + areaTypeSeq + " " + fieldContent + " " + salary + " " + careerTypeSeq);
+		System.out.println(seq + " " + noticeSeq + " " + fieldName + " " + hireTypeSeq + " " + areaTypeSeq + " " + content + " " + salary + " " + careerTypeSeq);
 		return super.toString();
 	}
 }

@@ -35,6 +35,12 @@
 			</div>
 			<div style="clear: both;"></div>
 			
+			<!-- 비고 -->
+			<div id="extraContainer">
+				<div id="extraPcdata" class="noticeTitle">비고</div>
+				<textarea style="width: 100%; height: 50px; resize: none" name="extra"></textarea>
+			</div>
+			
 			<!-- 면접 전형 -->
 			<div id="testContainer">
 				<div class="noticeTitle">면접 전형 <span class="addElement">추가</span> <span class="deleteElement">삭제</span></div>
@@ -95,6 +101,11 @@
 				<input type="text" name="fieldName1">
 			</div>
 			
+			<div class="fieldContentContainer">
+				<div class="noticeTitle fieldContentPcdata">지원분야업무</div>
+				<input type="text" name="fieldContent1" style="width: 400px;">
+			</div>
+			
 			<div class="hireTypeContainer">
 				<div class="noticeTitle">고용형태</div>
 				<select name="hireTypeSeq1">
@@ -120,6 +131,12 @@
 					<option value="${areatypedto.seq}">${areatypedto.area}</option>
 					</c:forEach>
 				</select>
+			</div>
+			
+			<!-- 연봉 -->
+			<div class="salaryContainer">
+				<div class="noticeTitle">연봉</div>
+				<input type="number" name="salary1" class="salary">
 			</div>
 			
 			<!-- 요구사항들 -->
@@ -282,8 +299,14 @@
 		
 			<div class="fieldNameContainer">
 				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
-				<input type="text" class="fieldName" name="fieldName1" disabled>
+				<input type="text" class="fieldName" name="fieldName2" disabled>
 			</div>
+			
+			<div class="fieldContentContainer">
+				<div class="noticeTitle fieldContentPcdata">지원분야업무</div>
+				<input type="text" class="fieldContent" name="fieldContent2" style="width: 400px;">
+			</div>
+			
 			<div>
 				<div class="hireTypeContainer">
 					<div class="noticeTitle">고용형태</div>
@@ -312,6 +335,10 @@
 					</select>
 				</div>
 				
+				<div class="salaryContainer">
+					<div class="noticeTitle">연봉</div>
+					<input type="number" name="salary2" class="salary">
+				</div>
 			</div>
 			
 			
@@ -474,6 +501,11 @@
 				<input type="text" class="fieldName" name="fieldName1" disabled>
 			</div>
 			
+			<div class="fieldContentContainer">
+				<div class="noticeTitle fieldContentPcdata">지원분야업무</div>
+				<input type="text" id="fieldContent" name="fieldContent3" style="width: 400px;" disabled>
+			</div>
+			
 			<div class="hireTypeContainer">
 				<div class="noticeTitle">고용형태</div>
 				<select class="hireType" name="hireTypeSeq3" disabled>
@@ -499,6 +531,11 @@
 					<option value="${areatypedto.seq}">${areatypedto.area}</option>
 					</c:forEach>
 				</select>
+			</div>
+			
+			<div class="salaryContainer">
+				<div class="noticeTitle">연봉</div>
+				<input type="number" name="salary3" class="salary">
 			</div>
 			
 			<!-- 요구사항들 -->
@@ -699,12 +736,12 @@
  		$(".addField").click(function(event) {
  			var nextField = $(event.target).parent().next(); //다음 요구 조건
  			nextField.show(); //다음 요구 조건 보이기
- 			nextField.find(".fieldName, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", false); //얘네 disabled 풀어주기
+ 			nextField.find(".fieldName, .fieldContent, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", false); //얘네 disabled 풀어주기
  		});
  		
  		$(".fa-trash-o").click(function(event) {
  			var parentField = $(event.target).parents(".fieldContainer");
- 			parentField.find(".fieldName, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", true);
+ 			parentField.find(".fieldName, .fieldContent, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", true);
  			parentField.hide();
  			
  		});

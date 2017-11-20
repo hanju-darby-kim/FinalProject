@@ -13,6 +13,8 @@ import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
+import com.test.spring.dto.NoticeDTO;
+import com.test.spring.dto.TestByNoticeDTO;
 import com.test.spring.dto.TestTypeDTO;
 
 @Repository
@@ -55,6 +57,18 @@ public class NoticeDAO {
 
 	public List<MajorCategoryDTO> getMajorCategory() {
 		return sql.selectList("notice.getMajorCategory");
+	}
+
+	public int addNotice(NoticeDTO notice) {
+		return sql.insert("notice.addNotice", notice);
+	}
+
+	public String getMaxNoticeSeq() {
+		return sql.selectOne("notice.getMaxNoticeSeq");
+	}
+
+	public int addTestByNotice(TestByNoticeDTO testByNotice) {
+		return sql.insert("notice.addTestByNotice", testByNotice);
 	}
 	
 }

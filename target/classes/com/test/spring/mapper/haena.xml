@@ -40,6 +40,24 @@
 	<select id="getMajorCategory" resultType="com.test.spring.dto.MajorCategoryDTO">
 		SELECT * FROM MajorCategory ORDER BY majorCategory
 	</select>
+	
+	<insert id="addNotice" parameterType = "com.test.spring.dto.NoticeDTO">
+		INSERT INTO tblNotice 
+			(SEQ, COMPANYSEQ, CONTENT, startDate, ENDDATE, REPORT) 
+				VALUES 
+					(tblnoticeSeq.nextval, #{companySeq}, #{content}, to_date(#{startDate}, 'yyyy-mm-dd HH:MI'), to_date(#{endDate}, 'yyyy-mm-dd HH:MI'), #{report})
+	</insert>
+	
+	<select id="getMaxNoticeSeq" resultType = "String">
+		SELECT MAX(seq) FROM tblNotice
+	</select>
+	
+	<insert id="addTestByNotice" parameterType = "com.test.spring.dto.TestByNoticeDTO">
+		INSERT INTO TESTBYNOTICE 
+			(SEQ, NOTICESEQ, TESTTYPESEQ) 
+				VALUES 
+					(TESTBYNOTICESEQ.nextval, #{noticeSeq}, #{testTypeSeq})
+	</insert>
 </mapper>
 
 
