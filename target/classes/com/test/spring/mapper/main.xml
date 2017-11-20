@@ -20,6 +20,10 @@
 	<select id="isStudent" parameterType="String" resultType="Integer">
 		SELECT COUNT(*) AS count FROM student WHERE seq = #{seq}
 	</select>
+	<!-- 회원가입하려는 아이디가 중복되었는가 -->
+	<select id="isDup" parameterType="String" resultType="Integer">
+		SELECT COUNT(*) AS count FROM member WHERE id = #{id}
+	</select>
 	
 	<!-- 학생의 pf를 -->
 	<select id="getPf" parameterType="String" resultType="String">

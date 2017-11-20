@@ -4,6 +4,24 @@
 
 <mapper namespace="manager">
 
+	<select id="check" parameterType="Integer" resultType="Integer">
+		select count(*) from stubycur a
+    	inner join curopen b on a.curopenseq = b.seq
+    	inner join manager c on b.managerseq = c.seq
+    	inner join member d on a.seq = d.seq
+    	inner join tblattendance e on b.seq = e.sseq where c.seq = #{seq} and e.day = sysdate
+	</select>
 	
+	<select id="stuList" parameterType="Integer" resultType="Integer">
+		select a.seq from stubycur a
+    	inner join curopen b on a.curopenseq = b.seq
+    	inner join manager c on b.managerseq = c.seq
+    	inner join member d on a.seq = d.seq where enddate > sysdate and managerSeq = #{seq}
+	</select>
+	
+	
+	<insert id="start" parameterType="Integer">
+		insert into tblAttendance (seq, sseq, aseq, day) values (tblAttendance_seq.nextval, #{stuSeq}, 1, sysdate)
+	</insert>
 	
 </mapper>

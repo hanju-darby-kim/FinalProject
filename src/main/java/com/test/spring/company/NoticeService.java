@@ -1,7 +1,18 @@
 package com.test.spring.company;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.test.spring.dto.AreaTypeDTO;
+import com.test.spring.dto.CareerTypeDTO;
+import com.test.spring.dto.CertificateTypeDTO;
+import com.test.spring.dto.EducationTypeDTO;
+import com.test.spring.dto.HireTypeDTO;
+import com.test.spring.dto.LangTestTypeDTO;
+import com.test.spring.dto.MajorCategoryDTO;
+import com.test.spring.dto.TestTypeDTO;
 
 @Service
 public class NoticeService implements INoticeService {
@@ -14,17 +25,61 @@ public class NoticeService implements INoticeService {
 	 */
 	@Override
 	public String getContent(String seq) {
-	
 		return dao.getContent(seq);
 	}
 	
+	
+	@Override
+	public List<TestTypeDTO> getTestType() {
+		return dao.getTestType();
+	}
+
+	@Override
+	public List<HireTypeDTO> getHireType() {
+		return dao.getHireType();
+	}
+
+	@Override
+	public List<CareerTypeDTO> getCareerType() {
+		return dao.getCareerType();
+	}
+
 	/**
 	 * 공고 db 저장
 	 */
 	@Override
 	public int addNoticeOk(String seq) {
-		
 		return 0;
+	}
+
+
+	@Override
+	public List<AreaTypeDTO> getAreaType() {
+		return dao.getAreaType();
+	}
+
+
+	@Override
+	public List<EducationTypeDTO> getEducationType() {
+		return dao.getEducationType();
+	}
+
+
+	@Override
+	public List<CertificateTypeDTO> getCertificateType() {
+		return dao.getCertificateType();
+	}
+
+
+	@Override
+	public List<LangTestTypeDTO> getLangTestType() {
+		return dao.getLangTestType();
+	}
+
+
+	@Override
+	public List<MajorCategoryDTO> getMajorCategory() {
+		return dao.getMajorCategory();
 	}
 
 	

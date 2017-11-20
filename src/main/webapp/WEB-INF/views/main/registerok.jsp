@@ -15,7 +15,11 @@
 			location.href = "/final/login.action";
 		</c:if>
 		<c:if test="${result==0}">
-			history.back;
+			history.back();
+		</c:if>
+		<c:if test="${result==-1}">
+			alert("아이디가 중복되었어요!");
+			history.back();
 		</c:if>
 		
 	</script>	 

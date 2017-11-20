@@ -5,7 +5,21 @@ public class CurSubjectsDTO {
 	private String subSeq;
 	private String name;
 	private int days;
+	private String curName;
+	private String subName;
 	
+	public String getCurName() {
+		return curName;
+	}
+	public void setCurName(String curName) {
+		this.curName = curName;
+	}
+	public String getSubName() {
+		return subName;
+	}
+	public void setSubName(String subName) {
+		this.subName = subName;
+	}
 	public String getSeq() {
 		return seq;
 	}

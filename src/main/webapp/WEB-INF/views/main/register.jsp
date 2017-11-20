@@ -18,9 +18,60 @@
   	$("#roadAddrPart2").val(roadAddrPart2);
   	$("#addrDetail").val(addrDetail);
   	$("#zipNo").val(zipNo);
+  	
+  	//alert(roadAddrPart1);
+  	
+  	//document.write("str1.concat(str2) : " + roadAddrPart1.concat(roadAddrPart2) + "<br>");
+  	
+  	// var address = 'roadAddrPart1' + 'roadAddrPart2' + 'addrDetail' + 'zipNo'; 
+  	var address =  roadAddrPart1 + roadAddrPart2 + addrDetail + zipNo;
+  	//var address = str.con
+  	$("#address").val(address);
+  	//alert(roadFullAddr);
   }
   
+  
+  function goCheck(){
+	  console.log("함수를 실행하였습니다.");
+
+	  $("#pw").val();
+	  $("#pw2").val();
+	  
+	  if($("#pw").val() == $("#pw2").val()){
+		  alert("비밀번호 유효성 통과");
+		 // alert($("#btnsubmit")[0].type);//button
+		 $("#form1").submit();
+	  }else{
+		  
+		  alert("비밀번호가 다릅니다");
+		  return false;
+	  }
+  }
+  
+  function pwCheck(){
+	//alert(password);
+	//alert(password2);
+	  document.getElementById("pw").value;
+	  document.getElementById("pw2").value;
+ 
+  	if(document.getElementById("pw2").value == ""){
+  		
+  		document.getElementById("passwordCheckText").innerHTML = ""
+  	}else if(document.getElementById("pw").value != document.getElementById("pw2").value){
+  		document.getElementById("passwordCheckText").innerHTML = "<b><font color = red size = 1pt>비밀번호가 일치하지 않습니다.</font></b>"
+  	}else{
+  		document.getElementById("passwordCheckText").innerHTML = "<b><font color = blue size = 1pt>비밀번호가  일치합니다.</font></b>"
+  		
+  	}
+  	}
+  	
+  	
+  	
+ console.log("스크립트를 실행하였습니다.");
+  
   </script>
+  
+  
 		<!-- MAIN -->
 		<div class="shop-main register">
 			<div class="container">
@@ -36,13 +87,13 @@
 					
 					
 					
-					<form method="POST" action="/final/registerok.action" class="form-horizontal" role="form">
+					<form method="POST" action="/final/registerok.action" class="form-horizontal" id="form1" >
 						<div class="form-group">
 							<label for="id" class="control-label sr-only">id</label>
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user"></i></span>
-									<input type="text" class="form-control" id="id" placeholder="id">
+									<input type="text" class="form-control" id="id" placeholder="id" name="id">
 								</div>
 							</div>
 						</div>
@@ -51,7 +102,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password" placeholder="Password">
+									<input type="password" class="form-control" id="pw" placeholder="Password" name="pw">
 								</div>
 							</div>
 						</div>
@@ -60,16 +111,32 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-									<input type="password" class="form-control" id="password2" placeholder="Repeat Password">
+									<input type="password" class="form-control" id="pw2" placeholder="Repeat Password" name="pw2" onkeyup="pwCheck()">
 								</div>
 							</div>
 						</div>
+						<table>
+							<tr>
+								<td id="passwordCheckText" width=100></td>
+							</tr>
+						</table>
+						
+						
 						<div class="form-group">
 							<label for="username" class="control-label sr-only">Username</label>
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user"></i></span>
-									<input type="text" class="form-control" id="username" placeholder="Username">
+									<input type="text" class="form-control" id="name" placeholder="Username" name="name">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="tel" class="control-label sr-only">Tel</label>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-phone"></i></span>
+									<input type="tel" class="form-control" id="tel" placeholder="Tel" name="tel">
 								</div>
 							</div>
 						</div>
@@ -78,16 +145,7 @@
 							<div class="col-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" id="email" placeholder="Email">
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="email" class="control-label sr-only">Email</label>
-							<div class="col-sm-12">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<input type="email" class="form-control" id="email" placeholder="Email" name="email">
 								</div>
 							</div>
 						</div>
@@ -141,35 +199,47 @@
 							</div>
 						</div>
 						
-						gender : &nbsp;&nbsp;&nbsp;
+						<!-- gender : &nbsp;&nbsp;&nbsp;
 						<input type="checkbox" name="chk_info" value="m">man
-						<input type="checkbox" name="chk_info" value="f">lady
+						<input type="checkbox" name="chk_info" value="f">lady -->
 						
 						
 						
 						<div class="form-group">
-							<label for="email" class="control-label sr-only">Email</label>
+							<label for="gender" class="control-label sr-only">Gender</label>
 							<div class="col-sm-12">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<span class="input-group-addon"><i class="fa fa-male"></i></span>
+									<select name="gender" class="form-control" id="gender">
+									    <option value="">--Gender--</option>
+									    <option value="m">male</option>
+									    <option value="f">female</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ssn" class="control-label sr-only">SSN</label>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-group"></i></span>
+									<input type="text" class="form-control" name = "ssn" id="ssn" placeholder="SSN(123456-1234567)" >
 								</div>
 							</div>
 						</div>
 						
+						<input type="hidden" id = "address" name = "address">
 						
 						
 						<div class="form-group">
 							<div class="col-sm-12">
-								<button type="submit" class="btn btn-primary btn-block"><i class="fa fa-check-circle"></i> Create Account</button>
+								<button type="button" id="btnsubmit" onclick="goCheck()" class="btn btn-primary btn-block"><i class="fa fa-check-circle"></i> Create Account</button>
 							</div>
 						</div>
 						
-						
-						
-						
-						
 					</form>
+						
+					
 					
 					
 					<p><em>Already have an account? 이미 만들었어요?</em> <a href="login.action"><strong>Login</strong></a></p>

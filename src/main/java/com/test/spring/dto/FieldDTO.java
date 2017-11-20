@@ -1,14 +1,21 @@
 package com.test.spring.dto;
 
+import java.util.ArrayList;
+
 public class FieldDTO {
 	private String seq;
 	private String noticeSeq;
 	private String fieldName;
 	private String fieldContent;
-	private String hireType;
-	private String location;
+	private String hireTypeSeq;
+	private String areaTypeSeq;
 	private int salary;
-	private String careerType;
+	private String careerTypeSeq;
+	
+	private DemandEducationDTO demandEducation;
+	private ArrayList<DemandCertificateDTO> demandCertificate;
+	private ArrayList<DemandLangTestDTO﻿> demandLangTest;
+	private ArrayList<DemandMajorDTO> demandMajor;
 	
 	public String getSeq() {
 		return seq;
@@ -28,42 +35,65 @@ public class FieldDTO {
 	public void setFieldName(String fieldName) {
 		this.fieldName = fieldName;
 	}
-	public String getHireType() {
-		return hireType;
-	}
-	public void setHireType(String hireType) {
-		this.hireType = hireType;
-	}
-	public String getLocation() {
-		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
-	}
 	public int getSalary() {
 		return salary;
 	}
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	public String getCareerType() {
-		return careerType;
-	}
-	public void setCareerType(String careerType) {
-		this.careerType = careerType;
-	}
-	
 	public String getFieldContent() {
 		return fieldContent;
 	}
 	public void setFieldContent(String fieldContent) {
 		this.fieldContent = fieldContent;
 	}
-
+	public String getHireTypeSeq() {
+		return hireTypeSeq;
+	}
+	public void setHireTypeSeq(String hireTypeSeq) {
+		this.hireTypeSeq = hireTypeSeq;
+	}
+	public String getCareerTypeSeq() {
+		return careerTypeSeq;
+	}
+	public void setCareerTypeSeq(String careerTypeSeq) {
+		this.careerTypeSeq = careerTypeSeq;
+	}
+	public String getAreaTypeSeq() {
+		return areaTypeSeq;
+	}
+	public void setAreaTypeSeq(String areaTypeSeq) {
+		this.areaTypeSeq = areaTypeSeq;
+	}
+	
+	public DemandEducationDTO getDemandEducation() {
+		return demandEducation;
+	}
+	public void setDemandEducation(DemandEducationDTO demandEducation) {
+		this.demandEducation = demandEducation;
+	}
+	public ArrayList<DemandCertificateDTO> getDemandCertificate() {
+		return demandCertificate;
+	}
+	public void setDemandCertificate(ArrayList<DemandCertificateDTO> demandCertificate) {
+		this.demandCertificate = demandCertificate;
+	}
+	public ArrayList<DemandLangTestDTO﻿> getDemandLangTest() {
+		return demandLangTest;
+	}
+	public void setDemandLangTest(ArrayList<DemandLangTestDTO﻿> demandLangTest) {
+		this.demandLangTest = demandLangTest;
+	}
+	public ArrayList<DemandMajorDTO> getDemandMajor() {
+		return demandMajor;
+	}
+	public void setDemandMajor(ArrayList<DemandMajorDTO> demandMajor) {
+		this.demandMajor = demandMajor;
+	}
 	
 	@Override
 	public String toString() {
-		System.out.println(seq + " " + noticeSeq + " " + fieldName + " " + hireType + " " + location + " " + fieldContent + " " + salary + " " + careerType);
+		System.out.println(seq + " " + noticeSeq + " " + fieldName + " " + hireTypeSeq + " " + areaTypeSeq + " " + fieldContent + " " + salary + " " + careerTypeSeq);
 		return super.toString();
 	}
 }

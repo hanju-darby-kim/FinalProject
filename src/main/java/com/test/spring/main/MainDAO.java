@@ -45,6 +45,18 @@ public class MainDAO {
 		}
 		
 	}
+	public boolean isDup(String id) {
+		
+		//회원가입하려는 아이디가 중복되었는가
+		int count = sql.selectOne("main.isDup", id);
+		
+		if(count != 0) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
 
 	public String getPf(String seq) {
 		return sql.selectOne("main.getPf", seq);
@@ -52,7 +64,20 @@ public class MainDAO {
 
 	public int register(MemberDTO dto) {
 		// 회원등록
-		return sql.insert("main.register", dto);
+		
+		
+		
+		if(isDup(dto.getId())){
+			//아이디 중복될때
+			return -1;
+			
+		}else{
+			//아이디 중복없을떄
+			return sql.insert("main.register", dto);
+		}
+		
+		
+		
 	}
 	
 }

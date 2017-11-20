@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div class="page-header one-column has-background-image">
+<div class="page-header one-column has-company-background-image">
 	<div class="container">
 		<h1 class="page-title">SIST Information</h1>
 		<ol class="breadcrumb link-accent">
