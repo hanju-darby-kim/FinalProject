@@ -26,7 +26,7 @@
 	<!-- template.jsp -> (복사) -> add.jsp -->
 	<div id="main">
 		<section>
-		테스트
+		입력완료한 후 넘어온 페이지
 			<!-- 글쓰기 폼 -->
 			<form method="post" action="/MVCTest/board/addok.do" enctype="multipart/form-data">		<!-- 그다음일처리할 서블릿 호출/ 항상 서블릿을 호출 jsp -> jsp x  -->
 			<table id="tbl" class="table table-striped">

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.spring.dto.ConsulteeTypeDTO;
+import com.test.spring.dto.CurTypeDTO;
 import com.test.spring.dto.MenuCategoryDTO;
 
 
@@ -47,11 +48,19 @@ private ConsultDAO dao;
 		req.setAttribute("menuCategory", menuCategory);
 		
 		List<ConsulteeTypeDTO> list = service.consulteeType();
+		List<CurTypeDTO> list2 = service.curType();
 		//System.out.println(list.size());
 		req.setAttribute("list", list);
+		req.setAttribute("list2", list2);
 	
 		
 		return "booking.consulting.view";
+	}
+	
+	@RequestMapping(method={RequestMethod.POST}, value="/booking/consultingOk.action")
+	public String consultingOk(HttpServletRequest req){
+
+		return "booking.consulting.addOk";
 	}
 
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.test.spring.dto.ConsulteeTypeDTO;
+import com.test.spring.dto.CurTypeDTO;
 
 
 @Repository
@@ -29,6 +30,11 @@ public class ConsultDAO {
 	public List<ConsulteeTypeDTO> consulteeType() {
 		// TODO Auto-generated method stub
 		return sql.selectList("hyunjin.getConsulteeType");
+	}
+
+	public List<CurTypeDTO> curType() {
+		// TODO Auto-generated method stub
+		return sql.selectList("hyunjin.getCurType");
 	}
 	
 }

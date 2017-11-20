@@ -8,6 +8,9 @@
 		SELECT * FROM tblConsulteeType order by seq
 	</select>
 	
+	<select id="getCurType" resultType="com.test.spring.dto.CurTypeDTO">
+		SELECT * FROM curType order by seq
+	</select>
 	<!-- <select id="categoryadd" parameterType="String">
 		insert into curType values (curtypeseq.nextval, #{str})
 	</select> -->
