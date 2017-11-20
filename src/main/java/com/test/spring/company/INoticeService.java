@@ -9,11 +9,11 @@ import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
+import com.test.spring.dto.NoticeDTO;
 import com.test.spring.dto.TestTypeDTO;
 
 public interface INoticeService {
 	String getContent(String seq);
-	int addNoticeOk(String seq);
 	List<TestTypeDTO> getTestType();
 	List<HireTypeDTO> getHireType();
 	List<CareerTypeDTO> getCareerType();
@@ -22,4 +22,5 @@ public interface INoticeService {
 	List<CertificateTypeDTO> getCertificateType();
 	List<LangTestTypeDTO> getLangTestType();
 	List<MajorCategoryDTO> getMajorCategory();
+	int addNoticeOk(NoticeDTO notice);
 }
