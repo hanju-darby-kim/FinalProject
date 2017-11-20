@@ -2,11 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
-
-
-
 <h2 class="section-heading">공고 등록</h2>
-<form method="POST" action="/final/addnotice.action">
+<form method="POST" action="/final/addnoticeok.action">
 	<div id="noticeContainer">
 		<div id="noticeHeadContainer">
 			<div id="noticeContentContainter">
@@ -29,7 +26,7 @@
 				<label class="fancy-radio" style="float: left;">
 					<input type="radio" name="report" value="y">
 					<span><i></i>네</span>
-				</label><div style="clear: both;"></div>
+				</label>
 				<label class="fancy-radio" style="float: left;">
 					<input type="radio" name="report" checked="checked" value="n">
 					<span><i></i>아니오</span>
@@ -273,7 +270,9 @@
 				</div>		
 			</div>
 			<!-- 요구사항 끝 -->
-			<button type="button" class="btn btn-rounded-4x btn-default addField">지원분야 추가</button>
+			
+			<button type="button" class="btn btn-primary btn-sm addField"><i class="fa fa-plus"></i> 추가</button>
+			
 		</div>
 		<!-- 지원분야끝 -->
 		
@@ -463,7 +462,7 @@
 				<!-- 요구어학시험 끝 -->	
 			</div>
 			<!-- 요구사항 끝 -->
-			<input type="button" class="addField" value="지원분야 추가">
+			<button type="button" class="btn btn-primary btn-sm addField"><i class="fa fa-plus"></i> 추가</button>
 		</div>
 		<!-- 지원분야끝 -->
 		
@@ -558,7 +557,7 @@
 						<label class="fancy-checkbox">
 			            	<input type="checkbox"  name="certificateEssential3_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label><div style="clear: both;"></div><div style="clear: both;"></div>
+			        	</label><div style="clear: both;"></div>
 			        </div>
 				</div>
 				<!-- 요구자격증끝 -->
@@ -656,7 +655,7 @@
 		<!-- 지원분야끝 -->
 	</div>
 	<!-- 공고 끝 -->
-	<input type="submit" value="등록하기">
+	<button type="submit" class="btn btn-success btn-rounded-3x btnSubmit" style="background-color: #65a5d2; border-color: #65a5d2;"><i class="fa fa-check"></i> 등록하기</button>
 </form>
 
 <!-- dateRange -->

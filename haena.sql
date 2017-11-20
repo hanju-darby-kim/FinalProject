@@ -94,3 +94,4 @@ update majorcategory set majorcategory = '인문학' where majorcategory = '문�
 update majorcategory set majorcategory = '어문학' where majorcategory = '어학';
 
 commit;
+
