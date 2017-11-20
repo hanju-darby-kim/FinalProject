@@ -57,6 +57,7 @@ private ConsultDAO dao;
 		return "booking.consulting.view";
 	}
 	
+	//예약 추가
 	@RequestMapping(method={RequestMethod.POST}, value="/booking/consultingOk.action")
 	public String consultingOk(HttpServletRequest req){
 
