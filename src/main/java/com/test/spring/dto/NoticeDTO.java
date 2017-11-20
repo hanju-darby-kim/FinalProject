@@ -21,6 +21,7 @@ public class NoticeDTO {
 	private String startEndDate; //입력 받은 날짜 그대로(후에 시작일과 종료일 나누는 작업 필요)
 	
 	private ArrayList<FieldDTO> field;
+	private ArrayList<TestByNoticeDTO> testByNotice;
 	
 	public ArrayList<FieldDTO> getField() {
 		return field;
@@ -81,6 +82,12 @@ public class NoticeDTO {
 	}
 	public void setStartEndDate(String startEndDate) {
 		this.startEndDate = startEndDate;
+	}
+	public ArrayList<TestByNoticeDTO> getTestByNotice() {
+		return testByNotice;
+	}
+	public void setTestByNotice(ArrayList<TestByNoticeDTO> testByNotice) {
+		this.testByNotice = testByNotice;
 	}
 	
 	

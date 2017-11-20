@@ -95,3 +95,4 @@ update majorcategory set majorcategory = '어문학' where majorcategory = '어�
 
 commit;
 
+select to_date('2017-02-02 11:13', 'yyyy-mm-dd HH:MI') from dual;

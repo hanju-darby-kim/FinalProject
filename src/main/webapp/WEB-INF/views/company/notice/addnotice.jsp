@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
 <h2 class="section-heading">공고 등록</h2>
-<form method="POST" action="/final/addnoticeok.action">
+<form method="POST" action="/final/company/addnoticeok.action">
 	<div id="noticeContainer">
 		<div id="noticeHeadContainer">
 			<div id="noticeContentContainter">
