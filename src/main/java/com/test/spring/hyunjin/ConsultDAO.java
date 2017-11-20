@@ -40,6 +40,7 @@ public class ConsultDAO {
 
 	public int booking(ConsultingBookingDTO dto) {
 		// TODO Auto-generated method stub
+		System.out.println("curTypeSeq : " + dto.getCurTypeSeq());
 		return sql.insert("hyunjin.booking", dto);
 	}
 	

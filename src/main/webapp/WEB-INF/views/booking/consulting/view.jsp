@@ -105,7 +105,7 @@
 					<tr>
 						<th scope="row"><label for="username"> 기타 희망과정 : </label></th>
 						<td>
-							<textarea name="inq" rows="6" cols="60"></textarea>
+							<textarea name="comment" id="comment" rows="6" cols="60"></textarea>
 						</td>
 					</tr>
 				
