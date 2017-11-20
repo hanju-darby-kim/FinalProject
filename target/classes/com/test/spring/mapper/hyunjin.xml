@@ -17,7 +17,7 @@
 	<!-- 회원가입 -->
 	<insert id="booking" parameterType="com.test.spring.dto.ConsultingBookingDTO">
 		insert into TBLCONSULTINGBOOKING
-			 values (TBLCONSULTINGBOOKINGSeq.nextval, #{applicant}, #{crseq}, #{curtypeseq}, #{tel}, #{email}, #{comments})
+			 values (TBLCONSULTINGBOOKINGSeq.nextval, #{applicant}, #{crseq}, #{curtypeseq}, #{tel}, #{email}, #{comment})
 	</insert>
 	
 </mapper>
