@@ -60,7 +60,7 @@ private ConsultDAO dao;
 	@RequestMapping(method={RequestMethod.POST}, value="/booking/consultingOk.action")
 	public String consultingOk(HttpServletRequest req){
 
-		return "booking.consulting.addOk";
+		return "booking.consulting.addok";
 	}
 
 }
