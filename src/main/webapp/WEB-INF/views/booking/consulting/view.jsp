@@ -54,7 +54,7 @@
 						</select>
 					</td>
 				</tr> -->
-				<tr>
+		<tr>
 			<th>예약인 구분</th>
 			<td>
 				<select name="ConsulteeType" id="ConsulteeType" class="form-control short">
@@ -65,8 +65,19 @@
 			</td>
 			<!-- <td><input type="text" name="curTypeSeq" id="curTypeSeq" class="form-control short" /></td> -->
 		</tr>
+		<tr>
+			<th>선택 과목</th>
+			<td>
+				<select name="CurType" id="CurType" class="form-control short">
+					<c:forEach items="${list}" var="dto">
+						<option value="${dto.seq}">${dto.curType}</option>
+					</c:forEach>
+				</select>
+			</td>
+			<!-- <td><input type="text" name="curTypeSeq" id="curTypeSeq" class="form-control short" /></td> -->
+		</tr>
 				
-					<tr>
+				<!-- 	<tr>
 						<th><label for="username">선택 과목 </label></th>
 						<td> 
 							<input type="checkbox" value="5" name="cou"/> 웹 프로그래밍과정
@@ -83,7 +94,7 @@
 						<td> 
 							<input type="checkbox" value="7" name="cou"/> 스마트 폰 개발과정
 						</td>
-					</tr>
+					</tr> -->
 					<!-- <tr>
 						<th></th>
 						<td> 
