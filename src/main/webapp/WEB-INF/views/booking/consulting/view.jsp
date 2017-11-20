@@ -32,15 +32,15 @@
 			<table id="tbl" class="table table-striped">
 				<tr>
 					<th>이름</th>
-					<td><input type="text" name="name" id="name" class="form-control short" required /></td>
+					<td><input type="text" name="applicant" id="applicant" class="form-control short" required /></td>
 				</tr>
 				<tr>
 					<th>연락처</th>
-					<td><input type="text" name="email" id="tel" class="form-control short" required /></td>
+					<td><input type="text" name="tel" id="tel" class="form-control short" required /></td>
 				</tr>
 				<tr>
 					<th>e-mail</th>
-					<td><input type="text" name="subject" id="email" class="form-control long" required /></td>
+					<td><input type="text" name="email" id="email" class="form-control long" required /></td>
 				</tr>
 				
 				<!-- <tr>
@@ -57,7 +57,7 @@
 		<tr>
 			<th>예약인 구분</th>
 			<td>
-				<select name="ConsulteeType" id="ConsulteeType" class="form-control short">
+				<select name="crSeq" id="crSeq" class="form-control short">
 					<c:forEach items="${list}" var="dto">
 						<option value="${dto.seq}">${dto.consulteeType}</option>
 					</c:forEach>
@@ -68,7 +68,7 @@
 		<tr>
 			<th>선택 과목</th>
 			<td>
-				<select name="CurType" id="CurType" class="form-control short">
+				<select name="curTypeSeq" id="curTypeSeq" class="form-control short">
 					<c:forEach items="${list2}" var="dto">
 						<option value="${dto.seq}">${dto.curType}</option>
 					</c:forEach>
