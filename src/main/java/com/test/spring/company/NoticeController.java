@@ -17,7 +17,8 @@ import com.test.spring.dto.CertificateTypeDTO;
 import com.test.spring.dto.CertificationDTO;
 import com.test.spring.dto.DemandCertificateDTO;
 import com.test.spring.dto.DemandEducationDTO;
-import com.test.spring.dto.DemandLangTestDTO﻿;
+import com.test.spring.dto.DemandLangTestDTO;
+/*import com.test.spring.dto.DemandLangTestDTO﻿;*/
 import com.test.spring.dto.DemandMajorDTO;
 import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.FieldDTO;
@@ -149,7 +150,7 @@ public class NoticeController {
 				
 				//for문 작업이 필요한 ArrayList들
 				ArrayList<DemandCertificateDTO> demandCertificate = new ArrayList<DemandCertificateDTO>();
-				ArrayList<DemandLangTestDTO﻿> demandLangTest = new ArrayList<DemandLangTestDTO﻿>();
+				ArrayList<DemandLangTestDTO> demandLangTest = new ArrayList<DemandLangTestDTO>();
 				ArrayList<DemandMajorDTO> demandMajor = new ArrayList<DemandMajorDTO>();
 				
 				for (int j=1; j<=3; j++) {
@@ -165,7 +166,7 @@ public class NoticeController {
 					//어학시험
 					String langTestTypeSeq = req.getParameter("langTestTypeSeq" + i + "_" + j);
 					if(langTestTypeSeq != null) {
-						DemandLangTestDTO﻿ tempLangTest = new DemandLangTestDTO﻿();
+						DemandLangTestDTO tempLangTest = new DemandLangTestDTO();
 						tempLangTest.setLangTestTypeSeq(langTestTypeSeq);
 						tempLangTest.setEssential(getPreference(req.getParameter("langTestEssential" + i + "_" + j)));
 						demandLangTest.add(tempLangTest);

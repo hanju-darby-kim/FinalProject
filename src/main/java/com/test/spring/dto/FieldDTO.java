@@ -14,7 +14,7 @@ public class FieldDTO {
 	
 	private DemandEducationDTO demandEducation;
 	private ArrayList<DemandCertificateDTO> demandCertificate;
-	private ArrayList<DemandLangTestDTO﻿> demandLangTest;
+	private ArrayList<DemandLangTestDTO> demandLangTest;
 	private ArrayList<DemandMajorDTO> demandMajor;
 	
 	public String getSeq() {
@@ -78,10 +78,10 @@ public class FieldDTO {
 	public void setDemandCertificate(ArrayList<DemandCertificateDTO> demandCertificate) {
 		this.demandCertificate = demandCertificate;
 	}
-	public ArrayList<DemandLangTestDTO﻿> getDemandLangTest() {
+	public ArrayList<DemandLangTestDTO> getDemandLangTest() {
 		return demandLangTest;
 	}
-	public void setDemandLangTest(ArrayList<DemandLangTestDTO﻿> demandLangTest) {
+	public void setDemandLangTest(ArrayList<DemandLangTestDTO> demandLangTest) {
 		this.demandLangTest = demandLangTest;
 	}
 	public ArrayList<DemandMajorDTO> getDemandMajor() {

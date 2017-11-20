@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.test.spring.dto.AreaTypeDTO;
 import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.CertificateTypeDTO;
+import com.test.spring.dto.DemandCertificateDTO;
 import com.test.spring.dto.DemandEducationDTO;
 import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.FieldDTO;
@@ -86,6 +87,10 @@ public class NoticeDAO {
 
 	public int addDemandEducation(DemandEducationDTO demandEducation) {
 		return sql.insert("notice.addDemandEducation", demandEducation);
+	}
+
+	public int addDemandCertificate(DemandCertificateDTO cerdto) {
+		return sql.insert("notice.addDemandCertificate", cerdto);
 	}
 	
 }

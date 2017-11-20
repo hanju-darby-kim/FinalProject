@@ -96,7 +96,9 @@ update majorcategory set majorcategory = '어문학' where majorcategory = '어�
 commit;
 
 select to_date('2017-02-02 11:13', 'yyyy-mm-dd HH:MI') from dual;
+select * from DEMANDLANGTEST;
 
+alter table DEMANDLANGTEST rename COLUMN vital to essential;
 
 ALTER TABLE tblNotice ADD (startDate DATE);
 
@@ -105,4 +107,10 @@ select * from TBLFIELD;
 select * from TBLNOTICE;
 select * from TESTBYNOTICE;
 
-INSERT INTO TBLFIELD (SEQ, NOTICESEQ, FIELDNAME, HIRETYPESEQ, AREATYPESEQ, CONTENT, SALARY, CAREERTYPESEQ) VALUES (tblFieldSEq.nextval)
+select * from DEMANDEDUCATION;
+alter table DEMANDEDUCATION rename COLUMN educationType TO educationTypeSeq;
+
+INSERT INTO DEMANDCERTIFICATE (SEQ, FIELDSEQ, VITAL, CERTIFICATETYPESEQ) VALUES (DEMANDCERTIFICATESEQ.nextval, );
+ALTER TABLE demandCertificate RENAME COLUMN vital TO essential;
+
+select * from DEMANDCERTIFICATE;

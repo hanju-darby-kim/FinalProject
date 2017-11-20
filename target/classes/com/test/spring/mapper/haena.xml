@@ -70,7 +70,14 @@
 	</select>
 	
 	<insert id="addDemandEducation" parameterType = "com.test.spring.dto.DemandEducationDTO">
-		
+		INSERT INTO DEMANDEDUCATION (SEQ, FIELDSEQ, EDUCATIONTYPESEQ, ESSENTIAL) VALUES (demandEducationSeq.nextval, #{fieldSeq}, #{educationTypeSeq}, #{essential})
+	</insert>
+	
+	<insert id="addDemandCertificate" parameterType = "com.test.spring.dto.DemandCertificateDTO">
+		INSERT INTO DEMANDCERTIFICATE
+			(SEQ, FIELDSEQ, ESSENTIAL, CERTIFICATETYPESEQ) 
+				VALUES
+					(DEMANDCERTIFICATESEQ.nextval, #{fieldSeq}, #{essential}, #{certificateTypeSeq})
 	</insert>
 </mapper>
 

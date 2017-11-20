@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.test.spring.dto.AreaTypeDTO;
 import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.CertificateTypeDTO;
+import com.test.spring.dto.DemandCertificateDTO;
+import com.test.spring.dto.DemandLangTestDTO;
 import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.FieldDTO;
 import com.test.spring.dto.HireTypeDTO;
@@ -102,6 +104,20 @@ public class NoticeService implements INoticeService {
 			 //요구학력
 			 fielddto.getDemandEducation().setFieldSeq(fielddto.getSeq());
 			 dao.addDemandEducation(fielddto.getDemandEducation());
+			 
+			 //요구자격증
+			 for(DemandCertificateDTO cerdto : fielddto.getDemandCertificate()) {
+				 cerdto.setFieldSeq(fielddto.getSeq());
+				 dao.addDemandCertificate(cerdto);
+			 }
+			 
+			 //요구어학시험
+			 
+			 for(DemandLangTestDTO langdto : fielddto.getDemandLangTest()) {
+				 
+			 }
+			 
+			 //요구학과
 			 
 		 }
 		 

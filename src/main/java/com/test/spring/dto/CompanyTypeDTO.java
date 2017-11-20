@@ -4,7 +4,7 @@ package com.test.spring.dto;
  * @author 전슬기
  *
  */
-public class CompanyType {
+public class CompanyTypeDTO {
 
 	private String seq;
 	private String companyType;
