@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.spring.dto.ConsulteeTypeDTO;
+import com.test.spring.dto.ConsultingBookingDTO;
 import com.test.spring.dto.CurTypeDTO;
 import com.test.spring.dto.MenuCategoryDTO;
 
@@ -59,8 +60,12 @@ private ConsultDAO dao;
 	
 	//예약 추가
 	@RequestMapping(method={RequestMethod.POST}, value="/booking/consultingOk.action")
-	public String consultingOk(HttpServletRequest req){
+	public String consultingOk(HttpServletRequest req, ConsultingBookingDTO dto){
 
+		int result = service.booking(dto);
+		
+		req.setAttribute("result", result);	
+		
 		return "booking.consulting.addok";
 	}
 
