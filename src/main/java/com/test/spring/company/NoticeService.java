@@ -10,6 +10,7 @@ import com.test.spring.dto.AreaTypeDTO;
 import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.CertificateTypeDTO;
 import com.test.spring.dto.EducationTypeDTO;
+import com.test.spring.dto.FieldDTO;
 import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
@@ -89,8 +90,21 @@ public class NoticeService implements INoticeService {
 		 
 		 //면접 전형
 		 for(TestByNoticeDTO tbndto : notice.getTestByNotice()) {
+			 tbndto.setNoticeSeq(notice.getSeq());
 			 dao.addTestByNotice(tbndto);
 		 }
+		
+		 for(FieldDTO fielddto : notice.getField()) {
+			 fielddto.setNoticeSeq(notice.getSeq());
+			 dao.addField(fielddto); //지원분야 기본정보
+			 fielddto.setSeq(dao.getMaxFieldSeq()); //방금 넣은 지원분야 seq 얻어오기
+			 
+			 //요구학력
+			 fielddto.getDemandEducation().setFieldSeq(fielddto.getSeq());
+			 dao.addDemandEducation(fielddto.getDemandEducation());
+			 
+		 }
+		 
 		 
 		 
 		 

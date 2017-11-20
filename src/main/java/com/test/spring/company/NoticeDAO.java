@@ -9,7 +9,9 @@ import org.springframework.stereotype.Repository;
 import com.test.spring.dto.AreaTypeDTO;
 import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.CertificateTypeDTO;
+import com.test.spring.dto.DemandEducationDTO;
 import com.test.spring.dto.EducationTypeDTO;
+import com.test.spring.dto.FieldDTO;
 import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
@@ -60,6 +62,9 @@ public class NoticeDAO {
 	}
 
 	public int addNotice(NoticeDTO notice) {
+		
+		System.out.println(notice.getCompanySeq());
+		System.out.println(notice.getContent());
 		return sql.insert("notice.addNotice", notice);
 	}
 
@@ -69,6 +74,18 @@ public class NoticeDAO {
 
 	public int addTestByNotice(TestByNoticeDTO testByNotice) {
 		return sql.insert("notice.addTestByNotice", testByNotice);
+	}
+
+	public int addField(FieldDTO fielddto) {
+		return sql.insert("notice.addField", fielddto);
+	}
+
+	public String getMaxFieldSeq() {
+		return sql.selectOne("notice.getMaxFieldSeq");
+	}
+
+	public int addDemandEducation(DemandEducationDTO demandEducation) {
+		return sql.insert("notice.addDemandEducation", demandEducation);
 	}
 	
 }

@@ -45,7 +45,7 @@
 		INSERT INTO tblNotice 
 			(SEQ, COMPANYSEQ, CONTENT, startDate, ENDDATE, REPORT) 
 				VALUES 
-					(tblnoticeSeq.nextval, #{companySeq}, #{content}, to_date(#{startDate}, 'yyyy-mm-dd HH:MI'), to_date(#{endDate}, 'yyyy-mm-dd HH:MI'), #{report})
+					(tblnoticeSeq.nextval, #{companySeq}, #{content}, to_date(#{startDate}, 'yyyy-mm-dd HH24:MI'), to_date(#{endDate}, 'yyyy-mm-dd HH24:MI'), #{report})
 	</insert>
 	
 	<select id="getMaxNoticeSeq" resultType = "String">
@@ -57,6 +57,20 @@
 			(SEQ, NOTICESEQ, TESTTYPESEQ) 
 				VALUES 
 					(TESTBYNOTICESEQ.nextval, #{noticeSeq}, #{testTypeSeq})
+	</insert>
+	
+	<insert id="addField" parameterType = "com.test.spring.dto.FieldDTO">
+		INSERT INTO TBLFIELD 
+			(SEQ, NOTICESEQ, FIELDNAME, HIRETYPESEQ, AREATYPESEQ, CONTENT, SALARY, CAREERTYPESEQ) VALUES
+				(tblFieldSeq.nextval, #{noticeSeq}, #{fieldName}, #{hireTypeSeq}, #{areaTypeSeq}, #{content}, #{salary}, #{careerTypeSeq})
+	</insert>
+	
+	<select id="getMaxFieldSeq" resultType = "String">
+		SELECT MAX(seq) FROM tblField
+	</select>
+	
+	<insert id="addDemandEducation" parameterType = "com.test.spring.dto.DemandEducationDTO">
+		
 	</insert>
 </mapper>
 

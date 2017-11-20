@@ -101,3 +101,8 @@ select to_date('2017-02-02 11:13', 'yyyy-mm-dd HH:MI') from dual;
 ALTER TABLE tblNotice ADD (startDate DATE);
 
 select * from TBLFIELD;
+
+select * from TBLNOTICE;
+select * from TESTBYNOTICE;
+
+INSERT INTO TBLFIELD (SEQ, NOTICESEQ, FIELDNAME, HIRETYPESEQ, AREATYPESEQ, CONTENT, SALARY, CAREERTYPESEQ) VALUES (tblFieldSEq.nextval)
