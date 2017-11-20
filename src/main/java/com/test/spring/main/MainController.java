@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 import com.test.spring.dto.CertificationDTO;
+import com.test.spring.dto.ConsulteeTypeDTO;
+import com.test.spring.dto.CurTypeDTO;
 import com.test.spring.dto.MemberDTO;
 import com.test.spring.dto.MenuCategoryDTO;
 
@@ -95,7 +97,7 @@ public class MainController {
 		
 		
 		System.out.println("확인 : " + "main" + certification.getTarget());
-
+		System.out.println("seq : " + certification.getSeq());
 		// 성공하면 메인으로 실패하면 로그인 페이지에 그대로 남기
 		if (certification.getCount() != 0) { // 성공시
 			return "main." + certification.getTarget(); // 타겟에 따라 다른 메인으로 접속
@@ -226,16 +228,5 @@ public class MainController {
 		return "center.road.view";
 	}
 	
-	// 예약센터 -> 예약신청
-	@RequestMapping(method = { RequestMethod.GET }, value = "/booking/consulting.action")
-	public String consulting(HttpServletRequest req) {
-		menuCategory.setBigCategory("예약센터");
-		menuCategory.setMiddleCategory("예약신청");
-		menuCategory.setSmallCategory("없음");
-		
-		req.setAttribute("menuCategory", menuCategory);
-		
-		return "booking.consulting.view";
-	}
 
 }

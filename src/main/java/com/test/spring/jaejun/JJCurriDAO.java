@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.test.spring.dto.CurTypeDTO;
+import com.test.spring.dto.CurriculumDTO;
 
 @Repository
 public class JJCurriDAO {
@@ -41,10 +42,17 @@ public class JJCurriDAO {
 	}
 
 	public int editCategory(HashMap<String, String> map) {
+		//System.out.println("DAO" + map.get("seq"));
+		//System.out.println("DAO" + map.get("editcategoryname"));
 		
-		return sql.update("JJCurri.categoryedit");
+		return sql.update("JJCurri.categoryedit", map);
 	}
 
+	public List<CurriculumDTO> curriculum() {
+		
+		return sql.selectList("JJCurri.getcurriculumlist");
+	}
+	
 }
 
 

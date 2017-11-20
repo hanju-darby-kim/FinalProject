@@ -21,8 +21,14 @@
 	</select>
 	
 	<update id="categoryedit" parameterType="map">
-		update curType set curtype = #{str} where seq = #{num}
+		update curType set curtype.curtype = #{editcategoryname} where curtype.seq = #{seq}
 	</update>
+
+
+
+	<select id="getcurriculumlist" resultType="com.test.spring.dto.CurriculumDTO">
+		SELECT * FROM curriculum order by seq
+	</select>
 	
 </mapper>
 

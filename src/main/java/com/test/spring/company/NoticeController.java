@@ -19,7 +19,7 @@ import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
-import com.test.spring.dto.MajorTypeDTO;
+import com.test.spring.dto.NoticeDTO;
 import com.test.spring.dto.TestTypeDTO;
 
 
@@ -87,5 +87,14 @@ public class NoticeController {
 		req.setAttribute("majorcategorylist", majorcategorylist);
 		
 		return "company.notice.addnotice.addnoticecss";
+	}
+	
+	@RequestMapping(method= {RequestMethod.POST}, value="/company/addnoticeok.action")
+	public String addNoticeOk(NoticeDTO notice, HttpSession session, HttpServletRequest req) {
+		
+		String companySeq = ((CertificationDTO)session.getAttribute("certification")).getSeq(); //회사 번호
+		req.getAttribute("");
+		
+		return "company.notice.addnoticeok";
 	}
 }
