@@ -11,6 +11,8 @@ import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.CertificateTypeDTO;
 import com.test.spring.dto.DemandCertificateDTO;
 import com.test.spring.dto.DemandEducationDTO;
+import com.test.spring.dto.DemandLangTestDTO;
+import com.test.spring.dto.DemandMajorDTO;
 import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.FieldDTO;
 import com.test.spring.dto.HireTypeDTO;
@@ -91,6 +93,15 @@ public class NoticeDAO {
 
 	public int addDemandCertificate(DemandCertificateDTO cerdto) {
 		return sql.insert("notice.addDemandCertificate", cerdto);
+	}
+
+	public int addDemandLangTest(DemandLangTestDTO langdto) {
+		return sql.insert("notice.addDemandLangTest", langdto);
+	}
+
+	public int addDemandMajor(DemandMajorDTO majordto) {
+		return sql.insert("notice.addDemandMajor", majordto);
+		
 	}
 	
 }

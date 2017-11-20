@@ -1,5 +1,7 @@
 package com.test.spring.company;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import com.test.spring.dto.AreaTypeDTO;
@@ -22,5 +24,6 @@ public interface INoticeService {
 	List<CertificateTypeDTO> getCertificateType();
 	List<LangTestTypeDTO> getLangTestType();
 	List<MajorCategoryDTO> getMajorCategory();
-	int addNoticeOk(NoticeDTO notice);
+	String addNoticeOk(NoticeDTO notice);
+	ArrayList<NoticeDTO> getList(HashMap<String, Integer> paging);
 }

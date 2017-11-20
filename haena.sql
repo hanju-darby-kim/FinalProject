@@ -114,3 +114,12 @@ INSERT INTO DEMANDCERTIFICATE (SEQ, FIELDSEQ, VITAL, CERTIFICATETYPESEQ) VALUES 
 ALTER TABLE demandCertificate RENAME COLUMN vital TO essential;
 
 select * from DEMANDCERTIFICATE;
+
+INSERT INTO demandLangTest (SEQ, FIELDSEQ, LANGTESTTYPESEQ, ESSENTIAL) VALUES (demandLangTestSeq.nextval, )
+
+create SEQUENCE demandLangTestSeq START WITH 5;
+select * from demandLangTest;
+
+select * from demandMajor;
+create sequence demandMajorSeq START WITH 27;
+INSERT INTO demandMajor (SEQ, FIELDSEQ, MAJORCATEGORYSEQ, ESSENTIAL) VALUES (demandMajorSeq.nextval,

@@ -132,6 +132,7 @@
 					</c:forEach>
 				</select>
 			</div>
+			<div style="clear: both;"></div>
 			
 			<!-- 연봉 -->
 			<div class="salaryContainer">

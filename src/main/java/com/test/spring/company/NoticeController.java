@@ -1,6 +1,7 @@
 package com.test.spring.company;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -190,9 +191,9 @@ public class NoticeController {
 		}//for(i)
 		notice.setField(field);
 		
-		int result = service.addNoticeOk(notice);
+		String seq = service.addNoticeOk(notice);
 		
-		req.setAttribute("result", result);
+		req.setAttribute("seq", seq);
 		/*
 		  	//확인
 		  	for(FieldDTO dto : field) {
@@ -223,6 +224,39 @@ public class NoticeController {
 		}*/
 		
 		return "company.notice.addnoticeok";
+	}
+	
+	@RequestMapping(method= {RequestMethod.GET}, value="/company/list.action")
+	public String list(HttpServletRequest req) {
+		int nowPage = 0;
+		int totalCount = 0;
+		int pageSize = 10;
+		int start = 0;
+		int end = 0;
+		int n = 0;
+		int loop = 0;
+		int blockSize = 10;
+		
+		String page = req.getParameter("page");
+		
+		if(page == null) nowPage = 1;
+		else nowPage = Integer.parseInt(page);
+		
+		start = ((nowPage - 1) * pageSize) + 1;
+		end = start + pageSize - 1;
+		
+		HashMap<String, Integer> paging = new HashMap<String, Integer>();
+		paging.put("start", start);
+		paging.put("end", end);
+		
+		ArrayList<NoticeDTO> list = service.getList(paging);
+		
+		return "company.notice.list";
+	}
+	
+	public String view() {
+		return null;
+		
 	}
 	
 	/**

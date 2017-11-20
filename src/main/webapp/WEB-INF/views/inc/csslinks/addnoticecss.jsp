@@ -84,11 +84,14 @@
 		.hireTypeContainer, .careerTypeContainer, .areaTypeContainer {
 			float: left;
 			margin-right: 30px;
-			margin-bottom: 15px;
 		}
 		
 		.hireTypeContainer select, .careerTypeContainer select, .areaTypeContainer select {
 			width: 70px;
+		}
+		
+		.salary {
+			margin-bottom: 20px;
 		}
 		
 		.demandContainer {

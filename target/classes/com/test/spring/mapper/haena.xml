@@ -79,6 +79,19 @@
 				VALUES
 					(DEMANDCERTIFICATESEQ.nextval, #{fieldSeq}, #{essential}, #{certificateTypeSeq})
 	</insert>
+	
+	<insert id="addDemandLangTest" parameterType = "com.test.spring.dto.DemandLangTestDTO">
+		INSERT INTO demandLangTest 
+			(SEQ, FIELDSEQ, LANGTESTTYPESEQ, ESSENTIAL) 
+				VALUES 
+					(demandLangTestSeq.nextval, #{fieldSeq}, #{langTestTypeSeq}, #{essential}) 
+	</insert>
+	
+	<insert id = "addDemandMajor" parameterType = "com.test.spring.dto.DemandMajorDTO">
+		INSERT INTO demandMajor 
+			(SEQ, FIELDSEQ, MAJORCATEGORYSEQ, ESSENTIAL) 
+				VALUES (demandMajorSeq.nextval, #{fieldSeq}, #{majorCategorySeq}, #{essential})
+	</insert>
 </mapper>
 
 

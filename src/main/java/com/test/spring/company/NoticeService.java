@@ -1,5 +1,7 @@
 package com.test.spring.company;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import com.test.spring.dto.CareerTypeDTO;
 import com.test.spring.dto.CertificateTypeDTO;
 import com.test.spring.dto.DemandCertificateDTO;
 import com.test.spring.dto.DemandLangTestDTO;
+import com.test.spring.dto.DemandMajorDTO;
 import com.test.spring.dto.EducationTypeDTO;
 import com.test.spring.dto.FieldDTO;
 import com.test.spring.dto.HireTypeDTO;
@@ -84,7 +87,7 @@ public class NoticeService implements INoticeService {
 	 */
 	@Override
 	@Transactional
-	public int addNoticeOk(NoticeDTO notice) {
+	public String addNoticeOk(NoticeDTO notice) {
 		//면접 기본 정보
 		dao.addNotice(notice);
 		//방금 넣은 면접 기본 정보의 시퀀스 가져오기
@@ -114,18 +117,26 @@ public class NoticeService implements INoticeService {
 			 //요구어학시험
 			 
 			 for(DemandLangTestDTO langdto : fielddto.getDemandLangTest()) {
-				 
+				 langdto.setFieldSeq(fielddto.getSeq());
+				 dao.addDemandLangTest(langdto);
 			 }
 			 
 			 //요구학과
+			 for(DemandMajorDTO majordto : fielddto.getDemandMajor()) {
+				 majordto.setFieldSeq(fielddto.getSeq());
+				 dao.addDemandMajor(majordto);
+			 }
 			 
 		 }
-		 
-		 
-		 
-		 
-		 
-		return 0;
+
+		return notice.getSeq();
+	} //addNotice
+
+
+	@Override
+	public ArrayList<NoticeDTO> getList(HashMap<String, Integer> paging) {
+		
+		return null;
 	}
 
 	
