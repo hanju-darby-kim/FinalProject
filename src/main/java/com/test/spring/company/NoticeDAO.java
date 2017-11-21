@@ -1,5 +1,7 @@
 package com.test.spring.company;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -102,6 +104,14 @@ public class NoticeDAO {
 	public int addDemandMajor(DemandMajorDTO majordto) {
 		return sql.insert("notice.addDemandMajor", majordto);
 		
+	}
+
+	public List<NoticeDTO> getList(HashMap<String, Integer> paging) {
+		return sql.selectList("notice.getList", paging);
+	}
+
+	public int getTotalCount() {
+		return sql.selectOne("notice.getTotalCount");
 	}
 	
 }

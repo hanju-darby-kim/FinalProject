@@ -227,10 +227,11 @@ public class NoticeController {
 	}
 	
 	@RequestMapping(method= {RequestMethod.GET}, value="/company/list.action")
-	public String list(HttpServletRequest req) {
+	public String getList(HttpServletRequest req) {
 		int nowPage = 0;
 		int totalCount = 0;
 		int pageSize = 10;
+		int totalPage = 0;
 		int start = 0;
 		int end = 0;
 		int n = 0;
@@ -249,8 +250,24 @@ public class NoticeController {
 		paging.put("start", start);
 		paging.put("end", end);
 		
-		ArrayList<NoticeDTO> list = service.getList(paging);
+		List<NoticeDTO> list = service.getList(paging);
 		
+		totalCount = service.getTotalCount();
+		totalPage = (int)Math.ceil((double)totalCount / pageSize);
+		
+		String pagebar = "<nav><ul class='pagination'>";
+		loop = 1;
+		n = ((nowPage - 1) / blockSize) * blockSize + 1;
+		
+		if (n == 1) {
+			pagebar += String.format("<li class='disabled'><a href='#' area-label='Previous'><span area-hidden='true'>$laquo;</span></a></li>");	
+		} else {
+			pagebar += String.format("<li><a href='/final/company/list.action?page=%d' area-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1);
+		}
+		
+		while(!(loop > blockSize || n > totalPage)) {
+			
+		}
 		return "company.notice.list";
 	}
 	

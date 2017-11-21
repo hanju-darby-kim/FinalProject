@@ -4,27 +4,25 @@
 
 <!-- MyBatis 사용 시 SQL을 관리하는 파일 -->
 <mapper namespace="JJCurri">
-	<select id="getCurType" resultType="com.test.spring.dto.CurTypeDTO">
-		SELECT * FROM curType order by seq
+	<select id="getCurType" resultType="com.test.spring.dto.CurcategoryDTO">
+		SELECT * FROM curcategory order by seq
 	</select>
 	
 	<insert id="categoryadd" parameterType="String">
-		insert into curType values (curtypeseq.nextval, #{str})
+		insert into curcategory values (curcategoryseq.nextval, #{str})
 	</insert>
 	
 	<delete id="categorydel" parameterType="String">
-		delete from curType where seq = #{str}
+		delete from curcategory where seq = #{str}
 	</delete>
 	
 	<select id="getlastseqCategory" resultType="Integer">
-		select max(Seq) from curtype
+		select max(Seq) from curcategory
 	</select>
 	
 	<update id="categoryedit" parameterType="map">
-		update curType set curtype.curtype = #{editcategoryname} where curtype.seq = #{seq}
+		update curcategory set curcategory.category = #{editcategoryname} where curcategory.seq = #{seq}
 	</update>
-
-
 
 	<select id="getcurriculumlist" resultType="com.test.spring.dto.CurriculumDTO">
 		SELECT * FROM curriculum order by seq
