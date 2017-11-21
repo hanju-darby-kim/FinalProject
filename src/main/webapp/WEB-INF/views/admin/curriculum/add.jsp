@@ -25,6 +25,7 @@
 		var win = window.open("${pageContext.request.contextPath}/admin/curri/categorylist.action", "win", "width=450, height=600, left=" + (screen.availWidth * 0.6) + ", top=" + (screen.availHeight * 0.2));
 	}
 </script>
+<h3>과정 추가</h3>
 <form method="post" action="${pageContext.request.contextPath}/admin/curri/addok.action">
 	<table id="tblform" class="table">
 		<tr>
