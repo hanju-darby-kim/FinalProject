@@ -13,6 +13,9 @@
 	<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/css/my-custom-styles.css" rel="stylesheet" type="text/css">
 	
+	<!-- FOR APIs -->
+	<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+	
 	<!-- IE 9 Fallback-->
 	<!--[if IE 9]>
 		<link href="${pageContext.request.contextPath}/css/ie.css" rel="stylesheet">

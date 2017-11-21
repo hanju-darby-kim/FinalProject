@@ -19,7 +19,7 @@ public class ManagerDAO {
 	//매니저의 관리 학생들 출결 개시했는지 여부 확인
 	public int attManagerCheck(int seq) {
 		
-		return sql.selectOne("manager.check", seq);		
+		return sql.selectOne("manager.check", seq);
 	}
 	
 	//매니저의 관리 학생들 출결 개시

@@ -15,6 +15,13 @@
 	<select id="checkVac" parameterType="Integer" resultType="Integer">
 		select count(*) from tblAttendance where sseq = #{seq} and aseq = 4
 	</select>
+	
+	<insert id="stuVac" parameterType="map">
+		insert into atreason (seq, content, tempdate, tempseq) values (atreasonSeq.nextVal, #{content}, #{tempdate}, ${seq})
+	</insert>
 
+	<select id="attStudent" parameterType="Integer" resultType="com.test.spring.dto.StudentAttendanceDTO">
+		select * from vStuAttOne where sseq = #{seq} order by day
+	</select>
 
 </mapper>

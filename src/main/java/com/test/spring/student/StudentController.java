@@ -1,7 +1,8 @@
 package com.test.spring.student;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.spring.dto.CertificationDTO;
-import com.test.spring.dto.StudentDTO;
-import com.test.spring.manager.ManagerController;
+import com.test.spring.dto.StudentAttendanceDTO;
 
 @Controller
 public class StudentController {
@@ -47,9 +47,10 @@ public class StudentController {
 		
 		if (certification.getTarget().equals("student")) {
 			
-			service.attStudent();
-			
-			req.setAttribute("", "");
+			int seq = Integer.parseInt(certification.getSeq());
+			System.out.println(seq);
+			List<StudentAttendanceDTO> list = service.attStudent(seq);
+			req.setAttribute("list", list);
 			return "student.attendance";
 			
 		} else {//에러페이지로
@@ -79,13 +80,18 @@ public class StudentController {
 	}
 	
 	@RequestMapping(method= {RequestMethod.POST}, value="/student/vacationGo.action")
-	public String vacationGo(HttpServletRequest req, HttpServletResponse resp) {
+	public String vacationGo(HttpServletRequest req, HttpSession session) {
 		
-		String date = (String) req.getAttribute("day");
-		String content = (String) req.getAttribute("content");
-		System.out.println(date);
-		System.out.println(content);
+		CertificationDTO certification = (CertificationDTO) session.getAttribute("certification");
 		
-		return "forward:/main.action";
+		String seq = certification.getSeq();
+		String date = (String) req.getParameter("day");
+		String content = (String) req.getParameter("content");
+		
+		String result = service.stuVac(seq, date, content);
+		req.setAttribute("procMsg", result);
+		System.out.println(result);
+		
+		return "main.action";
 	}
 }
