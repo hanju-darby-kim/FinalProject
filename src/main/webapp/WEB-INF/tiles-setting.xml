@@ -33,15 +33,7 @@
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
    
-   <!-- 학생, 매니저, 관리자 업무 -->
-   <definition name="*.*" template="/WEB-INF/views/layouts/layout3.jsp"> 
-      <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
-      <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
-      <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>
-      <put-attribute name="submenu" value="/WEB-INF/views/inc/submenu/{1}submenu.jsp"/>
-      <put-attribute name="core" value="/WEB-INF/views/{1}/{2}.jsp"/>
-      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
-   </definition>
+  
    
    <!-- company.notice.addnotice.addnoticecss -->  
     <!-- css가 추가된 페이지 (사용자.기능.파일이름)으로 기재 -->
@@ -66,6 +58,16 @@
       <put-attribute name="submenu" value="/WEB-INF/views/inc/submenu/{1}submenu.jsp"/> <!-- 왼쪽 사이드 메뉴 -->
       <put-attribute name="core" value="/WEB-INF/views/{1}/{2}/{3}.jsp"/> <!-- 실제 코어내용  -->
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/> <!-- 푸터 -->
+   </definition>
+   
+    <!-- 학생, 매니저, 관리자 업무 -->
+   <definition name="*.*" template="/WEB-INF/views/layouts/layout3.jsp"> 
+      <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
+      <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
+      <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>
+      <put-attribute name="submenu" value="/WEB-INF/views/inc/submenu/{1}submenu.jsp"/>
+      <put-attribute name="core" value="/WEB-INF/views/{1}/{2}.jsp"/>
+      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
    
    <!-- 템플릿화면 -->
