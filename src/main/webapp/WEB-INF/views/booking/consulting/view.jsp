@@ -26,7 +26,7 @@
 	<!-- template.jsp -> (복사) -> add.jsp -->
 	<div id="main">
 		<section>
-		테스트
+		
 			<!-- 글쓰기 폼 -->
 			<form method="post" action="/final/booking/consultingOk.action" enctype="multipart/form-data">		<!-- 그다음일처리할 서블릿 호출/ 항상 서블릿을 호출 jsp -> jsp x  -->
 			<table id="tbl" class="table table-striped">
