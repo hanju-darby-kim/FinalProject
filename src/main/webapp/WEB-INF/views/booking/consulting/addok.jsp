@@ -27,6 +27,12 @@
 	<div id="main">
 		<section>
 		입력완료한 후 넘어온 페이지
+		<script>
+			<c:if test="${result==1}">
+				alert("글이 등록되었습니다!");
+				location.href = "/booking/consulting.action";
+			</c:if>
+		</script>
 			
 		</section>
 
