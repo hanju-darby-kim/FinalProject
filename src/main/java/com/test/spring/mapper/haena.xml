@@ -93,7 +93,7 @@
 				VALUES (demandMajorSeq.nextval, #{fieldSeq}, #{majorCategorySeq}, #{essential})
 	</insert>
 	
-	<select id="getList" parameterType="map" resultType="com.test.spring.dto.NoticeDTO">
+	<!-- <select id="getList" parameterType="map" resultType="com.test.spring.dto.NoticeDTO">
 		SELECT * FROM
 		(SELECT a.*, rownum AS rnum FROM
 			(SELECT n.SEQ,
@@ -105,7 +105,11 @@
 					ON n.COMPANYSEQ = c.SEQ
 						WHERE n.CONFIRM = 'y') a)
 				WHERE rnum >= #{start} AND rnum <= #{end}
-	</select> 
+	</select>  -->
+	
+	<select id="getTotalCount" resultType="Integer">
+		SELECT COUNT(*) AS count FROM tblNotice
+	</select>
 </mapper>
 
 
