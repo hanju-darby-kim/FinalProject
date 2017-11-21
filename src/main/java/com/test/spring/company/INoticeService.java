@@ -11,6 +11,7 @@ import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
 import com.test.spring.dto.NoticeDTO;
+import com.test.spring.dto.NoticeViewDTO;
 import com.test.spring.dto.TestTypeDTO;
 
 public interface INoticeService {
@@ -28,4 +29,5 @@ public interface INoticeService {
 	int getTotalCount();
 	List<NoticeDTO> getMyList(HashMap<String, Integer> map);
 	int getMyTotalCount(String companySeq);
+	NoticeViewDTO getView(String seq);
 }

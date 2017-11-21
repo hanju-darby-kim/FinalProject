@@ -27,6 +27,7 @@ import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
 import com.test.spring.dto.NoticeDTO;
+import com.test.spring.dto.NoticeViewDTO;
 import com.test.spring.dto.TestByNoticeDTO;
 import com.test.spring.dto.TestTypeDTO;
 
@@ -145,7 +146,7 @@ public class NoticeController {
 				tempField.setHireTypeSeq(req.getParameter("hireTypeSeq" + i)); //고용 형태
 				tempField.setCareerTypeSeq(req.getParameter("careerTypeSeq" + i)); //경력신입
 				tempField.setAreaTypeSeq(req.getParameter("areaTypeSeq" + i)); //지역
-				tempField.setSalary(Integer.parseInt(req.getParameter("salary" + i))); //연봉
+				tempField.setSalary(req.getParameter("salary" + i)); //연봉
 				//dto 작업이 필요한 애들
 				//요구학력
 				DemandEducationDTO edudto = new DemandEducationDTO();
@@ -376,9 +377,14 @@ public class NoticeController {
 		return "company.notice.list.listcss";
 	}
 	
-	public String view() {
-		return null;
+	@RequestMapping(method= {RequestMethod.GET}, value="/company/view.action")
+	public String view(String seq, HttpServletRequest req) {
 		
+		NoticeViewDTO view = service.getView(seq);
+		
+		req.setAttribute("view", view);
+		
+		return "company.notice.view.noticeviewcss";
 	}
 	
 	/**

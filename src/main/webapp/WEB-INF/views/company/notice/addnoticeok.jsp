@@ -6,6 +6,6 @@
 	<div style="text-align: center;">승인 후에 공고 목록에 게시됩니다.</div>	
 </div>
 <div class="buttons" style="text-align: center; margin-top: 30px;">
-	<input type="button" class="btn btn-rounded-2x btn-warning" value="목록으로">
+	<input type="button" class="btn btn-rounded-2x btn-warning" onclick="location.href='/final/company/mylist.action?seq=${certification.seq}';" value="목록으로">
 	<input type="button" class="btn btn-rounded-2x btn-primary" value="공고 보기">
 </div> 

@@ -6,7 +6,7 @@
 		margin: 50px auto;
 	}
 	
-	#tblList th, .seq, .name, .endDate, .applyCount, .confirm {
+	#tblList th, .seq, .name, .endDate, .applyCount, .confirm, .regDate {
 		text-align: center;
 	}
 	
@@ -18,10 +18,13 @@
 	
 	#tblList .confirm {
 		width: 80px;
-		
 	}
 
 	#pagebar {
 		text-align: center;
+	}
+	
+	#tblList .tbltr {
+		cursor: pointer;
 	}
 </style>

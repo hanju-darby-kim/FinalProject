@@ -36,8 +36,8 @@
 			</div>
 		</nav>
 		<!-- END NAVBAR -->
-		<tiles:insertAttribute name="core"/>
 		<!-- END CALL-TO-ACTION -->
+		<tiles:insertAttribute name="core"/>
 		<!-- FOOTER -->
 		<footer>
 			<tiles:insertAttribute name="footer"/>

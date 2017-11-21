@@ -50,9 +50,20 @@ public class JJCurriController {
 	 * @return
 	 */
 	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/addok.action")
-	public String curriAddok(HttpServletRequest req){
-
-		return "admin.curriculum.addok";
+	public String curriAddok(HttpServletRequest req, CurriculumDTO dto){
+		System.out.println(dto.getTitle());
+		System.out.println(dto.getCategoryseq());
+		System.out.println(dto.getCost());
+		System.out.println(dto.getCapacity());
+		System.out.println(dto.getTime());
+		System.out.println(dto.getTimeperday());
+		System.out.println(dto.getObjective());
+		System.out.println(dto.getDay());
+		
+		int addcurriculumresult = service.addcurriculum(dto);
+		req.setAttribute("addcurriculumresult", addcurriculumresult);
+		
+		return "redirect:/admin/curri/curriculumlist.action";
 	}
 	
 	/**

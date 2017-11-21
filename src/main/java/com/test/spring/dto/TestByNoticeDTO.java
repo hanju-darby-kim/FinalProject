@@ -4,6 +4,7 @@ public class TestByNoticeDTO {
 	private String seq;
 	private String noticeSeq;
 	private String testTypeSeq;
+	private String testType;
 	
 	public String getSeq() {
 		return seq;
@@ -22,6 +23,12 @@ public class TestByNoticeDTO {
 	}
 	public void setTestTypeSeq(String testTypeSeq) {
 		this.testTypeSeq = testTypeSeq;
+	}
+	public String getTestType() {
+		return testType;
+	}
+	public void setTestType(String testType) {
+		this.testType = testType;
 	}
 	
 	

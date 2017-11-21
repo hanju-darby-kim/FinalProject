@@ -2,25 +2,29 @@ package com.test.spring.dto;
 public class CurriculumDTO {
 	private String seq;
 	private String title;
-	private String curTypeSeq;
+	private String categoryseq;
 	private int cost;
 	private String capacity;
 	private int time;
-	private int timePerDay;
+	private int timeperday;
 	private String objective;
 	private int day;
-	private String curType;
+	private String category;
 	
 	
 	
-	public String getCurType() {
-		return curType;
+	public String getCategoryseq() {
+		return categoryseq;
 	}
-	public void setCurType(String curType) {
-		this.curType = curType;
+	public void setCategoryseq(String categoryseq) {
+		this.categoryseq = categoryseq;
 	}
-	
-	
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
 	
 	public String getSeq() {
 		return seq;
@@ -33,12 +37,6 @@ public class CurriculumDTO {
 	}
 	public void setTitle(String title) {
 		this.title = title;
-	}
-	public String getCurTypeSeq() {
-		return curTypeSeq;
-	}
-	public void setCurTypeSeq(String curTypeSeq) {
-		this.curTypeSeq = curTypeSeq;
 	}
 	public int getCost() {
 		return cost;
@@ -58,12 +56,14 @@ public class CurriculumDTO {
 	public void setTime(int time) {
 		this.time = time;
 	}
-	public int getTimePerDay() {
-		return timePerDay;
+
+	public int getTimeperday() {
+		return timeperday;
 	}
-	public void setTimePerDay(int timePerDay) {
-		this.timePerDay = timePerDay;
+	public void setTimeperday(int timeperday) {
+		this.timeperday = timeperday;
 	}
+	
 	public String getObjective() {
 		return objective;
 	}

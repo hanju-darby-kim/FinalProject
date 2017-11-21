@@ -25,12 +25,13 @@
 		var win = window.open("${pageContext.request.contextPath}/admin/curri/categorylist.action", "win", "width=450, height=600, left=" + (screen.availWidth * 0.6) + ", top=" + (screen.availHeight * 0.2));
 	}
 </script>
-<form method="post" action="/admin/curri/addok.action">
+<h3>과정 추가</h3>
+<form method="post" action="${pageContext.request.contextPath}/admin/curri/addok.action">
 	<table id="tblform" class="table">
 		<tr>
 			<th>카테고리</th>
 			<td>
-				<select name="curTypeSeq" id="curTypeSeq" class="form-control short">
+				<select name="categoryseq" id="categoryseq" class="form-control short">
 					<c:forEach items="${list}" var="dto">
 						<option value="${dto.seq}">${dto.category}</option>
 					</c:forEach>
@@ -57,7 +58,7 @@
 		</tr>
 		<tr>
 			<th>하루교육시간</th>
-			<td><input placeholder="예) 8" type="text" name="timePerDay" id="timePerDay" class="form-control short" /></td>
+			<td><input placeholder="예) 8" type="text" name="timeperday" id="timeperday" class="form-control short" /></td>
 		</tr>
 		<tr>
 			<th>교육일수</th>

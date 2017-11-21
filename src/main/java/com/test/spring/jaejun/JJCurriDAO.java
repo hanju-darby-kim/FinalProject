@@ -52,6 +52,11 @@ public class JJCurriDAO {
 		
 		return sql.selectList("JJCurri.getcurriculumlist");
 	}
+
+	public int addcurriculum(CurriculumDTO dto) {
+		
+		return sql.insert("JJCurri.addcurriculum", dto);
+	}
 	
 }
 

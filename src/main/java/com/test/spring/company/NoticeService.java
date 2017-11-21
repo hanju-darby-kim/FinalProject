@@ -19,6 +19,7 @@ import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
 import com.test.spring.dto.NoticeDTO;
+import com.test.spring.dto.NoticeViewDTO;
 import com.test.spring.dto.TestByNoticeDTO;
 import com.test.spring.dto.TestTypeDTO;
 
@@ -87,6 +88,7 @@ public class NoticeService implements INoticeService {
 	@Override
 	@Transactional
 	public String addNoticeOk(NoticeDTO notice) {
+		notice.setConfirm("n");
 		//면접 기본 정보
 		dao.addNotice(notice);
 		//방금 넣은 면접 기본 정보의 시퀀스 가져오기
@@ -154,6 +156,7 @@ public class NoticeService implements INoticeService {
 		List<NoticeDTO> notice = dao.getMyList(map);
 		for (NoticeDTO dto : notice) {
 			dto.setEndDate(dto.getEndDate().substring(0, 16));
+			dto.setRegDate(dto.getRegDate().substring(0, 16));
 			dto.setApplyCount(dao.getApplyCount(dto.getSeq()));
 		}
 		return notice;
@@ -163,6 +166,27 @@ public class NoticeService implements INoticeService {
 	@Override
 	public int getMyTotalCount(String companySeq) {
 		return dao.getMyTotalCount(companySeq);
+	}
+
+
+	@Override
+	public NoticeViewDTO getView(String seq) {
+		NoticeViewDTO view = dao.getView(seq); //공고 기본 정보
+		view.setFoundationDate(view.getFoundationDate().substring(0, 10));
+		view.setTestByNotice(dao.getTestByNotice(seq)); //면접 전형
+		List<FieldDTO> field = dao.getField(seq); //지원분야 기본
+		for(FieldDTO dto : field) {
+			//학력
+			dto.setDemandEducation(dao.getDemandEducation(dto.getSeq()));
+			//자격증
+			dto.setDemandCertificate(dao.getDemandCertificate(dto.getSeq()));
+			//어학시험
+			dto.setDemandLangTest(dao.getDemandLangTest(dto.getSeq()));
+			//학과
+			dto.setDemandMajor(dao.getDemandMajor(dto.getSeq()));
+		}
+		view.setField(field);
+		return view;
 	}
 
 

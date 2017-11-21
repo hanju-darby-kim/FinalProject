@@ -5,6 +5,7 @@ public class DemandCertificateDTO {
 	private String seq;
 	private String fieldSeq;
 	private String certificateTypeSeq;
+	private String certificateType;
 	private String essential;
 	public String getSeq() {
 		return seq;
@@ -29,6 +30,12 @@ public class DemandCertificateDTO {
 	}
 	public void setEssential(String essential) {
 		this.essential = essential;
+	}
+	public String getCertificateType() {
+		return certificateType;
+	}
+	public void setCertificateType(String certificateType) {
+		this.certificateType = certificateType;
 	}
 	
 	
