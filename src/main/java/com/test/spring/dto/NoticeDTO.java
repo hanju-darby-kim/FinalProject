@@ -11,6 +11,8 @@ public class NoticeDTO {
 	
 	private String seq;
 	private String companySeq;
+	private String companyName;
+	private String companyAddress;
 	private String content;
 	private String confirm;
 	private String startDate;
@@ -82,6 +84,18 @@ public class NoticeDTO {
 	}
 	public void setStartEndDate(String startEndDate) {
 		this.startEndDate = startEndDate;
+	}
+	public String getCompanyAddress() {
+		return companyAddress;
+	}
+	public void setCompanyAddress(String companyAddress) {
+		this.companyAddress = companyAddress;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
 	public ArrayList<TestByNoticeDTO> getTestByNotice() {
 		return testByNotice;

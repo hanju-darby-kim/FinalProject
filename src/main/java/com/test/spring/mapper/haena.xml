@@ -92,6 +92,20 @@
 			(SEQ, FIELDSEQ, MAJORCATEGORYSEQ, ESSENTIAL) 
 				VALUES (demandMajorSeq.nextval, #{fieldSeq}, #{majorCategorySeq}, #{essential})
 	</insert>
+	
+	<select id="getList" parameterType="map" resultType="com.test.spring.dto.NoticeDTO">
+		SELECT * FROM
+		(SELECT a.*, rownum AS rnum FROM
+			(SELECT n.SEQ,
+				c.name AS companyName,
+				c.ADDRESS AS companyAddress,
+				n.ENDDATE
+					FROM tblNotice n
+				INNER JOIN company c
+					ON n.COMPANYSEQ = c.SEQ
+						WHERE n.CONFIRM = 'y') a)
+				WHERE rnum >= #{start} AND rnum <= #{end}
+	</select> 
 </mapper>
 
 
