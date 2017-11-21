@@ -2,11 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
-
-
-
 <h2 class="section-heading">공고 등록</h2>
-<form method="POST" action="/final/addnotice.action">
+<form method="POST" action="/final/company/addnoticeok.action">
 	<div id="noticeContainer">
 		<div id="noticeHeadContainer">
 			<div id="noticeContentContainter">
@@ -29,7 +26,7 @@
 				<label class="fancy-radio" style="float: left;">
 					<input type="radio" name="report" value="y">
 					<span><i></i>네</span>
-				</label><div style="clear: both;"></div>
+				</label>
 				<label class="fancy-radio" style="float: left;">
 					<input type="radio" name="report" checked="checked" value="n">
 					<span><i></i>아니오</span>
@@ -37,6 +34,12 @@
 				<div style="clear: both;"></div>
 			</div>
 			<div style="clear: both;"></div>
+			
+			<!-- 비고 -->
+			<div id="extraContainer">
+				<div id="extraPcdata" class="noticeTitle">비고</div>
+				<textarea style="width: 100%; height: 50px; resize: none" name="extra"></textarea>
+			</div>
 			
 			<!-- 면접 전형 -->
 			<div id="testContainer">
@@ -98,6 +101,11 @@
 				<input type="text" name="fieldName1">
 			</div>
 			
+			<div class="fieldContentContainer">
+				<div class="noticeTitle fieldContentPcdata">지원분야업무</div>
+				<input type="text" name="fieldContent1" style="width: 400px;">
+			</div>
+			
 			<div class="hireTypeContainer">
 				<div class="noticeTitle">고용형태</div>
 				<select name="hireTypeSeq1">
@@ -123,6 +131,13 @@
 					<option value="${areatypedto.seq}">${areatypedto.area}</option>
 					</c:forEach>
 				</select>
+			</div>
+			<div style="clear: both;"></div>
+			
+			<!-- 연봉 -->
+			<div class="salaryContainer">
+				<div class="noticeTitle">연봉</div>
+				<input type="number" name="salary1" class="salary">
 			</div>
 			
 			<!-- 요구사항들 -->
@@ -273,7 +288,9 @@
 				</div>		
 			</div>
 			<!-- 요구사항 끝 -->
-			<button type="button" class="btn btn-rounded-4x btn-default addField">지원분야 추가</button>
+			
+			<button type="button" class="btn btn-primary btn-sm addField"><i class="fa fa-plus"></i> 추가</button>
+			
 		</div>
 		<!-- 지원분야끝 -->
 		
@@ -283,8 +300,14 @@
 		
 			<div class="fieldNameContainer">
 				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
-				<input type="text" class="fieldName" name="fieldName1" disabled>
+				<input type="text" class="fieldName" name="fieldName2" disabled>
 			</div>
+			
+			<div class="fieldContentContainer">
+				<div class="noticeTitle fieldContentPcdata">지원분야업무</div>
+				<input type="text" class="fieldContent" name="fieldContent2" style="width: 400px;">
+			</div>
+			
 			<div>
 				<div class="hireTypeContainer">
 					<div class="noticeTitle">고용형태</div>
@@ -313,6 +336,10 @@
 					</select>
 				</div>
 				
+				<div class="salaryContainer">
+					<div class="noticeTitle">연봉</div>
+					<input type="number" name="salary2" class="salary">
+				</div>
 			</div>
 			
 			
@@ -463,7 +490,7 @@
 				<!-- 요구어학시험 끝 -->	
 			</div>
 			<!-- 요구사항 끝 -->
-			<input type="button" class="addField" value="지원분야 추가">
+			<button type="button" class="btn btn-primary btn-sm addField"><i class="fa fa-plus"></i> 추가</button>
 		</div>
 		<!-- 지원분야끝 -->
 		
@@ -473,6 +500,11 @@
 			<div class="fieldNameContainer">
 				<div class="noticeTitle testPcdata">지원분야명 <div class="fa fa-trash-o"></div></div>
 				<input type="text" class="fieldName" name="fieldName1" disabled>
+			</div>
+			
+			<div class="fieldContentContainer">
+				<div class="noticeTitle fieldContentPcdata">지원분야업무</div>
+				<input type="text" id="fieldContent" name="fieldContent3" style="width: 400px;" disabled>
 			</div>
 			
 			<div class="hireTypeContainer">
@@ -500,6 +532,11 @@
 					<option value="${areatypedto.seq}">${areatypedto.area}</option>
 					</c:forEach>
 				</select>
+			</div>
+			
+			<div class="salaryContainer">
+				<div class="noticeTitle">연봉</div>
+				<input type="number" name="salary3" class="salary">
 			</div>
 			
 			<!-- 요구사항들 -->
@@ -558,7 +595,7 @@
 						<label class="fancy-checkbox">
 			            	<input type="checkbox"  name="certificateEssential3_3" value="필수" disabled>
 			            	<span>필수</span>
-			        	</label><div style="clear: both;"></div><div style="clear: both;"></div>
+			        	</label><div style="clear: both;"></div>
 			        </div>
 				</div>
 				<!-- 요구자격증끝 -->
@@ -656,7 +693,7 @@
 		<!-- 지원분야끝 -->
 	</div>
 	<!-- 공고 끝 -->
-	<input type="submit" value="등록하기">
+	<button type="submit" class="btn btn-success btn-rounded-3x btnSubmit" style="background-color: #65a5d2; border-color: #65a5d2;"><i class="fa fa-check"></i> 등록하기</button>
 </form>
 
 <!-- dateRange -->
@@ -700,12 +737,12 @@
  		$(".addField").click(function(event) {
  			var nextField = $(event.target).parent().next(); //다음 요구 조건
  			nextField.show(); //다음 요구 조건 보이기
- 			nextField.find(".fieldName, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", false); //얘네 disabled 풀어주기
+ 			nextField.find(".fieldName, .fieldContent, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", false); //얘네 disabled 풀어주기
  		});
  		
  		$(".fa-trash-o").click(function(event) {
  			var parentField = $(event.target).parents(".fieldContainer");
- 			parentField.find(".fieldName, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", true);
+ 			parentField.find(".fieldName, .fieldContent, .hireType, .careerType, .areaType, .educationType, .educationEssential").prop("disabled", true);
  			parentField.hide();
  			
  		});

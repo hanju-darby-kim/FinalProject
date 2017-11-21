@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- MyBatis 사용 시 SQL을 관리하는 파일 -->
+<mapper namespace="teacher">
+
+	<!-- login한 아이디와 pw가 존재하는지 -->
+	<select id="getOpenCurSeqByTSeq" parameterType="map" resultType="String">
+		SELECT curseq FROM CUROPEN WHERE INSSEQ=#{tseq}
+		AND to_date(#{nowdate},'yyyymmdd') BETWEEN STARTDATE AND ENDDATE
+	</select>
+	
+	<!-- login한 아이디와 pw가 존재하는지 -->
+	<select id="getCurSubjectsByCSeq" parameterType="String" resultType="com.test.spring.dto.CurSubjectsDTO">
+		select cur.TITLE as curName, cs.*, sub.name as subName from TBLSUBJECT sub INNER JOIN CURSUBJECTS cs ON sub.SEQ = cs.SUBSEQ INNER JOIN CURRICULUM cur on cs.CURSEQ = cur.SEQ
+  where cs.curseq = #{curSeq}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    

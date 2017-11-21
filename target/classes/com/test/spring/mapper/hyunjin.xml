@@ -8,9 +8,17 @@
 		SELECT * FROM tblConsulteeType order by seq
 	</select>
 	
+	<select id="getCurType" resultType="com.test.spring.dto.CurTypeDTO">
+		SELECT * FROM curType order by seq
+	</select>
 	<!-- <select id="categoryadd" parameterType="String">
 		insert into curType values (curtypeseq.nextval, #{str})
 	</select> -->
+	<!-- 회원가입 -->
+	<insert id="booking" parameterType="com.test.spring.dto.ConsultingBookingDTO">
+		insert into TBLCONSULTINGBOOKING values (TBLCONSULTINGBOOKINGSeq.nextval, #{applicant}, #{crSeq}, #{curTypeSeq}, #{tel}, #{email}, #{comment})
+	</insert>
+	
 </mapper>
 
 

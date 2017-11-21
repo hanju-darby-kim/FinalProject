@@ -94,3 +94,32 @@ update majorcategory set majorcategory = '인문학' where majorcategory = '문�
 update majorcategory set majorcategory = '어문학' where majorcategory = '어학';
 
 commit;
+
+select to_date('2017-02-02 11:13', 'yyyy-mm-dd HH:MI') from dual;
+select * from DEMANDLANGTEST;
+
+alter table DEMANDLANGTEST rename COLUMN vital to essential;
+
+ALTER TABLE tblNotice ADD (startDate DATE);
+
+select * from TBLFIELD;
+
+select * from TBLNOTICE;
+select * from TESTBYNOTICE;
+
+select * from DEMANDEDUCATION;
+alter table DEMANDEDUCATION rename COLUMN educationType TO educationTypeSeq;
+
+INSERT INTO DEMANDCERTIFICATE (SEQ, FIELDSEQ, VITAL, CERTIFICATETYPESEQ) VALUES (DEMANDCERTIFICATESEQ.nextval, );
+ALTER TABLE demandCertificate RENAME COLUMN vital TO essential;
+
+select * from DEMANDCERTIFICATE;
+
+INSERT INTO demandLangTest (SEQ, FIELDSEQ, LANGTESTTYPESEQ, ESSENTIAL) VALUES (demandLangTestSeq.nextval, )
+
+create SEQUENCE demandLangTestSeq START WITH 5;
+select * from demandLangTest;
+
+select * from demandMajor;
+create sequence demandMajorSeq START WITH 27;
+INSERT INTO demandMajor (SEQ, FIELDSEQ, MAJORCATEGORYSEQ, ESSENTIAL) VALUES (demandMajorSeq.nextval,

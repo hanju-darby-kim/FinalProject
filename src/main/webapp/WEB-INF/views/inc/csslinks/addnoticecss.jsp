@@ -10,11 +10,11 @@
 		.addElement { margin-left: 1px; }
 		
 		.fa-trash-o {
-		    font-size: 20px;
-		    background-color: #bbb;
+		    font-size: 18px;
+		    background-color: #aaa;
 		    border-radius: 3px;
 		    color: white;
-		    padding: 3px 7px;
+		    padding: 3px 5px;
 		    cursor: pointer;
 		}
 		
@@ -22,7 +22,7 @@
 			font-size: 15px;
 			font-weight: bold;
 			padding-left: 1px;
-			margin-bottom: 10px;
+			margin-bottom: 3px;
 			margin-top: 15px;
 		}
 		
@@ -84,13 +84,14 @@
 		.hireTypeContainer, .careerTypeContainer, .areaTypeContainer {
 			float: left;
 			margin-right: 30px;
-			margin-bottom: 15px;
-			border: 1px solid black;
 		}
 		
-		/* 왜 안먹지 */
 		.hireTypeContainer select, .careerTypeContainer select, .areaTypeContainer select {
 			width: 70px;
+		}
+		
+		.salary {
+			margin-bottom: 20px;
 		}
 		
 		.demandContainer {
@@ -101,10 +102,18 @@
 			margin-top: 0px;
 		}
 		
-		select {
+		select, .fancy-checkbox {
 			float: left;
-			margin-right: 6px;
-	
+			margin-right: 7px;
+		}
+		
+		.addField {
+			margin-top: 10px;
+			width: 100%;
+		}
+		
+		.btnSubmit {
+			margin-top: 10px;
 		}
 		
 	</style>

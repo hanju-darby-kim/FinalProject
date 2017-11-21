@@ -1,12 +1,10 @@
 package com.test.spring.dto;
 
-public class DemandLangTestDTO﻿ {
-
+public class DemandLangTestDTO {
 	private String seq;
 	private String fieldSeq;
 	private String langTestTypeSeq;
 	private String essential;
-	
 	public String getSeq() {
 		return seq;
 	}
@@ -31,5 +29,4 @@ public class DemandLangTestDTO﻿ {
 	public void setEssential(String essential) {
 		this.essential = essential;
 	}
-	
 }
