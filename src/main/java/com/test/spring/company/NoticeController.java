@@ -249,8 +249,9 @@ public class NoticeController {
 		paging.put("start", start);
 		paging.put("end", end);
 		
-		ArrayList<NoticeDTO> list = service.getList(paging);
+		List<NoticeDTO> list = service.getList(paging);
 		
+		totalCount = service.getTotalCount();
 		return "company.notice.list";
 	}
 	

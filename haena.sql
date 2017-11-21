@@ -122,4 +122,20 @@ select * from demandLangTest;
 
 select * from demandMajor;
 create sequence demandMajorSeq START WITH 27;
-INSERT INTO demandMajor (SEQ, FIELDSEQ, MAJORCATEGORYSEQ, ESSENTIAL) VALUES (demandMajorSeq.nextval,
+SELECT * FROM
+	(SELECT a.*, rownum AS rnum FROM
+		(SELECT n.SEQ,
+			c.name AS companyName,
+			c.ADDRESS AS companyAddress,
+			n.ENDDATE
+				FROM tblNotice n
+			INNER JOIN company c
+				ON n.COMPANYSEQ = c.SEQ
+					WHERE n.CONFIRM = 'y') a)
+		WHERE rnum >= 1 AND rnum <= 2;
+
+SELECT * FROM tblnotice;
+select * from TBLAPPLY;
+select * from company;
+
+select * from (select a.*, rownum as rnum from (select seq, name, subject, readCount, regDate, round((sysdate - regDate) * 24 * 60) as gap, commentCount, filename, depth from tblBoard %s order by thread desc) a) where rnum >= %s and rnum <= %s", where, map.get("start"), map.get("end"));

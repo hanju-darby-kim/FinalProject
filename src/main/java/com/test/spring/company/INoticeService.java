@@ -25,5 +25,6 @@ public interface INoticeService {
 	List<LangTestTypeDTO> getLangTestType();
 	List<MajorCategoryDTO> getMajorCategory();
 	String addNoticeOk(NoticeDTO notice);
-	ArrayList<NoticeDTO> getList(HashMap<String, Integer> paging);
+	List<NoticeDTO> getList(HashMap<String, Integer> paging);
+	int getTotalCount();
 }

@@ -1,6 +1,5 @@
 package com.test.spring.company;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -134,9 +133,15 @@ public class NoticeService implements INoticeService {
 
 
 	@Override
-	public ArrayList<NoticeDTO> getList(HashMap<String, Integer> paging) {
-		
-		return null;
+	public List<NoticeDTO> getList(HashMap<String, Integer> paging) {
+		List<NoticeDTO> notice = dao.getList(paging);
+		return notice;
+	}
+
+
+	@Override
+	public int getTotalCount() {
+		return dao.getTotalCount();
 	}
 
 	
