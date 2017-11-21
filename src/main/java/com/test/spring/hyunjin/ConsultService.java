@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.spring.dto.ConsulteeTypeDTO;
+import com.test.spring.dto.ConsultingBookingDTO;
+import com.test.spring.dto.CurTypeDTO;
 
 
 @Service
@@ -15,9 +17,23 @@ public class ConsultService implements IConsultService {
 	private ConsultDAO dao;
 	
 	@Override
-	public List<ConsulteeTypeDTO> ConsulteeType() {
+	public List<ConsulteeTypeDTO> consulteeType() {
 		
-		return dao.ConsulteeType();
+		return dao.consulteeType();
+	}
+
+		
+	@Override
+	public List<CurTypeDTO> curType() {
+		// TODO Auto-generated method stub
+		return dao.curType();
+	}
+
+
+	@Override
+	public int booking(ConsultingBookingDTO dto) {
+		// TODO Auto-generated method stub
+		return dao.booking(dto);
 	}
 
 	/*@Override

@@ -55,10 +55,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<h2 class="section-heading">KNOW BETTER</h2>
-						<p class="lead">Synergistically procrastinate one-to-one results for accurate platforms. Assertively whiteboard corporate users whereas dynamic initiatives.</p>
-						<p>Energistically architect leading-edge users and inexpensive internal or "organic" sources. Distinctively evolve e-business resources after progressive intellectual capital. Objectively architect maintainable technologies via strategic convergence. Continually optimize stand-alone expertise with e-business e-services. Continually conceptualize client-centered opportunities and.</p>
-						<p>Dynamically customize backward-compatible processes via front-end models. Distinctively evisculate an expanded array of scenarios after virtual information. Professionally predominate technically sound resources through impactful mindshare. Efficiently drive viral interfaces without inexpensive value. Credibly.</p>
+						<h2 class="section-heading">"사자의 심장을 가져라"</h2>
+						<p class="lead">당신은 세상을 변화시키는 IT 리더입니다. </p>
+						<p>급격하게 변화하는 IT혁명의 시대에서 성공하려면, IT리더는 자신이 속한 환경에 맞는 리더십 특성의 구성요소를 잘 파악하고 적용해야 한다. 즉 환경이 바뀌면 리더도 달라져야 한다는 뜻이다. 격변의 시대에 중요한 것은 ‘누가’ 이끄느냐가 아니라 ‘어떻게’ 이끄느냐다.</p>
+						<p>To succeed in the era of rapidly changing IT revolution, IT leaders must identify and apply the components of the leadership characteristics that fit their environment. That means that if the environment changes, the leader should change. What is important in the turbulent times is not who leads, but how it leads.</p>
 					</div>
 					<div class="col-md-6">
 						<img src="${pageContext.request.contextPath}/img/intro-img.png" class="img-responsive" alt="Image Intro">

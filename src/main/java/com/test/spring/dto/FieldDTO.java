@@ -1,14 +1,21 @@
 package com.test.spring.dto;
 
+import java.util.ArrayList;
+
 public class FieldDTO {
 	private String seq;
 	private String noticeSeq;
 	private String fieldName;
-	private String fieldContent;
+	private String content;
 	private String hireTypeSeq;
 	private String areaTypeSeq;
 	private int salary;
 	private String careerTypeSeq;
+	
+	private DemandEducationDTO demandEducation;
+	private ArrayList<DemandCertificateDTO> demandCertificate;
+	private ArrayList<DemandLangTestDTO> demandLangTest;
+	private ArrayList<DemandMajorDTO> demandMajor;
 	
 	public String getSeq() {
 		return seq;
@@ -34,11 +41,11 @@ public class FieldDTO {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	public String getFieldContent() {
-		return fieldContent;
+	public String getContent() {
+		return content;
 	}
-	public void setFieldContent(String fieldContent) {
-		this.fieldContent = fieldContent;
+	public void setContent(String content) {
+		this.content = content;
 	}
 	public String getHireTypeSeq() {
 		return hireTypeSeq;
@@ -58,9 +65,35 @@ public class FieldDTO {
 	public void setAreaTypeSeq(String areaTypeSeq) {
 		this.areaTypeSeq = areaTypeSeq;
 	}
+	
+	public DemandEducationDTO getDemandEducation() {
+		return demandEducation;
+	}
+	public void setDemandEducation(DemandEducationDTO demandEducation) {
+		this.demandEducation = demandEducation;
+	}
+	public ArrayList<DemandCertificateDTO> getDemandCertificate() {
+		return demandCertificate;
+	}
+	public void setDemandCertificate(ArrayList<DemandCertificateDTO> demandCertificate) {
+		this.demandCertificate = demandCertificate;
+	}
+	public ArrayList<DemandLangTestDTO> getDemandLangTest() {
+		return demandLangTest;
+	}
+	public void setDemandLangTest(ArrayList<DemandLangTestDTO> demandLangTest) {
+		this.demandLangTest = demandLangTest;
+	}
+	public ArrayList<DemandMajorDTO> getDemandMajor() {
+		return demandMajor;
+	}
+	public void setDemandMajor(ArrayList<DemandMajorDTO> demandMajor) {
+		this.demandMajor = demandMajor;
+	}
+	
 	@Override
 	public String toString() {
-		System.out.println(seq + " " + noticeSeq + " " + fieldName + " " + hireTypeSeq + " " + areaTypeSeq + " " + fieldContent + " " + salary + " " + careerTypeSeq);
+		System.out.println(seq + " " + noticeSeq + " " + fieldName + " " + hireTypeSeq + " " + areaTypeSeq + " " + content + " " + salary + " " + careerTypeSeq);
 		return super.toString();
 	}
 }

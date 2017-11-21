@@ -12,6 +12,7 @@
 	성공하셨습니다.
 	<script>
 		<c:if test="${result==1}">
+			alert("회원가입이 완료되었습니다!!");
 			location.href = "/final/login.action";
 		</c:if>
 		<c:if test="${result==0}">

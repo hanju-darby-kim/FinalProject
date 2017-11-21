@@ -94,3 +94,74 @@ update majorcategory set majorcategory = '인문학' where majorcategory = '문�
 update majorcategory set majorcategory = '어문학' where majorcategory = '어학';
 
 commit;
+
+select to_date('2017-02-02 11:13', 'yyyy-mm-dd HH:MI') from dual;
+select * from DEMANDLANGTEST;
+
+alter table DEMANDLANGTEST rename COLUMN vital to essential;
+
+ALTER TABLE tblNotice ADD (startDate DATE);
+
+select * from TBLFIELD;
+
+select * from TBLNOTICE;
+select * from TESTBYNOTICE;
+
+select * from DEMANDEDUCATION;
+alter table DEMANDEDUCATION rename COLUMN educationType TO educationTypeSeq;
+
+INSERT INTO DEMANDCERTIFICATE (SEQ, FIELDSEQ, VITAL, CERTIFICATETYPESEQ) VALUES (DEMANDCERTIFICATESEQ.nextval, );
+ALTER TABLE demandCertificate RENAME COLUMN vital TO essential;
+
+select * from DEMANDCERTIFICATE;
+
+INSERT INTO demandLangTest (SEQ, FIELDSEQ, LANGTESTTYPESEQ, ESSENTIAL) VALUES (demandLangTestSeq.nextval, )
+
+create SEQUENCE demandLangTestSeq START WITH 5;
+select * from demandLangTest;
+
+select * from demandMajor;
+create sequence demandMajorSeq START WITH 27;
+SELECT * FROM
+	(SELECT a.*, rownum AS rnum FROM
+		(SELECT n.SEQ,
+			c.name AS companyName,
+			c.ADDRESS AS companyAddress,
+			n.ENDDATE
+				FROM tblNotice n
+			INNER JOIN company c
+				ON n.COMPANYSEQ = c.SEQ
+					WHERE n.CONFIRM = 'y') a)
+		WHERE rnum >= 1 AND rnum <= 2;
+
+SELECT * FROM tblnotice;
+select * from TBLAPPLY;
+select * from company;
+
+SELECT COUNT(* ) FROM TBLAPPLY WHERE fieldSeq IN (SELECT seq FROM tblField WHERE noticeSeq = 6);
+
+
+SELECT * FROM
+		(SELECT a.*, rownum AS rnum FROM
+			(SELECT n.SEQ,
+				c.name AS companyName,
+				n.confirm,
+				n.ENDDATE
+					FROM tblNotice n
+				INNER JOIN company c
+					ON n.COMPANYSEQ = c.SEQ
+						WHERE n.companySeq = 2) a)
+				WHERE rnum >= 1 AND rnum <= 10;
+select * from tblnotice;
+
+SELECT * FROM company;
+
+select * from tblnotice;
+
+update tblnotice set confirm = 'n' WHERE confirm IS NULL;
+
+SELECT * FROM tblnotice;
+
+commit;
+
+SELECT COUNT(*) FROM tblNotice WHERE companySeq = 2;
