@@ -50,8 +50,11 @@ public class JJCurriController {
 	 * @return
 	 */
 	@RequestMapping(method={RequestMethod.POST}, value="/admin/curri/addok.action")
-	public String curriAddok(HttpServletRequest req){
-
+	public String curriAddok(HttpServletRequest req, CurriculumDTO dto){
+		
+		int addcurriculumresult = service.addcurriculum(dto);
+		req.setAttribute("addcurriculumresult", addcurriculumresult);
+		
 		return "admin.curriculum.addok";
 	}
 	

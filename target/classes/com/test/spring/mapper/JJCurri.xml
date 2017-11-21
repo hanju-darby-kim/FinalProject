@@ -23,10 +23,16 @@
 	<update id="categoryedit" parameterType="map">
 		update curcategory set curcategory.category = #{editcategoryname} where curcategory.seq = #{seq}
 	</update>
-
+	
 	<select id="getcurriculumlist" resultType="com.test.spring.dto.CurriculumDTO">
-		SELECT * FROM curriculum order by seq
+		SELECT * FROM jjcurri order by seq
 	</select>
+	
+	
+
+	<insert id="addcurriculum" parameterType="com.test.spring.dto.CurriculumDTO">
+		insert into curriculum values (curriculumseq.nextval, #{title}, #{categoryseq}, #{cost}, #{capacity}, #{time}, #{timeperday}, #{objective}, #{day})
+	</insert>
 	
 </mapper>
 

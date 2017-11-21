@@ -52,4 +52,10 @@ public class JJCurriService implements IJJCurriService {
 		return dao.curriculum();
 	}
 	
+	@Override
+	public int addcurriculum(CurriculumDTO dto) {
+	
+		return dao.addcurriculum(dto);
+	}
+	
 }

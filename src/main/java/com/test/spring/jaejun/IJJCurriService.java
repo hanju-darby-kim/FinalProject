@@ -19,6 +19,8 @@ public interface IJJCurriService {
 	int editCategory(HashMap<String, String> map);
 
 	List<CurriculumDTO> curriculum();
+
+	int addcurriculum(CurriculumDTO dto);
 	
 	
 	

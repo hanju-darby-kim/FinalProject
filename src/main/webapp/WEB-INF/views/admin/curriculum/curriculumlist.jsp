@@ -4,37 +4,34 @@
 <style>
 	#curriculumlisttbl {
 		width: 800px;
+		vertical-align: middle;
 	}
 </style>
 <h3>과정 목록</h3>
 <table id="curriculumlisttbl" class="table table-striped">
 	<c:forEach items="${list}" var="dto" varStatus="status">
 		<tr>
-			<td>번호</td>
-			<td>${status.count}</td>
-			<td>카테고리</td>
-			<td>${dto.title}</td>
+			<th style="width:100px;">번호</th>
+			<td style="width:300px;">${status.count}</td>
+			<th style="width:100px;">카테고리</th>
+			<td style="width:300px;">${dto.category}</td>
 		</tr>
 		<tr>
-			<td>과정명</td>
-			<td>${dto.title}</td>
+			<th>과정명</th>
+			<td colspan="3">${dto.title}</td>
 		</tr>
 		<tr>
-			<td>비용</td>
-			<td>${dto.cost}</td>
+			<th>비용</th>
+			<td>${dto.cost}원</td>
+			<th>총 교육시간/하루 교육시간</th>
+			<td>${dto.time}시간 / ${dto.timePerDay}시간</td>
 		</tr>
 		<tr>
-			<td>총 교육시간</td>
-			<td>${dto.time}</td>
-			<td>하루 교육시간</td>
-			<td>${dto.timePerDay}</td>
+			<th>교육목표</th>
+			<td colspan="3">${dto.objective}</td>
 		</tr>
 		<tr>
-			<td>교육목표</td>
-			<td>${dto.objective}</td>
-		</tr>
-		<tr>
-			<td>
+			<td colspan="4" style="background-color: Honeydew;"></td>
 		</tr>
 	</c:forEach>
 </table>
