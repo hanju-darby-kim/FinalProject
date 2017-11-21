@@ -6,7 +6,7 @@ public class CurriculumDTO {
 	private int cost;
 	private String capacity;
 	private int time;
-	private int timePerDay;
+	private int timeperday;
 	private String objective;
 	private int day;
 	private String category;
@@ -56,12 +56,14 @@ public class CurriculumDTO {
 	public void setTime(int time) {
 		this.time = time;
 	}
-	public int getTimePerDay() {
-		return timePerDay;
+
+	public int getTimeperday() {
+		return timeperday;
 	}
-	public void setTimePerDay(int timePerDay) {
-		this.timePerDay = timePerDay;
+	public void setTimeperday(int timeperday) {
+		this.timeperday = timeperday;
 	}
+	
 	public String getObjective() {
 		return objective;
 	}

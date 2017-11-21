@@ -24,7 +24,7 @@
 			<th>비용</th>
 			<td>${dto.cost}원</td>
 			<th>총 교육시간/하루 교육시간</th>
-			<td>${dto.time}시간 / ${dto.timePerDay}시간</td>
+			<td>${dto.time}시간 / ${dto.timeperday}시간</td>
 		</tr>
 		<tr>
 			<th>교육목표</th>

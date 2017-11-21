@@ -31,7 +31,7 @@
 		<tr>
 			<th>카테고리</th>
 			<td>
-				<select name="curTypeSeq" id="curTypeSeq" class="form-control short">
+				<select name="categoryseq" id="categoryseq" class="form-control short">
 					<c:forEach items="${list}" var="dto">
 						<option value="${dto.seq}">${dto.category}</option>
 					</c:forEach>
@@ -58,7 +58,7 @@
 		</tr>
 		<tr>
 			<th>하루교육시간</th>
-			<td><input placeholder="예) 8" type="text" name="timePerDay" id="timePerDay" class="form-control short" /></td>
+			<td><input placeholder="예) 8" type="text" name="timeperday" id="timeperday" class="form-control short" /></td>
 		</tr>
 		<tr>
 			<th>교육일수</th>
