@@ -3,15 +3,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<div id="noticeContainer">
+<div id="noticeContainer" class="margin-20">
 	<!-- 기업명 -->
-	<div id="companyName">
+	<div id="companyName" class="margin-20">
 		<h1>${view.companyName}</h1>
 	</div>		
 	
 	<!-- 회사소개 -->
-	<div id="contentContainer">
-		<div id="viewTitle">
+	<div id="contentContainer" class="margin-20">
+		<div class="viewTitle">
 			회사 소개
 		</div>
 		<div id="content">
@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	
-	<div id="websiteContainer">
+	<div id="websiteContainer" class="margin-20">
 		<div class="viewTitle">
 			홈페이지
 		</div>
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 	
-	<div id="addressContainer">
+	<div id="addressContainer" class="margin-20">
 		<div class="viewTitle">
 			회사 주소
 		</div>
@@ -37,7 +37,7 @@
 		</div>
 	</div>
 	
-	<div id="endDateContainer">
+	<div id="endDateContainer" class="margin-20">
 		<div class="viewTitle">
 			마감일
 		</div>
@@ -46,7 +46,7 @@
 		</div>
 	</div>
 	
-	<div id="numberOfEmpContainer">
+	<div id="numberOfEmpContainer" class="margin-20">
 		<div class="viewTitle">
 			사원수
 		</div>
@@ -55,7 +55,7 @@
 		</div>
 	</div>
 	
-	<div id="fondationDateContainer">
+	<div id="fondationDateContainer" class="margin-20">
 		<div class="viewTitle">
 			설립일
 		</div>
@@ -64,8 +64,8 @@
 		</div>
 	</div>
 	
-	<div id="salesContainer">
-		<div id="viewTitle">
+	<div id="salesContainer" class="margin-20">
+		<div class="viewTitle">
 			매출액
 		</div>
 		<div id="sales">
@@ -73,8 +73,8 @@
 		</div>
 	</div>
 	
-	<div id="companyTypeContainer">
-		<div id="viewTitle">
+	<div id="companyTypeContainer" class="margin-20">
+		<div class="viewTitle">
 			기업형태
 		</div>
 		<div id="companyType">
@@ -82,8 +82,8 @@
 		</div>
 	</div>
 	
-	<div id="industryTypeContainer">
-		<div id="viewTitle">
+	<div id="industryTypeContainer" class="margin-20">
+		<div class="viewTitle">
 			산업군
 		</div>
 		<div id="industryType">
@@ -91,7 +91,7 @@
 		</div>
 	</div>
 	
-	지원분야
+	<div class="viewTitle">지원분야</div>
 	<c:forEach items="${view.field}" var="field">
 	<div class="fieldContainer">
 		<div class="fieldName">
