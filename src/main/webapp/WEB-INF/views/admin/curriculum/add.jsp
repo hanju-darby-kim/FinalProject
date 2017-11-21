@@ -32,7 +32,7 @@
 			<td>
 				<select name="curTypeSeq" id="curTypeSeq" class="form-control short">
 					<c:forEach items="${list}" var="dto">
-						<option value="${dto.seq}">${dto.curType}</option>
+						<option value="${dto.seq}">${dto.category}</option>
 					</c:forEach>
 				</select>
 				<input type="button" id="addCategory" name="addCategory" value="카테고리 추가/제거" onclick="addcategory();"/>
