@@ -144,7 +144,7 @@
 <c:forEach items="${list}" var="dto" varStatus="status">
 	<tr>
 		<td>${status.count}</td>
-		<td>${dto.curType}</td>
+		<td>${dto.category}</td>
 		<td>
 		<a href="#" style="cursor: pointer;" onclick="modify(${dto.seq}, ${status.count});">[수정]</a>
 			<a href="#" style="cursor: pointer;" onclick="del(${dto.seq}, ${status.count});">[삭제]</a>
