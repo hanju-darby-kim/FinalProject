@@ -132,7 +132,13 @@ public class MainController {
 		return "main/popup/jusoPopup";
 	}
 
-
+	//에러페이지, 오류 발생시 띄우는 메시지는 errorMsg
+	@RequestMapping(method = { RequestMethod.GET }, value = "/error.action")
+	public String error(HttpServletRequest req) {
+		
+		return "sign.error";
+	}
+	
 	// 센터소개 -> 개요
 	@RequestMapping(method = { RequestMethod.GET }, value = "/center/geyo.action")
 	public String centerGeyo(HttpServletRequest req) {

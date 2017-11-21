@@ -36,7 +36,6 @@
 			 values (memberSeq.nextval, #{id}, #{pw}, #{name}, #{tel}, #{address}, #{email}, #{gender}, #{ssn})
 	</insert>
 	
-	
 </mapper>
 
 

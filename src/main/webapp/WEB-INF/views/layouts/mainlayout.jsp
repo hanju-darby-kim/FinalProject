@@ -37,8 +37,8 @@
 			</div>
 		</nav>
 		<!-- END NAVBAR -->
-		<tiles:insertAttribute name="core"/>
 		<!-- END CALL-TO-ACTION -->
+		<tiles:insertAttribute name="core"/>
 		<!-- FOOTER -->
 		<footer>
 			<tiles:insertAttribute name="footer"/>
@@ -46,7 +46,8 @@
 		<!-- END FOOTER -->
 	</div>
 	<!-- END WRAPPER -->
-	<!-- JAVASCRIPTS -->
+	
+	<!-- JAVASCRIPTS -->	
 	<script src="${pageContext.request.contextPath}/js/jquery-2.1.1.min.js"></script>
 	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 	<script src="${pageContext.request.contextPath}/js/plugins/slick/slick.min.js"></script>
@@ -55,20 +56,11 @@
 	<script src="${pageContext.request.contextPath}/js/plugins/autohidingnavbar/jquery.bootstrap-autohidingnavbar.min.js"></script>
 	<script src="${pageContext.request.contextPath}/js/repute-scripts.js"></script>
 	
+	<!-- CUSTOM JAVASCRIPTS -->	
+	<script src="${pageContext.request.contextPath}/js/custom-script.js"></script>
+	<script src="${pageContext.request.contextPath}/js/bootstrap-datepicker.js"></script>
+	<script src="${pageContext.request.contextPath}/js/daterangepicker.js"></script>
+	
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

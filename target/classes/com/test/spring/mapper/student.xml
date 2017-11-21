@@ -4,16 +4,17 @@
 
 <mapper namespace="student">
 
-	<select id="loginCheck" parameterType="com.test.spring.dto.StudentDTO">
-		select count(*) from tblAttendance where date .....
+	<select id="loginCheck" parameterType="Integer" resultType="Integer">
+		select count(*) from tblAttendance where day = to_char(sysdate, 'yyyy-mm-dd') and seq = #{seq}
+	</select>
+
+	<select id="checkInOut" parameterType="Integer" resultType="Integer" statementType="CALLABLE">
+		{call studentCheck(#{seq}, #{mode=OUT, javaType=int, jdbcType=NUMERIC})}
 	</select>
 	
-	<insert id="checkIn">
-		
-	</insert>
-	
-	<update id="checkOut">
-		
-	</update>
-	
+	<select id="checkVac" parameterType="Integer" resultType="Integer">
+		select count(*) from tblAttendance where sseq = #{seq} and aseq = 4
+	</select>
+
+
 </mapper>
