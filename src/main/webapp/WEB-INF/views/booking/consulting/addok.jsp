@@ -30,7 +30,7 @@
 		<script>
 			<c:if test="${result==1}">
 				alert("글이 등록되었습니다!");
-				location.href = "/booking/consulting.action";
+				location.href = "/final/main.action";
 			</c:if>
 		</script>
 			
