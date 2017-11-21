@@ -22,7 +22,6 @@ public class ManagerService implements IManagerService {
 		
 		int result = dao.attManagerCheck(seq);
 		
-		//금일 매니저가 이미 체크했는지 확인 후 체크된 경우
 		if (result != 0) {
 			return "금일은 이미 출결개시를 했습니다";
 		} else {			
