@@ -135,6 +135,10 @@ public class NoticeService implements INoticeService {
 	@Override
 	public List<NoticeDTO> getList(HashMap<String, Integer> paging) {
 		List<NoticeDTO> notice = dao.getList(paging);
+		for (NoticeDTO dto : notice) {
+			dto.setEndDate(dto.getEndDate().substring(0, 16));
+			dto.setApplyCount(dao.getApplyCount(dto.getSeq()));
+		}
 		return notice;
 	}
 

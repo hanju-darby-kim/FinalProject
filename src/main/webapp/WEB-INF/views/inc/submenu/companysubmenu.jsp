@@ -18,8 +18,9 @@
 		<li class="list-group-item has-submenu ">
 			<a href="#Notice" class="submenu-toggle" data-toggle="collapse" data-parent="sidebar-nav">공고관리</a>
 			<ul id="Notice" class="list-unstyled collapse submenu ">
-				<li><a href="${pageContext.request.contextPath}/company/addnotice.action">공고확인</a></li>
+				<li><a href="${pageContext.request.contextPath}/company/list.action">공고목록</a></li>
 				<li><a href="${pageContext.request.contextPath}/company/addnotice.action">공고등록</a></li>
+				<li><a href="${pageContext.request.contextPath}/company/addnotice.action">내 공고 확인</a></li>
 			</ul>
 		</li>
 		<li class="list-group-item"><a href="${pageContext.request.contextPath}/center/column.action">CEO 컬럼</a></li>		

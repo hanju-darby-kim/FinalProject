@@ -260,15 +260,38 @@ public class NoticeController {
 		n = ((nowPage - 1) / blockSize) * blockSize + 1;
 		
 		if (n == 1) {
-			pagebar += String.format("<li class='disabled'><a href='#' area-label='Previous'><span area-hidden='true'>$laquo;</span></a></li>");	
+			pagebar += String.format("<li class='disabled'><a href='#' area-label='Previous'><span area-hidden='true'>&raquo;</span></a></li>");	
 		} else {
-			pagebar += String.format("<li><a href='/final/company/list.action?page=%d' area-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1);
+			pagebar += String.format("<li><a href='/final/company/list.action?page=%d' area-label='Previous'><span aria-hidden='true'>&raquo;</span></a></li>", n-1);
 		}
 		
 		while(!(loop > blockSize || n > totalPage)) {
 			
+			if (n == nowPage) {
+				pagebar += String.format(" <li class='active'><a href='#'>%d</a></li> ", n);
+			} else {
+				pagebar += String.format(" <li><a href='/final/company/list.action?page=%d'>%d</a></li>", n, n);
+			}
+			
+			loop++;
+			n++;
 		}
-		return "company.notice.list";
+			
+		if (n > totalPage) {
+			pagebar += String.format("<li class='disabled'><a href='#' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>");
+		} else {		
+			pagebar += String.format("<li><a href='/final/company/list.action?page=%d' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>", n);
+		}
+		
+		pagebar += "</ul></nav>";
+		
+		req.setAttribute("list", list);
+		req.setAttribute("nowPage", nowPage);
+		req.setAttribute("totalCount", totalCount);
+		req.setAttribute("totalPage", totalPage);
+		req.setAttribute("pagebar", pagebar);
+		
+		return "company.notice.list.listcss";
 	}
 	
 	public String view() {

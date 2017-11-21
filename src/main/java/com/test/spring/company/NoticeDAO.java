@@ -113,5 +113,9 @@ public class NoticeDAO {
 	public int getTotalCount() {
 		return sql.selectOne("notice.getTotalCount");
 	}
+
+	public int getApplyCount(String seq) {
+		return sql.selectOne("notice.getApplyCount", seq);
+	}
 	
 }
