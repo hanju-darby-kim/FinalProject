@@ -93,22 +93,29 @@
 				VALUES (demandMajorSeq.nextval, #{fieldSeq}, #{majorCategorySeq}, #{essential})
 	</insert>
 	
-	<!-- <select id="getList" parameterType="map" resultType="com.test.spring.dto.NoticeDTO">
+	<select id="getList" parameterType="map" resultType="com.test.spring.dto.NoticeDTO">
 		SELECT * FROM
 		(SELECT a.*, rownum AS rnum FROM
 			(SELECT n.SEQ,
 				c.name AS companyName,
 				c.ADDRESS AS companyAddress,
+				c.seq AS companySeq,
 				n.ENDDATE
 					FROM tblNotice n
 				INNER JOIN company c
 					ON n.COMPANYSEQ = c.SEQ
 						WHERE n.CONFIRM = 'y') a)
-				WHERE rnum >= #{start} AND rnum <= #{end}
-	</select>  -->
+				WHERE rnum <![CDATA[>=]]> #{start} AND rnum <![CDATA[<=]]> #{end}
+	</select> 
 	
 	<select id="getTotalCount" resultType="Integer">
-		SELECT COUNT(*) AS count FROM tblNotice
+		SELECT COUNT(*) AS count FROM tblNotice WHERE confirm = 'y'
+	</select>
+	
+	<select id="getApplyCount" resultType="Integer" parameterType="String">
+		SELECT COUNT(* ) FROM TBLAPPLY 
+			WHERE fieldSeq IN 
+				(SELECT seq FROM tblField WHERE noticeSeq = #{seq})
 	</select>
 </mapper>
 

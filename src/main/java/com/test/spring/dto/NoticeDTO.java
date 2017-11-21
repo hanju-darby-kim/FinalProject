@@ -20,6 +20,8 @@ public class NoticeDTO {
 	private String report;
 	private String extra;
 	
+	private int applyCount;
+	
 	private String startEndDate; //입력 받은 날짜 그대로(후에 시작일과 종료일 나누는 작업 필요)
 	
 	private ArrayList<FieldDTO> field;
@@ -102,6 +104,12 @@ public class NoticeDTO {
 	}
 	public void setTestByNotice(ArrayList<TestByNoticeDTO> testByNotice) {
 		this.testByNotice = testByNotice;
+	}
+	public int getApplyCount() {
+		return applyCount;
+	}
+	public void setApplyCount(int applyCount) {
+		this.applyCount = applyCount;
 	}
 	
 	

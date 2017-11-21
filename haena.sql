@@ -138,4 +138,4 @@ SELECT * FROM tblnotice;
 select * from TBLAPPLY;
 select * from company;
 
-select * from (select a.*, rownum as rnum from (select seq, name, subject, readCount, regDate, round((sysdate - regDate) * 24 * 60) as gap, commentCount, filename, depth from tblBoard %s order by thread desc) a) where rnum >= %s and rnum <= %s", where, map.get("start"), map.get("end"));
+SELECT COUNT(* ) FROM TBLAPPLY WHERE fieldSeq IN (SELECT seq FROM tblField WHERE noticeSeq = 6);
