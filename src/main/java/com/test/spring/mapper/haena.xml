@@ -100,7 +100,8 @@
 				c.name AS companyName,
 				c.ADDRESS AS companyAddress,
 				c.seq AS companySeq,
-				n.ENDDATE
+				n.ENDDATE,
+				n.regDate
 					FROM tblNotice n
 				INNER JOIN company c
 					ON n.COMPANYSEQ = c.SEQ
@@ -124,7 +125,8 @@
 			(SELECT n.SEQ,
 				c.name AS companyName,
 				n.confirm,
-				n.ENDDATE
+				n.ENDDATE,
+				c.regDate
 					FROM tblNotice n
 				INNER JOIN company c
 					ON n.COMPANYSEQ = c.SEQ
@@ -135,6 +137,102 @@
 	
 	<select id="getMyTotalCount" resultType="Integer" parameterType="String">
 		SELECT COUNT(*) FROM tblNotice WHERE companySeq = #{companySeq}	
+	</select>
+	
+	<select id="getView" resultType="com.test.spring.dto.NoticeViewDTO" parameterType="String">
+		SELECT
+			c.name AS companyName,
+			n.CONTENT,
+			n.endDate,
+			c.WEBSITE,
+			c.ADDRESS AS companyAddress,
+			c.numberOfEmp,
+			c.foundationDate,
+			c.sales,
+			ct.companyType,
+			i.name as industryType
+		FROM tblNotice n
+			INNER JOIN company c
+				ON n.COMPANYSEQ = c.SEQ
+					INNER JOIN companyType ct
+						on c.COMPANYTYPESEQ = ct.SEQ
+							INNER JOIN TBLINDUSTRY i
+								ON c.INDUSTRYTYPESEQ = i.SEQ
+					WHERE n.seq = #{seq}
+	</select>
+	
+	<select id="getTestByNotice" resultType="com.test.spring.dto.TestByNoticeDTO" parameterType="String">
+		SELECT
+			tbn.noticeSeq,
+			t.testType
+		FROM testByNotice tbn
+			INNER JOIN testType t
+				ON tbn.TESTTYPESEQ = t.SEQ
+				where noticeSeq = #{seq}
+					ORDER BY tbn.SEQ
+	</select>
+	
+	<select id="getField" resultType="com.test.spring.dto.FieldDTO" parameterType="String">
+		SELECT
+			 f.seq,
+			 f.noticeSeq,
+			 f.fieldName,
+			 f.content,
+			 h.hireType,
+			 c.careerType,
+			 a.area as areaType,
+			 f.salary
+		 FROM tblfield f
+			INNER JOIN hireType h
+			    ON f.HIRETYPESEQ = h.seq
+			        INNER JOIN TBLAREATYPE a
+			            ON f.AREATYPESEQ = a.SEQ
+			                INNER JOIN careerType c
+			                    ON f.CAREERTYPESEQ = c.seq
+		    WHERE f.noticeSeq = #{seq}
+	</select>
+	
+	<select id="getDemandEducation" parameterType="String" resultType="com.test.spring.dto.DemandEducationDTO">
+		SELECT
+			de.essential,
+			et.educationType
+		FROM
+			DEMANDEDUCATION de
+				INNER JOIN educationType et
+					ON de.EDUCATIONTYPESEQ = et.SEQ
+				WHERE fieldSeq = #{seq}
+	</select>
+	
+	<select id="getDemandCertificate" parameterType="String" resultType="com.test.spring.dto.DemandCertificateDTO">
+		SELECT
+			dc.essential,
+			ct.certificateType
+		FROM
+			demandCertificate dc
+				INNER JOIN certificateType ct
+					ON dc.CERTIFICATETYPESEQ = ct.SEQ
+				WHERE fieldSeq = #{seq}
+	</select>
+	
+	<select id="getDemandLangTest" parameterType="String" resultType="com.test.spring.dto.DemandLangTestDTO">
+		SELECT
+			dlt.essential,
+			lt.langTestType
+		FROM
+			DEMANDLANGTEST dlt
+				INNER JOIN langTestType lt
+					ON dlt.LANGTESTTYPESEQ = lt.SEQ
+				WHERE fieldSeq = #{seq}
+	</select>
+	<select id="getDemandMajor" parameterType="String" resultType="com.test.spring.dto.DemandMajorDTO">
+		SELECT
+			dm.essential,
+			mc.majorCategory
+		FROM
+			demandMajor dm
+				INNER JOIN majorCategory mc
+					ON dm.MAJORCATEGORYSEQ = mc.SEQ
+				WHERE fieldSeq = #{seq}
 	</select>
 </mapper>
 

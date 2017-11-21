@@ -4,6 +4,7 @@ public class DemandLangTestDTO {
 	private String seq;
 	private String fieldSeq;
 	private String langTestTypeSeq;
+	private String langTestType;
 	private String essential;
 	public String getSeq() {
 		return seq;
@@ -28,5 +29,11 @@ public class DemandLangTestDTO {
 	}
 	public void setEssential(String essential) {
 		this.essential = essential;
+	}
+	public String getLangTestType() {
+		return langTestType;
+	}
+	public void setLangTestType(String langTestType) {
+		this.langTestType = langTestType;
 	}
 }

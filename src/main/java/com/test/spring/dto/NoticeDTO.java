@@ -1,6 +1,7 @@
 package com.test.spring.dto;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 기업공고 데이터를 담는 DTO 클래스
@@ -18,19 +19,19 @@ public class NoticeDTO {
 	private String startDate;
 	private String endDate;
 	private String report;
-	private String extra;
+	private String regDate;
 	
 	private int applyCount;
 	
 	private String startEndDate; //입력 받은 날짜 그대로(후에 시작일과 종료일 나누는 작업 필요)
 	
-	private ArrayList<FieldDTO> field;
-	private ArrayList<TestByNoticeDTO> testByNotice;
+	private List<FieldDTO> field;
+	private List<TestByNoticeDTO> testByNotice;
 	
-	public ArrayList<FieldDTO> getField() {
+	public List<FieldDTO> getField() {
 		return field;
 	}
-	public void setField(ArrayList<FieldDTO> field) {
+	public void setField(List<FieldDTO> field) {
 		this.field = field;
 	}
 	public String getSeq() {
@@ -75,12 +76,6 @@ public class NoticeDTO {
 	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
-	public String getExtra() {
-		return extra;
-	}
-	public void setExtra(String extra) {
-		this.extra = extra;
-	}
 	public String getStartEndDate() {
 		return startEndDate;
 	}
@@ -99,10 +94,16 @@ public class NoticeDTO {
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-	public ArrayList<TestByNoticeDTO> getTestByNotice() {
+	public List<TestByNoticeDTO> getTestByNotice() {
 		return testByNotice;
 	}
-	public void setTestByNotice(ArrayList<TestByNoticeDTO> testByNotice) {
+	public String getRegDate() {
+		return regDate;
+	}
+	public void setRegDate(String regDate) {
+		this.regDate = regDate;
+	}
+	public void setTestByNotice(List<TestByNoticeDTO> testByNotice) {
 		this.testByNotice = testByNotice;
 	}
 	public int getApplyCount() {

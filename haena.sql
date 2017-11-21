@@ -165,3 +165,119 @@ SELECT * FROM tblnotice;
 commit;
 
 SELECT COUNT(*) FROM tblNotice WHERE companySeq = 2;
+
+select * from TBLNOTICE;
+
+alter table tblNotice add (regDate date default sysdate not null);
+
+SELECT * FROM tblNotice;
+
+SELECT
+	c.name AS companyName,
+	n.CONTENT,
+	n.endDate,
+	c.WEBSITE,
+	c.ADDRESS AS companyAddress,
+	c.numberOfEmp,
+	c.foundationDate,
+	c.sales,
+	ct.companyType,
+	i.name as industryType
+FROM tblNotice n
+	INNER JOIN company c
+		ON n.COMPANYSEQ = c.SEQ
+			INNER JOIN companyType ct
+				on c.COMPANYTYPESEQ = ct.SEQ
+					INNER JOIN TBLINDUSTRY i
+						ON c.INDUSTRYTYPESEQ = i.SEQ
+			WHERE n.seq = 11;
+
+select * from teacher;
+
+select * from companyType;
+select * from MANAGER;
+
+
+select
+	tbn.noticeSeq,
+	t.TESTTYPE
+	from testByNotice tbn
+		INNER JOIN testType t
+			ON tbn.TESTTYPESEQ = t.SEQ
+			where noticeSeq = 5
+				ORDER BY tbn.SEQ;
+
+ SELECT
+	 f.seq,
+	 f.noticeSeq,
+	 f.fieldName,
+	 f.content,
+	 h.hireType,
+	 c.careerType,
+	 a.area as areaType,
+	 f.salary
+ FROM tblfield f
+	INNER JOIN hireType h
+	    ON f.HIRETYPESEQ = h.seq
+	      INNER JOIN TBLAREATYPE a
+	            ON f.AREATYPESEQ = a.SEQ
+	                INNER JOIN careerType c
+	                    ON f.CAREERTYPESEQ = c.seq
+    WHERE f.noticeSeq =5;
+select * from tblField where noticeSeq = 5;
+
+select * from tblField where noticeSeq = 5;
+update tblField set areaTypeSeq = 1 where areaTypeSeq is null;
+select * from tblField;
+select * from tblAreaType;
+
+SELECT
+	de.essential,
+	et.educationType
+FROM
+	DEMANDEDUCATION de
+		INNER JOIN educationType et
+			ON de.EDUCATIONTYPESEQ = et.SEQ
+		WHERE fieldSeq = 3;
+select * from DEMANDEDUCATION;
+commit;
+
+SELECT
+	dc.essential,
+	ct.certificateType
+FROM
+	demandCertificate dc
+		INNER JOIN certificateType ct
+			ON dc.CERTIFICATETYPESEQ = ct.SEQ
+		WHERE fieldSeq = 3;
+
+SELECT
+	dlt.essential,
+	lt.langTestType
+FROM
+	DEMANDLANGTEST dlt
+		INNER JOIN langTestType lt
+			ON dlt.LANGTESTTYPESEQ = lt.SEQ
+		WHERE fieldSeq = 3;
+
+SELECT
+	dm.essential,
+	mc.majorCategory
+FROM
+	demandMajor dm
+		INNER JOIN majorCategory mc
+			ON dm.MAJORCATEGORYSEQ = mc.SEQ
+		WHERE fieldSeq = 3;
+
+select * from tblnotice;
+select * from tblfield;
+select * from DEMANDEDUCATION;
+
+select * from COMPANY;
+
+
+update TBLNOTICE set confirm = 'y' where seq = 29;
+commit;
+
+select * from demandMajor;
+select * from tblField;

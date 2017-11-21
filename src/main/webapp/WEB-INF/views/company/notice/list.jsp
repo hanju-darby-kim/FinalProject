@@ -13,7 +13,7 @@
 	</thead>
 	<tbody>
 		<c:forEach items="${list}" var="notice">
-		<tr>
+		<tr class="tbltr" onclick="location.href='${pageContext.request.contextPath}/company/view.action?seq=${notice.seq}';">
 			<td class="seq">${notice.seq}</td>
 			<td class="name">${notice.companyName}</td>
 			<td class="address">${notice.companyAddress}</td>

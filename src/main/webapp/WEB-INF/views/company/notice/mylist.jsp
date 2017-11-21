@@ -8,16 +8,18 @@
 			<th>번호</th>
 			<th>기업명</th>
 			<th>허락여부</th>
+			<th>등록일</th>
 			<th>종료일</th>
 			<th>지원자수</th>
 		</tr>
 	</thead>
 	<tbody>
 		<c:forEach items="${list}" var="notice">
-		<tr>
+		<tr class="tbltr" onclick="location.href='${pageContext.request.contextPath}/company/view.action?seq=${notice.seq}';">
 			<td class="seq">${notice.seq}</td>
 			<td class="name">${notice.companyName}</td>
 			<td class="confirm">${notice.confirm}</td>
+			<td class="regDate">${notice.regDate}</td>
 			<td class="endDate">${notice.endDate}</td>
 			<td class="applyCount">${notice.applyCount}</td>
 		</tr>

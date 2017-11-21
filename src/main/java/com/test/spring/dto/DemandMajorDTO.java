@@ -9,6 +9,7 @@ public class DemandMajorDTO {
 	private String seq;
 	private String fieldSeq;
 	private String majorCategorySeq;
+	private String majorCategory;
 	private String essential;
 	
 	public String getSeq() {
@@ -34,6 +35,12 @@ public class DemandMajorDTO {
 	}
 	public void setEssential(String essential) {
 		this.essential = essential;
+	}
+	public String getMajorCategory() {
+		return majorCategory;
+	}
+	public void setMajorCategory(String majorCategory) {
+		this.majorCategory = majorCategory;
 	}
 	
 	

@@ -21,6 +21,7 @@ import com.test.spring.dto.HireTypeDTO;
 import com.test.spring.dto.LangTestTypeDTO;
 import com.test.spring.dto.MajorCategoryDTO;
 import com.test.spring.dto.NoticeDTO;
+import com.test.spring.dto.NoticeViewDTO;
 import com.test.spring.dto.TestByNoticeDTO;
 import com.test.spring.dto.TestTypeDTO;
 
@@ -125,5 +126,34 @@ public class NoticeDAO {
 	public int getMyTotalCount(String companySeq) {
 		return sql.selectOne("notice.getMyTotalCount", companySeq);
 	}
+
+	public NoticeViewDTO getView(String seq) {
+		return sql.selectOne("notice.getView", seq);
+	}
+
+	public List<TestByNoticeDTO> getTestByNotice(String seq) {
+		return sql.selectList("notice.getTestByNotice", seq);
+	}
+
+	public List<FieldDTO> getField(String seq) {
+		return sql.selectList("notice.getField", seq);
+	}
+
+	public DemandEducationDTO getDemandEducation(String seq) {
+		return sql.selectOne("notice.getDemandEducation", seq);
+	}
+
+	public List<DemandCertificateDTO> getDemandCertificate(String seq) {
+		return sql.selectList("notice.getDemandCertificate", seq);
+	}
+
+	public List<DemandLangTestDTO> getDemandLangTest(String seq) {
+		return sql.selectList("notice.getDemandLangTest", seq);
+	}
+
+	public List<DemandMajorDTO> getDemandMajor(String seq) {
+		return sql.selectList("notice.getDemandMajor", seq);
+	}
+	
 	
 }

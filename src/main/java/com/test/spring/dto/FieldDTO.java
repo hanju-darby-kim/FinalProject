@@ -1,6 +1,7 @@
 package com.test.spring.dto;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FieldDTO {
 	private String seq;
@@ -8,14 +9,17 @@ public class FieldDTO {
 	private String fieldName;
 	private String content;
 	private String hireTypeSeq;
+	private String hireType;
 	private String areaTypeSeq;
-	private int salary;
+	private String areatype;
+	private String salary;
 	private String careerTypeSeq;
+	private String careerType;
 	
 	private DemandEducationDTO demandEducation;
-	private ArrayList<DemandCertificateDTO> demandCertificate;
-	private ArrayList<DemandLangTestDTO> demandLangTest;
-	private ArrayList<DemandMajorDTO> demandMajor;
+	private List<DemandCertificateDTO> demandCertificate;
+	private List<DemandLangTestDTO> demandLangTest;
+	private List<DemandMajorDTO> demandMajor;
 	
 	public String getSeq() {
 		return seq;
@@ -35,10 +39,10 @@ public class FieldDTO {
 	public void setFieldName(String fieldName) {
 		this.fieldName = fieldName;
 	}
-	public int getSalary() {
+	public String getSalary() {
 		return salary;
 	}
-	public void setSalary(int salary) {
+	public void setSalary(String salary) {
 		this.salary = salary;
 	}
 	public String getContent() {
@@ -72,25 +76,45 @@ public class FieldDTO {
 	public void setDemandEducation(DemandEducationDTO demandEducation) {
 		this.demandEducation = demandEducation;
 	}
-	public ArrayList<DemandCertificateDTO> getDemandCertificate() {
+	public List<DemandCertificateDTO> getDemandCertificate() {
 		return demandCertificate;
 	}
-	public void setDemandCertificate(ArrayList<DemandCertificateDTO> demandCertificate) {
-		this.demandCertificate = demandCertificate;
-	}
-	public ArrayList<DemandLangTestDTO> getDemandLangTest() {
+
+	public List<DemandLangTestDTO> getDemandLangTest() {
 		return demandLangTest;
 	}
-	public void setDemandLangTest(ArrayList<DemandLangTestDTO> demandLangTest) {
-		this.demandLangTest = demandLangTest;
-	}
-	public ArrayList<DemandMajorDTO> getDemandMajor() {
+
+	public List<DemandMajorDTO> getDemandMajor() {
 		return demandMajor;
 	}
-	public void setDemandMajor(ArrayList<DemandMajorDTO> demandMajor) {
+	
+	public String getHireType() {
+		return hireType;
+	}
+	public void setHireType(String hireType) {
+		this.hireType = hireType;
+	}
+	public String getAreatype() {
+		return areatype;
+	}
+	public void setAreatype(String areatype) {
+		this.areatype = areatype;
+	}
+	public String getCareerType() {
+		return careerType;
+	}
+	public void setCareerType(String careerType) {
+		this.careerType = careerType;
+	}
+	public void setDemandCertificate(List<DemandCertificateDTO> demandCertificate) {
+		this.demandCertificate = demandCertificate;
+	}
+	public void setDemandLangTest(List<DemandLangTestDTO> demandLangTest) {
+		this.demandLangTest = demandLangTest;
+	}
+	public void setDemandMajor(List<DemandMajorDTO> demandMajor) {
 		this.demandMajor = demandMajor;
 	}
-	
 	@Override
 	public String toString() {
 		System.out.println(seq + " " + noticeSeq + " " + fieldName + " " + hireTypeSeq + " " + areaTypeSeq + " " + content + " " + salary + " " + careerTypeSeq);

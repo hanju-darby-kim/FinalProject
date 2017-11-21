@@ -5,6 +5,7 @@ public class DemandEducationDTO {
 	private String seq;
 	private String fieldSeq;
 	private String educationTypeSeq;
+	private String educationType;
 	private String essential;
 	public String getSeq() {
 		return seq;
@@ -29,6 +30,12 @@ public class DemandEducationDTO {
 	}
 	public void setEssential(String essential) {
 		this.essential = essential;
+	}
+	public String getEducationType() {
+		return educationType;
+	}
+	public void setEducationType(String educationType) {
+		this.educationType = educationType;
 	}
 	
 	
