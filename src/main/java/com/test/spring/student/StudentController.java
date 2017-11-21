@@ -1,5 +1,6 @@
 package com.test.spring.student;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.test.spring.dto.AtTypeDTO;
 import com.test.spring.dto.CertificationDTO;
 import com.test.spring.dto.StudentAttendanceDTO;
 
@@ -46,10 +48,16 @@ public class StudentController {
 		CertificationDTO certification = (CertificationDTO) session.getAttribute("certification");
 		
 		if (certification.getTarget().equals("student")) {
-			
-			int seq = Integer.parseInt(certification.getSeq());
-			System.out.println(seq);
+			int seq = Integer.parseInt(certification.getSeq());		
 			List<StudentAttendanceDTO> list = service.attStudent(seq);
+			
+			req.setAttribute("list", list);
+			return "student.attendance";
+			
+		} else if (certification.getTarget().equals("manager")) {
+			int seq = Integer.parseInt(req.getParameter("seq"));
+			List<StudentAttendanceDTO> list = service.attStudent(seq);
+			
 			req.setAttribute("list", list);
 			return "student.attendance";
 			
@@ -66,10 +74,15 @@ public class StudentController {
 		
 		if (certification.getTarget().equals("student")) {
 			
-			//사용 휴가일수 체크
+			//사용 휴가일수 체크			
 			int seq = Integer.parseInt(certification.getSeq());
-			int result = service.checkVac(seq);
-			req.setAttribute("checkVac", result);
+			int checkVac = service.checkVac(seq);
+			int remainVac = service.remainVac(seq);
+			List<AtTypeDTO> typeList = service.getType();			
+			
+			req.setAttribute("checkVac", checkVac);
+			req.setAttribute("remainVac", remainVac);
+			req.setAttribute("typeList", typeList);
 			
 			return "student.vacation";
 			
@@ -85,10 +98,11 @@ public class StudentController {
 		CertificationDTO certification = (CertificationDTO) session.getAttribute("certification");
 		
 		String seq = certification.getSeq();
-		String date = (String) req.getParameter("day");
-		String content = (String) req.getParameter("content");
+		String date = req.getParameter("day");
+		String content = req.getParameter("content");
+		String type = req.getParameter("type");
 		
-		String result = service.stuVac(seq, date, content);
+		String result = service.stuVac(seq, date, content, type);
 		req.setAttribute("procMsg", result);
 		System.out.println(result);
 		

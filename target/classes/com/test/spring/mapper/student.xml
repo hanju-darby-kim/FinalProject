@@ -5,19 +5,40 @@
 <mapper namespace="student">
 
 	<select id="loginCheck" parameterType="Integer" resultType="Integer">
-		select count(*) from tblAttendance where day = to_char(sysdate, 'yyyy-mm-dd') and seq = #{seq}
+		select count(*) from tblAttendance where day = to_char(sysdate, 'yyyy-mm-dd') and startTime is not null and sseq = #{seq}
 	</select>
 
-	<select id="checkInOut" parameterType="Integer" resultType="Integer" statementType="CALLABLE">
-		{call studentCheck(#{seq}, #{mode=OUT, javaType=int, jdbcType=NUMERIC})}
-	</select>
+<!-- 	<parameterMap type="hashmap" id="param">
+		<parameter property="seq" mode="IN" jdbcType="NUMERIC" javaType="int" />
+		<parameter property="result" mode="OUT" jdbcType="NUMERIC" javaType="int" />		
+	</parameterMap>
+
+	<select id="checkInOut" parameterMap="param" statementType="CALLABLE">
+		{call studentCheck(?,?)}
+	</select> -->
+	
+	<update id="attCheckIn" parameterType="Integer">
+		update tblAttendance set startTime = sysdate where day = to_char(sysdate, 'yyyy-mm-dd') and sseq = #{seq}
+	</update>
+	
+	<update id="attCheckOut" parameterType="Integer">
+		update tblAttendance set endTime = sysdate where day = to_char(sysdate, 'yyyy-mm-dd') and sseq = #{seq}
+	</update>
 	
 	<select id="checkVac" parameterType="Integer" resultType="Integer">
 		select count(*) from tblAttendance where sseq = #{seq} and aseq = 4
 	</select>
 	
+	<select id="remainVac" parameterType="Integer" resultType="Integer">
+		select floor(day/30) from vMagStuList where seq = #{seq}
+	</select>
+	
+	<select id="getType" resultType="com.test.spring.dto.AtTypeDTO">
+		select * from attype where seq = 2 or seq = 4 or seq = 5 order by seq
+	</select>
+	
 	<insert id="stuVac" parameterType="map">
-		insert into atreason (seq, content, tempdate, tempseq) values (atreasonSeq.nextVal, #{content}, #{tempdate}, ${seq})
+		insert into atreason (seq, content, tempdate, tempseq, temptype) values (atreasonSeq.nextVal, #{content}, #{tempdate}, ${seq}, ${temptype})
 	</insert>
 
 	<select id="attStudent" parameterType="Integer" resultType="com.test.spring.dto.StudentAttendanceDTO">

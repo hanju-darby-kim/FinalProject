@@ -1,5 +1,7 @@
 package com.test.spring.manager;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -9,7 +11,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.test.spring.dto.AtReasonDTO;
 import com.test.spring.dto.CertificationDTO;
+import com.test.spring.dto.CurListDTO;
+import com.test.spring.dto.StuListDTO;
 import com.test.spring.dto.StudentDTO;
 
 @Controller
@@ -25,15 +30,15 @@ public class ManagerController {
 		CertificationDTO certification = (CertificationDTO) session.getAttribute("certification");
 		
 		if (certification.getTarget().equals("manager")) {
-			
 			int seq = Integer.parseInt(certification.getSeq());
 			String result = service.attStart(seq);
 			
 			req.setAttribute("procMsg", result);
 			return "forward:/main.action";
+			
 		} else {
-			req.setAttribute("procMsg", "로그인 후 다시 이용해 주십시오");
-			return "forward:/main.action";
+			req.setAttribute("errorMsg", "로그인 후 다시 이용해 주십시오");
+			return "sign.error";
 		}
 	}
 	
@@ -45,12 +50,33 @@ public class ManagerController {
 		if (certification.getTarget().equals("manager")) {
 			
 			int seq = Integer.parseInt(certification.getSeq());
-			service.attManager();
+			List<CurListDTO> bigList = service.curList(seq);
+			req.setAttribute("bigList", bigList);
 			
 			return "manager.attendance";		
 			
 		} else {
-			return "main.error";			
+			req.setAttribute("errorMsg", "로그인 후 다시 이용해 주십시오");
+			return "sign.error";
+		}
+	}
+	
+	@RequestMapping(method= {RequestMethod.GET}, value="/manager/attendanceStuList.action")
+	public String attendanceList(HttpServletRequest req, HttpSession session) {
+		
+		CertificationDTO certification = (CertificationDTO) session.getAttribute("certification");
+		
+		if (certification.getTarget().equals("manager")) {
+			
+			int curriSeq = Integer.parseInt(req.getParameter("curriSeq"));
+			List<StuListDTO> smallList = service.stuList(curriSeq);
+			req.setAttribute("smallList", smallList);
+			
+			return "manager.attendance";
+			
+		} else {
+			req.setAttribute("errorMsg", "로그인 후 다시 이용해 주십시오");
+			return "sign.error";
 		}
 	}
 	
@@ -62,9 +88,9 @@ public class ManagerController {
 		if (certification.getTarget().equals("manager")) {
 			
 			int seq = Integer.parseInt(certification.getSeq());
-			//service.manageAtt();
+			List<AtReasonDTO> list = service.reasonList(seq);
 			
-			return "manager.attendance";		
+			return "manager.manageAtt";		
 			
 		} else {
 			return "main.error";			

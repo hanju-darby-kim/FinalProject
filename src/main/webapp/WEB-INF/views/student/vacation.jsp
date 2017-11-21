@@ -23,11 +23,21 @@
 			<h2 class="panel-title section-heading no-margin">휴가사유 작성</h2>
 		</div>
 		<div class="panel-body">
-			<p>현재 사용하신 휴가일수는  ${checkVac} 일 입니다</p>
-			<textarea name="content" class="textarea form-control" rows="4" cols="30" maxlength="100" style="resize: none;" required></textarea>
-			<p class="help-block text-right js-textarea-help">
-				<span class="text-muted"></span>
-			</p>
+			<div class="form-group">
+				<select class="form-control" name="type">
+				<c:forEach items="${typeList}" var="dto">
+					<option value="${dto.seq}">${dto.atType}</option>
+				</c:forEach>
+				</select>
+				</div>
+			<div class="form-group">
+				<p>총 휴가일수는  ${remainVac} 일 입니다</p>
+				<p>사용하신 휴가일수는  ${checkVac} 일 입니다</p>
+				<textarea name="content" class="textarea form-control" rows="4" cols="30" maxlength="100" style="resize: none;" required></textarea>
+				<p class="help-block text-right js-textarea-help">
+					<span class="text-muted"></span>
+				</p>
+			</div>
 		</div>
 	</div>
 	<!-- END TEXT AREA WITH COUNTER -->

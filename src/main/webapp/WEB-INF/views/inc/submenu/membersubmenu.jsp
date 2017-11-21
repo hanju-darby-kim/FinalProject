@@ -10,7 +10,7 @@
 		<ul id="sideStuList" class="list-unstyled collapse submenu">
 			<li><a href="${pageContext.request.contextPath}/student/attcheck.action">출석체크</a></li>
 			<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결확인</a></li>
-			<li><a href="${pageContext.request.contextPath}/student/vacation.action">휴가신청</a></li>
+			<li><a href="${pageContext.request.contextPath}/student/vacation.action">공결신청</a></li>
 		</ul>
 	</li>
 	</c:if>

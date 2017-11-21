@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
 <script>
 $(document).ready(function() {
    $('#stuTable').DataTable( {
@@ -27,6 +28,7 @@ $(document).ready(function() {
         });
       }
    });
+
 });
 </script>
 
@@ -34,7 +36,7 @@ $(document).ready(function() {
 <div class="panel-body">
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h2 class="panel-title section-heading no-margin">출석 상황</h2>
+			<h2 class="panel-title section-heading no-margin">출결관리</h2>
 		</div>
 		<div class="panel-body">
 			<table id="stuTable" width="100%" class="table table-striped table-bordered table-hover">
@@ -73,4 +75,3 @@ $(document).ready(function() {
 		</div>
 	</div>
 </div>
-

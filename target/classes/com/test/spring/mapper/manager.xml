@@ -11,16 +11,27 @@
 			inner join manager d on c.managerseq = d.seq where a.day = to_char(sysdate, 'yyyy-mm-dd')
 	</select>
 	
-	<select id="stuList" parameterType="Integer" resultType="Integer">
+	<select id="attStart" parameterType="Integer" resultType="Integer">
 		select a.seq from stubycur a
     	inner join curopen b on a.curopenseq = b.seq
     	inner join manager c on b.managerseq = c.seq
     	inner join member d on a.seq = d.seq where enddate > sysdate and managerSeq = #{seq}
 	</select>
 	
-	
 	<insert id="start" parameterType="Integer">
 		insert into tblAttendance (seq, sseq, aseq, day) values (tblAttendance_seq.nextval, #{stuSeq}, 1, to_char(sysdate, 'yyyy-mm-dd'))
 	</insert>
+	
+	<select id="curList" parameterType="Integer" resultType="com.test.spring.dto.CurListDTO">
+		select * from vMagCurList where managerSeq = #{seq} and endDate > sysdate
+	</select>
+	
+	<select id="stuList" parameterType="Integer" resultType="com.test.spring.dto.StuListDTO">
+		select * from vMagStuList where curriSeq = #{curriSeq}
+	</select>
+	
+	<select id="reasonList" parameterType="Integer" resultType="com.test.spring.dto.AtTypeDTO">
+		
+	</select>
 	
 </mapper>
