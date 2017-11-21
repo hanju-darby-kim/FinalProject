@@ -8,6 +8,12 @@
 		alert("로그아웃 되셨습니다.");
 	</script>
 	</c:if>
+	<!-- 명령 수행 후 결과메시지 전달 -->
+	<c:if test="${procMsg != null}">
+	<script>
+		alert('${procMsg}');
+	</script>
+	</c:if>
 	
 	<div class="topbar">
 		<ul class="list-inline top-nav">

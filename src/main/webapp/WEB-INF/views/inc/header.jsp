@@ -59,7 +59,7 @@
 				<c:if test="${certification.target eq 'student'}">
 				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">학생 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="${pageContext.request.contextPath}/student/attcheck.action">출석체크</a></li>
+						<li><a id="stuAttCheck" href="${pageContext.request.contextPath}/student/attcheck.action">출석체크</a></li>
 						<li><a href="${pageContext.request.contextPath}/student/attendance.action">출결확인</a></li>
 						<li><a href="${pageContext.request.contextPath}/student/vacation.action">휴가신청</a></li>
 						<li><a href="${pageContext.request.contextPath}/student/grant.action">지원금확인</a></li>
@@ -75,7 +75,7 @@
 						<ul class="dropdown-menu" role="menu">
 							<li class="dropdown "><a href="#">출결관리 <i	class="fa fa-angle-right"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="${pageContext.request.contextPath}/manager/attcheck.action">출결개시</a></li>
+									<li><a id="magAttCheck" href="${pageContext.request.contextPath}/manager/attcheck.action">출결개시</a></li>
 									<li><a href="${pageContext.request.contextPath}/manager/attendance.action">출결확인</a></li>
 									<li><a href="${pageContext.request.contextPath}/manager/vacation.action">휴가관리</a></li>
 									<li><a href="${pageContext.request.contextPath}/manager/early_sick.action">조퇴/병가관리</a></li>
@@ -136,10 +136,6 @@
 				</li>
 				</c:if>
 				
-				<c:if test="${procMsg} != null">
-					<script>
-						alert(${procMsg});
-					</script>
-				</c:if>
+
 
 	<!-- END MAIN NAVIGATION -->

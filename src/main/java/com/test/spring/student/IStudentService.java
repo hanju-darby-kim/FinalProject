@@ -6,6 +6,8 @@ public interface IStudentService {
 
 	void attStudent();
 
-	int attCheck(StudentDTO dto);
+	String attCheck(int seq);
+
+	int checkVac(int seq);
 
 }
