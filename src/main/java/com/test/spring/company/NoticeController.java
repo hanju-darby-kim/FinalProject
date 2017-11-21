@@ -45,54 +45,59 @@ public class NoticeController {
 	@RequestMapping(method = {RequestMethod.GET}, value="/company/addnotice.action")
 	public String addNotice(HttpSession session, HttpServletRequest req) {
 		
-		//인증티켓 중 기업의 seq 필요
-		String seq = ((CertificationDTO)session.getAttribute("certification")).getSeq();
-	
-		//기업 설명 얻어오기
-		String content = service.getContent(seq);
+		if ((session.getAttribute("certification")) != null) {
+			//인증티켓 중 기업의 seq 필요
+			String seq = ((CertificationDTO)session.getAttribute("certification")).getSeq();
 		
-		//전형 종류 가져오기 
-		List<TestTypeDTO> testlist = new ArrayList<TestTypeDTO>();
-		testlist = service.getTestType();
-		
-		//hireType 얻어오기
-		List<HireTypeDTO> hiretypelist = new ArrayList<HireTypeDTO>();
-		hiretypelist = service.getHireType();
-		
-		//careerType 얻어오기
-		List<CareerTypeDTO> careertypelist = new ArrayList<CareerTypeDTO>();
-		careertypelist = service.getCareerType();
-		
-		//근무지역
-		List<AreaTypeDTO> areatypelist = new ArrayList<AreaTypeDTO>();
-		areatypelist = service.getAreaType();
-		
-		//학력
-		List<EducationTypeDTO> educationtypelist = new ArrayList<EducationTypeDTO>();
-		educationtypelist = service.getEducationType();
-		
-		//자격증
-		List<CertificateTypeDTO> certificatetypelist = new ArrayList<CertificateTypeDTO>();
-		certificatetypelist = service.getCertificateType();
-		
-		//어학시험
-		List<LangTestTypeDTO> langtesttypelist = new ArrayList<LangTestTypeDTO>();
-		langtesttypelist = service.getLangTestType();
-		
-		//학과
-		List<MajorCategoryDTO> majorcategorylist = new ArrayList<MajorCategoryDTO>();
-		majorcategorylist = service.getMajorCategory();
-		
-		
-		req.setAttribute("content", content);
-		req.setAttribute("testlist", testlist);
-		req.setAttribute("hiretypelist", hiretypelist);
-		req.setAttribute("careertypelist", careertypelist);
-		req.setAttribute("areatypelist", areatypelist);
-		req.setAttribute("educationtypelist", educationtypelist);
-		req.setAttribute("certificatetypelist", certificatetypelist);
-		req.setAttribute("langtesttypelist", langtesttypelist);
-		req.setAttribute("majorcategorylist", majorcategorylist);
+			//기업 설명 얻어오기
+			String content = service.getContent(seq);
+			
+			//전형 종류 가져오기 
+			List<TestTypeDTO> testlist = new ArrayList<TestTypeDTO>();
+			testlist = service.getTestType();
+			
+			//hireType 얻어오기
+			List<HireTypeDTO> hiretypelist = new ArrayList<HireTypeDTO>();
+			hiretypelist = service.getHireType();
+			
+			//careerType 얻어오기
+			List<CareerTypeDTO> careertypelist = new ArrayList<CareerTypeDTO>();
+			careertypelist = service.getCareerType();
+			
+			//근무지역
+			List<AreaTypeDTO> areatypelist = new ArrayList<AreaTypeDTO>();
+			areatypelist = service.getAreaType();
+			
+			//학력
+			List<EducationTypeDTO> educationtypelist = new ArrayList<EducationTypeDTO>();
+			educationtypelist = service.getEducationType();
+			
+			//자격증
+			List<CertificateTypeDTO> certificatetypelist = new ArrayList<CertificateTypeDTO>();
+			certificatetypelist = service.getCertificateType();
+			
+			//어학시험
+			List<LangTestTypeDTO> langtesttypelist = new ArrayList<LangTestTypeDTO>();
+			langtesttypelist = service.getLangTestType();
+			
+			//학과
+			List<MajorCategoryDTO> majorcategorylist = new ArrayList<MajorCategoryDTO>();
+			majorcategorylist = service.getMajorCategory();
+			
+			
+			req.setAttribute("content", content);
+			req.setAttribute("testlist", testlist);
+			req.setAttribute("hiretypelist", hiretypelist);
+			req.setAttribute("careertypelist", careertypelist);
+			req.setAttribute("areatypelist", areatypelist);
+			req.setAttribute("educationtypelist", educationtypelist);
+			req.setAttribute("certificatetypelist", certificatetypelist);
+			req.setAttribute("langtesttypelist", langtesttypelist);
+			req.setAttribute("majorcategorylist", majorcategorylist);
+			req.setAttribute("login", 1);
+		} else {
+			req.setAttribute("login", 0);
+		}
 		
 		return "company.notice.addnotice.addnoticecss";
 	}
@@ -226,8 +231,85 @@ public class NoticeController {
 		return "company.notice.addnoticeok";
 	}
 	
+	@RequestMapping(method= {RequestMethod.GET}, value="/company/mylist.action")
+	public String getMyList(HttpServletRequest req, HttpSession session) {
+		
+		if ((session.getAttribute("certification")) != null) {
+		
+			int nowPage = 0;
+			int totalCount = 0;
+			int pageSize = 10;
+			int totalPage = 0;
+			int start = 0;
+			int end = 0;
+			int n = 0;
+			int loop = 0;
+			int blockSize = 10;
+			
+			String page = req.getParameter("page");
+			
+			if(page == null) nowPage = 1;
+			else nowPage = Integer.parseInt(page);
+			
+			start = ((nowPage - 1) * pageSize) + 1;
+			end = start + pageSize - 1;
+			
+			HashMap<String, Integer> map = new HashMap<String, Integer>();
+			map.put("start", start);
+			map.put("end", end);
+			map.put("companySeq", Integer.parseInt(((CertificationDTO)session.getAttribute("certification")).getSeq()));
+			
+			List<NoticeDTO> list = service.getMyList(map);
+			
+			totalCount = service.getMyTotalCount(((CertificationDTO)session.getAttribute("certification")).getSeq());
+			totalPage = (int)Math.ceil((double)totalCount / pageSize);
+			
+			String pagebar = "<nav><ul class='pagination'>";
+			loop = 1;
+			n = ((nowPage - 1) / blockSize) * blockSize + 1;
+			
+			if (n == 1) {
+				pagebar += String.format("<li class='disabled'><a href='#' area-label='Previous'><span area-hidden='true'>&raquo;</span></a></li>");	
+			} else {
+				pagebar += String.format("<li><a href='/final/company/mylist.action?page=%d' area-label='Previous'><span aria-hidden='true'>&raquo;</span></a></li>", n-1);
+			}
+			
+			while(!(loop > blockSize || n > totalPage)) {
+				
+				if (n == nowPage) {
+					pagebar += String.format(" <li class='active'><a href='#'>%d</a></li> ", n);
+				} else {
+					pagebar += String.format(" <li><a href='/final/company/mylist.action?page=%d'>%d</a></li>", n, n);
+				}
+				
+				loop++;
+				n++;
+			}
+				
+			if (n > totalPage) {
+				pagebar += String.format("<li class='disabled'><a href='#' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>");
+			} else {		
+				pagebar += String.format("<li><a href='/final/company/mylist.action?page=%d' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>", n);
+			}
+			
+			pagebar += "</ul></nav>";
+			
+			req.setAttribute("login", 1);
+			req.setAttribute("list", list);
+			req.setAttribute("nowPage", nowPage);
+			req.setAttribute("totalCount", totalCount);
+			req.setAttribute("totalPage", totalPage);
+			req.setAttribute("pagebar", pagebar);
+		} else {
+			req.setAttribute("login", 0);
+		}
+		
+		return "company.notice.mylist.listcss";
+	}
+	
 	@RequestMapping(method= {RequestMethod.GET}, value="/company/list.action")
 	public String getList(HttpServletRequest req) {
+		
 		int nowPage = 0;
 		int totalCount = 0;
 		int pageSize = 10;

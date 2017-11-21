@@ -1,6 +1,5 @@
 package com.test.spring.company;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -27,4 +26,6 @@ public interface INoticeService {
 	String addNoticeOk(NoticeDTO notice);
 	List<NoticeDTO> getList(HashMap<String, Integer> paging);
 	int getTotalCount();
+	List<NoticeDTO> getMyList(HashMap<String, Integer> map);
+	int getMyTotalCount(String companySeq);
 }

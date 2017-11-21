@@ -104,7 +104,7 @@
 					FROM tblNotice n
 				INNER JOIN company c
 					ON n.COMPANYSEQ = c.SEQ
-						WHERE n.CONFIRM = 'y') a)
+						WHERE n.CONFIRM = 'y' ORDER BY seq DESC) a)
 				WHERE rnum <![CDATA[>=]]> #{start} AND rnum <![CDATA[<=]]> #{end}
 	</select> 
 	
@@ -116,6 +116,25 @@
 		SELECT COUNT(* ) FROM TBLAPPLY 
 			WHERE fieldSeq IN 
 				(SELECT seq FROM tblField WHERE noticeSeq = #{seq})
+	</select>
+	
+	<select id="getMyList" resultType="com.test.spring.dto.NoticeDTO" parameterType="map">
+		SELECT * FROM
+		(SELECT a.*, rownum AS rnum FROM
+			(SELECT n.SEQ,
+				c.name AS companyName,
+				n.confirm,
+				n.ENDDATE
+					FROM tblNotice n
+				INNER JOIN company c
+					ON n.COMPANYSEQ = c.SEQ
+						WHERE n.companySeq = #{companySeq}
+							ORDER BY seq DESC) a)
+					WHERE rnum <![CDATA[>=]]> #{start} AND rnum <![CDATA[<=]]> #{end}
+	</select>
+	
+	<select id="getMyTotalCount" resultType="Integer" parameterType="String">
+		SELECT COUNT(*) FROM tblNotice WHERE companySeq = #{companySeq}	
 	</select>
 </mapper>
 

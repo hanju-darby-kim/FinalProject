@@ -119,7 +119,13 @@
 				<li class="dropdown "><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown">기업메뉴 <i class="fa fa-angle-down"></i></a>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="${pageContext.request.contextPath}/company/addnotice.action">공고관리</a></li>
+					<li class="dropdown "><a href="#">공고관리<i class="fa fa-angle-right"></i></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="${pageContext.request.contextPath}/company/list.action">공고목록</a></li>
+							<li><a href="${pageContext.request.contextPath}/company/addnotice.action">공고등록</a></li>
+							<li><a href="${pageContext.request.contextPath}/company/mylist.action">내 공고 확인</a></li>
+						</ul>
+					</li>
 					<li><a href="blog-full-thumbnail.html">Blog Full Thumbnail</a></li>
 					<li><a href="blog-single.html">Blog Single</a></li>
 					<li><a href="blog-single-full.html">Blog Single Full</a></li>
