@@ -6,7 +6,7 @@
 		margin: 50px auto;
 	}
 	
-	#tblList th, .seq, .name, .endDate, .applyCount {
+	#tblList th, .seq, .name, .endDate, .applyCount, .confirm {
 		text-align: center;
 	}
 	
@@ -15,7 +15,11 @@
 		font-size: 13px;
 		padding: 5px;
 	}
-
+	
+	#tblList .confirm {
+		width: 80px;
+		
+	}
 
 	#pagebar {
 		text-align: center;

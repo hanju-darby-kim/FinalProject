@@ -117,5 +117,13 @@ public class NoticeDAO {
 	public int getApplyCount(String seq) {
 		return sql.selectOne("notice.getApplyCount", seq);
 	}
+
+	public List<NoticeDTO> getMyList(HashMap<String, Integer> map) {
+		return sql.selectList("notice.getMyList", map);
+	}
+
+	public int getMyTotalCount(String companySeq) {
+		return sql.selectOne("notice.getMyTotalCount", companySeq);
+	}
 	
 }

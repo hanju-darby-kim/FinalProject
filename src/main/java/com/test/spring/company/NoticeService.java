@@ -148,6 +148,26 @@ public class NoticeService implements INoticeService {
 		return dao.getTotalCount();
 	}
 
+
+	@Override
+	public List<NoticeDTO> getMyList(HashMap<String, Integer> map) {
+		List<NoticeDTO> notice = dao.getMyList(map);
+		for (NoticeDTO dto : notice) {
+			dto.setEndDate(dto.getEndDate().substring(0, 16));
+			dto.setApplyCount(dao.getApplyCount(dto.getSeq()));
+		}
+		return notice;
+	}
+
+
+	@Override
+	public int getMyTotalCount(String companySeq) {
+		return dao.getMyTotalCount(companySeq);
+	}
+
+
+
+
 	
 	
 }

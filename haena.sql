@@ -139,3 +139,29 @@ select * from TBLAPPLY;
 select * from company;
 
 SELECT COUNT(* ) FROM TBLAPPLY WHERE fieldSeq IN (SELECT seq FROM tblField WHERE noticeSeq = 6);
+
+
+SELECT * FROM
+		(SELECT a.*, rownum AS rnum FROM
+			(SELECT n.SEQ,
+				c.name AS companyName,
+				n.confirm,
+				n.ENDDATE
+					FROM tblNotice n
+				INNER JOIN company c
+					ON n.COMPANYSEQ = c.SEQ
+						WHERE n.companySeq = 2) a)
+				WHERE rnum >= 1 AND rnum <= 10;
+select * from tblnotice;
+
+SELECT * FROM company;
+
+select * from tblnotice;
+
+update tblnotice set confirm = 'n' WHERE confirm IS NULL;
+
+SELECT * FROM tblnotice;
+
+commit;
+
+SELECT COUNT(*) FROM tblNotice WHERE companySeq = 2;
