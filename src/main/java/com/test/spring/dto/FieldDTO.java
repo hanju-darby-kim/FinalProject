@@ -1,6 +1,5 @@
 package com.test.spring.dto;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class FieldDTO {
@@ -11,7 +10,7 @@ public class FieldDTO {
 	private String hireTypeSeq;
 	private String hireType;
 	private String areaTypeSeq;
-	private String areatype;
+	private String areaType;
 	private String salary;
 	private String careerTypeSeq;
 	private String careerType;
@@ -91,15 +90,16 @@ public class FieldDTO {
 	public String getHireType() {
 		return hireType;
 	}
+	public String getAreaType() {
+		return areaType;
+	}
+	public void setAreaType(String areaType) {
+		this.areaType = areaType;
+	}
 	public void setHireType(String hireType) {
 		this.hireType = hireType;
 	}
-	public String getAreatype() {
-		return areatype;
-	}
-	public void setAreatype(String areatype) {
-		this.areatype = areatype;
-	}
+
 	public String getCareerType() {
 		return careerType;
 	}

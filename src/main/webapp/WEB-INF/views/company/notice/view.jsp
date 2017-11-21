@@ -51,7 +51,7 @@
 			사원수
 		</div>
 		<div id="numberOfEmp">
-			${view.numberOfEmp}
+			${view.numberOfEmp}명
 		</div>
 	</div>
 	
@@ -93,8 +93,48 @@
 	
 	지원분야
 	<c:forEach items="${view.field}" var="field">
-		
-	
+	<div class="fieldContainer">
+		<div class="fieldName">
+			${field.fieldName}
+		</div>
+		<div class="fieldCondition">
+			<div><b>학력</b> : ${field.demandEducation.educationType}(${field.demandEducation.essential})</div> 
+			<div><b>경력</b> : ${field.careerType}</div>
+			<div><b>근무지</b> : ${field.areaType}</div>
+			<div><b>연봉</b> : <fmt:formatNumber value="${field.salary}" pattern="#,###" />만원</div>
+		</div>
+		<div class="fieldContent">
+			${field.content}
+		</div>
+		<div class="fieldDemand">
+			<c:if test="${field.demandCertificate.size() != 0}">
+			<div id="demandCertificateContainer">
+				<div class="viewTitle">자격증</div>
+					<c:forEach items="${field.demandCertificate}" var="certificate">
+					<div>${certificate.certificateType}(${certificate.essential})</div>
+					</c:forEach>
+			</div>
+			</c:if>
+			
+			<c:if test="${field.demandLangTest.size() != 0}">
+			<div id="demandLangTestContainer">
+				<div class="viewTitle">어학</div>
+					<c:forEach items="${field.demandLangTest}" var="langTest">
+					<div>${langTest.langTestType}(${langTest.essential})</div>
+					</c:forEach>
+			</div>
+			</c:if>
+			
+			<c:if test="${field.demandMajor.size() != 0}">
+			<div id="demandMajorContainer">
+				<div class="viewTitle">전공</div>
+					<c:forEach items="${field.demandMajor}" var="major">
+					<div>${major.majorCategory}(${major.essential})</div>
+					</c:forEach>
+			</div>
+			</c:if>
+		</div>
+	</div>
 	</c:forEach>
 	
 </div>
