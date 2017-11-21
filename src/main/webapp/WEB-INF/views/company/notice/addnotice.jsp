@@ -307,40 +307,41 @@
 				<div class="noticeTitle fieldContentPcdata">지원분야업무</div>
 				<input type="text" class="fieldContent" name="fieldContent2" style="width: 400px;">
 			</div>
-			
-			<div>
-				<div class="hireTypeContainer">
-					<div class="noticeTitle">고용형태</div>
-					<select class="hireType" name="hireTypeSeq2" disabled>
-						<c:forEach items="${hiretypelist}" var="hiretypedto">
-						<option value="${hiretypedto.seq}">${hiretypedto.hireType}</option>
-						</c:forEach>
-					</select>
-				</div>
-				
-				<div class="careerTypeContainer">
-					<div class="noticeTitle">경력</div>
-					<select class="careerType" name="careerTypeSeq2" disabled>
-						<c:forEach items="${careertypelist}" var="careertypedto">
-						<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
-						</c:forEach>
-					</select>
-				</div>
-				
-				<div class="areaTypeContainer">
-					<div class="noticeTitle">근무지역</div>
-					<select class="areaType" name="areaTypeSeq2" disabled>
-						<c:forEach items="${areatypelist}" var="areatypedto">
-						<option value="${areatypedto.seq}">${areatypedto.area}</option>
-						</c:forEach>
-					</select>
-				</div>
-				
-				<div class="salaryContainer">
-					<div class="noticeTitle">연봉</div>
-					<input type="number" name="salary2" class="salary">
-				</div>
+		
+			<div class="hireTypeContainer">
+				<div class="noticeTitle">고용형태</div>
+				<select class="hireType" name="hireTypeSeq2" disabled>
+					<c:forEach items="${hiretypelist}" var="hiretypedto">
+					<option value="${hiretypedto.seq}">${hiretypedto.hireType}</option>
+					</c:forEach>
+				</select>
 			</div>
+			
+			<div class="careerTypeContainer">
+				<div class="noticeTitle">경력</div>
+				<select class="careerType" name="careerTypeSeq2" disabled>
+					<c:forEach items="${careertypelist}" var="careertypedto">
+					<option value="${careertypedto.seq}">${careertypedto.careerType}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div class="areaTypeContainer">
+				<div class="noticeTitle">근무지역</div>
+				<select class="areaType" name="areaTypeSeq2" disabled>
+					<c:forEach items="${areatypelist}" var="areatypedto">
+					<option value="${areatypedto.seq}">${areatypedto.area}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+			<div style="clear: both;"></div>
+			
+			<div class="salaryContainer">
+				<div class="noticeTitle">연봉</div>
+				<input type="number" name="salary2" class="salary">
+			</div>
+		
 			
 			
 			<!-- 요구사항들 -->
@@ -533,6 +534,8 @@
 					</c:forEach>
 				</select>
 			</div>
+			
+			<div style="clear: both;"></div>
 			
 			<div class="salaryContainer">
 				<div class="noticeTitle">연봉</div>
