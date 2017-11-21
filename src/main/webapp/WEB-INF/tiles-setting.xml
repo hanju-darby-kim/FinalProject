@@ -5,15 +5,17 @@
 
 
 <tiles-definitions>
-   
+
 	<!-- 한주 : 커리큘럼 리스트, 지원서 작성 등 -->
+	<!-- 
 	<definition name="curriculum.*" template="/WEB-INF/views/layouts/mainlayout.jsp"> 
-      <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>	<!-- css 등의 쇼잉을 위해 필요한 파일 -->
-      <put-attribute name="core" value="/WEB-INF/views/member/hanju-curriculum/{1}.jsp"/>	<!-- 컨텐츠 -->
-      <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>	<!-- 탑헤더(로그인, 회원가입..) -->
-      <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>	<!-- 헤더(센터소개, 취업교육과정..) -->
-      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>	<!-- 푸터 -->
-   </definition>
+		<put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>	css 등의 쇼잉을 위해 필요한 파일
+		<put-attribute name="core" value="/WEB-INF/views/member/hanju-curriculum/{1}.jsp"/>	컨텐츠
+		<put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>	탑헤더(로그인, 회원가입..)
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>	헤더(센터소개, 취업교육과정..)
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>	푸터
+	</definition>
+	 -->
 
     <!-- main 레이아웃 관련 -->
     <!-- main.student.main -->
@@ -28,15 +30,6 @@
    <!-- 로그인, 회원가입 -->
    <definition name="sign.*" template="/WEB-INF/views/layouts/signlayout.jsp"> 
       <put-attribute name="core" value="/WEB-INF/views/main/{1}.jsp"/>
-      <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
-      <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>
-      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
-   </definition>
-   
-   <!-- 학생, 매니저, 관리자 업무 -->
-   <definition name="*.*" template="/WEB-INF/views/layouts/mainlayout.jsp"> 
-      <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
-      <put-attribute name="core" value="/WEB-INF/views/{1}/{2}.jsp"/>
       <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
       <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
@@ -65,6 +58,15 @@
       <put-attribute name="submenu" value="/WEB-INF/views/inc/submenu/{1}submenu.jsp"/> <!-- 왼쪽 사이드 메뉴 -->
       <put-attribute name="core" value="/WEB-INF/views/{1}/{2}/{3}.jsp"/> <!-- 실제 코어내용  -->
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/> <!-- 푸터 -->
+   </definition>
+   
+   <!-- 학생, 매니저, 관리자 업무 -->
+   <definition name="*.*" template="/WEB-INF/views/layouts/mainlayout.jsp"> 
+      <put-attribute name="links" value="/WEB-INF/views/inc/links.jsp"/>
+      <put-attribute name="core" value="/WEB-INF/views/{1}/{2}.jsp"/>
+      <put-attribute name="topheader" value="/WEB-INF/views/inc/topheader.jsp"/>
+      <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>
+      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
    </definition>
    
    <!-- 템플릿화면 -->
