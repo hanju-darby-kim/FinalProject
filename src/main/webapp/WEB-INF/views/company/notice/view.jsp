@@ -10,6 +10,10 @@
 	</div>		
 	
 	<!-- 회사소개 -->
+	<div class="viewBigTitle">
+		회사 정보
+	</div>
+	
 	<div id="basicInfoContainer">
 		<div id="contentContainer" class="margin-20">
 			<div class="viewTitle">
@@ -20,7 +24,7 @@
 			</div>
 		</div>
 		
-		<div id="websiteContainer" class="margin-20 float-left">
+		<div id="websiteContainer" class="margin-20 float-left width-240">
 			<div class="viewTitle">
 				홈페이지
 			</div>
@@ -29,7 +33,7 @@
 			</div>
 		</div>
 		
-		<div id="addressContainer" class="margin-20 float-left">
+		<div id="addressContainer" class="margin-20 float-left width-240">
 			<div class="viewTitle">
 				회사 주소
 			</div>
@@ -38,7 +42,7 @@
 			</div>
 		</div>
 		
-		<div id="endDateContainer" class="margin-20 float-left">
+		<div id="endDateContainer" class="margin-20 float-left width-240">
 			<div class="viewTitle">
 				마감일
 			</div>
@@ -47,7 +51,7 @@
 			</div>
 		</div>
 		<div style="clear: both;"></div>
-		<div id="numberOfEmpContainer" class="margin-20 float-left">
+		<div id="numberOfEmpContainer" class="margin-20 float-left width-240">
 			<div class="viewTitle">
 				사원수
 			</div>
@@ -56,7 +60,7 @@
 			</div>
 		</div>
 		
-		<div id="fondationDateContainer" class="margin-20 float-left">
+		<div id="fondationDateContainer" class="margin-20 float-left width-240">
 			<div class="viewTitle">
 				설립일
 			</div>
@@ -65,7 +69,7 @@
 			</div>
 		</div>
 		
-		<div id="salesContainer" class="margin-20 float-left">
+		<div id="salesContainer" class="margin-20 float-left width-240">
 			<div class="viewTitle">
 				매출액
 			</div>
@@ -76,7 +80,7 @@
 	
 		<div style="clear: both;"></div>
 	
-		<div id="companyTypeContainer" class="margin-20 float-left">
+		<div id="companyTypeContainer" class="margin-20 float-left width-240">
 			<div class="viewTitle">
 				기업형태
 			</div>
@@ -85,7 +89,7 @@
 			</div>
 		</div>
 		
-		<div id="industryTypeContainer" class="margin-20 float-left">
+		<div id="industryTypeContainer" class="margin-20 float-left width-240">
 			<div class="viewTitle">
 				산업군
 			</div>
@@ -97,23 +101,23 @@
 	
 	</div> <!-- basicInfoContainer -->
 	
-	<div id="fieldContainer">
-		<div class="viewTitle">지원분야</div>
+	<div class="viewBigTitle">지원분야</div>
+	<div id="fieldOuterContainer">
 		<c:forEach items="${view.field}" var="field">
 		<div class="fieldContainer">
-			<div class="fieldName">
+			<div class="fieldName float-left" style="height: 100%;">
 				${field.fieldName}
 			</div>
-			<div class="fieldCondition">
+			<div class="fieldCondition float-left">
 				<div><b>학력</b> : ${field.demandEducation.educationType}(${field.demandEducation.essential})</div> 
 				<div><b>경력</b> : ${field.careerType}</div>
 				<div><b>근무지</b> : ${field.areaType}</div>
 				<div><b>연봉</b> : <fmt:formatNumber value="${field.salary}" pattern="#,###" />만원</div>
 			</div>
-			<div class="fieldContent">
+			<div class="fieldContent float-left">
 				${field.content}
 			</div>
-			<div class="fieldDemand">
+			<div class="fieldDemand float-left">
 				<c:if test="${field.demandCertificate.size() != 0}">
 				<div id="demandCertificateContainer">
 					<div class="viewTitle">자격증</div>
@@ -141,7 +145,9 @@
 				</div>
 				</c:if>
 			</div>
+			<div style="clear: both;"></div>
 		</div>
+		<div style="clear: both;"></div>
 		</c:forEach>
 		
 		</div>
