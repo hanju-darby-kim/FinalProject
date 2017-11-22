@@ -15,4 +15,8 @@
 	.margin-20 {
 		margin-bottom: 20px;
 	}
+	
+	.float-left {
+		float: left;
+	}
 </style>

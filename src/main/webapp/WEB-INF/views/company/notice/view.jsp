@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	
-	<div id="websiteContainer" class="margin-20">
+	<div id="websiteContainer" class="margin-20 float-left">
 		<div class="viewTitle">
 			홈페이지
 		</div>
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 	
-	<div id="addressContainer" class="margin-20">
+	<div id="addressContainer" class="margin-20 float-left">
 		<div class="viewTitle">
 			회사 주소
 		</div>
@@ -37,7 +37,7 @@
 		</div>
 	</div>
 	
-	<div id="endDateContainer" class="margin-20">
+	<div id="endDateContainer" class="margin-20 float-left">
 		<div class="viewTitle">
 			마감일
 		</div>
@@ -46,7 +46,7 @@
 		</div>
 	</div>
 	
-	<div id="numberOfEmpContainer" class="margin-20">
+	<div id="numberOfEmpContainer" class="margin-20 float-left">
 		<div class="viewTitle">
 			사원수
 		</div>
@@ -55,7 +55,7 @@
 		</div>
 	</div>
 	
-	<div id="fondationDateContainer" class="margin-20">
+	<div id="fondationDateContainer" class="margin-20 float-left">
 		<div class="viewTitle">
 			설립일
 		</div>
@@ -63,8 +63,8 @@
 			${view.foundationDate}
 		</div>
 	</div>
-	
-	<div id="salesContainer" class="margin-20">
+	<div style="clear: both;"></div>
+	<div id="salesContainer" class="margin-20 float-left">
 		<div class="viewTitle">
 			매출액
 		</div>
@@ -73,7 +73,7 @@
 		</div>
 	</div>
 	
-	<div id="companyTypeContainer" class="margin-20">
+	<div id="companyTypeContainer" class="margin-20 float-left">
 		<div class="viewTitle">
 			기업형태
 		</div>
@@ -82,7 +82,7 @@
 		</div>
 	</div>
 	
-	<div id="industryTypeContainer" class="margin-20">
+	<div id="industryTypeContainer" class="margin-20 float-left">
 		<div class="viewTitle">
 			산업군
 		</div>
@@ -90,7 +90,7 @@
 			${view.industryType}
 		</div>
 	</div>
-	
+	<div style="clear: both;"></div>
 	<div class="viewTitle">지원분야</div>
 	<c:forEach items="${view.field}" var="field">
 	<div class="fieldContainer">

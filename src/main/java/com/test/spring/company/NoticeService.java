@@ -173,6 +173,7 @@ public class NoticeService implements INoticeService {
 	public NoticeViewDTO getView(String seq) {
 		NoticeViewDTO view = dao.getView(seq); //공고 기본 정보
 		view.setFoundationDate(view.getFoundationDate().substring(0, 10));
+		view.setEndDate(view.getEndDate().substring(0, 16));
 		view.setTestByNotice(dao.getTestByNotice(seq)); //면접 전형
 		List<FieldDTO> field = dao.getField(seq); //지원분야 기본
 		for(FieldDTO dto : field) {
