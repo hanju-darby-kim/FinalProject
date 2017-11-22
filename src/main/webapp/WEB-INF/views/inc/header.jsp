@@ -71,8 +71,8 @@
 				<c:if test="${certification.target eq 'manager'}">
 				<li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown">매니저 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">		
-						<li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
-						<ul class="dropdown-menu" role="menu">
+						<li class="dropdown "><a href="#">학생관리 <i class="fa fa-angle-right"></i></a>
+							<ul class="dropdown-menu" role="menu">
 							<li><a href="${pageContext.request.contextPath}/manager/attcheck.action">출결개시</a></li>
 							<li><a href="${pageContext.request.contextPath}/manager/attendance.action">출결확인</a></li>
 							<li><a href="${pageContext.request.contextPath}/manager/manageAtt.action">출결관리</a></li>
@@ -88,9 +88,9 @@
 				<c:if test="${certification.target eq 'admin'}">
 
 				
-				<li class="dropdown "><a href="#" class="dropdown-toggle"	data-toggle="dropdown">관리자 메뉴 <i class="fa fa-angle-down"></i></a>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">관리자 메뉴 <i class="fa fa-angle-down"></i></a>
 					<ul class="dropdown-menu" role="menu">	
-						<li class="dropdown "><a href="#">근무표 관리<i class="fa fa-angle-right"></i></a>
+						<li class="dropdown"><a href="#">근무표 관리<i class="fa fa-angle-right"></i></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="${pageContext.request.contextPath}/admin/write.action">근무표 작성</a></li>
 								<li><a href="${pageContext.request.contextPath}/admin/write.action">근무 일지 체크</a></li>
@@ -98,14 +98,14 @@
 							</ul>
 						</li>
 						
-						<li>
-							<a href="${pageContext.request.contextPath}/admin/curri/curriculumlist.action">과정 관리</a>
+						<li class="dropdown"><a href="${pageContext.request.contextPath}/admin/curri/curriculumlist.action">과정 관리<i class="fa fa-angle-right"></i></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="${pageContext.request.contextPath}/admin/curri/curriculumlist.action">과정 목록</a></li>
 								<li><a href="${pageContext.request.contextPath}/admin/curri/add.action">과정 추가</a></li>
 							</ul>
 						</li>
 					</ul>
+					
 				</li>
 
 						<%-- <li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>

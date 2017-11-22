@@ -9,24 +9,25 @@
 					<div class="item active">
 						<img src="${pageContext.request.contextPath}/img/sliders/slider1-pic1.jpg" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
-							<h2 class="hero-heading">CLEAN &amp; ELEGANT DESIGN</h2>
-							<p class="lead">Giving valuable reputation and credibility to your business</p>
+							<h2 class="hero-heading">쌍용교육센터</h2>
+							<p class="lead">2017년 고용노동부 교육훈련기관 인증평가<br>5년인증 최우수훈련기관 선정</p>
 							<a href="#" class="btn btn-lg hero-button">LEARN MORE</a>
 						</div>
 					</div>
 					<div class="item">
 						<img src="${pageContext.request.contextPath}/img/sliders/slider1-pic2.jpg" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
-							<h2 class="hero-heading">ULTRA RESPONSIVE</h2>
-							<p class="lead">Leave it to the theme, it knows how to deal with screen sizes</p>
+							<h2 class="hero-heading">비트코인 기반 블록체인 서비스 모델링 구축과정</h2>
+							<p class="lead">비트코인과 블록체인 기술을 통한<br>신규 ICT 융합 모델 및 서비스 모델 개발과 구축</p>
 							<a href="#" class="btn btn-lg hero-button">LEARN MORE</a>
 						</div>
 					</div>
 					<div class="item">
 						<img src="${pageContext.request.contextPath}/img/sliders/slider1-pic3.jpeg" class="img-responsive" alt="Slider Image">
 						<div class="carousel-caption">
-							<h2 class="hero-heading">EASY TO CUSTOMIZE</h2>
-							<p class="lead">Readable code, well documented and FREE support</p>
+							<h2 class="hero-heading">웹 애플리케이션 응용SW실무개발자 양성과정</h2>
+							<p class="lead">자바프로그래밍을 익히고 실무적 업무 스킬향상|조작능력과 응용력 배양|<br>자바프로그래밍의 기초부터 실무 Web Project까지 교육|실무중심의 교육진행 방식
+							</p>
 							<a href="#" class="btn btn-lg hero-button">LEARN MORE</a>
 						</div>
 					</div>
@@ -120,8 +121,8 @@
 					</div>
 					<div class="tab-pane fade text-center" id="tab-bottom3">
 						<img src="${pageContext.request.contextPath}/img/hero-unit-obj.png" class="img-responsive center-block margin-bottom-30px" alt="Clean and Elegant Design">
-						<h3 class="text-accent-color">CLEAN &amp; ELEGANT DESIGN</h3>
-						<p class="lead">Competently implement bricks-and-clicks collaboration and idea-sharing rather than visionary internal or "organic" sources. Rapidiously matrix premium core competencies for.</p>
+						<h3 class="text-accent-color">비트코인 기반 블록체인 서비스 모델링 구축과정</h3>
+						<p class="lead">자바프로그래밍을 익히고 실무적 업무 스킬향상|조작능력과 응용력 배양|자바프로그래밍의 기초부터 실무 Web Project까지 교육|실무중심의 교육진행 방식</p>
 					</div>
 					<div class="tab-pane fade text-center" id="tab-bottom4">
 						<img src="${pageContext.request.contextPath}/img/free.png" class="img-responsive center-block margin-bottom-30px" alt="Free Updates and Support">
