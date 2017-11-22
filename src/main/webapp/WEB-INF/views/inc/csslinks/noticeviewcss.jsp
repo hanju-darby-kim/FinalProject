@@ -18,5 +18,12 @@
 	
 	.float-left {
 		float: left;
+		width: 240px;
+		margin-right: 20px;
+	}
+	
+	#basicInfoContainer {
+		border: 1px solid #ddd;
+		padding: 20px;
 	}
 </style>
