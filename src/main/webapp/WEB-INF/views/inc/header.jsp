@@ -98,8 +98,15 @@
 							</ul>
 						</li>
 						
-						<li><a href="${pageContext.request.contextPath}/admin/curri/curriculumlist.action">과정 관리</a></li>
-					</ul></li>
+						<li>
+							<a href="${pageContext.request.contextPath}/admin/curri/curriculumlist.action">과정 관리</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="${pageContext.request.contextPath}/admin/curri/curriculumlist.action">과정 목록</a></li>
+								<li><a href="${pageContext.request.contextPath}/admin/curri/add.action">과정 추가</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
 
 						<%-- <li class="dropdown "><a href="#">학생관리 <i	class="fa fa-angle-right"></i></a>
 						<ul class="dropdown-menu" role="menu">
