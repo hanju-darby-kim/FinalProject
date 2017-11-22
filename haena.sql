@@ -281,3 +281,9 @@ commit;
 
 select * from demandMajor;
 select * from tblField;
+
+select * from COMPANY;
+
+update tblNotice set confirm = 'n' where confirm is null;
+
+commit;

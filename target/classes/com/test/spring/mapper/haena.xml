@@ -43,9 +43,9 @@
 	
 	<insert id="addNotice" parameterType = "com.test.spring.dto.NoticeDTO">
 		INSERT INTO tblNotice 
-			(SEQ, COMPANYSEQ, CONTENT, startDate, ENDDATE, REPORT) 
+			(SEQ, COMPANYSEQ, CONTENT, startDate, ENDDATE, REPORT, confirm) 
 				VALUES 
-					(tblnoticeSeq.nextval, #{companySeq}, #{content}, to_date(#{startDate}, 'yyyy-mm-dd HH24:MI'), to_date(#{endDate}, 'yyyy-mm-dd HH24:MI'), #{report})
+					(tblnoticeSeq.nextval, #{companySeq}, #{content}, to_date(#{startDate}, 'yyyy-mm-dd HH24:MI'), to_date(#{endDate}, 'yyyy-mm-dd HH24:MI'), #{report}, 'n')
 	</insert>
 	
 	<select id="getMaxNoticeSeq" resultType = "String">

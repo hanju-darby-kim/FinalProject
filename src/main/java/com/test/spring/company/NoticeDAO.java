@@ -68,9 +68,6 @@ public class NoticeDAO {
 	}
 
 	public int addNotice(NoticeDTO notice) {
-		
-		System.out.println(notice.getCompanySeq());
-		System.out.println(notice.getContent());
 		return sql.insert("notice.addNotice", notice);
 	}
 
