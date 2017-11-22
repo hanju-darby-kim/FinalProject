@@ -88,7 +88,7 @@ public class NoticeService implements INoticeService {
 	@Override
 	@Transactional
 	public String addNoticeOk(NoticeDTO notice) {
-		notice.setConfirm("n");
+		//notice.setConfirm("n");
 		//면접 기본 정보
 		dao.addNotice(notice);
 		//방금 넣은 면접 기본 정보의 시퀀스 가져오기
