@@ -5,10 +5,11 @@ import org.springframework.stereotype.Repository;
 import com.test.spring.dto.AtReasonDTO;
 import com.test.spring.dto.CurListDTO;
 import com.test.spring.dto.StuListDTO;
-import com.test.spring.dto.StudentDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -46,10 +47,50 @@ public class ManagerDAO {
 	}
 
 	public List<AtReasonDTO> reasonList(int seq) {
-
-		return sql.selectList("manager.reasonList", seq);
-		//seq는 managerSeq, 이를 이용해서 관리하는 학생들이 올린 공결처리서를 모두 가져오기(뷰 생성 필요)
+		
+		List<String> names = new ArrayList<String>(); 
+		List<AtReasonDTO> list = sql.selectList("manager.reasonList", seq);
+		List<AtReasonDTO> vlist = new ArrayList<AtReasonDTO>();
+		String temp = "";
+		int value = 0;
+		
+		for (int i=0;i<list.size();i++) {
+			AtReasonDTO dto = list.get(i);
+			value = Integer.parseInt(dto.getTempseq());
+			temp = sql.selectOne("manager.stuNames", value);
+			dto.setAtSeq(temp);
+			vlist.add(dto);
+		}
+		return vlist;
 	}
 
-	
+	public AtReasonDTO getVac(int seq) {
+
+		return sql.selectOne("manager.getVac", seq);
+	}
+
+	public int getA(int sseq) {
+		
+		return sql.selectOne("student.checkVac", sseq);
+	}
+
+	public int getB(int sseq) {
+		
+		return sql.selectOne("student.remainVac", sseq);
+	}
+
+	public void changeAtt(HashMap<String, String> param, int retype) {
+		
+		int target = sql.selectOne("manager.targetAtt", param);
+		HashMap<String, Integer> result = new HashMap<String, Integer>();
+		result.put("target", target);
+		result.put("type", retype);
+		sql.update("manager.changeAtt", result);
+	}
+
+	public void delReason(int resultSeq) {
+		
+		sql.delete("manager.delReason", resultSeq);		
+	}
+
 }

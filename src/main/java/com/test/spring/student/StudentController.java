@@ -78,7 +78,7 @@ public class StudentController {
 			int seq = Integer.parseInt(certification.getSeq());
 			int checkVac = service.checkVac(seq);
 			int remainVac = service.remainVac(seq);
-			List<AtTypeDTO> typeList = service.getType();			
+			List<AtTypeDTO> typeList = service.getType();		
 			
 			req.setAttribute("checkVac", checkVac);
 			req.setAttribute("remainVac", remainVac);

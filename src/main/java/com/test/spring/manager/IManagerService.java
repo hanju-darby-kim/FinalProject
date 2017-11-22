@@ -17,4 +17,14 @@ public interface IManagerService {
 
 	List<AtReasonDTO> reasonList(int seq);
 
+	AtReasonDTO getVac(int seq);
+
+	int getA(int sseq);
+
+	int getB(int sseq);
+
+	void changeAtt(int resultSeq, String day, int retype);
+
+	void delReason(int resultSeq);
+
 }

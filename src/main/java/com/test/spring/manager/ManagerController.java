@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.spring.dto.AtReasonDTO;
+import com.test.spring.dto.AttendanceDTO;
 import com.test.spring.dto.CertificationDTO;
 import com.test.spring.dto.CurListDTO;
 import com.test.spring.dto.StuListDTO;
@@ -89,10 +90,96 @@ public class ManagerController {
 			
 			int seq = Integer.parseInt(certification.getSeq());
 			List<AtReasonDTO> list = service.reasonList(seq);
+			req.setAttribute("list", list);
 			
 			return "manager.manageAtt";		
 			
 		} else {
+			req.setAttribute("errorMsg", "로그인 후 다시 이용해 주십시오");
+			return "main.error";			
+		}
+	}
+	
+	@RequestMapping(method= {RequestMethod.GET}, value="/manager/vacation.action")
+	public String vacation(HttpServletRequest req, HttpSession session) {
+		
+		CertificationDTO certification = (CertificationDTO) session.getAttribute("certification");
+		
+		if (certification.getTarget().equals("manager")) {
+			
+			int seq = Integer.parseInt(req.getParameter("seq"));
+			AtReasonDTO dto = service.getVac(seq);
+			int sseq = Integer.parseInt(dto.getTempseq());
+			int check = service.getA(sseq);
+			int remain = service.getB(sseq);
+			req.setAttribute("dto", dto);
+			req.setAttribute("check", check);
+			req.setAttribute("remain", remain);
+			
+			return "manager.vacation";
+			
+		} else {
+			req.setAttribute("errorMsg", "로그인 후 다시 이용해 주십시오");
+			return "main.error";			
+		}
+	}
+	
+	@RequestMapping(method= {RequestMethod.POST}, value="/manager/vacationGo.action")
+	public String vacationGo(HttpServletRequest req, HttpSession session) {
+		
+		CertificationDTO certification = (CertificationDTO) session.getAttribute("certification");
+		
+		if (certification.getTarget().equals("manager")) {
+			
+			int sseq = Integer.parseInt(req.getParameter("sseq"));
+			String day = req.getParameter("day");
+			String type = req.getParameter("type");
+			int retype = 1;
+			if (type.equals("조퇴")) {
+				retype = 2;
+			} else if (type.equals("휴가")) {
+				retype = 4;
+			} else if (type.equals("병결")) {
+				retype = 5;			
+			}
+			service.changeAtt(sseq, day, retype);
+			
+			//사유서 삭제(승인/거절 모두)
+			int resultSeq = Integer.parseInt(req.getParameter("resultseq"));
+			service.delReason(resultSeq);
+			
+			int seq = Integer.parseInt(certification.getSeq());
+			List<AtReasonDTO> list = service.reasonList(seq);
+			req.setAttribute("list", list);
+			req.setAttribute("procMsg", "처리가 완료되었습니다");
+			
+			return "manager.manageAtt";			
+			
+		} else {
+			req.setAttribute("errorMsg", "로그인 후 다시 이용해 주십시오");
+			return "main.error";			
+		}
+	}
+	
+	@RequestMapping(method= {RequestMethod.GET}, value="/manager/vacationNo.action")
+	public String vacationNo(HttpServletRequest req, HttpSession session) {
+		
+		CertificationDTO certification = (CertificationDTO) session.getAttribute("certification");
+		
+		if (certification.getTarget().equals("manager")) {
+			
+			int resultSeq = Integer.parseInt(req.getParameter("seq"));
+			service.delReason(resultSeq);
+			
+			int seq = Integer.parseInt(certification.getSeq());
+			List<AtReasonDTO> list = service.reasonList(seq);
+			req.setAttribute("list", list);
+			req.setAttribute("procMsg", "처리가 완료되었습니다");
+			
+			return "manager.manageAtt";		
+			
+		} else {
+			req.setAttribute("errorMsg", "로그인 후 다시 이용해 주십시오");
 			return "main.error";			
 		}
 	}

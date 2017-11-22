@@ -30,8 +30,28 @@
 		select * from vMagStuList where curriSeq = #{curriSeq}
 	</select>
 	
-	<select id="reasonList" parameterType="Integer" resultType="com.test.spring.dto.AtTypeDTO">
-		
+	<select id="reasonList" parameterType="Integer" resultType="com.test.spring.dto.AtReasonDTO">
+		select * from vLast where atseq = #{seq}
 	</select>
+	
+	<select id="stuNames" parameterType="Integer" resultType="String">
+		select name from member where seq = #{value}
+	</select>
+	
+	<select id="getVac" parameterType="Integer" resultType="com.test.spring.dto.AtReasonDTO">
+		select * from vLast where seq = #{seq}
+	</select>
+	
+	<select id="targetAtt" parameterType="map">
+		select seq from tblAttendance where sseq = #{sseq} and day = #{day}
+	</select>
+	
+	<update id="changeAtt" parameterType="map">
+		update tblAttendance set aseq = #{type} where seq = #{target}
+	</update>
+	
+	<delete id="delReason" parameterType="Integer">
+		delete from atreason where seq = #{resultSeq}
+	</delete>
 	
 </mapper>

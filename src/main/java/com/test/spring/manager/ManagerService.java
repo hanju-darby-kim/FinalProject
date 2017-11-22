@@ -1,12 +1,14 @@
 package com.test.spring.manager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.spring.dto.AtReasonDTO;
+import com.test.spring.dto.AttendanceDTO;
 import com.test.spring.dto.CurListDTO;
 import com.test.spring.dto.StuListDTO;
 
@@ -54,5 +56,37 @@ public class ManagerService implements IManagerService {
 	public List<AtReasonDTO> reasonList(int seq) {
 
 		return dao.reasonList(seq);
+	}
+
+	@Override
+	public AtReasonDTO getVac(int seq) {
+		
+		return dao.getVac(seq);
+	}
+
+	@Override
+	public int getA(int sseq) {
+		
+		return dao.getA(sseq);
+	}
+
+	@Override
+	public int getB(int sseq) {
+		
+		return dao.getB(sseq);
+	}
+
+	@Override
+	public void changeAtt(int resultSeq, String day, int retype) {
+		HashMap<String, String> param = new HashMap<String, String>();
+		param.put("sseq", resultSeq+"");
+		param.put("day", day);
+		dao.changeAtt(param, retype);
+	}
+	
+	@Override
+	public void delReason(int resultSeq) {
+
+		dao.delReason(resultSeq);
 	}
 }

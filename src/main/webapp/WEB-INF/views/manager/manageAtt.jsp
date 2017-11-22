@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
 <script>
 $(document).ready(function() {
    $('#stuTable').DataTable( {
@@ -31,6 +30,11 @@ $(document).ready(function() {
 
 });
 </script>
+<c:if test="${procMsg != null}">
+<script>
+	alert('${procMsg}');
+</script>
+</c:if>
 
 <!-- PAGE CONTENT -->
 <div class="panel-body">
@@ -42,10 +46,10 @@ $(document).ready(function() {
 			<table id="stuTable" width="100%" class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr class="table-list">
-						<th style="text-align:center;">일자</th>
-						<th style="text-align:center;">출석상태</th>
-						<th style="text-align:center;">입실시간</th>
-						<th style="text-align:center;">퇴실시간</th>
+						<th style="text-align:center;">학생</th>
+						<th style="text-align:center;">처리유형</th>
+						<th style="text-align:center;">희망일</th>
+						<th style="text-align:center;">처리</th>
 					</tr>
 				</thead>
 					<tfoot>
@@ -59,10 +63,10 @@ $(document).ready(function() {
 				<tbody>
 					<c:forEach items="${list}" var="dto">
 					<tr class="table-list text-center">
-						<td>${dto.day}</td>
-						<td>${dto.type}</td>
-						<td>${dto.startTime}</td>
-						<td>${dto.endTime}</td>
+						<td>${dto.atSeq}</td>
+						<td>${dto.temptype}</td>
+						<td>${dto.tempdate}</td>
+						<td><button type="button" id="btn-custom-small" class="btn btn-outline btn-default glyphicon glyphicon-check" onclick="location.href='${pageContext.request.contextPath}/manager/vacation.action?seq=${dto.seq}';"></button></td>
 					</tr>
 					</c:forEach>
 				</tbody>
